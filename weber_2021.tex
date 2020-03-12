@@ -1,57 +1,20 @@
-\documentclass[a4paper,12pt]{memoir}
+\documentclass[a4paper,12pt]{book}
 
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-% \usepackage[round]{natbib}
-\usepackage[english]{babel}
-\usepackage{csquotes}
-\usepackage[
-    backref=true,
-    style=authoryear,
-    maxcitenames=2 ,
-    maxbibnames=99,
-    refsegment=chapter,
-]{biblatex}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsfonts}
-\usepackage{amstext}
-% \usepackage{fancyhdr}
-\usepackage[pdftex]{graphicx}
-% \usepackage{wrapfig}
-\usepackage{multicol}
-\usepackage{tabularx}
-\usepackage{multirow}
-\usepackage{caption}
-\usepackage{subcaption}
-% \usepackage[T1,hyphens]{url}
-\usepackage[pdfborder={0 0 0 [0 0]}]{hyperref}
-\usepackage{color}
-\usepackage{siunitx}
-% \usepackage{booktabs}
-% \usepackage{setspace}
-% \usepackage[nottoc,notbib]{tocbibind}
-\usepackage[version=4]{mhchem}
-\usepackage[numbered]{bookmark}
-\usepackage{array}
-\usepackage{pdflscape}
-% \usepackage{titlesec}
-% \usepackage[a4paper]{couverture/meta-donnees}
+\usepackage{styleperso}
 
-\graphicspath{{figures/}}
-\bibliography{/home/webersa/Documents/Articles/bibtex.bib}
+\bibliography{/home/webersa/Documents/Articles/biblatex.bib}
 
-\bookmark[page=1,level=0]{Sample document}
+% =====================================================================================
+% ============= BOOK MARK {{{
+% \bookmarksetup{color=blue}
+% \bookmark[page=1,level=0]{Sample document}
+% }}}
+% =====================================================================================
 
-\sisetup{per-mode = reciprocal} % reciprocal / symbol 
-\DeclareSIUnit\opv{\nmol\per\min\per\cubic\meter}
-\DeclareSIUnit\opm{\nmol\per\min\per\ug}
-
-\renewcommand{\hat}{\widehat}
-
-
+% =====================================================================================
+% ========= New command {{{
 \newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\hat}{\widehat}
 
 \newcommand{\E}[1]{\cdot 10^{#1}}
 \newcommand{\Var}{\mathrm{Var}} 
@@ -59,9 +22,6 @@
 \newcommand{\ch}{\mathrm{ch}}
 \newcommand{\sh}{\mathrm{sh}}
 \newcommand{\ta}{\mathrm{th}}
-\definecolor{darkred}{rgb}{0.5,0,0}
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-\definecolor{darkblue}{rgb}{0,0,0.5}
 \newcommand{\TODO}[1]{{\color{red}\textbf{TODO: }#1}}
 \newcommand{\NOt}{\ce{NO3^-}}
 \newcommand{\SOq}{\ce{SO4^2-}}
@@ -82,40 +42,41 @@
 \newcommand{\OPv}{\texorpdfstring{\text{OP\textsubscript{v}}}{OPv}}
 \newcommand{\Xg}{{\mathbf{X}^{-g}}}
 \newcommand{\OMEGA}{\mathbf{\Omega}}
+\newcommand{\ugm}{\si{\micro\gram\per\cubic\meter}}
 
+% }}}
+% =====================================================================================
 
-\hypersetup{
-    % backref=page,               % Permet d'ajouter des liens dans
-    % pagebackref=true,           % les bibliographies
-    % hyperindex=true,            % Ajoute des liens dans les index.
-    colorlinks=true,            % Colorise les liens.
-    breaklinks=true,            % Permet le retour à la ligne dans les liens trop longs.
-    urlcolor=blue,              % Couleur des hyperliens.
-    linkcolor=darkred,          % Couleur des liens internes.
-    citecolor=darkgreen         % Couleur des citations
-}
-
+% =====================================================================================
 % segmented bibliography
 \defbibheading{subbibliography}{\subsection*{References in~\ref{refsegment:\therefsection\therefsegment}:
 \nameref{refsegment:\therefsection\therefsegment} }}
+% =====================================================================================
 
-% ==== TOC settings
+% =====================================================================================
+% ==== TOC settings {{{
+% }}}
+% =====================================================================================
 
 
-% ==== Title page
+\graphicspath{{figures/}}
+
+% =====================================================================================
+% ==== Title page {{{
 \author{Samuël Weber}
 \title{Aerosols sources and their contribution to the oxidative potential of Particulate Matter}
+% }}}
+% =====================================================================================
 
 \begin{document}
 
-% \partstyle{madsen}
 
 % \include{couverture}
 \maketitle
 
 \frontmatter
 
-\newpage
+\clearpage
 % \chapter{Acknowledgements}
 % \onehalfspacing
 % First of all, I wish to thanks Jean-Luc for supporting me during almost
@@ -150,48 +111,65 @@
 % \normalsize
 %
 
-% Fakepart TableofContent
-\setcounter{tocdepth}{4}
+% =====================================================================================
+% ====== TableofContent {{{
+\setcounter{tocdepth}{2}
 \tableofcontents
 \listoftables
 \listoffigures
 
+% }}}
+% =====================================================================================
 
 \mainmatter
 
-\chapter{Introduction}%
+\chapter*{Introduction}%
 \label{cha:introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 \input{chapters/introduction.tex}
 
-
-\chapter{State of the art}%
-\label{cha:state_of_the_art}
+\chapter{État de l'art}
+\label{cha:etat_de_lart}
+\PartialToc
+\clearpage
 \input{chapters/chapter01.tex}
 
-\chapter{Development of source apportionement strategy}%
+\chapter{Développent méthodologique d'attribution des sources de PM}
 \label{cha:chapter02}
+\PartialToc
+\clearpage
 \input{chapters/chapter02.tex}
 
-
-\chapter{Methodology for the attribution of the oxidizing potential to the aerosols sources}%
+\chapter{Méthodologie de déconvolution des sources de PO}
 \label{cha:methodology_for_the_attribution_of_intrisinc_op_to_a_pm_source}
+\PartialToc
+\clearpage
 \input{chapters/chapter03.tex}
 
-\chapter{Application to 15 sites in France}%
+\chapter{Passage à l'échelle régionale : application à 15 sites d'étude en France}
 \label{cha:application_to_15_sites_in_France}
+\PartialToc
+\clearpage
 \input{chapters/chapter04.tex}
 
-\chapter{Toward the spatio-temporal modelizing}%
+\chapter{Vers une modélisation spatialisé du PO}
 \label{cha:spatio_temporal_modelizing}
+\PartialToc
+\clearpage
 \input{chapters/chapter05.tex}
 
-% Fakepart Bibliography
+% =====================================================================================
+% Bibliographie complète {{{
 % \addcontentsline{toc}{part}{Bibliography}
 % \printbibheading
 \printbibliography
-\bibbysegment[heading=subbibliography]
+% \bibbysegment[heading=subbibliography]
 
-% Fakepart: Appendix
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% Appendix {{{
 \addcontentsline{toc}{part}{Appendix}
 \appendix
 \setcounter{table}{0}
@@ -200,5 +178,6 @@
 \renewcommand{\thetable}{\thesection-\arabic{table}}
 \renewcommand{\thefigure}{\thesection-\arabic{figure}}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}
-
+% }}}
+% =====================================================================================
 \end{document}

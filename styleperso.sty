@@ -1,0 +1,222 @@
+% vim: fdm=marker
+
+% =====================================================================================
+% ==== Packages {{{
+\usepackage[a4paper,xetex]{geometry}
+\usepackage{lmodern}
+% \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[english,main=french]{babel}
+\usepackage{csquotes}
+\usepackage[backref=true,style=authoryear,maxcitenames=2,maxbibnames=99,refsegment=chapter,]{biblatex}
+\usepackage{amsmath,amssymb,amsfonts,amstext,latexsym}
+\usepackage{fancyhdr,extramarks}
+\usepackage{graphicx}
+% \usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{multirow}
+% \usepackage{caption}
+% \usepackage{subcaption}
+% \usepackage[T1,hyphens]{url}
+\usepackage{adforn}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{setspace}
+% \usepackage[nottoc,notbib]{tocbibind}
+\usepackage[version=4]{mhchem}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{pdflscape}
+% \usepackage{pdfpages}
+% \usepackage{minitoc}
+\usepackage{titlesec,titletoc}
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ====== SIunitx {{{
+\sisetup{per-mode = reciprocal} % reciprocal / symbol 
+\DeclareSIUnit\opv{\nmol\per\min\per\cubic\meter}
+\DeclareSIUnit\opm{\nmol\per\min\per\ug}
+\DeclareSIUnit\concum{\micro\gram\per\cubic\meter}
+
+% Note that the sign must be
+%  µ
+%  MICRO SIGN
+%  Unicode: U+00B5, UTF-8: C2 B5
+% and \emph{not}
+%  μ
+%  GREEK SMALL LETTER MU
+%  Unicode: U+03BC, UTF-8: CE BC
+\sisetup{math-micro=\text{µ},text-micro=µ}
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ===== Colors {{{
+% See http://web.njit.edu/~kevin/rgb.txt.html for possibilities
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{ChadDarkBlue}{rgb}{.1,0,.2}  
+\definecolor{ChadBlue}{rgb}{.1,.1,.5}  
+\definecolor{ChadRoyal}{rgb}{.2,.2,.8}  
+%\definecolor{ChadGreen}{rgb}{0,.35,.1}
+%\definecolor{ChadGreen}{rgb}{0,.5,.25}  % Too bright
+%\definecolor{ChadGreen}{rgb}{0,.4,.2}    % Still too bright
+\definecolor{ChadGreen}{rgb}{0,.4,0}    % Dark Green
+%\definecolor{ChadRed}{rgb}{.8,.1,.2}    % Too bright
+\definecolor{ChadRed}{rgb}{.5,0,.5}  % purple
+
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ==== Geometry {{{
+\geometry{
+    a4paper,
+    hmargin={2.5cm, 2.5cm},
+    vmargin={2.5cm, 2.5cm}
+}
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ==== Hyperlink {{{
+\usepackage[
+	colorlinks,breaklinks,   % deleted ps2pdf 11/6/15
+	bookmarks=false,
+	pdfstartview=Fit,  % for fitting entire page; FitW just fits width
+	pdfview=Fit,       % after traversing a hyperlink
+	linkcolor=ChadRed,
+	urlcolor=ChadGreen,
+	citecolor=ChadRoyal,
+	hyperfootnotes=false,
+]{hyperref}
+%\usepackage[figure,table]{hypcap} % Correct a problem with hyperref
+%\urlstyle{rm} %so it doesn't use a typewriter font for url's.
+\usepackage[open,openlevel=0,bold,numbered]{bookmark}
+
+% }}}
+% =====================================================================================
+
+% Fix title, sections, etc.
+
+% \let\LaTeXtitle\title
+% \renewcommand{\title}[1]{\LaTeXtitle{\color{ChadBlue}{\LARGE #1}}}
+% \renewcommand{\abstractname}{\color{ChadBlue}Abstract}
+% \renewcommand{\figurename}{\color{ChadBlue}Figure}
+% \renewcommand{\tablename}{\color{ChadBlue}Table}
+%
+% \let\LaTeX@startsection\@startsection 
+% \renewcommand{\@startsection}[6]{\LaTeX@startsection%
+% {#1}{#2}{#3}{#4}{#5}{\color{ChadBlue}\raggedright #6}} 
+
+
+% =====================================================================================
+% ==== Table of content {{{
+\newcommand{\PartialToc}{\vspace*{2pc}%
+    \startcontents[chapters]
+	\vbox{\bf\Large Table des matières}
+	\printcontents[chapters]{}{1}{}
+}
+
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ==== Fancy header/footer {{{
+% E: Even page
+% O: Odd page
+% L: Left field
+% C: Center field
+% R: Right field
+% H: Header
+% F: Footer
+\pagestyle{fancy}
+\fancyhead[L]{\textsl{\rightmark}}
+\fancyhead[R]{\thepage}
+\fancyfoot{}
+\renewcommand\headrule{%
+    \vspace{-5pt}
+	\hrulefill
+	\raisebox{-2.1pt}{\quad\adfflatleafleft\quad\adfast6\quad\adfflatleafright\quad}%
+	\hrulefill
+}
+
+\setlength\headheight{21pt}
+
+%}}}
+% =====================================================================================
+
+% =====================================================================================
+% ==== Sections styles {{{
+% set counter up to the subsubsection
+\setcounter{secnumdepth}{3}
+
+% remove chapter counter
+\makeatletter
+\renewcommand\thesection{\@arabic\c@section}
+\renewcommand\thesubsection{\@arabic\c@section.\@arabic\c@subsection}
+\renewcommand\thesubsubsection{\@arabic\c@section.\@arabic\c@subsection.\@arabic\c@subsubsection}
+\makeatother
+
+\titleformat{\chapter} % command
+	[display] % shape
+	{\normalfont\scshape\huge} % format
+	{\vspace{-5cm}\color{darkblue}\newline\flushright\chaptertitlename\hspace{1ex}\thechapter} % label
+	{0.5ex} % sep
+	{
+		\rule{\textwidth}{1pt}
+		\vspace{1ex}
+		\centering
+	} % before-code
+	[
+		\vspace{-0.5ex}%
+		\rule{\textwidth}{0.3pt}
+	] % after-code
+
+
+\titleformat{\subsection}% command
+	[hang]%shape
+	{\bf}%format
+	{\thesubsection}%label
+	{0.5em}%sep
+	{}%before-code
+	[]%after-code
+
+\titleformat{\subsubsection}% command
+	[hang]%shape
+	{\bf}%format
+	{\thesubsubsection}%label
+	{0.5em}%sep
+	{}%before-code
+	[]%after-code
+% }}}
+% =====================================================================================
+
+% =====================================================================================
+% ==== Paragraph setup {{{
+% Paragraph Setup
+\onehalfspacing
+%\setlength{\parindent}{0em} 
+%\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
+%\setlength{\parsep}{0pt}
+\setlength{\parskip}{0pt}
+
+% This is how to control linespacing using setspace
+% (\singlespacing or doublespacing just call this command)
+\setstretch{1.4}
+% }}}
+% =====================================================================================
+
+
+% Spacing in Tables and Figures
+%\renewcommand{\tabcolsep}{1pt}   % space between columns
+% \renewcommand{\arraystretch}{1.0} % space between rows
+% \addtolength{\textfloatsep}{0pt} % space between floats and text
+% \addtolength{\abovecaptionskip}{0pt} % space above caption
+% \addtolength{\belowcaptionskip}{.15in} % space below caption
