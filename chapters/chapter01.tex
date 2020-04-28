@@ -171,75 +171,190 @@ dit d'Aikten, le plus fins (prépondérant en nombre), permettant par coagulatio
 d'atteindre des particules plus grosses (mode d'accumulation) allant jusqu'au \PMdc, pour
 enfin, lorsque la vitesse de coagulation est suffisante, atteindre le mode grossier
 \PMdix, pouvant également être allimenté par diverse autres sources comme la remise en
-suspension par le vent, les pollens, les activités humaines, etc, comme nous le verons
-plus loin.
-
-These categories do not have the same
-chemical composition nor shape as they reflect different source or different process in
-place in the atmosphere. Indeed, aerosols can react with the gas (\ce{SO2},
-\ce{NO2}, \ce{NH3} for instance), radiation or radicals (the so call hydroxyl radical
-\ce{HO^.}) or even with other aerosols and form new species or bigger aerosols. We then
-call this aerosol \emph{secondary aerosol} as it do not reflect a primary source but
-reaction in the atmosphere.
+suspension de poussière ou sable par le vent, les pollens, les activités humaines, etc,
+comme nous le verons plus loin.
+Ces catégories très diverses présentent ainsi des formes variés, comme illustré par les
+clichés de microscopies électroniques présentés Figure~\ref{fig:micrography}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\textwidth]{aerosol_micrographs.jpg}
-    \caption{Image au microscope electronique à balayage, à des échelles différentes,
+    \caption{Image au microscope électronique à balayage, à des échelles différentes,
         illustrant la diversité de forme des aérosols.
-        De gauche à droite : cendre volcanic, polen, sel de mer et suie. Micrographies de
-        l'USGS, UMBC (Chere Petty) et de l'Arizona State University (Peter Buseck). Credit
-        : NASA earthobservatory
-    \url{https://earthobservatory.nasa.gov/Features/Aerosols/}.}
+        De gauche à droite : cendre volcanic, pollen, sel de mer et suie. Micrographies de
+        l'USGS, UMBC (Chere Petty) et de l'Arizona State University (Peter Buseck). 
+        Crédit : NASA earthobservatory \url{https://earthobservatory.nasa.gov/Features/Aerosols/}.
+    }
     \label{fig:micrography}
 \end{figure}
-An aerosol is composed of several chemical species like ions (\SOq, \NOt, \ce{Na+},
-\ce{Cl-}, \ce{Mg^2+}, etc), metals (\ce{Cu}, \ce{Al}, \ce{Ti}, \ce{Ca}, etc), and organics species
-(cellulose or other sugar, \og black carbon\fg, hopanes, etc).  They come from different
-sources: natural like volcano, biology, desert (resuspension due to the wind) or marine
-spray for instance and anthropogenic like traffic exhaust, brake wear, industry, biomass
-burning or agriculture.  Each of these sources emits different species, in different
-quantity and in different place of the atmosphere and of the Earth and with different
-shape as shown in fig.~\ref{fig:micrography}.  However, the average lifetime of an aerosol
-is from hour to week, and then can impact a wide area.  For instance the black carbon
-emitted in developed countries is a major issue for the ice melt in the Artic's iceshelf.
-More generally, aerosols are a key parameter in the climate system as they interact with
-the Solar and Earth radiation, act as cloud/ice condensation nucleii and sectionicipate to
-the precipitation process \autocite{boucherClouds2013}.
 
+\subsection{Composition chimique}%
+\label{ssub:composition_chimique}
+
+En terme d'élements constitutifs de ces PM, il est d'usage de regrouper les espèces en
+différentes classes représentant les espèces majeurs de la masse des PM. La
+Figure~\ref{fig:chapter01/composition_chimique} présentes les gammes de concentrations
+observée à travers le monde pour différentes typologies de site de prélèvement.
+On y trouve différents ions issus de la condensation de la phase gaseuse (nitrate \NOt, formé à
+partir des \ce{NO_x} et l'ammonium \ce{NH_4^+}, formé à partir de \ce{NH3}) et du sulfate
+\SOq, formé par condensation du \ce{SO2} mais également émis par les volcans et les
+activités anthropiques).
+Une part également importante de la masse provient de la matière carbonnée, notée ici
+carbone organic (ou \textit{organic carbon} OC). Ce terme regroupe un nombre extrèmement
+important d'espèce chimique comportant une chaine carbonnée, de l'oxygène et
+de l'azote. On y retrouve par exemple la cellulose ou autres sucres issues de sa
+dégradation par combustion (lévoglucosan, mannosan, galactosan), des "polyols" (arabitol,
+mannitol, etc) émis par les bactéries ou champignons~\autocite{samakePolyols2019}, ou encore
+d'autres famille de molécule comme les alcanes, hopanes, composé aromatique polycyclique
+ou même pesticide. Cette matière carbonnée est souvent exprimée en terme de matière
+organique (MO, ou \textit{organic matter} OM) prennant en compte la masse du carbone mais
+également des autres atomes (oxygène, azote…) via un facteur correctif variant entre 1.2
+et 2.3 suivant les lieux de prélèvement.
+Mais le carbone est également présent sous forme plus "pure" (i.e. sans oxygène ni azote).
+On parle alors de carbon élementaire (\textit{elementary carbon} EC) lorsqu'il est mesuré
+par méthode thermique, et de carbone noir (\textit{black carbon} BC) lorsqu'il est mesuré
+par methode optique. Cette distinction EC ou BC provient du fait qu'il existe un continuum
+entre le carbone organique et le carbone élémentaire, et que chacune des méthodes
+d'observation implique une seuil de différentiation entre les deux catégories.
+Finallement, d'autres ions sont également présents, comme le sodium \ce{Na^+}, le chlore
+\ce{Cl-}, le magnésium \ce{Mg^2+}, etc. mais également de nombreux éléments métaliques
+comme le cuivre \ce{Cu}, l'aluminium \ce{Al}, le titan \ce{Ti}, le calcium \ce{Ca}, le fer
+\ce{Fe}, etc.
+
+La composition chimique d'un aérosols dépend de ses sources d'émissions (voir
+également~\ref{sec:signature_chimique_des_sources_demissions} mais également des
+différents processus bio-physico-chimiques présents dans l'atmosphère. En effet, sous
+l'effet des radiations solaires, de la capacité oxydante de l'atmosphère ou des
+micro-organismes vivant dans l'air, la composition chimique des aérosols évolue au court
+de sa vie. On parle d'\textit{aérosol primaire} lorsque le chimie reflète celle des sources
+d'émission, et d'\textit{aérosol secondaire} lorsque les composés chimiques proviennent de
+réactions ayant eu lieu dans l'air.
+
+Cette sensibilié aux sources d'émissions explique en partie la variabilité observée sur la
+composition chimique et sa sensibilité à la typologie du site de d'étude. Les sites marins
+présentant d'avantage de sels marins, les sites proches des déserts de sable d'avantage de
+poussière minérale, les sites urbains d'avantage de marqueur de combustion (EC), etc.
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=1.0\linewidth]{chapter01/composition_chimique.png}
+    \caption{Composition chimique majeurs de la masse des \PMdix{} pour différentes
+        typologies de sites de prélèvement. Crédit: \cite[figure 7.13]{boucherClouds2013},
+        aggrégeant 113 études sur au moins une année de prélèvement, entre 1993 et 2012.}%
+    \label{fig:chapter01/composition_chimique}
+\end{figure}
 
 \subsection{Impacts climatiques des aérosols}%
 \label{sub:impacts_climatiques_des_aerosols}
-\paragraph{Noyaux de condensation}%
-\label{par:noyaux_de_condensation}
+
+Les aérosols sont un éléments essentiels de la machine climatique terrestre de part leur
+interraction avec le rayonnement solaire et donc leur impact sur le bilan radiatif de la
+Terre, mais également par leur interraction très forte avec la dynamique des nuages, au
+point que les rapport du GIEC traite dans le même chapitre les nuages et les aérosols.
 
 \paragraph{Impact radiatif}%
 \label{par:impact_radiatif}
 
+De part leur faible taille, les aérosols diffusent le rayonnement incidant et agisent donc
+comme "bouclier thermique", ré-émettant une partie du flux solaire entrant dans l'espace,
+conduissant ainsi à un refroidissement de l'atmosphère.
+Cependant, les aérosols absorbent aussi une partie du rayonnement incidant, augmentant
+l'agitation thermique et donc conduissant à un réchauffement du climat.
+Ces deux effets agissent de concert, à différentes altitudes de l'atmosphère, et selon la
+composition chimique des aérosols.
+Enfin, la déposition des aérosols, et notamment du black carbone, sur la neige ou les
+glaces des banquises induit un effet bien connu de rétroaction possitive : le carbone
+absorbant le rayonnement normalement réémis par les surfaces blanches diminue l'albédo de
+la surface, augmente localement la température, fait fondre la glace, découvrant des
+surfaces plus sombre (roche ou océan), absorbant d'avantage de rayonnement, conduisant à
+un réchauffement accrue, etc.
 
+\paragraph{Noyaux de condensation des nuages}%
+\label{par:noyaux_de_condensation_des_nuages}
+
+Mais les aérosols, grâce à leur taille et leur ions, permettent également de baisser
+l'énergie d'activation nécessaire à l'aggregation de la vapeur d'eau sous forme liquide en
+goutelettes, puis goutte, facilitant l'apparition des nuages. Ainsi, les aérosols agissent
+comme noyaux de condensation des nuages (CCN pour \textit{cloud condensation nuclei}). Or
+les nuages empèches certes les infrarouges terrestres de repartir vers l'espace, mais
+présentent également un albédo élevé, renvoyant une grande partie du rayonnement à courte
+longueur d'onde du soleil vers l'espace. L'effet observé est donc un refroidissement du
+climat.
+Aussi, pour une même quantité d'eau, le nombre de CCN disponible conditionne la taille des
+goutellettes des nuages, et donc leur taille, durée de vie et probabilité de se
+transformer en nuage précipitant.
+
+\paragraph{Impacts sur le déréglement climatique en cours}%
+\label{par:impacts_sur_le_dereglement_climatique_en_cours}
+
+Pour ces différents aspects, très brievement exprimé ici, l'impact total des aérosols sur
+le climat est connu avec une incertitude élevée. 
+
+Notamment, leur contribution à la différence du forcage radiatif entre 1750 et 2011 --qui
+est de \SI{2.29}{\W\m\squared}-- s'estime entre
+\SIrange[range-phrase=~et~]{-0.77}{0.23}{\W\per\m\squared}, avec un forçage négatif pour
+les poussières minérale, le sulfate, nitrate et carbonne organique, mais positif pour le
+carbonne noir.  Quant à leur rôle sur la dynamique des nuages, il s'estime entre
+\SIrange[range-phrase=~et~]{-1.33}{-0.06}{\W\per\m\squared}, mais présente des
+incertitudes plus élevés dû fait de la complexité à prendre en compte ces phénomènes dans
+les modèles de climat. C'est actuellement le forcage radiatif le moins bien connu de la
+machine climatique Terrestre.
 
 \subsection{Impacts environnementaux}%
 \label{sub:impacts_environnementaux}
 
-\paragraph{Transport longue distance}%
-\label{par:transport_longue_distance}
+La durée de vie des aérosols dans l'atmophère entre leur émission et leur déposition est
+de plusieurs jours. Dans ce délai, la circulation atmosphérique les déplacent sur des
+distance pouvant être de plusieurs milier de kilomètre. Il n'est pas rare par exemple en
+Europe d'avoir des épisodes de dépositions de sable provenant du désert saharien. Ce
+déplacement longue distance d'aérosols est même un des mécanismes clef de certains "bloom"
+de phytoplancton, apportant d'importante quantité de nutriment à la surface de l'océan (en
+métaux et phosphate notamment).
+Plus spectaculaire, les cendres volcaniques relarguées dans l'atmosphère suite à de
+violentes éruptions, en plus de leur impact climatique potentiel, peuvent occasioner des
+pluies acides du fait de la présence en quantité de sulfate dans ces cendres.
+Autre exemple marquant, le nitrate est l'un des éléments limitant de la croissance des
+plante en prairie d'altitude. Or une partie importante de ce nitrate est apporté par
+déposition de nitrate d'amonium particulaire provenant du transport longue distance.
 
-
-\paragraph{Polluants émergents}%
-\label{par:polluants_emergents}
-
-
+Cette liste n'a pas pour but d'être exhaustif mais uniquement de présenter à quel point
+les aérosols et leur composition chimique variée impacte directement de nombreux
+écosystèmes terrestres, qu'ils proviennent de source anthropiques comme c'est le cas pour le
+nitrate, ou de sources naturelles.
 
 \subsection{Impacts sanitaires}%
 \label{sub:impacts_sanitaires}
 
+Finallement, l'impact sanitaire des aérosols sur la population humaine a commencé à être
+un sujet de recherche suite à l'industrialisation et aux épisodes de "smog" causant la
+mort de plusieurs personnes à Engis (Meuse, Belgique) en 1930, Donora (Pennsilvanie, USA)
+en 1948 ou encore le plus connu "Great smog of London", en 1952.
+
+De façons plus générale, la qualité de l'air (incluant les aérosols, mais également les
+composés gaseux comme les \ce{NO_x} ou l'ozone) est actuellement la 5eme cause de
+mortalité dans le monde et représent un décés sur dix. En Europe, pour l'année 2013, c'est
+ainsi \num{800000} personnes qui sont décédés des suites de maladies cardiovasculaires,
+cancer, pneumonie… directement imputable à la qualité de l'air
+\autocite{worldhealthorganizationAmbient2016}.
+En terme de bilan financier, la banque mondiale en collaboration avec l'Institute for
+Health Metrics and Evaluation (IHME) de l'université de Washington estimait que le coût
+associé aux décés prématurés de la seule année 2013 s'évaluait à plus de \$5.11 trillion
+de dollar dans le monde~\autocite{worldbankCost2016}.
+
+Afin de limiter cet impact sanitaire, de nombreux pays ont définis des seuils de
+concentrations de différents composés. Seulement ces seuils sont différents d'une
+institution à une autre. Par exemple, entre 2015 et 2017, le seuil de concentration
+journalière recommandé pour les \PMdix{} par l'union européenne (\SI{50}{\ugm} en moyenne
+journalière) était dépassé pour entre 13 et 19~\% de la population européenne, mais cette
+proportion augmente à entre 42 et 62~\% si l'on prend en compte le seuil recommandé de
+l'OMS de \SI{20}{\ugm} en moyenne annuelle~\autocite{europeanenvironmentagencyAir2019}.
 
 
 \section{Détermination des sources d'émission des PM}%
 \label{sec:source_apportionment_of_pm}
 
 \subsection{Signature chimique des sources d'émissions}%
-\label{sec:chemical_signature_of_the_sources}
+\label{sec:signature_chimique_des_sources_demissions}
 
 \subsection{Source apportionment model}%
 \label{sec:source_apportionment_model}
