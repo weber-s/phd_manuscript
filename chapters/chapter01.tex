@@ -450,11 +450,11 @@ Dans les espèces courrament analysés et utilisés durant cette thèse, on retr
 
     \item[Traffic routier] émettant différents métaux (Ca, Cu, Mo, Pb, Sb, Sn, Fe, Zr,
         Ti) et de la matière carbonnée --notamment de l'EC-- et des composés organiques
-        (hopanes, alcanes)~\autocite{charronIdentification2019}. Les émissions
+        (hopanes, alcanes)~\autocite{schauerCharacterization2006,charronIdentification2019}. Les émissions
         véhiculaires sont parfois séparées en 2 sous-types : émissions à l'échappement
         provenant de la combustion~\autocite{allenSize2001,huMetals2009,vianaSource2008},
         et émissions hors-échappement (abrasion de la route, usure des freins et pneus,
-        etc.)~\autocite{sandersAirborne2003,sternbeckMetal2002}.
+        etc.)~\autocite{grigoratosBrake2015,sandersAirborne2003,sternbeckMetal2002}.
 
     \item[Émission primaire biogenique] directement émise par les micro-organismes du sol
         et des plantes, qui, de par leur activité biologique, émettent notamment
@@ -479,7 +479,7 @@ Dans les espèces courrament analysés et utilisés durant cette thèse, on retr
         industriels~\autocite{sylvestreComprehensive2017}.
 
     \item[Port et bateau] proche des côtes notamment. Marqué par la présence de V et Ni,
-        provenant de la combustion de fuel lourd, mais également de composé organique
+        provenant de la combustion de fuel lourd, mais également de composés organiques
         comme les hopanes.
 
     \item[Agriculture] émettant notamment du nitrate et de l'ammoniac à travers les
@@ -503,7 +503,7 @@ nouvelles espèces chimiques.
 \paragraph{Aérosol organique secondaire}%
 \label{par:aérosol_organique_secondaire}
 
-Notamment, la biologie est connue pour emettre du dimethyl sulfate (DMS), s'oxydant en
+Notamment, la biologie est connue pour émettre du dimethyl sulfate (DMS), s'oxydant en
 MSA dans l'atmosphère. Sa présence dans les PM trace donc le viellissement d'un aérosol
 d'origine organique.  L'oxalate est également un composé issue de réaction photochimique,
 mais la diversité des composés primaires et voie de réaction rend extrêmement difficile
@@ -538,29 +538,156 @@ sodium peut avoir été remplacé par d'autre cations comme le potassium ou le m
 Souvent, ce procédé est associé a une augmentation de la matière organique liée à cet
 aérosol.
 
-\subsection{Source apportionment model}%
+\subsection{Modèle d'attribution des sources}%
 \label{sec:source_apportionment_model}
 
-\subsubsection{Direct modeling}%
-\label{sub:direct_modeling}
+Afin d'estimer la contribution de chaques sources de PM à un point donnée, il est possible
+d'utiliser 2 grandes familles de modèles d'attribution des sources (\textit{source
+apportionment} (SA)). La première est fondée sur notre connaissance des
+émissions et de la météorologie et calcul les réactions physico chimique depuis les
+sources jusqu'au lieu d'étude (modèle dit de chimie-transport (\textit{chemical transport
+model} (CTM)) alors que la deuxième s'evertue à mesurer en un point donné
+la chimie des PM et par traitement statistique, attribue a différente source ou
+''facteur'' leur contribution aux concentrations observées (modèle dit récepteur
+(\textit{receptor model} RM)).
 
-\paragraph{Lagrangian or dispersion model}%
-\label{sub:lagrangian_or_dispersion_model}
+\subsubsection{Modèle déterministe de chimie-transport}%
+\label{ssub:modele_deterministe_de_chimietransport}
 
-\paragraph{Deterministic chemistry transport model (CTM)}%
-\label{sub:deterministic_chemistry_transport_model_ctm_}
+\paragraph{Présentation}%
+\label{par:presentation}
 
-\subsubsection{Receptor model}%
-\label{sec:receptor_model}
+Les modèles déterministes s'appuient sur l'inventaire des sources d'émissions sur la
+région étudiée. Ces cadastres d'émissions sont regroupés en catégorie \textit{Selected
+Nomenclature for reporting of Air Pollutants} (SNAP) représentant chacune un secteur
+d'activité : Énergie, Procédés industriel, Agriculture, Déchets, Autres et enfin
+Naturelle.
+Chacune de ces catégories possèdent évidemment des sous-catégories raffinant la
+classification (par exemple, les émissions de l'aviation civile de plus de \SI{100}{m} de
+long se retrouvent dans le SNAP 080503 (ou \textit{Nomenclature For Reporting} (NFR)
+1.3.A.c) autrement dit Énergie - Combustion - Aviation - Aviation civile de plus de
+\SI{100}{m})~\autocite{europeanenvironmentagencyEMEP2019}.
+À chacun de ces SNAP est associé un profile d'émission (\ce{O3}, \ce{SO2}, NOx, \ce{NH3}, \PMdix, \PMdc,
+VOC principallement).
 
-\paragraph{Chemical mass balance (CMB)}%
-\label{sub:chemical_mass_balance_cmb_}
+Vient ensuite un inventaire de ces sources d'émissions sous forme de cadastre géographique
+et temporelle. Notamment la \textit{Convention on Long-Range Transboundary Air
+Pollution} (LRTAP) implémenté par l'\textit{European Monitoring and Evaluation Program}
+(EMEP) sous l'égide de \textit{United Nations Economic Commission for Europe} (UNECE),
+prévoit que les différentes parties prennante à cette convention présentent un rapport de
+leurs émissions régulièrement à l'EMEP.
 
-\paragraph{Principal component analysis (PCA)}%
-\label{sub:principal_component_analysis_pca_}
+Ainsi, il est alors possible de construire des modèles déterministes de dispersion et de
+réaction des polluants, en couplant un modèle de diffusion résolvant les équations de la
+physique de l'atmosphère avec un modèle physico-chimique faisant évoluer les composés
+gaseux et particulaires, incluant leurs émissions, dépots, interraction physico-chimique,
+etc. Pour n'en citer que quelqu'uns : 
+Community Multi-scale Air Quality (CMAQ)\footnote{\url{https://www.epa.gov/cmaq}},
+Comprehensive Air Quality Model with Extensions (CAMx)\footnote{\url{http://www.camx.com/}},
+WRF-Chem\footnote{\url{https://www2.acom.ucar.edu/wrf-chem}},
+Chimère,
+LOTOS-EUROS...
 
-\paragraph{Positive matrix factorization (PMF)}%
-\label{sub:positive_matrix_factorization_pmf_}
+La raison de la pluralité de ces modèles provient des différentes paramètrisations
+possibles des équations physiques, mais également des choix conceptuels de recherche.
+
+\paragraph{Source apportionment}%
+\label{par:source_apportionment}
+
+Concernant l'attribution des sources, il est possible d'utiliser deux techniques au sein
+des CTM:
+
+\begin{enumerate}
+    \item Faire une première simulation incluant toutes les sources d'émissions, puis une
+        deuxième avec une source en moins. La différence reflettant l'impacte de la source
+        supprimée sur les concentrations ambiantes ;
+    \item Tracer la provenance de chacunes espèces chimiques lors des schéma réactionnels
+        (\textit{source labelling} ou \textit{tagged species}).
+\end{enumerate}
+
+Seulement, du fait des nombreux processus non linéaire, la suppression d'une source
+d'émission aura des répercussions beaucoup plus complexe que la simple diminution des
+concentrations propre à cette source (par exemple, des NOx pouraient ne pas passer en
+phase particulaire du fait d'un manque d'ammoniac). La première solution correspond donc à
+se demander 
+\begin{quote}
+    Si je diminue ou supprime les émissions de cette source, quels impacts cela va-t-il
+    avoir sur les concentrations ?
+\end{quote}
+alors que la deuxième répond à
+\begin{quote}
+    Dans la concentration ambiante, à combien s'estime la contribution de telle source
+    d'émission ?
+\end{quote}
+Cette dernière technique a commencé été implémenté plus récemment dans certains
+CTM~\autocite{wangDevelopment2009,wagstromDevelopment2008,kranenburgSource2013,brandtContribution2013}
+et détaillé dans le rapport de~\textcite{mirceaEuropean2020}.
+
+Cependant l'utilisation des CTM présente certaines limites du fait de leur complexité.
+Notament, il semble illusoire de pouvoir un jour inclure toutes les réactions chimiques
+possibles dans les modèles déterministe, et quand bien même ce serait le cas --car les
+modèles réactionnels sont de plus en plus poussé--, il faudrait alors avoir des
+inventaires d'émissions beaucoup plus complet et précis temporellement, avec aucune
+certitude d'un oublie potentiel d'une source non prise en compte.  Aussi, la limitation
+physique des modèles météorologiques se retrouvent dans les CTM. Il est donc compliqué
+d'envisager, du fait du coût de calcul et de stockage, une simulation à \SI{10}{m} de
+résolution spatiale (ou moins), ce qui serait cependant nécessaire pour apréhender
+correctement des phénomènes précis, comme les inversions thermiques des vallées alpines.
+
+\subsubsection{Modèle récepteur}%
+\label{ssub:model_recepteur}
+
+À l'inverse, il est possible d'estimer les sources contribuant aux concentrations
+ambiantes en un lieu donné sans la moindre information météorologique ou simulation
+déterministe. Pour cela, il convient de faire des prélèvements sur le lieu d'étude,
+d'analyser la chimie que l'on y trouve, et à l'aide de modèle statistique, de retrouver
+les différents profiles de source et leur contribution, traduisible pas l'équation
+d'équilibre des masses
+\begin{align}
+    \label{eq:mass_balance}
+    X &= G \cdot F
+\end{align}
+où $X$ est la matrice de dimension $n\times m$ des observations, $G$ est la matrice des
+contribution de taille $n\times p$ et $F$ la matrice des profiles de taille $p \times n$,
+avec $n$ le nombre d'échantillon, $m$ le nombre de variables chimiques mesurées et $p$ le
+nombre de facteur. Un facteur peut être une source d'émission (combustion de biomasse par
+exemple), mais également regrouper des espèces chimiques provenant d'un même processus
+secondaire (nitrate d'ammonium par exemple).
+Il est courrant d'exprimer $X$ en \si{\ugm}, $G$ en \si{\ugm} ou concentration
+normalisée~\si{[-]} et $F$ en \si{\micro\g\per\micro\g} ou \si{\ugm}.
+
+Si l'on mesure $X$, ce qui nous intéresse ici est de connaître $G$ et/ou $F$. Si l'on
+admet que l'on connait a priori les profiles d'émission possibles, alors $F$ est connu, et
+l'on cherche à estimer $G$. Le modèle de déconvolution adapté est alors le
+\textit{Chemical Mass Balance} (CMB). À l'opposé, on peut n'avoir aucune information a
+priori à la fois sur les contributions et les profiles d'émissions. On utilisera alors le
+modèle de déconvolution \textit{Positive Matrix Factorization} (PMF).  Ces 2 types de
+modèles statistiques sont aux deux extrèmes d'un spectre de modèle statistique depuis une
+information ''absolue'' des profiles de sources à une absence totale d'information de ces
+mêmes profiles.  Il existe cependant un continuum entre ces deux pôles (voir
+Figure~\ref{fig:chapter01/source_apportionment_methods}, et de nombreux modèles ont été
+développé et amélioré depuis la première étude de SA de \textcite{colucciAutomotive1965}
+utilisant la ''simple'' corrélation entre le \ce{CO} et le plomb et benzo(a)pyrène.  Une
+revue détaillée et historique du fonctionnement de ces différents modèles peut-être
+retrouvé sur les articles de
+\textcite{henryHistory1997,vianaSource2008,belisCritical2013,hopkeReview2016}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapter01/source_apportionment_methods.png}
+    \caption{
+        Connaissance a priori nécessaire pour les différents modèles de SA existant,
+        depuis la simple analyse de facteur par ACP au modèle CMB. Crédit :
+        \textcite{vianaSource2008} adaptée de \textcite{schauerCharacterization2006}
+    }%
+    \label{fig:chapter01/source_apportionment_methods}
+\end{figure}
+
+Dans cette thèse, seul le modèle PMF résolue grâce au solver ME-2 développé par
+\textcite{paateroMultilinear1999} a été utilisé, et va maintenant être décrit en détail.
+
+\subsubsection{Modèle source récepteur PMF}%
+\label{ssub:pmf}
 
 
 \section{Vers une mesure unifiée: le potentiel oxydant}%
@@ -569,13 +696,13 @@ aérosol.
 Devant la grande variété de chimie, forme, taille, etc. des aérosols, il apparaît
 compliqué de résumer la toxicité de l'air que l'on respire à sa simple concentration
 massique en aérosols. En effet, il est évident que respirer un~\si{\ugm} de sable n'aura
-pas le même impact sur notre santé qu'un~\si{\ugm} de mercure ou de plomb.
-Seulement, la mesure massique est l'une des plus simples a implémenter en routine et est
-également facilement automatisable, permettant ainsi un premier ordre de grandeur de 
-l'exposition des populations. Aussi, il est important de rappeler que les aérosols n'ont
-pas qu'un impacte sanitaire, mais également climatique (voir
-section~\ref{sub:impacts_climatiques_des_aerosols}), pour lequel la messure de la concentration est tout a
-fait adaptée.
+pas le même impact sur notre santé qu'un~\si{\ugm} de mercure ou de plomb.  Seulement, la
+mesure massique est l'une des plus simples a implémenter en routine et est également
+facilement automatisable, permettant ainsi un premier ordre de grandeur de l'exposition
+des populations. Aussi, il est important de rappeler que les aérosols n'ont pas qu'un
+impacte sanitaire, mais également climatique (voir
+section~\ref{sub:impacts_climatiques_des_aerosols}), pour lequel la messure de la
+concentration est tout a fait adaptée.
 
 Afin de répondre à ce problème, il a été proposé dans les années 2010 une nouvelle mesure,
 intégratrice des propriétés physico-chimique des aérosols, sensé être plus proche des
@@ -602,6 +729,10 @@ cocktail" lors de la combinaison de différentes espèces chimiques.
 \paragraph{Mesure par Ditiothreitol}%
 \label{ssub:mesure_par_ditiothreitol}
 
+\autocite{choRedox2005}
+
+But \autocite{beiReaction2014}
+
 \paragraph{Mesure par Acide ascorbic}%
 \label{ssub:mesure_par_acide_ascorbic}
 
@@ -614,7 +745,93 @@ cocktail" lors de la combinaison de différentes espèces chimiques.
 \subsubsection{Unitées de mesures}%
 \label{ssub:unitees_de_mesures}
 
-Mesure de réactivité par ug de PM ou par m3 d'air respirer.
+La mesure du PO par DTT ou AA fournit une consomation de réactant en \si{\nano\mole\per\min}.
+Cependant, cette mesure est nécessairement dépendante de la quantité de PM introduite dans
+la réaction.
+Il convient donc de normaliser cette consommation d'antioxydant par la masse des réactifs.
+Seulement, cette mesure n'est pas fidèle à l'exposition des personnes car ne prend pas en
+compte la concentration en particule. De ce fait, deux normalisations de la réactivité des
+particules co-existent.
+
+\paragraph{Normalisation par la masse}%
+\label{par:normalisation_par_la_masse}
+Pour exprimer la réactivité "intrinsèque" d'une particule, la cinétique de déplétion
+d'antioxydant ($cAO$, en \si{\nmol\per\min}) est normalisée par la masse de réactif
+introduit (en \si{\ug}). On obtient ainsi le PO par \si{\ug}, noté \OPm{} en
+\si{\nmol\per\min\per\micro\g}:
+\begin{align}
+    \label{eq:opm}
+    OP_m &= \frac{cAO - cAO_{blank}}{M}
+\end{align}
+où $cAO$ est la consommation d'antioxydant dans l'échantillon et $cAO_{blank}$
+est la consommation d'antioxydant dans les blancs, tous deux en \si{\nmol\per\min}, et $M$
+la masse de réactif introduit (PM ou élement chimique), en \si{\ug}.
+
+\paragraph{Normalisation par le volume}%
+\label{par:normalisation_par_le_volume}
+
+Seulement, la réactivité intrinsèque n'est pas un indicateur propice à l'exposition. En
+effet, il faut également tenir compte de la concentration ambiante des particules. Le PO
+est donc aussi exprimé par unité de volume, notée \OPv{} en
+\si{\nmol\per\min\per\cubic\meter} et parfois appelé PO "extrinsèque", calculé par:
+\begin{align}
+    \label{eq:opv}
+    OP_v &= OP_m \times [\text{PM}]
+\end{align}
+où [PM] correspond à la concentration en particule en \si{\ugm}. Cette expression se
+retrouve également écrite~\autocite{fangSemiautomated2015} sous la forme
+\begin{align}
+    \label{eq:opvalt}
+    OP_v &= \frac{cAO - cAO_{blank}}{V}
+\end{align}
+où $V$ est le volume d'air analysé. Ces deux formes sont cependant équivalentes, car en
+replacant $V = \frac{M}{[PM]}$ dans l'Eq.~\ref{eq:opvalt}, on retrouve bien
+l'Eq.~\ref{eq:opv}:
+\begin{align}
+    \label{eq:opvopvalt}
+    OP_v &= \frac{cAO -cAO_{blank}}{V} = \frac{cAO -cAO_{blank}}{M}\times [\text{PM}] = OP_m \times [\text{PM}].
+\end{align}
+
+\paragraph{Comparabilité des échantillons}%
+\label{par:comparabilité_des_échantillons}
+
+Le fait de se rammener à un microgramme de PM en divisant par la masse introduite fait
+l'hypothèse d'une linéarité du PO en fonction de la masse. Hors, il a été montré par
+\textcite{charrierDithiothreitol2012,charrierBias2016,calasComparison2018} que cette
+hypothèse est fausse dans le test au DTT et qu'il présente en réalité une réponse
+pseudo-logarithmique en fonction de la masse du réactif.
+
+Ainsi, 2 analyses du même filtres ne présenteront pas la même valeur de \PODTTm{} si la
+concentration en PM n'est pas identique, les analyses faites à ''fortes masses''
+présenteront toujours un \PODTTm{} plus faible que celles à ''faibles masses''.
+La comparabilité des échantillons n'est donc possible que si les annalyses sont faites à
+masses constantes, ou artificiellement corrigées, soit par interpolation, soit par
+estimation grâce à la concentration de Cu et Mg, comme le propose
+\textcite{charrierBias2016}.
+
+Il faut également noter que ce biai se propage au \PODTTv{} du fait de sa linéarité avec le
+\PODTTm. Aussi, un deuxième biai apparaît ici. En effet, la non-linéarité du DTT fait
+que la prolongation linéaire entre 1 microgramme et X microgrammes par mètre cube est
+fausse. Le \PODTTv{} se comportant alors ''comme si'' les X microgrammes de PM de ce mètre
+cube d'air se comportaient comme X fois 1/X 1 microgramme de PM, ce qui est faux de part
+la non-linéarité du DTT.
+
+Les analyses de \PODTT{} de cette thèse suivent donc le protocole défini lors de la thèse
+de \textcite{calasPollution2017} : analyse à masse constante et faible de PM. Les
+échantillons seront donc comparables entre eux. Le parti pris garder le biai
+d'extrapolation de la ''faible masse'' à un volume d'air potentiellement charger en PM
+pour le \PODTTv{} se justifie biologiquement par les faibles volume d'air présent dans les
+poumons et donc la faible masse de PM en contacte avec les surfactants pulmonaires.
+
+Une telles non-linéarité n'est pas observée pour les tests à l'acide ascorbique ou à la
+DCFH.\todo{C'est vrai ca pour la DCFH ? On a checké ?}
+Les résultats issus de ces tests sont donc à priori comparables entre les différentes
+études.
+
+\subsubsection{Conservation des échantillons et dérive temporelles}%
+\label{ssub:conservation_des_échantillons_et_dérive_temporelles}
+
+Les 
 
 \subsection{État de la connaissance du PO}%
 \label{sub:etat_de_la_connaissance_du_po}
@@ -623,3 +840,8 @@ Mesure de réactivité par ug de PM ou par m3 d'air respirer.
 
 \addcontentsline{toc}{section}{Bibliography}
 \printbibliography[segment=2,heading=subbibliography]
+
+\section{Positionnement de cette thèse}%
+\label{sec:positionnement_de_cette_thèse}
+
+
