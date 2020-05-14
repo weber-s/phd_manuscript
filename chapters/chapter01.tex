@@ -23,11 +23,11 @@ capacité oxydante ayant un impact directe sur les différentes réactions pouva
 aussi bien avec les gas à effet de serre que pour les polluants organiques présent dans
 les basses couches de l'atmosphère.
 
-Enfin, il est à noté que l'atmosphère n'est pas composé que de gas mais également de
-particule solide ou liquide en suspension, que ce soit des critaux de glace ou d'eau
+Enfin, il est à noter que l'atmosphère n'est pas composé que de gaz mais également de
+particules solides ou liquides en suspension, que ce soit des critaux de glace ou d'eau
 liquide sous forme de nuage, mais également de ''poussières'', dont il sera question dans
-cette thèse, et qui seront plus explicitement détaillé
-ci-après~\ref{sec:les_aerosols_atmosphereiques}.
+cette thèse, et qui seront plus explicitement détaillées ci-après
+section~\ref{sec:les_aerosols_atmospheriques}.
 
 \subsection{Structuration de l'atmosphère}%
 \label{sub:structuration_de_l_atmosphere}
@@ -694,53 +694,144 @@ Dans cette thèse, seul le modèle PMF résolue grâce au solver ME-2 développ�
 \label{sec:le_potentiel_oxydant_des_aerosols}
 
 Devant la grande variété de chimie, forme, taille, etc. des aérosols, il apparaît
-compliqué de résumer la toxicité de l'air que l'on respire à sa simple concentration
+compliqué de résumer la toxicité de l'air que l'on respire à la simple concentration
 massique en aérosols. En effet, il est évident que respirer un~\si{\ugm} de sable n'aura
 pas le même impact sur notre santé qu'un~\si{\ugm} de mercure ou de plomb.  Seulement, la
-mesure massique est l'une des plus simples a implémenter en routine et est également
+mesure des concentrations est l'une des plus simples a implémenter en routine et est également
 facilement automatisable, permettant ainsi un premier ordre de grandeur de l'exposition
 des populations. Aussi, il est important de rappeler que les aérosols n'ont pas qu'un
-impacte sanitaire, mais également climatique (voir
-section~\ref{sub:impacts_climatiques_des_aerosols}), pour lequel la messure de la
-concentration est tout a fait adaptée.
+impacte sanitaire, mais également climatique ou environnementale (voir
+section~\ref{sub:impacts_climatiques_des_aerosols} et~\ref{sub:impacts_environnementaux}),
+pour lequels la messure de la concentration est tout a fait adaptée.
 
-Afin de répondre à ce problème, il a été proposé dans les années 2010 une nouvelle mesure,
+Bien qu'il n'est pas encore établit de mécanismes clair entre le PM et leur impact
+sanitaire, leur capacité a induire un stress oxydant dans notre corps est une des
+hypothèses privilégiées, notamment par leur transport ou induction d'espèces réactive de
+l'oxygène (\textit{reactive oxygen species}
+(ROS)}~\autocite{squadritoQuinoid2001,liParticulate2003a,liUltrafine2003,gonzalez-flechaOxidant2004}.
+
+La présence de ROS dans nos cellules est un phénomène naturel, produit en grande partie
+par catabolisme oxydatif et notamment la respiration celullaire lors du transfert
+d'electron depuis le \ce{O2} vers l'accepteur final \ce{H20}. Lors de ce transfert, il est
+possible d'avoir des électrons captés par d'autres espèces chimiques, conduisant à la
+formation de l'anion superoxyde \ce{O2^{.-}} ou \ce{HO^{.-}}, entre autres.
+En temps normal, les anti-oxydants cellulaires réduisent ces oxydants avant qu'ils ne
+puissent avoir des effets délétères sur les chaînes protéïques ou les acides nucléiques.
+
+Seulement, au contact de nos poumons, les PM, oxydantes, interagissent donc avec nos
+anti-oxydants naturels~\autocite{kellyProtein2003}, voir traversent la parois épithéliale
+et entre dans la circulation générale et les cellules internes.
+Dans un premier temps, les défenses anti-oxydantes sont mobilisées, puis si l'oxydation se
+poursuit, on a alors une inflamation, puis cytotoxicité~\autocite{baezaPollution2007}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapter01/OxydativeMechanism_BaezaMorano2007.png}
+    \caption{Mécanismes de toxicité de l’ozone et des particules atmosphériques dans les voies
+    aériennes. Crédit : \textcite[figure 1]{baezaPollution2007}}%
+    \label{fig:mecanisme_oxydation}
+\end{figure}
+
+Afin de répondre à cette problématique de métrique sanitaire des PM, il a été proposé
+par~\textcite{zielinskiModeling1999} et \textcite{choRedox2005} une nouvelle mesure,
 intégratrice des propriétés physico-chimique des aérosols, sensé être plus proche des
-impacte sanitaire occasioné par les PM. En effet, un des mécanismes suspecté d'être à
-l'origine des troubles sanitaires engendrés par les aérosols est le stresse oxydatif
-induit lors de l'inhalation des particules, entrainant une cascade de réaction au sain de
-notre organisme.
-Cette nouvelle mesure tente de quantifier les espèces réactive de l'oxygène (ROS) présente
-ou induite par les aérosols en mettant en contact les aérosols et un antioxydant.
+impacts sanitaires occasionés par les PM : le \textit{potentiel oxydant} (PO, ou
+\textit{oxidative potential} (OP)).
+Cette nouvelle mesure tente de quantifier les espèces réactive de l'oxygène présentent
+ou induite par les aérosols par la mise en contact des aérosols avec un anti-oxydant.
 Le suivit de la cinétique de la réaction permet ainsi d'estimer la réactivité de la
 particule, prenant en compte non seulement sa chimie, mais aussi la taille et forme des
-particules à travers leurs surface de réaction et également les potentiels "effet
-cocktail" lors de la combinaison de différentes espèces chimiques.
+particules à travers leurs surface de réaction et également les potentiels ''effet
+cocktail'' lors de la combinaison de différentes espèces chimiques.
+
+L'avantage de cette méthode accellulaire est qu'elle est peu couteuse, non-invasive et
+implémentable en routine en laboratoire, comparativement aux tests cellulaires nécessitant
+des prélèvement de tissu et analyse des protéines marqueuses de l'inflamation.
+Elle permet églament une confrontation facilitée aux autres informations dont l'on dispose
+sur les PM provennant du même échantillon.
 
 \subsection{Methodologie de mesure}%
 \label{sub:methodologie_de_mesure}
 
+Il n'existe pas à l'heure actuelle de méthodologie standardisée de mesure du potentiel
+oxydant. Plusieurs méthodes co-existent et apportent chacune une vision différente du PO.
+
+Il faut noter également que ces methodes n'ont pas été développées lors de ma thèse mais
+s'appuient sur les travaux de \textcite{calasPollution2017} et que les échantillons ont été
+analysés par les différents techniciens et techniciennes du plateau analytique Air-O-Sol.
+
 \subsubsection{Prendre en compte la bioaccessibilité: SLF}%
 \label{sub:prendre_en_compte_la_bioaccessibilite_slf}
 
-\subsubsection{Differents agent réactant}%
+Étant donnée que l'on cherche à reproduire le comportement des PM en milieu biologique
+(les poumons), il est important de procéder à l'extraction et l'analyse du PO dans un
+fluide reproduissant au plus fidèlement possible ce milieu, et non dans de l'eau mili-Q
+directement.
+
+Il existe différents types de fluides mimiquant les surfactant pulmonaires (\textit{simulated
+lung fluid} (SLF)). Les analyses de cette thèse provennant du protocole de
+\textcite{calasPollution2017}, il est fait usage d'un mélange de solution de Gamble+DPPC.
+\textcite{calasImportance2017} a pu montrer que différent SLF produisent des mesures de PO
+sensiblement différentes. Notamment, l'ALF tend à produire des mesures de PO
+systèmatiquement inférieure à la mesure faite dans du Gamble+DPPC (2 à 3 fois plus
+faible), qui elle même est légèrement inférieure à la mesure faite dans de l'eau mili-Q.
+\todo{est-ce que je justifie plus en avant ce choix ?}
+
+\subsubsection{Différents agents réactants}%
 \label{ssub:differents_agent_reactant}
 
-\paragraph{Mesure par Ditiothreitol}%
+La mesure du PO se faisant par suivit cinétique de la déplétion d'un anti-oxydant
+lorsqu'il est mis au contact des PM, le choix dans l'anti-oxydant induit des mesures de PO
+différentes. Au cours de cette thèses, 3 mesures différentes sont utilisées conjointement:
+le test au Dithiothreitol (DTT), à l'acide ascorbic ou vitamine-A (AA) et enfin le test à
+la DCFH.\todo{est-ce que je mentionne la DCFH puisqu'au final, je ne l'utilise jamais ?}
+
+Pour chacun des 2 tests présentés ci-après, des triplicats de mesures sont effectués, un
+témoin positif à la 1,4-naphtoquinone est utilisé et les blanc de laboratoire sous
+soustrait aux échantillons.
+
+\paragraph{Mesure par ditiothreitol (DTT)}%
 \label{ssub:mesure_par_ditiothreitol}
 
-\autocite{choRedox2005}
+Initiellement utilisé par~\textcite{choRedox2005} pour mesurer une concentration simulée de
+\ce{O2^{.-}} engendrée par la présence de composé organique, il a été ensuite montré par
+\textcite{beiReaction2014} que le DTT est potentiellement sensible à une plus grande
+variété de ROS qu'imaginé dans le schéma réactionnel originel. C'est maintenant le test le
+plus largement utilisé pour mesurer le PO des PM, notamment par la simplification et
+la semi automatisation de ce test par \textcite{fangSemiautomated2015}.
+Le suivit cinétique se fait par titration à interval régulier (0, 15 et 30 minutes) du DTT
+restant, par réaction avec le DTNB et suivit d'absorbance à \SI{465}{nm}.
+Il a été montrée également que ce réactif n'est pas sensible qu'aux composés organiques
+mais également aux métaux~\autocite{charrierDithiothreitol2012,linGeneration2011}
 
-But \autocite{beiReaction2014}
+\paragraph{Mesure par Acide ascorbique (AA)}%
+\label{ssub:mesure_par_acide_ascorbique}
 
-\paragraph{Mesure par Acide ascorbic}%
-\label{ssub:mesure_par_acide_ascorbic}
+Ce test, initié par \textcite{zielinskiModeling1999} pour mesuré la capacité oxydante de
+particule fine issue de la combustion de diesel, utilise l'acide ascorbique comme
+anti-oxydant.
+L'acide ascorbique ou vitamine-A est un anti-oxydant naturellement présent au niveau du
+surfactant pulmonaire. De la même manière que pour le test au DTT, l'AA va être réduit par
+les ROS des PM.
+Le suivit cinétique de la consommation de AA se fait pas absorbance à \SI{265}{\nano\m}
+toutes les 4 minutes à partire de la deuxième minutes, pendant 30 minutes au total.
 
-\paragraph{Mesure par DCFH}%
-\label{ssub:mesure_par_dcfh}
+% \paragraph{Mesure par DCFH}%
+% \label{ssub:mesure_par_dcfh}
 
 \paragraph{Autres methodes de mesure}%
 \label{sub:autres_methodes_de_mesure}
+
+D'autres methodes de mesures du PO existent, mais n'ont pas été utilisée au courant de
+cette thèse, à savoir :
+\begin{description}
+    \item[Electron spin resonance ESR] sensé ciblé particuliairement le radical
+        \ce{HO^{.}} \autocite{shiHydroxyl2003,shiTemporal2003}
+    \item[DCFH]\todo{ref}
+    \item[Mélange d'anti-oxydant] Bien que la pluspart du temps testé indépemment, il est
+        possible d'estimer un ''PO moyen'' par la mise en contact de différents
+        anti-oxydants simultanément (acide ascorbique, glutation et urée par exemple)~\autocite{calasComparison2018}
+\end{description}
 
 \subsubsection{Unitées de mesures}%
 \label{ssub:unitees_de_mesures}
@@ -828,20 +919,91 @@ DCFH.\todo{C'est vrai ca pour la DCFH ? On a checké ?}
 Les résultats issus de ces tests sont donc à priori comparables entre les différentes
 études.
 
-\subsubsection{Conservation des échantillons et dérive temporelles}%
-\label{ssub:conservation_des_échantillons_et_dérive_temporelles}
-
-Les 
-
-\subsection{État de la connaissance du PO}%
-\label{sub:etat_de_la_connaissance_du_po}
+% \subsubsection{Conservation des échantillons et dérive temporelles}%
+% \label{ssub:conservation_des_échantillons_et_dérive_temporelles}
+%
+% Les 
 
 
+\subsubsection{Un ''meilleur'' test que les autres ?}%
+\label{ssub:un_meilleur_test_que_les_autres_}
 
-\addcontentsline{toc}{section}{Bibliography}
-\printbibliography[segment=2,heading=subbibliography]
+Les différents tests de PO ne sont pas sensible aux mêmes espèces chimiques ni même aux même
+conditions physico-chimiques. En effet, l'étude de \textcite{kunzliComparison2006} sur 20
+sites européens présente des corrélations différentes entre le PO mesurée par ESR, AA ou
+GSH au regard de la masse des PM et les métaux les constituants.
+Ce résultat a été retrouvé depuis par de nombreuses études, et pour le test au DTT et DCFH
+également. Par conséquent, cela montre que différents constituants des PM ont des agissent
+différements et à travers des mécanismes oxydatifs divers, capturés par certains tests et
+non par d'autres.
+Il est donc probable que certaines affections sanitaires soient relié à un test donnée, et
+d'autre affection à un autre test. En l'absence de travaux plus approfondi en toxicologie
+et épidémiologie, il n'est donc pas possible en l'état actuel des connaissances de trancher
+pour ''le meilleur test de PO''.
+
+Par conséquent, les travaux de cette thèse s'emploient à étudier le PO mesuré par DTT et
+par acide ascorbique conjointement.
+
+\subsection{Attribution du PO aux sources d'émissions des PM}%
+\label{sub:attribution_du_po_aux_sources_d_émissions_des_pm}
+
+Les mesures de PO étant fastidieuse, il a fallu attendre la mise en place de technique
+de semi-automatisation pour obtenir des séries temporelles de mesure de PO. Les récents
+travaux de \textcite{fangSemiautomated2015}, parallement aux travaux de
+\textcite{calasPollution2017}, ont permis ce pas technique, permettant l'analyse accrue de
+prélèvement et les première série annuelle de PO, conjointement avec l'analyse de la
+chimie des filtres prélevés.
+
+Les liens entre la chimie des particules et les PO s'est dans un premier temps focalisé
+sur la simple corrélation univariée. Ainsi, le Cu présente de forte corrélation
+avec le \PODTT{} et \POAA, de même que le carbone organique, etc. Seulement, la simple
+corrélation montre également une forte corrélation entre le \PODTT{} et le \ce{NO3-},
+pourtant inerte en terme d'oxydo-réduction.
+En effet, une corrélation n'implique pas une causalité, et cette corrélation est en effet
+une co-corelation entre le \ce{NO3-} et d'autres espèces, rédox-actives.
+
+Enfin, il n'est pas possible de mesurer l'ensemble des espèces chimiques constituant les
+PM. Devant cette foultitude, il parrait donc illusoire de pouvoir attribuer un PO
+intrinsèque à chacune des espèce chimique.
+En revanche, si l'on bénéficie d'un nombre suffisant d'échantillon, il est alors possible
+d'estimer les sources ou facteurs d'émissions (voir
+section~\ref{sec:source_apportionment_of_pm}). Ce faisant, la vision par ''source'' plutôt
+que par ''espèce'' permet une aggrégation de l'information, en regroupant un ensemble
+d'espèce, mesurée ou non, provennant d'une même source d'émission, en une seule variable.
+Ainsi, il est possible d'attribuer un PO à une source donnée, sans pour autant avoir
+besoin de savoir quelles sont les espèces chimiques émises par cette source qui
+contribuent au PO.
+De plus, en terme de régulation, la vision par source est davantage pertinente car permet
+potentiellement une action politique plus rapide que s'il s'agissait de cibler une espèce
+chimique particulière.
+
+Les premières études de ce type sont celles de
+\textcite{vermaReactive2014,batesReactive2015,fangOxidative2016}, combinant 2 approches
+différentes:
+\begin{itemize}
+    \item Incorporation de PO comme variable d'entrée d'une étude PMF,
+    \item Analyse de sources via le CMB (sans PO), puis régression entre les sources de PM
+        ainsi déduites et le PO.
+\end{itemize}
+Bien que de façons inhérante aux différences entre PMF et CMB les sources retrouvées ne
+sont pas exactement les mêmes, ils montrent que la combustion de biomasse est la source
+principale de \PODTTv, suivit de près par le traffic routier (ensemble des émissions
+véhiculaire et de la remise en suspension de poussière de route), puis le sulfate
+d'amonium et enfin un facteur de composés organiques secondaires solubles.
+Concernant le \POAAv, \textcite{fangOxidative2016} estime à autour de 45\% la provenance
+véhiculaire et à environ 50\% la contribution de facteur secondaire (organique et
+inorganique).
+
+Lors du commencement de ma thèse, seuls ces études étaient, à ma connaissance, disponible
+dans la littérature concernant l'attribution des sources de PM aux potentiels oxydants.
+Depuis, de nouvelles études ont été publiés, et seront discutés dans le
+chapitre~\ref{cha:application_to_15_sites_in_France}.
+
 
 \section{Positionnement de cette thèse}%
 \label{sec:positionnement_de_cette_thèse}
+
+\addcontentsline{toc}{section}{Bibliography}
+\printbibliography[segment=2,heading=subbibliography]
 
 
