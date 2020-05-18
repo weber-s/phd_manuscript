@@ -3,10 +3,16 @@
 
 \usepackage{styleperso}
 \usepackage{todonotes}
-% \setuptodonotes{inline, color=blue!30}
-\setlength{\marginparwidth}{2.0cm}
+
+\setuptodonotes{inline, color=blue!30}
+% \setlength{\marginparwidth}{2.0cm}
 % \bibliography{/home/webersa/Documents/Articles/biblatex.bib}
+
+% =====================================================================================
+% ========== Bibliography {{{
 \bibliography{/home/samuel/Documents/IGE/Articles/biblatex.bib}
+% }}}
+% =====================================================================================
 
 % =====================================================================================
 % ============= BOOK MARK {{{
@@ -17,6 +23,7 @@
 
 % =====================================================================================
 % ========= New command {{{
+\DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
 \newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
 \renewcommand{\hat}{\widehat}
 
@@ -56,16 +63,6 @@
 % }}}
 % =====================================================================================
 
-% =====================================================================================
-% segmented bibliography
-\defbibheading{subbibliography}{\subsection*{References in~\ref{refsegment:\therefsection\therefsegment}:
-\nameref{refsegment:\therefsection\therefsegment} }}
-% =====================================================================================
-
-% =====================================================================================
-% ==== TOC settings {{{
-% }}}
-% =====================================================================================
 
 
 \graphicspath{{figures/}}
@@ -122,7 +119,6 @@
 
 % =====================================================================================
 % ====== TableofContent {{{
-\setcounter{tocdepth}{2}
 \tableofcontents
 \listoftables
 \listoffigures
@@ -143,11 +139,18 @@
 \clearpage
 \input{chapters/chapter01.tex}
 
-\chapter{Développent méthodologique d'attribution des sources de PM}
-\label{cha:chapter02}
+\chapter{Approfondissement des connaissances des sources des PM}%
+\label{cha:approfondissement_des_connaissances_des_sources_des_pm}
 \PartialToc
 \clearpage
-\input{chapters/chapter02.tex}
+\input{chapters/chapter02_approfondissement.tex}
+
+
+\chapter{Développent méthodologique d'attribution des sources de PM}
+\label{cha:developpement_methodologique_dattribution_des_sources_de_PM}
+\PartialToc
+\clearpage
+\input{chapters/chapter03_developpement.tex}
 
 \chapter{Méthodologie de déconvolution des sources de PO}
 \label{cha:methodology_for_the_attribution_of_intrisinc_op_to_a_pm_source}

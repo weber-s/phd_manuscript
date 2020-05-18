@@ -21,7 +21,7 @@
 % \usepackage{subcaption}
 % \usepackage[T1,hyphens]{url}
 \usepackage{adforn}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{siunitx}
 \usepackage{booktabs}
 \usepackage{setspace}
@@ -123,10 +123,11 @@
 
 % =====================================================================================
 % ==== Table of content {{{
+\setcounter{tocdepth}{2}
 \newcommand{\PartialToc}{\vspace*{2pc}%
     \startcontents[chapters]
 	\vbox{\bf\Large Table des matières}
-	\printcontents[chapters]{}{1}{}
+    \printcontents[chapters]{}{1}[3]{}
 }
 
 % }}}
@@ -218,6 +219,14 @@
 % }}}
 % =====================================================================================
 
+% =====================================================================================
+% ==== Bibliography setup {{{
+\renewcommand*{\bibfont}{\footnotesize}
+
+% segmented bibliography
+\defbibheading{subbibliography}[\refname]{ \section*{Réferences du chapitre}\addcontentsline{toc}{section}{Références}}
+% }}}
+% =====================================================================================
 
 % Spacing in Tables and Figures
 %\renewcommand{\tabcolsep}{1pt}   % space between columns
