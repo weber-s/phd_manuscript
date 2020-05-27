@@ -3,14 +3,21 @@
 % =====================================================================================
 % ==== Packages {{{
 \usepackage[a4paper,xetex]{geometry}
-\usepackage{lmodern}
 % \usepackage[utf8]{inputenc}
+
+% Fonts
+% \usepackage{lmodern}
+% \usepackage[bitstream-charter]{mathdesign}
+\usepackage{charter}
+% \usepackage{tgbonum}
+
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
 \usepackage[english,main=french]{babel}
 \usepackage{csquotes}
-\usepackage[backref=true,style=authoryear,maxcitenames=2,maxbibnames=99,refsegment=chapter,]{biblatex}
-\usepackage{amsmath,amssymb,amsfonts,amstext,latexsym}
+\usepackage[backref=false,style=authoryear,maxcitenames=2,maxbibnames=99,uniquelist=false,refsegment=chapter,]{biblatex}
+% \usepackage{amsmath,amssymb,amsfonts,amstext}
+\usepackage{latexsym}
 \usepackage{fancyhdr,extramarks}
 \usepackage{graphicx}
 % \usepackage{wrapfig}
@@ -158,6 +165,7 @@
 %}}}
 % =====================================================================================
 
+
 % =====================================================================================
 % ==== Sections styles {{{
 % set counter up to the subsubsection
@@ -185,18 +193,25 @@
 		\rule{\textwidth}{0.3pt}
 	]% after-code
 
+\titleformat{\section}
+    [hang]
+    {\usefont{T1}{qhv}{b}{n}\selectfont} % "qhv" - TeX Gyre Heros, "b" - bold
+    {} 
+    {0em}
+    {\hspace{-0.4pt}\Large \thesection\hspace{0.6em}}
+
 
 \titleformat{\subsection}% command
 	[hang]%shape
-	{\bf}%format
+    {\usefont{T1}{qhv}{b}{n}\selectfont}%format
 	{\thesubsection}%label
 	{0.5em}%sep
-	{}%before-code
+	{\large}%before-code
 	[]%after-code
 
 \titleformat{\subsubsection}% command
 	[hang]%shape
-	{\bf}%format
+    {\usefont{T1}{qhv}{b}{n}\selectfont}%format
 	{\thesubsubsection}%label
 	{0.5em}%sep
 	{}%before-code
@@ -215,13 +230,18 @@
 
 % This is how to control linespacing using setspace
 % (\singlespacing or doublespacing just call this command)
-\setstretch{1.4}
+\setstretch{1.2}
 % }}}
 % =====================================================================================
 
 % =====================================================================================
 % ==== Bibliography setup {{{
 \renewcommand*{\bibfont}{\footnotesize}
+
+\DeclareFieldFormat{journaltitle}{\mkbibemph{#1},} % italic journal title with comma
+\DeclareFieldFormat[inbook,thesis]{title}{\mkbibemph{#1}\addperiod} % italic title with period
+\DeclareFieldFormat[article]{title}{#1} % title of journal article is printed as normal text
+
 
 % segmented bibliography
 \defbibheading{subbibliography}[\refname]{ \section*{Réferences du chapitre}\addcontentsline{toc}{section}{Références}}
