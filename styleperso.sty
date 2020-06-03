@@ -16,7 +16,7 @@
 \usepackage[english,main=french]{babel}
 \usepackage{csquotes}
 \usepackage[backref=false,style=authoryear,maxcitenames=2,maxbibnames=99,uniquelist=false,refsegment=chapter,]{biblatex}
-% \usepackage{amsmath,amssymb,amsfonts,amstext}
+\usepackage{amsmath,amssymb,amsfonts,amstext}
 \usepackage{latexsym}
 \usepackage{fancyhdr,extramarks}
 \usepackage{graphicx}
@@ -40,6 +40,7 @@
 % \usepackage{pdfpages}
 % \usepackage{minitoc}
 \usepackage{titlesec,titletoc}
+\usepackage{threeparttablex}
 % }}}
 % =====================================================================================
 
@@ -52,7 +53,7 @@
 \DeclareSIUnit\ug{\micro\g}
 \DeclareSIUnit\nmol{\nano\mole}
 \DeclareSIUnit\min{\minute}
-\newcommand\ugm{\micro\gram\per\cubic\meter}
+\DeclareSIUnit\ugm{\micro\gram\per\cubic\meter}
 
 % Note that the sign must be
 %  µ
@@ -71,6 +72,7 @@
 % ===== Colors {{{
 % See http://web.njit.edu/~kevin/rgb.txt.html for possibilities
 \definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{palered}{rgb}{0.8,0.1,0.3}
 \definecolor{darkgreen}{rgb}{0,0.5,0}
 \definecolor{darkblue}{rgb}{0,0,0.5}
 \definecolor{ChadDarkBlue}{rgb}{.1,0,.2}  
@@ -203,7 +205,7 @@
 
 \titleformat{\subsection}% command
 	[hang]%shape
-    {\usefont{T1}{qhv}{b}{n}\selectfont}%format
+    {\color{darkblue}\usefont{T1}{qhv}{b}{n}\selectfont}%format
 	{\thesubsection}%label
 	{0.5em}%sep
 	{\large}%before-code
@@ -211,7 +213,7 @@
 
 \titleformat{\subsubsection}% command
 	[hang]%shape
-    {\usefont{T1}{qhv}{b}{n}\selectfont}%format
+    {\color{palered}\usefont{T1}{qhv}{b}{n}\selectfont}%format
 	{\thesubsubsection}%label
 	{0.5em}%sep
 	{}%before-code

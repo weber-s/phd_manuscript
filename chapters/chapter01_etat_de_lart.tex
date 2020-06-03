@@ -268,7 +268,6 @@ davantage de poussière minérale, les sites urbains davantage de marqueur de co
 \subsection{Impacts des aérosols sur l'écosystème terrestre}%
 \label{sub:impacts_des_aérosols_sur_l_écosystème_terrestre}
 
-
 \subsubsection{Impacts climatiques}%
 \label{ssub:impacts_climatiques}
 
@@ -347,24 +346,25 @@ les aérosols et leur composition chimique variée impacte directement de nombre
 écosystèmes terrestres, qu'ils proviennent de sources anthropiques comme c'est le cas pour le
 nitrate, ou de sources naturelles.
 
-\subsubsection{Impacts sanitaires}%
-\label{ssub:impacts_sanitaires}
+\subsection{Impacts sanitaires}%
+\label{sub:impacts_sanitaires}
 
 Finalement, l'impact sanitaire des aérosols sur la population humaine a commencé à être
 un sujet de recherche suite à l'industrialisation et aux épisodes de "smog" causant la
 mort de plusieurs personnes à Engis (Meuse, Belgique) en 1930, Donora (Pennsilvanie, USA)
 en 1948 ou encore le plus connu "Great smog of London", en 1952. Durant ces épisodes de
-pollutions, il est important de noter que la sur-mortalité due à l'exposition aigue durant
-l'épisode de pollution est très importante (jusqu'à 3 fois supérieure à la normale pour le
-smog de Londres), mais que la surmortalité persiste dans les mois qui suivent --pendant
-près d'un an pour le smog de Londres, alors même que les niveaux de pollutions étaient
-revenus à leurs états pré-décembre 1952 \autocite{bellReassessment2001}.
-Ces épisodes de pollutions intenses marquent le début de la prise de conscience de la
-population de la problématique de la pollution de l'air et on conduit à la première
+pollutions, il est important de noter que la sur-mortalité due à l'exposition aigue
+durant l'épisode de pollution est très importante (jusqu'à 3 fois supérieure à la normale
+pour le smog de Londres), mais que la surmortalité persiste dans les mois qui suivent
+--pendant près d'un an pour le smog de Londres, alors même que les niveaux de pollutions
+étaient revenus à leurs états pré-décembre 1952 \autocite{bellReassessment2001}.  Ces
+épisodes de pollutions intenses marquent le début de la prise de conscience par la
+population de la problématique de la pollution de l'air et ont conduit à la première
 législation anglaise en matière de qualité de l'air en 1956 avec le \textit{Clean Air
 Act}. Aussi, des programmes de mesures de la qualité de l'air pour différents polluants
 ont émergés et les actions misent en œuvre au niveau national et international ont permis
-en Europe une amélioration très sensible de la qualité de l'air (Figure~\ref{fig:chapter01/tendance_polluants}).
+en Europe une amélioration très sensible de la qualité de l'air
+(Figure~\ref{fig:chapter01/tendance_polluants}).
 
 \begin{figure}[ht]
     \centering
@@ -383,22 +383,55 @@ composés gazeux comme les \ce{NO_x} ou l'ozone) demeure actuellement la 5\ieme{
 mortalité dans le monde, représente un décés sur dix et est catégorisé "cancérogène
 certain" par le CIRC depuis 2013. En Europe, pour l'année 2013, c'est
 ainsi \num{800000} personne qui sont décédés des suites de maladies cardiovasculaires,
-cancer, pneumonie… directement imputable à la qualité de l'air
-\autocite{worldhealthorganizationAmbient2016}.
+cancer, pneumonie… directement attribuable à la qualité de l'air
+\autocite{worldhealthorganizationAmbient2016}. Récemment, \textcite{lelieveldLoss2020}
+estiment qu'en moyenne et à travers le monde, c'est 2.9 ans de vie perdue par personne
+qui sont imputables à la pollution de l'air, dont 1.7 ans "évitables" car provenant
+directement de sources anthropiques.
+
 En termes de bilan financier, la banque mondiale en collaboration avec l'Institute for
 Health Metrics and Evaluation (IHME) de l'université de Washington estimait que le coût
 associé aux décés prématurés de la seule année 2013 s'évaluait à plus de \$5.11 trillions
 de dollar dans le monde~\autocite{worldbankCost2016}.
 
 Afin de limiter cet impact sanitaire, de nombreux pays ont définis des seuils de
-concentrations de différents composés. Seulement ces seuils sont différents d'une
-institution à une autre. Par exemple, entre 2015 et 2017, le seuil de concentration
-journalière recommandé pour les \PMdix{} par l'union européenne (\SI{50}{\ugm} en moyenne
-journalière) était dépassé pour entre 13 et 19~\% de la population européenne, mais cette
-proportion augmente à entre 42 et 62~\% si l'on prend en compte le seuil recommandé de
-l'OMS de \SI{20}{\ugm} en moyenne annuelle~\autocite{europeanenvironmentagencyAir2019}.
-De plus, il est à noter qu'il n'existe pas de seuil à partir duquel l'exposition aux PM
-est inoffensif.
+concentrations de différents composés (voir Tableau~\ref{tab:seuil_PM} pour les PM).
+Seulement ces seuils sont différents d'une institution à une autre. Par exemple, entre
+2015 et 2017, le seuil de concentration journalière recommandé pour les \PMdix{} par
+l'union européenne (\SI{50}{\ugm} en moyenne journalière) était dépassé pour entre 13 et
+19~\% de la population européenne, mais cette proportion augmente à entre 42 et 62~\% si
+l'on prend en compte le seuil recommandé de l'OMS de \SI{20}{\ugm} en moyenne
+annuelle~\autocite{europeanenvironmentagencyAir2019}.  De plus, il est à noter qu'il
+n'existe pas de seuil à partir duquel l'exposition aux PM est inoffensif.
+
+\begin{table}[ht]
+    \begin{ThreePartTable}
+        \centering
+        \caption{Seuils de concentration de PM recommandés par différents organismes.}
+        \label{tab:seuil_PM}
+        \begin{tabular}{ccSc}
+            \toprule
+            Organisme       & Polluant & {Concentration (\si{\ugm})} & Période \\
+            \midrule
+            OMS\tnote{a}    & \PMdc  & 10 & moyenne annuelle       \\
+            OMS\tnote{a}    & \PMdc  & 25 & moyenne sur \SI{24}{h} \\
+            OMS\tnote{a}    & \PMdix & 20 & moyenne annuelle       \\
+            OMS\tnote{a}    & \PMdix & 50 & moyenne sur \SI{24}{h} \\
+            Europe\tnote{b} & \PMdc  & 25 & moyenne annuelle       \\
+            Europe\tnote{b} & \PMdc  & 20 & moyenne sur 3 ans      \\
+            Europe\tnote{b} & \PMdix & 40 & moyenne annuelle       \\
+            Europe\tnote{b} & \PMdix & 50 & moyenne sur \SI{24}{h} \\
+            France\tnote{c} & \PMdc  & 25 & moyenne annuelle \\
+            France\tnote{c} & \PMdix & 50 & moyenne sur \SI{24}{h} (\SI{<35}{jour\per an}) \\
+            France\tnote{c} & \PMdix & 40 & moyenne annuelle \\
+            \bottomrule
+        \end{tabular}
+        \begin{tablenotes}
+        \item[a] OMS air quality guideline \cite{worldhealthorganizationWHO2006}
+        \item[b] Directive 2008/50/EC \cite{officialjournaloftheeuropeanunionDirective2008}
+        \end{tablenotes}
+    \end{ThreePartTable}
+\end{table}
 
 \section{Détermination des sources d'émission des PM}%
 \label{sec:source_apportionment_of_pm}
@@ -1220,7 +1253,7 @@ oxydants.  Depuis, de nouvelles études ont été publiés, et seront discutés 
 chapitre~\ref{cha:application_to_15_sites_in_France}.
 
 
-\section{Problématique abordée dans cette thèse}%
+\section{Objectifs de cette thèse}%
 \label{sec:positionnement_de_cette_thèse}
 
 Ma thèse s'inscrit donc dans cette double problématique de l'identification et de la
@@ -1228,67 +1261,85 @@ quantification des contributions massiques des différentes sources d'émission 
 extérieur, mais aussi de leur contribution au nouvel indicateur qu'est le potentiel
 oxydant.
 
-\subsection{Méthodologie générale}%
-\label{sub:méthodologie_general}
+Premièrement, il s'agit d'améliorer l'outil de déconvolution des sources de PM
+\textit{Positive Matrix Factorization}, non pas par nouveau développement mathématique de
+résolution de l'équation de conservation des masses, mais par l'élaboration d'une
+expertise dans les différentes paramétrisations de ce modèle, dans son entraînement et
+dans la critique de ses résultats. Notamment, la questions de la présence de l'ensemble
+des sources majoritaires se posera dans le chapitre~\ref{cha:todo}, à travers
+l'implémentation de nouveux traceurs chimiques ou isotopiques.
+Également, les incertitudes des solutions PMF ne sont quasiment jamais explicités alors
+que c'est une question centrale qui intéressent d'autant plus les décideurs publique. Mes
+travaux tenterons donc de quantifier les incertitudes des contributions des sources aux
+espèces mesurées.
+Aussi, pour pouvoir généraliser des études PMF à différents sites, il faut auparavant
+non seulement s'assurer que les méthodes sont similaires entre les études (mêmes espèces
+chimiques…) mais aussi estimer objectivement la similitude de deux facteurs dit provenant
+de la même source d'émission, c'est-à-dire comparer les solutions entres elles.
 
-\paragraph{Choix du modèle d'attribution de source}%
-\label{par:choix_du_modèle_d_attribution_de_source}
+Blabla PO
 
-Le choix du modèle source-récepteur PMF est motivé par son aptitude à reproduire les
-concentrations locales sans préjugés a priori de la situation du site de prélèvement. La
-capacité du ME-2 à introduire des contraintes géochimiques est également un atout
-important justifiant l'usage du modèle PMF.
-Enfin, les précédents travaux au sein de l'équipe CHIANTI d'Antoine Waked, Benjamin Golly,
-Flory Chevrier et Dallia Salameh sur le modèle PMF représentent également une expertise
-appréciable dans le choix de cette méthode.
-
-\paragraph{Échantillons et analyses}%
-\label{par:échantillons_et_analyses}
-
-Les prélèvements, mesures de concentrations des différentes espèces chimiques et
-mesures du PO s'appuieront sur les travaux préalables et en cours de l'équipe CHIANTI et
-particulièrement du plateau analytique Air-O-Sol ainsi que la base de donnée accumulée
-depuis plusieurs année et en construction permanente.
-
-\paragraph{PO et chimie ou PO et sources ?}%
-\label{par:chimie_ou_sources_}
-
-Le choix a été fait de ne pas utiliser directement les espèces chimiques comme prédicteur
-des PO. En effet, sur la myriade d'espèces chimiques présente sur les aérosols, seule une
-partie infime est effectivement mesurée. Il n'est donc pas possible d'avoir une vue
-exhaustive de la chimie des PM et l'attribution d'un PO intrinsèque par espèce chimique
-présentera nécessairement des biais du fait de corrélation entre une espèce mesurée mais
-non redox-active (i.e. le lévoglucosan) et des espèces co-émise mais non mesurée (i.e. les
-quinones). Quand bien même toutes les espèces seraient mesurées, on se retrouverait alors
-avec un système d'équation a beaucoup trop d'inconnue par rapport au nombre
-d'observation (i.e jours de prélèvement), rendant caduque sa résolution.
-À contrario, les facteurs PMF aggrègent toutes cette chimie en quelques variables, tout en
-n'ayant besoin que de quelques espèces traceuses des émissions ou processus. Par exemple,
-la combustion de biomasse est déterminée à partir de la présence de lévoglucosan. On pourra
-donc attribuer un PO à la source \textit{combustion de biomasse}, avec concentration en PM
-connue et un profile chimique déterminé (et partiellement inconnue), tout en ne sachant
-pas exactement quelles espèces chimiques de cette source sont responsables de son PO.
-
-La méthodologie générale suivante est donc adoptée et résumée sur le schéma
-synthétique~\ref{fig:chapter01/workflow} :
-
-\begin{enumerate}
-    \item Grâce aux mesures de chimie et le modèle PMF, retrouver les sources d'émissions
-        de PM;
-    \item Coupler les données issues de la PMF et les mesures de PO pour construire un
-        modèle d'inversion permettant l'estimation de la contribution des différentes
-        sources aux potentiels oxydants ;
-    \item Estimer la variabilité géographique du potentiel oxydant des sources de PM.
-\end{enumerate}
-
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\linewidth]{chapter01/workflow.png}
-    \caption{Méthodologie générale suivie au cours de cette thèse.}%
-    \label{fig:chapter01/workflow}
-\end{figure}
-
+% \subsection{Méthodologie générale}%
+% \label{sub:méthodologie_general}
+%
+% \paragraph{Choix du modèle d'attribution de source}%
+% \label{par:choix_du_modèle_d_attribution_de_source}
+%
+% Le choix du modèle source-récepteur PMF est motivé par son aptitude à reproduire les
+% concentrations locales sans préjugés a priori de la situation du site de prélèvement. La
+% capacité du ME-2 à introduire des contraintes géochimiques est également un atout
+% important justifiant l'usage du modèle PMF.
+% Enfin, les précédents travaux au sein de l'équipe CHIANTI d'Antoine Waked, Benjamin Golly,
+% Flory Chevrier et Dallia Salameh sur le modèle PMF représentent également une expertise
+% appréciable dans le choix de cette méthode.
+%
+% \paragraph{Échantillons et analyses}%
+% \label{par:échantillons_et_analyses}
+%
+% Les prélèvements, mesures de concentrations des différentes espèces chimiques et
+% mesures du PO s'appuieront sur les travaux préalables et en cours de l'équipe CHIANTI et
+% particulièrement du plateau analytique Air-O-Sol ainsi que la base de donnée accumulée
+% depuis plusieurs année et en construction permanente.
+%
+% \paragraph{PO et chimie ou PO et sources ?}%
+% \label{par:chimie_ou_sources_}
+%
+% Le choix a été fait de ne pas utiliser directement les espèces chimiques comme prédicteur
+% des PO. En effet, sur la myriade d'espèces chimiques présente sur les aérosols, seule une
+% partie infime est effectivement mesurée. Il n'est donc pas possible d'avoir une vue
+% exhaustive de la chimie des PM et l'attribution d'un PO intrinsèque par espèce chimique
+% présentera nécessairement des biais du fait de corrélation entre une espèce mesurée mais
+% non redox-active (i.e. le lévoglucosan) et des espèces co-émise mais non mesurée (i.e. les
+% quinones). Quand bien même toutes les espèces seraient mesurées, on se retrouverait alors
+% avec un système d'équation a beaucoup trop d'inconnue par rapport au nombre
+% d'observation (i.e jours de prélèvement), rendant caduque sa résolution.
+% À contrario, les facteurs PMF aggrègent toutes cette chimie en quelques variables, tout en
+% n'ayant besoin que de quelques espèces traceuses des émissions ou processus. Par exemple,
+% la combustion de biomasse est déterminée à partir de la présence de lévoglucosan. On pourra
+% donc attribuer un PO à la source \textit{combustion de biomasse}, avec concentration en PM
+% connue et un profile chimique déterminé (et partiellement inconnue), tout en ne sachant
+% pas exactement quelles espèces chimiques de cette source sont responsables de son PO.
+%
+% La méthodologie générale suivante est donc adoptée et résumée sur le schéma
+% synthétique~\ref{fig:chapter01/workflow} :
+%
+% \begin{enumerate}
+%     \item Grâce aux mesures de chimie et le modèle PMF, retrouver les sources d'émissions
+%         de PM;
+%     \item Coupler les données issues de la PMF et les mesures de PO pour construire un
+%         modèle d'inversion permettant l'estimation de la contribution des différentes
+%         sources aux potentiels oxydants ;
+%     \item Estimer la variabilité géographique du potentiel oxydant des sources de PM.
+% \end{enumerate}
+%
+%
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=0.5\linewidth]{chapter01/workflow.png}
+%     \caption{Méthodologie générale suivie au cours de cette thèse.}%
+%     \label{fig:chapter01/workflow}
+% \end{figure}
+%
 \subsection{Questionnement et plan de la thèse}%
 \label{sub:plan_de_la_thèse}
 
