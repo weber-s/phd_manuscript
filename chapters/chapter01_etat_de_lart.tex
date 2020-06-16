@@ -441,159 +441,6 @@ Afin de pouvoir avoir un impact sur les concentrations de polluants, il est prim
 retracer leur provenance. Plusieurs techniques d'analyses existe, qu'elles soient purement
 physiques ou géochimiques.
 
-\subsection{Signature chimique des sources d'émissions}%
-\label{sec:signature_chimique_des_sources_demissions}
-
-Chaque source d'émission n'émettant pas les mêmes composés, une analyse chimique
-des PM permet l'estimation des contributions des différentes sources aux PM observés.
-Seulement, il n'est pas possible de mesurer l'entièreté des plus de 1000 espèces chimiques présentes
-dans les aérosols.
-Il convient donc de connaître au mieux la signature chimique des différentes sources
-d'émissions, notamment via des prélèvements à l'émission en condition
-réelle ou en chambre d'étude. La connaissance des espèces spécifiquement émises ou des
-ratios d'émissions entre différentes espèces des différentes sources permetront par la
-suite l'attribution de la contribution de ces sources aux PM observés.
-
-\subsubsection{Analyse chimique des particules fines}%
-\label{ssub:analyse_chimique_des_particules_fines}
-
-Les données utilisées pour cette thèse proviennent d'analyse faite en laboratoire à
-partir de prélèvement de terrain (mesure \textit{off-line}) via des préleveurs
-automatiques haut-volume, selon les recommandations de
-l'EN~16450:2017~\autocite{cenAmbient2017a}, chaque prélèvement correspondant à une
-journée d'échantillage. Les prélèvements étant réalisé sur des filtres en fibre de quartz
-pré-chauffée, grâce à un préleveur haut-débit (\SI{30}{\cubic\m\per\hour}) DA80 digitel.
-La fraction prélevée correspond toujours aux \PMdix{}.
-
-Dans les espèces couramment analysés et utilisés durant cette thèse, on retrouve :
-
-\begin{description}
-    \item[OC et EC] le carbone organique et élémentaire, mesuré par méthode
-        thermo-optique~\autocite[Sunset Lab. Analyser]{birchElemental1996}, par le
-        protocole EUSAAR-2~\autocite{cavalliStandardised2010,cenAmbient2017a};
-
-    \item[Ions] \ce{Cl-}, \ce{NO3^-}, \ce{SO4^2-}, \ce{NH4+}, \ce{Na+}, \ce{K+},
-        \ce{Mg^2+}, \ce{Ca^2+} et acide méthane suflonique (MSA), déterminés par
-        chromatographie ionique~\autocite{jaffrezoSeasonal2005,cenAmbient2017b};
-
-    \item[Métaux et éléments traces] Al, Ag, As, Ba, Be, Br, Bi, Ca, Cd, Ce, Co, Cr, Cs,
-        Cu, Fe, K, La, Li, Mg, Mn, Mo, Na, Ni, Pb, Pd, Pt, Rb, Sb, Sc, Se, Sn, Sr, Ti, V,
-        Zn et Zr, mesurés par ICP-AES ou
-        ICP-MS~\autocite{allemanPM102010,mbengueSizedistributed2014,cenAmbient2005}
-
-    \item[Monosacharides] Levoglucosan, mannosan, galactosan, arabitol, manitol, sorbitol
-        et glucose, analysés par
-        HPLC-PAD~\autocite{piotQuantification2012,wakedSource2014}.
-
-\end{description}
-
-\subsubsection{Profile chimique des sources d'émissions courantes}%
-\label{ssub:profile_chimique_des_sources_d_émissions_courantes}
-
-\begin{description}
-    \item[Combustion de biomasse] provenant en Europe majoritairement du chauffage
-        domestique. Le type de combustible et les conditions de combustion influence
-        grandement sur les espèces chimiques émises. On retrouve cependant toujours de
-        l'OC en grande quantité, ainsi que de l'EC. Aussi, si le BC est mesuré, il est
-        possible d'estimer la part du BC provenant de cette source de combustion \BCwb{}
-        (\textit{BC wood burning}).
-        Provennant de la pyrolyse de la cellulose, le lévoglucosan, mannosan et
-        galactosan forment 3 proxy spécifique de cette source, car il n'existe pas d'autre
-        procédé connu conduisant à leur présence dans l'atmosphère que la combustion de
-        bois~\autocite{jordanLevoglucosan2006,puxbaumLevoglucosan2007}.
-        Enfin, du potassium \ce{K+} et du rubidium Rb sont également associés à cette
-        source~\autocite{navaBiomass2015,gollyEtude2014,chevrierChauffage2016}.
-
-    \item[Traffic routier] émettant différents métaux (Ca, Cu, Mo, Pb, Sb, Sn, Fe, Zr,
-        Ti) et de la matière carbonée --notamment de l'EC-- et des composés organiques
-        (hopanes, alcanes)~\autocite{schauerCharacterization2006,charronIdentification2019}. Les émissions
-        véhiculaires sont parfois séparées en 2 sous-types : émissions à l'échappement
-        provenant de la combustion~\autocite{allenSize2001,huMetals2009,vianaSource2008},
-        et émissions hors-échappement (abrasion de la route, usure des freins et pneus,
-        etc.)~\autocite{grigoratosBrake2015,sandersAirborne2003,sternbeckMetal2002}.
-
-    \item[Émission primaire biogénique] directement émise par les micro-organismes du sol
-        et des plantes, qui, de par leur activité biologique, émettent notamment
-        différents polyols : arabitol, mannitol,
-        sorbitol~\autocite{bauerSignificant2008,yttriAmbient2007,samakePolyols2019}.
-
-    \item[Poussière crustale] remise en suspension par le vent ou les activités humaines
-        (mine, carrière, etc). Ce profil chimique reflète celui de la croute continentale
-        et présente donc du \ce{Mg^2+}, \ce{Ca^2+}, Ti, Mn et Fe, mais très peu de composés
-        organiques~\autocite{almeidaSource2005,dallostoHourly2013,morenoVariations2011,putaudSizesegregated2004}.
-
-    \item[Sel de mer] issue des embruns marins, présentant donc une grande proportion de
-        \ce{Na+} et \ce{Cl-}, mais également de
-        \ce{Mg^2+}~\autocite{belisCritical2013,odowdMarine1997,pioClimatology2007}. Il
-        est à noter que le sel de route, notamment en vallées alpines, présente la même
-        composition chimique~\autocite{airrhone-alpesInfluence2012}.
-
-    \item[Industrie] Les profils chimiques des sources industrielles sont très variables
-        car dépendent directement du type d'industrie. Cependant, il est courrant d'y
-        retrouver des métaux, du \SOq et certains composés organiques spécifiques (HAP et
-        HAPs, hopanes...) selon les procédés
-        industriels~\autocite{sylvestreComprehensive2017}.
-
-    \item[Port et bateau] proche des côtes notamment. Marqué par la présence de V et Ni,
-        provenant de la combustion de fuel lourd, mais également de composés organiques
-        comme les hopanes.
-
-    \item[Agriculture] émetant notamment du nitrate et de l'ammoniac à travers les
-        fertilisants de synthèse ou de fumier. Cette source d'émission est notamment
-        responsable des pics de pollution printanier, lors des épandages agricole à cette
-        période.
-
-    \item[Volcan] beaucoup plus ponctuel --surtout en Europe-- mais néanmoins possible
-        (par exemple l'Eyjafjöll en 2010), les volcans émettent de grande quantité de
-        poussère minérale et d'éléments traces, mais également de soufre et donc de \SOq.
-
-\end{description}
-
-\subsubsection{"Sources" ou processus secondaires}%
-\label{ssub:_sources_secondaires}
-
-Aux sources primaires précédemment listées, il faut ajouter les processus secondaires liés
-à la photochimie ou au vieillissement des aérosols, qui conduisent à la formation de
-nouvelles espèces chimiques.
-
-\paragraph{Aérosol organique secondaire}%
-\label{par:aérosol_organique_secondaire}
-
-Notamment, la biologie est connue pour émettre du dimethyl sulfate (DMS), s'oxydant en
-MSA dans l'atmosphère. Sa présence dans les PM trace donc le vieillissement d'un aérosol
-d'origine organique.  L'oxalate est également un composé issu de réaction photochimique,
-mais la diversité des composés primaires et voie de réaction rend extrêmement difficile
-l'identification de la source originelle.
-On nomme alors ces aérosols \textit{secondary organic aerosol} (SOA), dont le
-dénominateur commun est de présenter une fraction importante de matière organique
-oxygéné. Il est compliqué avec des analyses moléculaires d'en déterminer l'origine et des
-travaux sont en cours en ce sens et présenté dans le chapitre~\ref{chap:todo}.
-
-Il faut noter que d'autres techniques d'analyses, notamment l'ACSM, permettent une
-analyse plus avancée de cette fraction organique de l'aérosol, sans pour autant pouvoir
-caractériser moléculairement les éléments retrouvés.
-
-\paragraph{Aérosols inorganique secondaire}%
-\label{par:aérosols_inorganique_secondaire}
-
-Mais la partie organique n'est pas la seule à réagire dans l'atmopshère. Ainsi, les NOx,
-gazeux, émis notamment par le transport routier, peuvent condensés en phase particulaire
-lorsqu'ils s'associent à l'ammoniac, provenant du secteur agricole, pour former du
-nitrate d'ammonium \ce{NO3NH4}. Il en est de même pour le \ce{SO2} émis par différentes
-sources ou des fonctions sulfatés de la matière organique, et l'ammoniac, condensant en
-sulfate d'ammonium \ce{SO4(NH4)2}.
-
-\paragraph{Vieillissement et volatilité}%
-\label{par:vieillissement_et_volatilité}
-
-Aussi, la partie la plus volatile de la phase particulaire tend à s'évaporer et rejoindre
-la phase gaseuse au cours du temps. C'est ainsi qu'après plusieurs jours de transport
-dans l'atmosphère, le sel de mer peut avoir ''dégazer'' le chlore présent dans son réseau
-cristallin, et présenté des substitutions avec du sulfate ou du nitrate. De même que la
-sodium peut avoir été remplacé par d'autres cations comme le potassium ou le magnésium.
-Souvent, ce procédé est associé a une augmentation de la matière organique liée à cet
-aérosol.
-
 \subsection{Modèle d'attribution des sources}%
 \label{sec:source_apportionment_model}
 
@@ -603,8 +450,8 @@ apportionment} (SA)). La première est fondée sur notre connaissance des
 émissions et de la météorologie et calcul les réactions physico-chimiques depuis les
 sources jusqu'au lieu d'étude (modèle dit de chimie-transport (\textit{chemical transport
 model} (CTM)) alors que la deuxième s'évertue à mesurer en un point donné
-la chimie des PM et par traitement statistique, attribue a différente source ou
-''facteur'' leur contribution aux concentrations observées (modèle dit récepteur
+la chimie des PM et par traitement statistique, attribue à différentes sources ou
+''facteurs'' leurs contributions aux concentrations observées (modèle dit récepteur
 (\textit{receptor model} RM)).
 
 \subsubsection{Modèle déterministe de chimie-transport}%
@@ -624,7 +471,7 @@ long se retrouvent dans le SNAP 080503 (ou \textit{Nomenclature For Reporting} (
 1.3.A.c) autrement dit Énergie - Combustion - Aviation - Aviation civile de plus de
 \SI{100}{m})~\autocite{europeanenvironmentagencyEMEP2019}.
 À chacun de ces SNAP est associé un profile d'émission (\ce{O3}, \ce{SO2}, NOx, \ce{NH3}, \PMdix, \PMdc,
-VOC principalement).
+VOC principalement), obtenu soit par mesure directe, soit par calcul.
 
 Vient ensuite un inventaire de ces sources d'émissions sous forme de cadastre géographique
 et temporelle. Notamment la \textit{Convention on Long-Range Transboundary Air
@@ -647,6 +494,11 @@ LOTOS-EUROS...
 La raison de la pluralité de ces modèles provient des différentes paramétrisations
 possibles des équations physiques, mais également des choix conceptuels de recherche.
 
+\paragraph{Limitations}%
+\label{par:limitations}
+
+Comparaison Chimire-DECOMBIO : \textcite{bessagnetHigh2020}
+
 \paragraph{Source apportionment}%
 \label{par:source_apportionment}
 
@@ -654,18 +506,19 @@ Concernant l'attribution des sources, il est possible d'utiliser deux techniques
 des CTM:
 
 \begin{enumerate}
-    \item Faire une première simulation incluant toutes les sources d'émissions, puis une
-        deuxième avec une source en moins. La différence reflétant l'impacte de la source
-        supprimée sur les concentrations ambiantes ;
-    \item Tracer la provenance de chacunes espèces chimiques lors des schémas réactionnels
-        (\textit{source labelling} ou \textit{tagged species}).
+    \item Faire une première simulation incluant toutes les sources d'émissions (référence
+        ou témoin), puis une deuxième simulation avec une source d'émission en moins. La
+        différence reflétant l'impacte de la source supprimée sur les concentrations
+        ambiantes ;
+    \item Garder en mémoire la provenance de chacunes des espèces chimiques lors des
+        schémas réactionnels (technique dite de \textit{source labelling} ou \textit{tagged species}).
 \end{enumerate}
 
 Seulement, du fait des nombreux processus non linéaires, la suppression d'une source
 d'émission aura des répercussions beaucoup plus complexe que la simple diminution des
 concentrations propre à cette source (par exemple, des NOx pourraient ne pas passer en
-phase particulaire du fait d'un manque d'ammoniac). La première solution correspond donc à
-se demander 
+phase particulaire du fait d'un manque d'ammoniac, ou inversement). La première technique
+correspond donc à se demander 
 \begin{quote}
     Si les émissions de cette source sont diminuée ou supprimée, quels impacts cela va-t-il
     avoir sur les concentrations finales ?
@@ -675,29 +528,39 @@ alors que la deuxième répond à
     Dans la concentration ambiante de PM, à combien s'estime la contribution de cette source
     d'émission ?
 \end{quote}
+Ce sont bien deux questions différentes avec leurs légitimités propres.
 Cette dernière technique a commencé été implémenté plus récemment dans certains
 CTM~\autocite{wangDevelopment2009,wagstromDevelopment2008,kranenburgSource2013,brandtContribution2013}
-et détaillé dans le rapport de~\textcite{mirceaEuropean2020}.
+et détaillée dans le rapport de~\textcite{mirceaEuropean2020}. Elle présente également
+l'avantage de pouvoir tagguer non seulement les sources des espèces chimiques, mais
+également leur provenance géographique, c'est-à-dire leur lieu d'émission.
 
 Cependant l'utilisation des CTM présente certaines limites du fait de leur complexité.
 Notamment, il semble illusoire de pouvoir un jour inclure toutes les réactions chimiques
-possibles dans les modèles déterministes, et quand bien même ce serait le cas --car les
-modèles réactionnels sont de plus en plus poussées--, il faudrait alors avoir des
-inventaires d'émissions beaucoup plus complet et précis temporellement, avec aucune
-certitude d'un oubli potentiel d'une source non prise en compte.  Aussi, la limitation
-physique des modèles météorologiques se retrouvent dans les CTM. Il est donc compliqué
-d'envisager, du fait du coût de calcul et de stockage, une simulation à \SI{10}{m} de
-résolution spatiale (ou moins), ce qui serait cependant nécessaire pour appréhender
-correctement des phénomènes précis, comme les inversions thermiques des vallées alpines.
+possibles dans les modèles déterministes. Notament, les interactions aérosols/neiges ne
+sont pas encore complètement compris ni bien représenté dans ces modèles.
+
+Quand bien même ce serait le cas --car les modèles réactionnels sont de plus en plus
+poussées--, il faudrait alors avoir des inventaires d'émissions beaucoup plus complet et
+précis temporellement, avec aucune certitude d'un oubli potentiel d'une source non prise
+en compte. Par exemple une industrie locale non-encore repertoriée, la sous-estimation de
+la contribution d'un écosystème, une consommation de bois de chauffage individuel non
+inventorié, etc.
+
+Aussi, la limitation physique des modèles météorologiques se retrouvent dans les CTM. Il
+est donc compliqué d'envisager, du fait du coût de calcul et de stockage, une simulation à
+\SI{10}{m} de résolution spatiale (ou moins), ce qui serait cependant nécessaire pour
+appréhender correctement des phénomènes précis, comme les inversions thermiques des
+vallées alpines.
 
 \subsubsection{Modèles récepteurs}%
 \label{ssub:model_recepteur}
 
-À l'inverse, il est possible d'estimer les sources contribuant aux concentrations
+À l'inverse des CTM, il est possible d'estimer les sources contribuant aux concentrations
 ambiantes en un lieu donné sans la moindre information météorologique ou simulation
 déterministe. Pour cela, il convient de faire des prélèvements sur le lieu d'étude,
-d'analyser la chimie que l'on y trouve, et à l'aide de modèle statistique, de retrouver
-les différents profils de source et leur contribution, traduisible pas l'équation
+d'analyser la chimie que l'on y trouve et retrouver à l'aide de modèle statistique
+les différents profils de source et leurs contributions, traduisible pas l'équation
 d'équilibre des masses
 \begin{align}
     \label{eq:mass_balance}
@@ -706,31 +569,33 @@ d'équilibre des masses
 où $X$ est la matrice de dimension $n\times m$ des observations, $G$ est la matrice des
 contributions de taille $n\times p$ et $F$ la matrice des profils de taille $p \times n$,
 avec $n$ le nombre d'échantillon, $m$ le nombre de variables chimiques mesurées et $p$ le
-nombre de facteur. Un facteur peut être une source d'émission (combustion de biomasse par
-exemple), mais également regrouper des espèces chimiques provenant d'un même processus
-secondaire (nitrate d'ammonium par exemple).
+nombre de facteur.
+Un \textit{facteur} peut être une source d'émission (combustion de biomasse par exemple),
+mais également regrouper des espèces chimiques provenant d'un même processus secondaire
+(nitrate d'ammonium par exemple).
 Il est courrant d'exprimer $X$ en \si{\ugm}, $G$ en \si{\ugm} ou concentration
 normalisée~\si{[-]} et $F$ en \si{\micro\g\per\micro\g} ou \si{\ugm}.
 
-Si l'on mesure $X$, ce qui nous intéresse ici est de connaître $G$ et/ou $F$. Si l'on
-admet que l'on connait a priori les profils d'émissionis possibles, alors $F$ est connu, et
-l'on cherche à estimer $G$. Le modèle de déconvolution adapté est alors le
+Si l'on mesure $X$, ce qui nous intéresse ici est de connaître $G$ et/ou $F$.
+Si l'on admet que l'on connait a priori les profils d'émissions possibles, alors $F$ est
+connue et l'on cherche à estimer $G$. Le modèle de déconvolution adapté est alors le
 \textit{Chemical Mass Balance} (CMB). À l'opposé, on peut n'avoir aucune information a
 priori à la fois sur les contributions et les profils d'émissions. On utilisera alors le
-modèle de déconvolution \textit{Positive Matrix Factorization} (PMF).  Ces 2 types de
-modèles statistiques sont aux deux extrêmes d'un spectre de modèle de déconvolution depuis une
-information ''absolue'' des profils de sources à une absence totale d'information de ces
-mêmes profils.  Il existe cependant un continuum entre ces deux pôles (voir
-Figure~\ref{fig:chapter01/source_apportionment_methods}), et de nombreux modèles ont été
-développés et améliorés depuis la première étude de SA de \textcite{colucciAutomotive1965}
-utilisant la ''simple'' corrélation entre le \ce{CO} et le plomb et benzo(a)pyrène.  Une
-revue détaillée et historique du fonctionnement de ces différents modèles peut-être
-retrouvées dans les articles de
+modèle de déconvolution \textit{Positive Matrix Factorization} (PMF).
+
+Ces 2 types de modèles statistiques sont aux deux extrêmes d'un spectre de modèle de
+déconvolution depuis une information ``absolue'' des profils de sources à une absence
+totale d'information de ces mêmes profils.  Il existe cependant un continuum entre ces
+deux pôles (voir Figure~\ref{fig:chapter01/source_apportionment_methods}), et de nombreux
+modèles ont été développés et améliorés depuis la première étude de SA de
+\textcite{colucciAutomotive1965} utilisant la ``simple'' corrélation entre le \ce{CO} et
+le plomb et benzo(a)pyrène.  Une revue détaillée et historique du fonctionnement de ces
+différents modèles peut-être retrouvées dans les articles de
 \textcite{henryHistory1997,vianaSource2008,belisCritical2013,hopkeReview2016}.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.6\linewidth]{chapter01/source_apportionment_methods.png}
+    \includegraphics[width=0.7\linewidth]{chapter01/source_apportionment_methods.png}
     \caption{
         Connaissance a priori nécessaire pour les différents modèles de SA existant,
         depuis la simple analyse de facteur par ACP au modèle CMB. Crédit :
@@ -739,11 +604,41 @@ retrouvées dans les articles de
     \label{fig:chapter01/source_apportionment_methods}
 \end{figure}
 
-Dans cette thèse, seul le modèle PMF résolue grâce au solver ME-2 développé par
-\textcite{paateroMultilinear1999} a été utilisé, et va maintenant être décrit en détail.
+\subsubsection{Chemical mass balance CMB}%
+\label{ssub:chemical_mass_balance_cmb}
 
-\subsubsection{Modèle source récepteur PMF}%
+Le principe du CMB est de déterminer la contribution $G$ d'un nombre de source
+aux profils chimiques $F$ prédéfinis aux concentrations ambiantes $X$. Il est donc
+nécesaire de connaître les signatures chimiques des sources utilisées.
+
+Afin d'utiliser le modèle CMB --mais également pour d'autres buts-- l'US EPA construit
+depuis 1988 la base de donnée SPECIATE~\autocite{simonDevelopment2010}, répertoriant
+différents profils d'émission, dont la 5\ieme{}
+version a été publié en 2019~\autocite{u.s.environmentalprotectionagencySPECIATE2019}.
+Seulement, ces profils sont repésentatifs des sources présentent aux États-Unis et sont
+très certainements non transposable à d'autres régions du monde.
+En europe, il existe depuis 2016 une base de donnée similaire,
+SPECIEUROPE~\autocite{pernigottiSPECIEUROPE2016}, compilant des mesures à l'émission et
+d'autres types d'étude permettant d'estimer la signature chimique des profils d'émission.
+
+Cependant, des erreurs ou variabilités locales spécifiques au site recepteur sur ces
+profils peuvent conduire à une estimation erronée des contributions finales des
+différentes sources.
+Aussi, il est necessaire de choisir ou d'aggréger certains des >3000 profils de sources
+différents répertoriés afin de restreindre à une valeure réaliste le nombre de sources
+potentielle en un lieu donné.
+Enfin, les processus secondaires sont mal pris en compte dans ce modèle. L'exemple typique
+concerne l'aérosols inorganique secondaire sulfaté, représenté comme un mélange de sulfate
+et d'ammonium. Or ce facteur secondaire est souvent associé en réalité à de la matière
+organique ou d'autres espèces sulfatées.
+
+\subsubsection{Positive Matrix Factor PMF}%
 \label{ssub:pmf}
+
+Un modèle beaucoup plus agnostique que le CMB pour résoudre l'équation de conservation de
+la masse a été développé par~\textcite{paateroPositive1994}. Dans cette formulation,
+seule la matrice d'observation $X$ est connue, et les matrices de contribution $G$ et des
+profils chimiques $F$ sont inconnues.
 
 \paragraph{Formulation mathématique}%
 \label{par:formulation_mathématique}
@@ -794,9 +689,7 @@ système est invariant par rotation:
         &= (G \cdot T) \cdot (T^{-1} \cdot F) + E\\
         &= G' \cdot F' + E
 \end{align}
-et ainsi une infinité de solution coexistent. Pour estimer, et limiter, cette ambiguité
-rotationelle, le ME-2 permet notamment l'ajout de contrainte sur les matrices $G$ et $F$,
-limitant de fait le nombre de rotation possible de ces matrices.
+et ainsi une infinité de solution coexistent. 
 
 \paragraph{Interprétabilité du modèle PMF}%
 \label{par:interpretabilite_du_model_PMF}
@@ -840,9 +733,18 @@ figure~\ref{fig:chapter01/NMFvsPCA}).
 \label{par:applicabilité_en_science_de_l_atmosphère}
 
 Dans le cas qui nous intéresse ici, cela signifie que chacun des vecteurs de la matrice
-$F$ correspond à un profile d'emission, en \si{\ugm}, indépendant des autres profils, et
+$F$ correspond à un profil chimique, en \si{\ugm}, indépendant des autres profils, et
 que la matrice $G$ représente la contribution de chacun de ces profils au jour
 considéré, de manière cohérente avec l'équation de conservation de la masse.
+
+Puisque la PMF ne nous donne qu'un profil chimique, certains de ces profils représentent
+directement une source d'émission, et d'autres correspondent à un ensemble de processus
+conduisant à un profil chimique stable. On ne peut donc pas appeller ``source'' tous les ensembles
+identifiés par la PMF puisque certains ne sont pas à proprement parler émient tel quel et
+proviennent de processus physico-chimique ayant eu lieu après les émissions de ces
+composés.
+Le terme de \textbf{facteur} est donc utilisé pour désigner un profil chimique et sa
+contribution.
 
 L'application du modèle PMF a été utilisé de nombreuse fois, et a été grandement favorisé
 par son implémentation dans le logiciel de l'EPA: EPA PMF5.0~\autocite{norrisEPA2014}.
@@ -850,6 +752,46 @@ Si l'EPAPMF5 est massivement utilisé pour les données provenant d'analyse de
 filtre, l'utilisation de spectre de masse provenant de mesure d'AMS est facilité par
 l'utilisation du logiciel SoFi~\autocite{canonacoSoFi2013}. Ces deux logiciels utilisent
 le solveur ME-2 pour résoudre le système d'équation de la PMF.
+
+\paragraph{Estimation des incertitudes}%
+\label{par:incertitudes}
+
+Il existe différent type d'incertitude pour ce modèle : 1) la sensibilité aux données
+d'entrée (sur ou sous représentation de certains événements : impact d'un point
+``extrème'' par exemple) et 2) l'incertitude rotationelle~\autocite{brownMethods2015}.
+
+La première incertitude est évaluée à travers une méthode de \textit{bootstrap} consistant
+à rééchantilloner par block la matrice des observations $X$, à reconduire une simulation
+PMF et a faire correspondre chacun des nouveaux facteurs obtenus à ceux qui leur sont le
+plus proches dans la simulation initale.
+On obtient ainsi une incertitudes sur les profils chimiques mais également sur les
+contributions temporelles.
+Cela permet aussi d'évaluer si la solution initale était statistiquement peu fréquente
+dans l'espace des possibles ou si au contraire elle correspond à minimum de la fonction
+coût $Q$ relativement commun.
+
+L'incertitude rotationelle s'estime par méthode dite de \textit{displacment}. La gamme des
+valeurs possibles de chacune des espèces chimiques de chacun des profiles correspondant à
+une variation de la fonction coût $Q$ inférieur à une quantité donnée (par exemple $dQ =
+0.5\%$) est évaluée. Toutes ces valeurs sont alors possibles, et correspondent donc à
+l'incertitude rotationelle de la solution.
+
+\paragraph{Limitation de l'ambiguité et contrainte géochimique}%
+\label{par:limitation_de_l_ambiguité_et_contrainte_géochimique}
+
+Cependant, il est possible de limiter l'ambiguité rotationelle et donc de limité
+l'incertitude de la solution par l'ajout de contrainte géochimique au modèle statistique.
+Cela est rendu possible par le solver ME-2 qui permet notamment l'ajout de contraintes
+sur les matrices $G$ et $F$, limitant de fait le nombre de rotation possible de ces
+matrices. Ce faisant, l'utilisateur rajoute de la connaissance a priori au modèle qui
+était jusqu'alors purement statistique. C'est pourquoi dans la
+figure~\ref{fig:chapter01/source_apportionment_methods} le ME-2 n'est pas à l'extrèmité de
+l'axe : l'utilisateur rajoute de la connaissance sur les profils ou contributions
+temporelles des différents facteurs.
+
+L'ajout de ces contraintes limites de fait les rotations possibles des matrices $F$ et
+$G$, conduisant non-seulement à des solutions géochimiquement plus compréhensibles mais
+aussi à une incertitude plus faible des profils des différents facteurs.
 
 \paragraph{Subjectivité de l'expérimentateur}%
 \label{par:subjectivité_de_l_expérimentateur}
@@ -891,10 +833,10 @@ Enfin, l'identification des facteurs est laissé à l'appréciation de l'expéri
 faut donc savoir identifier quel profil d'émission peut être responsable du facteur
 observé. Cette nomenclature des facteurs est elle aussi subjectif et non standardisée :
 véhiculaire, émission routière, trafic routier, combustion diesel, etc. peuvent être
-différent nom donné au même profil, par différents utilisateurs.
-Des travaux récents, portés par le groupe FAIRMODE du JRC, portent notamment sur une
-harmonisation de cette nomenclature, à travers la construction d'une donnée européenne de
-profil de source standardisée et hierarchisé : SPECIEUROPE~\autocite{pernigottiSPECIEUROPE2016}.
+différents noms donnés au même profil, par différents utilisateurs.
+% Des travaux récents, portés par le groupe FAIRMODE du JRC, portent notamment sur une
+% harmonisation de cette nomenclature, à travers la construction d'une donnée européenne de
+% profil de source standardisée et hierarchisé : SPECIEUROPE~\autocite{pernigottiSPECIEUROPE2016}.
 
 Pour toutes ces raisons, la comparabilité des profils issus de différentes études PMF
 est donc un sujet en cours de recherche, et sera abordé plus en détail dans le
@@ -910,6 +852,173 @@ chapitre~\ref{cha:developpement_methodologique_dattribution_des_sources_de_PM}.
 contributions temporelles. Source: \textcite{belisEvaluation2020}}%
     \label{fig:chapter01/belisEvaluation2020_fig2a}
 \end{figure}
+
+\subsection{Atouts et limitations des différents modèles récepteurs}%
+\label{ssub:atouts_et_limitations_des_différents_modèles_récepteurs}
+
+Les 3 types de modèles listés précedemments (CTM, CMB et PMF) ne sont pas les seuls
+utilisés, mais représentent néanmoins la très grandes majorités des études d'attribution
+des sources. Leurs atouts et limitations sont repris dans le
+tableau~\ref{tab:comparison_SA} et nous expliqueront dans cette partie plus en avant le
+choix du modèle PMF avec analyse chimique sur filtre pour cette thèse.
+
+\subsubsection{La PMF : modèle théoriquement le moins biaisé par l'information a priori}%
+\label{ssub:choix_du_modèle_pmf}
+
+Lorsque l'on s'intéresse à un site particulier, le contexte géographique peut nous donner
+des indications sur les sources majoritaires. Seulement, prédéfinir à l'avance les sources
+possibles résulte en un biai évident : on ne voit que ce que l'on s'attend à voir.
+L'utilisation des CTM ou du CMB ne nous permet donc pas de découvrir de nouvelles sources
+locales. Au mieux, le modèle échoueron à reproduire les observations, ce qui indiquerai
+une source ou un processus manquant.
+
+Au contraire, la PMF étant totalement agnostique aux sources ou processus réels, les
+facteurs déterminés reflète les observations locales sans biai. Ainsi, l'ajout d'une
+espèce peut conduire à découvrir et quantifier une nouvelle source d'émission ou processus
+atmosphérique, jusqu'alors non prise en compte ou sous-estimée, comme nous le verrons dans
+le chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}. À noter
+également que la réciproque est vrai : la non-prise en compte d'une espèce chimique peut
+conduire à ne pas identifier un facteur important, ayant un impact directe sur la
+contribution des autres facteurs aux PM.
+Toute la difficulté réside dans le choix des ``bonnes espèces'' et en l'interprétation de
+ce modèle, fondé sur nos connaissances géochimiques.
+
+\subsubsection{Analyses chimiques ou spectroscopie de masse}%
+\label{ssub:analyses_chimiques_ou_spectroscopie_de_masse}
+
+Comme expliqué précédemment, les PM sont composés en grande majorités de matière organique
+--tout du moins dans les écosystèmes européens.  Devant la myriade d'espèce chimique la
+constituant, la caractérisation exhaustive de cette matière organique est illusoire.
+Pourtant, il est possible de décrire cette matière organique de manière extrèmement
+précise par spectroscopie de masse (\textit{aerosol mass spectrometer} (AMS)). On obtient alors des
+fragments d'espèces chimiques ionisées, caractérisés par leur ratio masse sur charge ionique
+($m/z$ ou Th).
+
+L'avantage principale est la quasi exhaustivité et la posibilité de
+résolution temporelle fine pouvant aller à un échantillon toutes les 2 minutes
+\autocite{marmureanuOnline2020}.  Le désavantage majeure est la quantité extrèmement
+importante de données générées à analyser. En plus, l'identification des fragments en
+facteur PMF est difficilement interprétable en terme de source d'émission. En effet, si
+l'on retrouve des facteurs primaires comme l'\textit{hydrocarbon-like organic} (HOA)
+pouvant être relié au trafic ou le \textit{biomass burning organic aerosol} (BBOA),
+certains, reflétant des processus secondaires, sont plus ``abstrait'' et classé selon leur
+degrée d'oxygénation : \textit{less-oxidized oxygenated organic aerosol} (LO-OOA) ou
+encore \textit{more-oxidized oxygenated organic aerosol} (MO-OOA).
+Enfin, l'utilisation de PMF sur données AMS présente aussi la limitation de ne prendre en
+compte que la matière organique. Il est donc difficile voir impossible d'estimer la
+contribution des poussières crustal, présentant très peu ou pas de matière organique. De
+même, les émissions secondaires du trafic comme l'usure des freins ou des pneu ne peuvent
+pas être retrouvées par PMF-AMS.
+
+Les méthodes de PMF-AMS sont cependant récente et en développement très rapide et ces
+dernières années nouveaux travaux tentent de combiner mesure AMS et mesure chimique sur
+filtre~\autocite{vlachouAdvanced2018,vlachouDevelopment2019}.  Cependant, lorsque l'on
+s'intéresse aux sources d'émissions dans une optique réglementaire et non de compréhension
+fine des processus secondaires, la PMF avec analyse chimique sur filtre reste pour
+l'instant d'avantage adaptée que la PMF-AMS.
+
+En effet, les analyses sur filtres permettent l'identification des types d'espèces
+chimiques plus large qu'uniquement la matière organique (ions et métaux notamment).  Le
+recul scientifique des analyses chimiques sur filtres est également appréciable pour
+déterminer les sources ou processus à l'œuvre.
+
+Enfin, et plus spécifiquement à cette thèse, nous chercherons à analyser d'autres
+variables que la chimie (notament le potentiel oxydant, voir
+section~\ref{sec:le_potentiel_oxydant_des_aerosols}) sur les mêmes échantillons que les
+mesures de chimie. Cela exclut donc les données AMS on-line et donc la résolution
+temporelle fine, réduisant l'intérêt de cette methode pour cette thèse.
+
+\begin{table}[!ht]
+    \begin{ThreePartTable}
+        \centering
+        \caption{Forces et limitations des différents modèles d'attribution des sources}
+        \label{tab:comparison_SA}
+        \footnotesize
+        \begin{tabular}{cp{0.43\textwidth}p{0.43\textwidth}}
+        \toprule
+        Type & Atouts & Limitations \\
+        \midrule
+        CTM &
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
+          \item Grande couverture spatiale et temporelle
+          \item Comparaison facilité : sources identiques partout\tnote{a}
+          \item Prévision à court et long terme
+          \item[{\unicodesymbols ~}] Peu de subjectivité\tnote{b}
+        \end{itemize}
+            &
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
+          \item Nécessite des cadastres d'émissions
+          \item Nécessite un modèle météo
+          \item Ne voit que ce qui est donnée des cadastres
+          \item Variabilité temporelle des émissions peu robuste
+          \item Nombre d'espèces chimiques limités
+        \end{itemize}
+        \\ \midrule
+        CMB & 
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
+          \item Spécificité du site potentiellement prise en compte
+          \item Grand nombre d'espèces pouvant être utilisé
+        \end{itemize}
+            & 
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
+          \item Faible représentativité spatiale et temporelle
+          \item Prélèvement et analyses couteux (humain et financier)
+          \item Profils des sources fixes et connu à l'avance
+          \item Nécessite une base de connaissance de profils chimique
+          \item Subjectivité de l'experimentateur
+        \end{itemize}
+        \\ \midrule
+        PMF &
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
+          \item Pas besoin de connaissance a priori des sources
+          \item Spécificités du site prise en compte
+        \end{itemize}
+            & 
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
+          \item Faible représentativité spatiale et temporelle
+          \item Prélèvement et analyses couteux (humain et financier)
+          \item Nécessite des espèces traceuses
+          \item Grand nombre d'échantillon requis
+          \item Subjectivité de l'experimentateur
+        \end{itemize}
+        \\
+        PMF-AMS &
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
+          \item Grande caractérisation de la matière organique
+          \item Possibilité de résolution temporelle très fine (mesure on-line)
+        \end{itemize}
+            & 
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
+          \item Difficultés d'interprétation
+          \item Cible spécifiquement la matière organique
+          \item Peu utile pour la réglementation
+        \end{itemize}
+        \\
+        PMF-filtre &
+        \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
+          \item Large gamme de famille d'espèce chimique
+          \item Directement applicable pour la régulation
+          \item D'autres analyse possible sur le même filtre (potentiel oxydant par
+              exemple)
+        \end{itemize}
+            & 
+        % \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
+        % \end{itemize}
+        \\
+        \bottomrule
+        \end{tabular}
+    \end{ThreePartTable}
+\end{table}
+
+
+\subsubsection{Nécessité d'inclure des espèces traceuses dans les PMF}%
+\label{ssub:nécessité_d_inclure_des_espèces_traceuses}
+
+L'une des limitations des PMF provient de leur sensibilité aux espèces chimiques
+utilisées.
+
+\todo{Discussion espèce organique}
+\autocite{srivastavaSpeciation2018}etc
 
 \section{Vers une mesure unifiée de l'impact sanitaire : le potentiel oxydant}%
 \label{sec:le_potentiel_oxydant_des_aerosols}
@@ -981,70 +1090,14 @@ Il faut noter également que ces méthodes n'ont pas été développées lors de
 s'appuient sur les travaux de \textcite{calasPollution2017} et que les échantillons ont été
 analysés par les différents techniciens et techniciennes du plateau analytique Air-O-Sol.
 
-\subsubsection{Prendre en compte la bioaccessibilité: SLF}%
-\label{sub:prendre_en_compte_la_bioaccessibilite_slf}
-
-Étant donné que l'on cherche à reproduire le comportement des PM en milieu biologique
-(les poumons), il est important de procéder à l'extraction et l'analyse du PO dans un
-fluide reproduissant au plus fidèlement possible ce milieu, et non dans de l'eau mili-Q
-directement.
-
-Il existe différents types de fluides mimiquant les surfactants pulmonaires (\textit{simulated
-lung fluid} (SLF)). Les analyses de cette thèse provennant du protocole de
-\textcite{calasPollution2017}, il est fait usage d'un mélange de solution de Gamble+DPPC.
-\textcite{calasImportance2017} a pu montrer que différent SLF produisent des mesures de PO
-sensiblement différentes. Notamment, l'ALF tend à produire des mesures de PO
-systèmatiquement inférieure à la mesure faite dans du Gamble+DPPC (2 à 3 fois plus
-faible), qui elle-même est légèrement inférieure à la mesure faite dans de l'eau mili-Q.
-\todo{est-ce que je justifie plus en avant ce choix ?}
-
 \subsubsection{Différents agents réactants}%
 \label{ssub:differents_agent_reactant}
 
 La mesure du PO se faisant par suivi cinétique de la déplétion d'un anti-oxydant
 lorsqu'il est mis au contact des PM, le choix dans l'anti-oxydant induit des mesures de PO
-différentes. Au cours de cette thèse, 3 mesures différentes sont utilisées conjointement:
-le test au dithiothreitol (DTT), à l'acide ascorbique ou vitamine-A (AA) et enfin le test à
-la DCFH.\todo{est-ce que je mentionne la DCFH puisqu'au final, je ne l'utilise jamais ?}
-
-Pour chacun des 2 tests présentés ci-après, des triplicats de mesures sont effectués, un
-témoin positif à la 1,4-naphtoquinone est utilisé et les blancs de laboratoire sous
-soustrait aux échantillons.
-
-\paragraph{Mesure par dithiothreitol (DTT)}%
-\label{ssub:mesure_par_dithiothreitol}
-
-Initialement utilisé par~\textcite{choRedox2005} pour mesurer une concentration simulée de
-\ce{O2^{.-}} engendrée par la présence de composé organique, il a été ensuite montré par
-\textcite{beiReaction2014} que le DTT est potentiellement sensible à une plus grande
-variété de ROS qu'imaginé dans le schéma réactionnel originel. C'est maintenant le test le
-plus largement utilisé pour mesurer le PO des PM, notamment par la simplification et
-la semie automatisation de ce test par \textcite{fangSemiautomated2015}.
-Le suivit cinétique se fait par titration à interval régulier (0, 15 et 30 minutes) du DTT
-restant, par réaction avec le DTNB et suivit d'absorbance à \SI{465}{nm}.
-Il a été montré également que ce réactif n'est pas sensible qu'aux composés organiques
-mais également aux métaux~\autocite{charrierDithiothreitol2012,linGeneration2011}
-
-Ce test est cependant limité du fait que le DTT n'est pas capable de mesurer
-\ce{HO^{.}}, qui est pourtant l'un des ROS prépondérants~\autocite{xiongRethinking2017}.
-
-\paragraph{Mesure par Acide ascorbique (AA)}%
-\label{ssub:mesure_par_acide_ascorbique}
-
-Ce test, initié par \textcite{zielinskiModeling1999} pour mesurer la capacité oxydante de
-particule fine issue de la combustion de diesel, utilise l'acide ascorbique comme
-anti-oxydant.
-L'acide ascorbique ou vitamine-A est un anti-oxydant naturellement présent au niveau du
-surfactant pulmonaire. De la même manière que pour le test au DTT, l'AA va être réduit par
-les ROS des PM.
-Le suivit cinétique de la consommation de AA se fait pas absorbance à \SI{265}{\nano\m}
-toutes les 4 minutes à partir de la deuxième minute, pendant 30 minutes au total.
-
-% \paragraph{Mesure par DCFH}%
-% \label{ssub:mesure_par_dcfh}
-
-\paragraph{Autres méthodes de mesure}%
-\label{sub:autres_methodes_de_mesure}
+différentes. Au cours de cette thèse, 2 mesures différentes sont utilisées conjointement :
+le test au dithiothreitol (DTT) et à l'acide ascorbique ou vitamine-A (AA), et sont
+explicités dans le chaptire suivant (section~\ref{sub:potentiels_oxydants}).
 
 D'autres méthodes de mesures du PO existent, mais n'ont pas été utilisées au courant de
 cette thèse, à savoir :
@@ -1056,98 +1109,6 @@ cette thèse, à savoir :
         possible d'estimer un ''PO moyen'' par la mise en contact de différents
         anti-oxydants simultanément (acide ascorbique, glutation et urée par exemple)~\autocite{calasComparison2018}
 \end{description}
-
-\subsubsection{Unitées de mesures}%
-\label{ssub:unitees_de_mesures}
-
-La mesure du PO par DTT ou AA fournit une consommation de réactant en \si{\nano\mole\per\min}.
-Cependant, cette mesure est nécessairement dépendante de la quantité de PM introduite dans
-la réaction.
-Il convient donc de normaliser cette consommation d'antioxydant par la masse des réactifs.
-Seulement, cette mesure n'est pas fidèle à l'exposition des personnes car ne prend pas en
-compte la concentration en particule. De ce fait, deux normalisations de la réactivité des
-particules coexistent.
-
-\paragraph{Normalisation par la masse}%
-\label{par:normalisation_par_la_masse}
-Pour exprimer la réactivité "intrinsèque" d'une particule, la cinétique de déplétion
-d'antioxydant ($cAO$, en \si{\nmol\per\min}) est normalisée par la masse de réactif
-introduit (en \si{\ug}). On obtient ainsi le PO par \si{\ug}, noté \OPm{} en
-\si{\nmol\per\min\per\micro\g}:
-\begin{align}
-    \label{eq:opm}
-    OP_m &= \frac{cAO - cAO_{blank}}{M}
-\end{align}
-où $cAO$ est la consommation d'antioxydant dans l'échantillon et $cAO_{blank}$
-est la consommation d'antioxydant dans les blancs, tous deux en \si{\nmol\per\min}, et $M$
-la masse de réactif introduit (PM ou élement chimique), en \si{\ug}.
-
-\paragraph{Normalisation par le volume}%
-\label{par:normalisation_par_le_volume}
-
-Seulement, la réactivité intrinsèque n'est pas un indicateur propice à l'exposition. En
-effet, il faut également tenir compte de la concentration ambiante des particules. Le PO
-est donc aussi exprimé par unité de volume, notée \OPv{} en
-\si{\nmol\per\min\per\cubic\meter} et parfois appelé PO "extrinsèque", calculé par:
-\begin{align}
-    \label{eq:opv}
-    OP_v &= OP_m \times [\text{PM}]
-\end{align}
-où [PM] correspond à la concentration en particule en \si{\ugm}. Cette expression se
-retrouve également écrite~\autocite{fangSemiautomated2015} sous la forme
-\begin{align}
-    \label{eq:opvalt}
-    OP_v &= \frac{cAO - cAO_{blank}}{V}
-\end{align}
-où $V$ est le volume d'air analysé. Ces deux formes sont cependant équivalentes, car en
-replacant $V = \frac{M}{[PM]}$ dans l'Eq.~\ref{eq:opvalt}, on retrouve bien
-l'Eq.~\ref{eq:opv}:
-\begin{align}
-    \label{eq:opvopvalt}
-    OP_v &= \frac{cAO -cAO_{blank}}{V} = \frac{cAO -cAO_{blank}}{M}\times [\text{PM}] = OP_m \times [\text{PM}].
-\end{align}
-
-\paragraph{Comparabilité des échantillons}%
-\label{par:comparabilité_des_échantillons}
-
-Le fait de se ramener à un microgramme de PM en divisant par la masse introduite fait
-l'hypothèse d'une linéarité du PO en fonction de la masse. Or, il a été montré par
-\textcite{charrierDithiothreitol2012,charrierBias2016,calasComparison2018} que cette
-hypothèse est fausse dans le test au DTT et qu'il présente en réalité une réponse
-pseudo-logarithmique en fonction de la masse du réactif.
-
-Ainsi, 2 analyses du même filtres ne présenteront pas la même valeur de \PODTTm{} si la
-concentration en PM n'est pas identique, les analyses faites à ''fortes masses''
-présenteront toujours un \PODTTm{} plus faible que celles à ''faibles masses''.
-La comparabilité des échantillons n'est donc possible que si les analyses sont faites à
-masses constantes, ou artificiellement corrigées, soit par interpolation, soit par
-estimation grâce à la concentration de Cu et Mg, comme le propose
-\textcite{charrierBias2016}.
-
-Il faut également noter que ce biais se propage au \PODTTv{} du fait de sa linéarité avec le
-\PODTTm. Aussi, un deuxième biais apparaît ici. En effet, la non-linéarité du DTT fait
-que la prolongation linéaire entre 1 microgramme et X microgrammes par mètre cube est
-fausse. Le \PODTTv{} se comportant alors ''comme si'' les X microgrammes de PM de ce mètre
-cube d'air se comportaient comme X fois 1/X 1 microgramme de PM, ce qui est faux de part
-la non-linéarité du DTT.
-
-Les analyses de \PODTT{} de cette thèse suivent donc le protocole défini lors de la thèse
-de \textcite{calasPollution2017} : analyse à masse constante et faible de PM. Les
-échantillons seront donc comparables entre eux. Le parti pris garder le biais
-d'extrapolation de la ''faible masse'' à un volume d'air potentiellement charger en PM
-pour le \PODTTv{} se justifie biologiquement par les faibles volumes d'air présent dans les
-poumons et donc la faible masse de PM en contacte avec les surfactants pulmonaires.
-
-Une telles non-linéarité n'est pas observée pour les tests à l'acide ascorbique ou à la
-DCFH.\todo{C'est vrai ca pour la DCFH ? On a checké ?}
-Les résultats issus de ces tests sont donc à priori comparables entre les différentes
-études.
-
-% \subsubsection{Conservation des échantillons et dérive temporelles}%
-% \label{ssub:conservation_des_échantillons_et_dérive_temporelles}
-%
-% Les 
-
 
 \subsubsection{Un ''meilleur'' test que les autres ?}%
 \label{ssub:un_meilleur_test_que_les_autres_}
@@ -1167,6 +1128,7 @@ pour ''le meilleur test de PO''.
 
 Par conséquent, les travaux de cette thèse s'emploient à étudier le PO mesuré par DTT et
 par acide ascorbique conjointement.
+
 
 \subsection{Attribution du PO aux sources d'émissions des PM}%
 \label{sub:attribution_du_po_aux_sources_d_émissions_des_pm}
@@ -1266,7 +1228,8 @@ Premièrement, il s'agit d'améliorer l'outil de déconvolution des sources de P
 résolution de l'équation de conservation des masses, mais par l'élaboration d'une
 expertise dans les différentes paramétrisations de ce modèle, dans son entraînement et
 dans la critique de ses résultats. Notamment, la questions de la présence de l'ensemble
-des sources majoritaires se posera dans le chapitre~\ref{cha:todo}, à travers
+des sources majoritaires se posera dans le
+chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}, à travers
 l'implémentation de nouveux traceurs chimiques ou isotopiques.
 Également, les incertitudes des solutions PMF ne sont quasiment jamais explicités alors
 que c'est une question centrale qui intéressent d'autant plus les décideurs publique. Mes
@@ -1277,69 +1240,8 @@ non seulement s'assurer que les méthodes sont similaires entre les études (mê
 chimiques…) mais aussi estimer objectivement la similitude de deux facteurs dit provenant
 de la même source d'émission, c'est-à-dire comparer les solutions entres elles.
 
-Blabla PO
+\todo{Blabla PO}
 
-% \subsection{Méthodologie générale}%
-% \label{sub:méthodologie_general}
-%
-% \paragraph{Choix du modèle d'attribution de source}%
-% \label{par:choix_du_modèle_d_attribution_de_source}
-%
-% Le choix du modèle source-récepteur PMF est motivé par son aptitude à reproduire les
-% concentrations locales sans préjugés a priori de la situation du site de prélèvement. La
-% capacité du ME-2 à introduire des contraintes géochimiques est également un atout
-% important justifiant l'usage du modèle PMF.
-% Enfin, les précédents travaux au sein de l'équipe CHIANTI d'Antoine Waked, Benjamin Golly,
-% Flory Chevrier et Dallia Salameh sur le modèle PMF représentent également une expertise
-% appréciable dans le choix de cette méthode.
-%
-% \paragraph{Échantillons et analyses}%
-% \label{par:échantillons_et_analyses}
-%
-% Les prélèvements, mesures de concentrations des différentes espèces chimiques et
-% mesures du PO s'appuieront sur les travaux préalables et en cours de l'équipe CHIANTI et
-% particulièrement du plateau analytique Air-O-Sol ainsi que la base de donnée accumulée
-% depuis plusieurs année et en construction permanente.
-%
-% \paragraph{PO et chimie ou PO et sources ?}%
-% \label{par:chimie_ou_sources_}
-%
-% Le choix a été fait de ne pas utiliser directement les espèces chimiques comme prédicteur
-% des PO. En effet, sur la myriade d'espèces chimiques présente sur les aérosols, seule une
-% partie infime est effectivement mesurée. Il n'est donc pas possible d'avoir une vue
-% exhaustive de la chimie des PM et l'attribution d'un PO intrinsèque par espèce chimique
-% présentera nécessairement des biais du fait de corrélation entre une espèce mesurée mais
-% non redox-active (i.e. le lévoglucosan) et des espèces co-émise mais non mesurée (i.e. les
-% quinones). Quand bien même toutes les espèces seraient mesurées, on se retrouverait alors
-% avec un système d'équation a beaucoup trop d'inconnue par rapport au nombre
-% d'observation (i.e jours de prélèvement), rendant caduque sa résolution.
-% À contrario, les facteurs PMF aggrègent toutes cette chimie en quelques variables, tout en
-% n'ayant besoin que de quelques espèces traceuses des émissions ou processus. Par exemple,
-% la combustion de biomasse est déterminée à partir de la présence de lévoglucosan. On pourra
-% donc attribuer un PO à la source \textit{combustion de biomasse}, avec concentration en PM
-% connue et un profile chimique déterminé (et partiellement inconnue), tout en ne sachant
-% pas exactement quelles espèces chimiques de cette source sont responsables de son PO.
-%
-% La méthodologie générale suivante est donc adoptée et résumée sur le schéma
-% synthétique~\ref{fig:chapter01/workflow} :
-%
-% \begin{enumerate}
-%     \item Grâce aux mesures de chimie et le modèle PMF, retrouver les sources d'émissions
-%         de PM;
-%     \item Coupler les données issues de la PMF et les mesures de PO pour construire un
-%         modèle d'inversion permettant l'estimation de la contribution des différentes
-%         sources aux potentiels oxydants ;
-%     \item Estimer la variabilité géographique du potentiel oxydant des sources de PM.
-% \end{enumerate}
-%
-%
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=0.5\linewidth]{chapter01/workflow.png}
-%     \caption{Méthodologie générale suivie au cours de cette thèse.}%
-%     \label{fig:chapter01/workflow}
-% \end{figure}
-%
 \subsection{Questionnement et plan de la thèse}%
 \label{sub:plan_de_la_thèse}
 
@@ -1351,10 +1253,10 @@ Ainsi, mes recherches tenteront de répondre aux questions suivantes :
         (Chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm})
     \item Est-il possible de diminuer la subjectivité de l'expérimentateur dans ces
         études d'attribution des sources ?
-        (Chapitre~\ref{cha:developpement_methodologique_dattribution_des_sources_de_PM})
+        (Chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm})
     \item Comment comparer efficacement 2 profils dit provenant de la même source, à
         différents sites de prélèvement et différentes années de mesure ?
-        (Chapitre~\ref{cha:developpement_methodologique_dattribution_des_sources_de_PM})
+        (Chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm})
     \item Comment remonter à la contribution des sources de PO une fois les sources
         d'émissions de PM identifiés ?
         (Chapitre~\ref{cha:methodology_for_the_attribution_of_intrisinc_op_to_a_pm_source})
@@ -1372,6 +1274,10 @@ Ainsi, mes recherches tenteront de répondre aux questions suivantes :
 
 
 
+% =============================
+% ===== Biblio {{{
+\clearpage
 \printbibliography[segment=\therefsegment,heading=subbibliography]
-
+% }}}
+% =============================
 
