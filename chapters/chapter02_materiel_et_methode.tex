@@ -575,5 +575,183 @@ aérosol.
 \section{Harmonisation et gestion de base de donnée}%
 \label{sec:harmonisation_et_gestion_de_base_de_donnée}
 
-\todo{Généralisation donc besoin d'homogénéisation, donnée intercomparable, bcp de données
-donc pb de visualisation et de statistique exploratrice, etc.}
+\subsection{Problématisation : des quantités de plus en plus conséquentes}%
+\label{sub:problématisation_des_quantités_de_plus_en_plus_conséquentes}
+
+Pour approfondir la compréhension de la chimie des PM, la base de donnée accumulée à l'IGE
+est extrèmement précieuse par son ampleur et diversité de lieu et chimie analysée.
+Seulement, jusqu'à présent, la généralisation d'observation était rendu compliquée par une
+difficulté technique : chaque série d'analyse était enregistré sur des support différents,
+sans standardisation et avec des méta-donnée partielles. Cela ne posait pas de problème
+tant que la personne en charge de l'étude de ces séries de mesure avait une connaissance
+implicite du jeu de donnée et tant que la quantité d'analyse était restreinte.
+
+Cependant, l'accumulation de mesure provennant de différent programme de recherche et la
+diversité des personnes ayant à traiter ces résultats ainsi qu'une volontée de synthèse
+demande un travail de fond sur la gestion de cette base de donnée afin d'avoir des données
+homogènes (même unité, même nomenclature, même format de date…) et intercomparables
+(métadonnée complète : fraction des PM analysée, site de prélèvement, date et heure du
+début et fin de prélèvement…).
+
+Aussi, le volume de donnée généré, sans être à proprement parler du \textit{big data}
+\footnote{Bien qu'il n'y ait pas de définition formelle de \textit{big data}…  Une
+    définition que j'apprécie stipule que le \textit{big data} commence lorsque tout
+    n'est plus visible sur un tableur. Dans ce cas, nous pouvons catégoriser cette base de
+donnée de \textit{big data}.}
+, demande un traitement automatique de diverses vérifications (balance ionique, detection
+d'erreur de mesure…) et pré-calcul de variables d'intérets (bilan de masse des PM,
+fraction crustale…).
+
+La quantité de donnée créer un besoin de visualisation rapide de ces mesures et
+d'outils de statistique exploratoire uni- ou multi-variée rapide d'utilisation
+(corrélation, dispersion saisonière, comparaison entre site…) tant pour la vérification
+des mesures (analyse de points sortant de l'ordinaire…) que pour des recherches
+préliminaires (cycle saison de tel espèce chimique sur site cotier ou alpin, évolution
+inter-annuelle, ratio lévoglucosan/OC…).
+
+Enfin, il n'existe pas pour l'instant de gestion de sauvegarde ou de suivi de l'édition
+de chacun de ces fichiers, rendant ces mesures dépendantes d'une seul support. Ainsi la perte
+d'une clef USB, un fichier corrompu, un virus informatique, un incendie… mais également
+des erreurs liés à l'utilisateur via un glisser/déposer un peu trop rapide ou une
+suppression de cellule pourrait conduire à la perte entière de série annuelle d'analyse.
+
+\subsection{Mise en place et gestion d'une base de donnée pour la filtrothèque}%
+\label{sub:mise_en_place_et_gestion_d_une_base_de_donnée_pour_la_filtrothèque}
+
+Ma thèse ayant remobilisée directement dans mes travaux ou dans des travaux associés de
+très nombreuses mesures, une des première étape a consisté en la mise en place d'une base
+de donnée centralisée et homogène de la filtrothèque, pouvant ainsi être traité de manière
+automatisée.
+
+\paragraph{Différents usages et utilisateurs}%
+\label{par:différents_usages_et_utilisateurs}
+
+Les contraintes majeures suivantes devaient être respectées :
+\begin{enumerate}
+    \item facilité d'utilisation pour la diversité des techniciens et techniciennes du
+        plateau analytique,
+    \item suivit, sauvegardes et historisation des mises à jours,
+    \item standardisation, structuration et interopérabilité vers différents logiciel ou
+        language de traitement (python, R, QGIS…).
+\end{enumerate}
+Le point numéro 1 demande donc une interface haut niveau (copier/coller, cliquer et
+éditer, commentaire, mise en couleur…) typique d'un tableur, alors le point 3 plaide
+davantage pour des formats de base de donnée plus élaboré (SQL, HDF…).
+Aussi, différents fichiers doivent pouvoir être mis en relation (lien site \& échantillon, méta-donnée du
+filtre \& résultat d'analyse, résultat PMF \& échantillon…), ce qui est très bien géré
+par le language SQL. Aussi, les \textit{dump} des bases de donnée SQL peuvent s'historiser
+de farçons incrémentale tout en permettant de retrouver très exactement la base de donnée à
+n'importe quelle date. 
+Pour l'instant, le choix du stockage s'est donc porté sur \textit{sqlite} pour sa
+simplicité d'utilisation\footnote{Cependant, le problème majeur de sqlite réside en son
+    absence de serveur accessible depuis l'extérieur. Une évolution possible serait un
+serveur postgres ou mysql.}.
+
+\paragraph{Historisation et stockage}%
+\label{par:historisation_et_stockage}
+
+L'historisation sera quand à elle gérée par un gestionnaire de version. Ici, \textit{git}
+est choisi. La sauvegarde se fera en locale sur les serveurs de l'IGE, mais également sur
+un dépot git de l'université\footnote{Dépot git :
+\url{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/bdd_aerosols}} (dépôt non public
+car certaines données ne sont pas publiques).
+Techniquement, l'historisation se fait par un versioning d'un dump de la base de donnée en
+SQL --afin de pouvoir reconstuire l'intégralité de la base de donnée-- ainsi qu'en
+l'export en CSV de chacune des séries de mesures par site d'étude.
+
+\paragraph{Harmonisation et pré-calcul}%
+\label{par:harmonisation_et_pré_calcul}
+
+Plusieurs variables d'intérêts sont souvent demandées, telles que la part crustale, la
+somme des certains polyols, l'estimation de la masse des PM reconstruites par bilan de
+masse… Aussi, ces variables sont donc automatiquement calculées en fonction des données
+disponibles. À titre d'exemple, la masse estimée des PM par bilan de masse est nécessaire
+pour la mesure du PO à masse constante de PM. Seulement, les estimations des différentes
+parties (crustale, sel marin, etc) peuvent dépendre des espèces mesurées, rendant complexe
+leur estimation : 
+\begin{align}
+    \label{eq:pm_massbalance}
+    \PMdix &= [\text{OM}] + [\text{EC}] + [\text{sea salt}] + [\ce{nss-SO_4^{2-}}] + [\ce{NO3-}] + [\ce{NH4+}] + [\text{dust}] + [\text{non dust}]
+\end{align}
+où EC, \ce{NO3-}, \ce{NH4+} sont directement mesurée, et où les autres fractions sont
+estimés selon les relations suivantes :
+
+\paragraph{OM} \autocite{putaudEuropean2010}(Lonati et al., 2005; Putaud et al., 2010; Sillanpää et al., 2006, Favez et al. 2011)
+        Ici, on considère une valeur constante pour le ratio OC-OM prennant en compte la
+        masse de H, N, O, S non mesurée :
+        $[OM] = 1.8 \times [OC]$
+
+\paragraph{nss-SO4} \autocite{seinfieldAtmospheric1998} sulfate non issue du sel marin
+$[nss-SO_4^{2-}] = [SO_4^{2-}] - [ss-SO_4^{2-}]$ avec $[ss-SO4] = 0.252\times[Na^+]$ donc 
+\begin{align*}
+    [\ce{nss-SO_4^{2-}}] &= [\ce{SO_4^{2-}}] - 0.252\times[\ce{Na+}]
+\end{align*}
+
+\paragraph{sea salt} Deux équations sont utilisés, selon la présence ou non de chlore, et
+en utilisant les ratio spécifique de l'eau de mer suivant :
+\begin{align*}
+    [\ce{ss-K+}]        &= 0.036\times[\ce{Na+}]\\
+    [\ce{ss-Mg^{2+}}]   &= 0.129\times[\ce{Na+}]\\
+    [\ce{ss-Ca^{2+}}]   &= 0.038\times[\ce{Na+}]\\
+    [\ce{ss-Cl^-}]      &= 1.8\times[\ce{Na+}]\\
+    [\ce{ss-SO_4^{2-}}] &= 0.252\times[\ce{Na+}]
+\end{align*}
+
+\subparagraph{Sans chlore} \autocite{putaudEuropean2010} (Grythe et al., 2014; Putaud et al., 2010):
+\begin{align*}
+    [\text{sea salt}] = [\ce{Na+}]\times(1 + [\ce{ss-K+}] + [\ce{ss-Mg^{2+}}] + [\ce{ss-Ca^{2+}}] + [\ce{ss-Cl-}] + [\ce{ss-SO_4^{2-}}])
+\end{align*}
+donc $[\text{sea salt}] = 3.252\times[\ce{Na+}]$.
+
+\subparagraph{Avec chlore} \autocite{putaudEuropean2010}
+\begin{align*}
+    [sea~salt] = [\ce{Cl-}] + [\ce{Na+}]\times(1 + [\ce{ss-K+}] + [\ce{ss-Mg^{2+}}] + [\ce{ss-Ca^{2+}}] + [\ce{ss-SO_4^{2-}}])
+\end{align*}
+donc $[\text{sea salt}] = [\ce{Cl-}] + 1.47\times[\ce{Na+}]$.
+
+\paragraph{Dust}
+\subparagraph{Depuis le calcium soluble} \autocite{putaudEuropean2004}
+$[dust] = 5.6 \times [nss-Ca^{2+}]$, avec $[nss-Ca^{2+}]$ estimé par $[Na^+]/[ss-Ca^{2+}]$
+de l'eau de mer de 26, donc : $[nss-Ca^{2+}] = [Ca^{2+}] - [Na^+]/26$. Donc :
+\begin{align*}
+    [dust] &= 5.6 \times ([Ca^{2+}] - [Na^+]/26)
+\end{align*}
+
+\subparagraph{Depuis les métaux}
+\begin{itemize}
+    \item \autocite{malmSpatial1994}
+      \begin{align*}
+          [\text{dust}] &= 1.16 \times (1.90[Al] + 2.15[Si] + 1.41[Ca] + 2.09[Fe] + 1.67[Ti])
+      \end{align*}
+  \item \autocite{querolSource2002,perezCoarse2008}
+      $[dust] = Al_2O_3 + SiO_2 + CO_3^{2-} + Ca + Fe + K + Mg + Mn + Ti + P$ avec
+      $SiO_2$ et $CO_3^{2-}$ déterminé indirectement par les relations
+      $[SiO_2] = 3 \times [Al_2O_3]$ ; $[Al_2O_3] = 1.89 \times [Al]$ et 
+      $[CO_3^{2-}] = 1.5 \times [Ca]$, ainsi
+      \begin{align*}
+          [\text{dust}] &= 7.56 \times [Al] + 2.5 \times [Ca] + Fe + K + Mg + Mn + Ti + P
+      \end{align*}
+\end{itemize}
+
+\paragraph{non dust} \autocite{salamehPM22015}
+Les élements non-dust correspondent à la somme des métaux non crustaux communément mesurés :
+\begin{align*}
+    [\text{non dust}] &= [Cu] + [Ni] + [Pb] + [V] + [Zn]
+\end{align*}
+
+
+
+
+\begin{landscape}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{chapter02/workflow_simple.pdf}
+    \caption{Vie d'un échantillon et des données : reception, analyse et enregistrement
+        dans la filtrothèque et visualisation, puis utilisation dans les différents
+        programmes de recherche.}%
+    \label{fig:bdd}
+\end{figure}
+\end{landscape}
+
+
+
