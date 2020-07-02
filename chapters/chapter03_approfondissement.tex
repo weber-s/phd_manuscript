@@ -309,6 +309,9 @@ en différents endroits (spatiallement ou temporellement).
 Les travaux de \cite{belisNew2015a} suggèrent l'utilisation conjointe de 2
 métriques permettant d'estimer la distance géochimique entre 2 profiles de facteurs.
 
+\subsection{Méthodologie}%
+\label{sub:méthodologie}
+
 \paragraph{Distance de Pearson}%
 \label{par:distance_de_pearson}
 
@@ -366,6 +369,7 @@ $y$, appelée \textit{maximum acceptable distance} MAD, telle que:
     \label{eq:MAD}
     MAD_i &= k \frac{1}{2}(x_i + y_i).
 \end{align}
+Ce procédé est illustré figure~\ref{fig:chapter03/SID_belis2015a}.
 
 La SID est la moyenne de la somme des ratio entre l'ID et le MAD, telle que:
 \begin{align}
@@ -380,7 +384,7 @@ soit :
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1.0\linewidth]{chapter03/SID_belis2015a.png}
+    \includegraphics[width=0.9\linewidth]{chapter03/SID_belis2015a.png}
     \caption{Illustration schématique de la distance SID. Légende originelle:
         Geometric representation of the identity distance (ID) as an indicator of
         similarity between two factor/source profiles. Left pane: $ID_{j,ab}$ between
@@ -392,12 +396,88 @@ soit :
     \label{fig:chapter03/SID_belis2015a}
 \end{figure}
 
-\section{Amélioration des solutions pmf par ajout de traceurs spécifiques}%
+\subsection{Implémentation et utilisation}%
+\label{sub:implémentation_et_utilisation}
+
+Ces 2 métriques de distances entre profiles sont utiles pour l'aide à l'identification
+d'un nouveau profiles, notamment via SPECIEUROPE. Cependant, toutes les espèces chimiques
+que nous utilisons ``en routine'' ne sont pas nécessairement présente dans les profiles de
+SPECIEUROPE. Aussi, SPECIEUROPE nous permet de comparer aux profiles déjà existant, et non
+par exemple des PMF sur 2 sites non encore dans la base de donnée SPECIEUROPE.
+
+Ainsi, pour comparer les profiles chimiques issues d'une même méthodologie PMF (même
+variables d'entrée, même contraintes, etc) à différents lieux, j'ai réimplenté une version
+de deltaTool en python\footnote{Disponible dans le paquet
+    \href{https://pypi.org/project/py4pm/}{py4pm}, dépot git:
+\url{https://gricad-gitlab.univ-grenoble-alpes.fr/webersa/py4pm}
+} permettant une
+utilisation plus flexible et une comparabilité des PMF conduitent pendant ma thèse.
+
+Le choix de $k$ de l'Eq.~\ref{eq:SID} pour le MAD a été porté à 1, similairement à
+\cite{pernigottiDeltaSA2018}, en absence d'information a priori sur la variabilité de ces
+profiles.
+
+La question de la comparabilité des profiles s'est posé majoritairement à 3 moments de ma
+thèses :
+\begin{enumerate}
+    \item Comparer 15 PMF utilisant une méthodologie harmonisée en France (project
+        SOURCES);
+    \item Étudier la variabilité fine échelle (i.e. à l'échelle d'une métropole) à travers
+        3 sites de prélèvement dans un rayon de \SI{15}{\kilo\m} autour de Grenoble, France
+        (projet Mobil'Air);
+    \item Évaluer l'impact de l'ajout de traceurs organiques (acide pinic, phtalic,
+        3-MBTCA et cellulose) par rapport à une PMF ``standard'' sur les 3 sites
+        Grenoblois (projet Mobil'Air).
+\end{enumerate}
+
+Le premier item sera abondamment traité dans la section~\ref{sec:sources} et
+\textcite{weberComparison2019}, tandis que les 2 autres font l'object d'un article en
+cours de soumission par \textcite{borlazaFinescaleinprep.} et sont détaillés succintement
+dans la section~\ref{sub:processus_secondaires}.
+
+\section{Amélioration des solutions PMF par ajout de traceurs spécifiques}%
 \label{sec:amélioration_des_solutions_pmf}
 
 \subsection{Apport de l'isotopie de l’azote sur la caractérisation des sources de pollution émettrices d’ammonium}%
 \label{sub:isotopie}
 \todo{contextualiser ces recherches}
+
+\subsubsection{Problématique}%
+\label{ssub:problématique}
+
+Dans de nombreuses PMF, il est rapporté un facteur secondaire inorganique contennant une
+grande part du sulfate, du nitrate et de l'ammonium, indiquant la présence de sulfate
+d'ammonium \ce{SO4(NH4)2} et nitrate d'ammonium \ce{NO3NH4}. Ces deux facteurs sont
+également souvent distinct, formant un facteur ``sulfate rich'', présentant le sulfate
+d'ammonium mais sans nitrate, et ``nitrate rich'' présentant du nitrate d'ammonium mais
+sans sulfate.
+
+Le facteur nitrate rich présente des émissions très saisonnière, responsable des grands
+événements de dépassement des seuils d'alerte printanier. Seulement, s'agissant d'un
+facteur secondaire issu de condensation des NOx et de l'ammoniac \ce{NH3}, sa provenance
+n'est pas clairement établit, même sur les NOx sont supposés venir du traffic routier et
+l'ammoniac de l'agriculture.
+
+\subsubsection{Objectifs et méthods}%
+\label{ssub:objectif}
+
+Dans ce cadre, le programme INACS de l'ADEME a permis les mesures de
+l'isotopie de l'azote du nitrate et de l'ammonium sur des cylces annuel complet à X sites.
+Parallèlement, les mesures de la signature isotopique à l'émission de différentes sources
+ont été faite à l'IGE, notamment en tunnel et à l'émission de cheminée (combustion de
+biomasse domestique). Différentes prélèvement issus de sources agricoles (fumier, fertilizant
+de synthèse, etc) ont également été analysés.
+
+L'isotopie est une technique connue permettant l'estimation des sources d'émission,
+seulement, il n'est pas possible de l'utiliser tel quel dans une analyse PMF et donc
+d'avoir cette information pour identifier plus précisement la source nitrate rich.
+En effet, la PMF résout une équation d'équilibre des masses et est donc purrement
+additive. Or, l'isotopie se traduit par une équation de mélange, résultant en une moyenne
+pondérée de la signature isotopique des sources par leur contribution.
+
+\subsubsection{Principaux résultats}%
+\label{ssub:principaux_résultats}
+
 
 \subsection{Émission biogénique primaire}%
 \label{sub:émission_biogénique_primaire}
@@ -412,6 +492,11 @@ soit :
 
 \subsection{Comparison of PM\textsubscript{10} sources profiles at 15 french sites using a harmonized constrained positive matrix factorization approach}%
 \label{sub:article}
+
+\subsection{Conclusion}%
+\label{sub:conclusion}
+
+
 
 % \includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/sources.pdf}
 
