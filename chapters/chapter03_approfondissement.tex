@@ -455,28 +455,153 @@ sans sulfate.
 Le facteur nitrate rich présente des émissions très saisonnière, responsable des grands
 événements de dépassement des seuils d'alerte printanier. Seulement, s'agissant d'un
 facteur secondaire issu de condensation des NOx et de l'ammoniac \ce{NH3}, sa provenance
-n'est pas clairement établit, même sur les NOx sont supposés venir du traffic routier et
-l'ammoniac de l'agriculture.
+n'est pas clairement établit. En effet, si les NOx sont supposés venir du traffic routier,
+la provenance de l'ammoniac peut aussi bien être agricole via l'urée ou les fertilisants de
+synthèse que liée au traffic routier. Aussi, une source importante émettant pendant les
+pics de pollution pourrait être la combustion de biomasse domestique, notamment en valée
+alpine, où cette source est active et corrélé au nitrate d'ammonium au début du printemps.
 
-\subsubsection{Objectifs et méthods}%
-\label{ssub:objectif}
-
-Dans ce cadre, le programme INACS de l'ADEME a permis les mesures de
-l'isotopie de l'azote du nitrate et de l'ammonium sur des cylces annuel complet à X sites.
-Parallèlement, les mesures de la signature isotopique à l'émission de différentes sources
-ont été faite à l'IGE, notamment en tunnel et à l'émission de cheminée (combustion de
-biomasse domestique). Différentes prélèvement issus de sources agricoles (fumier, fertilizant
-de synthèse, etc) ont également été analysés.
+\subsubsection{Objectifs et méthode}%
+\label{ssub:objectif_et_methode}
 
 L'isotopie est une technique connue permettant l'estimation des sources d'émission,
 seulement, il n'est pas possible de l'utiliser tel quel dans une analyse PMF et donc
 d'avoir cette information pour identifier plus précisement la source nitrate rich.
 En effet, la PMF résout une équation d'équilibre des masses et est donc purrement
 additive. Or, l'isotopie se traduit par une équation de mélange, résultant en une moyenne
-pondérée de la signature isotopique des sources par leur contribution.
+pondérée de la signature isotopique des sources par leurs contributions.
+
+Par contre, s'il n'est pas possible d'inclure directement le signal isotopique dans les
+PMF, il est possible d'effectuer un traitement en amont de la PMF, permettant de séparer
+l'ammonium ou le nitrate en différentes ``sous espèces'', selon leur sources de
+provenances, grâce à l'isotopie.
+
+Dans ce cadre, le programme INACS de l'ADEME a permis les mesures de l'isotopie de l'azote
+du nitrate et de l'ammonium sur des cylces annuel complet à X sites.  Parallèlement, les
+mesures de la signature isotopique à l'émission de différentes sources ont été faite,
+notamment en tunnel et à l'émission de cheminée (combustion de biomasse domestique), ainsi
+que de substances issues de sources agricoles (fumier, fertilizant de synthèse, bâtiment
+d'élevage, etc).
+
+L'ensemble de cette étude est disponible en annexe \ref{annexe:INACS} et ne sont présentés
+ci-après que les étapes et résultats majeurs de cette étude.
+
+\paragraph{Équation de mélange}%
+\label{par:équation_de_mélange}
+
+La première partie du programme INACS a montré que ces sources présentent des signatures
+isotopiques de l'azote distincte pour l'ammoniac, noté \dN(\NHq).
+Nous pouvons alors, sous certaines conditions, proposer une déconvolution de l'équation de mélange
+\begin{align}
+    \dN(\NHq)_{atm} \cdot [NH_4^+]_{atm} &= \sum_{i=1}^{n} \dN(\NHq)_i \cdot [NH_4^+]_i
+    \label{eq:melangeConcentration}
+\end{align}
+avec $[NH_4^+]_{atm} = \sum_{i=1}^n [NH_4^+]_i$ [\si{\ugm}] la concentration atmosphérique
+d'ammonium résultant du mélange des $n$ sources.  L'équation~\ref{eq:melangeConcentration}
+peut être réécrite en considérant $f_i = [NH_4^+]_i / [NH_4^+]_{atm}$~[-] comme étant la
+contribution de la source $i$ au mélange final. Ainsi on a
+\begin{align}
+    \dN(\NHq)_{atm} &= \sum_{i=1}^n \dN(\NHq)_i \cdot f_i. 
+    \label{eq:melangeContrib}
+\end{align}
+
+Selon certaines hypothèses, détaillées dans l'annexe~\ref{annexe:INACS}, en considérant les
+trois sources précédemment citées supposées majoritaires, à savoir combustion de biomasse,
+agricole et véhiculaire, pour chaque observation de \dN(\NHq)$_{atm}$ le système
+d'équation~\ref{eq:system1} suivant doit alors être vérifié :
+\begin{numcases}{\label{eq:system1}}
+    1 &$= f_{bio} + f_{agr} + f_{veh}$ \label{eq:bilanMass1} \\
+    \dN(\NHq)_{atm} &$= f_{bio} \cdot \dN(\NHq)_{bio} + f_{agr} \cdot \dN(\NHq)_{agr} + f_{veh} \cdot \dN(\NHq)_{veh}$ \label{eq:systemNH4}
+\end{numcases}
+où $f_{bio}$, $f_{agr}$ et $f_{veh}$ sont respectivement la contribution de la source de
+biomasse, agricole et véhiculaire et $\dN(\NHq)_{bio}$, $\dN(\NHq)_{agr}$ et
+$\dN(\NHq)_{veh}$ les compositions isotopiques respectives des sources biomasse, agricole
+et véhiculaire.
+
+\paragraph{Résolution par méthode Monte-Carlo}%
+\label{par:résolution_par_méthode_monte_carlo}
+
+La signature isotopique des sources étant connues avec une incertitudes, l'équation de
+mélange est résolue par méthode Monte-Carlo : pour chaque jour d'observation, l'équation
+\ref{eq:systemNH4} est résolue pour un triplet de valeur possible de chacune des
+signatures isotopiques des 3 sources, suivant une loi normale établit par la moyenne et
+l'écart type de chacun des prélèvements de ces sources. Le processus est répété 1000 fois
+pour chaque jour d'observation, résultat ainsi en 1000 triplets $(f_{agr}, f_{bio},
+f_{veh})$ possibles, permettant de calculer la concentration et l'incertitude associée de
+l'ammonium apporté par chacune de ces sources.
+
+\paragraph{Ajout d'une contrainte pour l'ammonium issue de la combustion de biomasse}%
+\label{par:ajout_d_une_contrainte_pour_l_ammonium_issue_de_la_combustion_de_biomasse}
+
+\subparagraph{Nécessité d'une nouvelle contrainte}%
+\label{par:nécessité_d_une_nouvelle_contrainte}
+
+Le système d'équation \ref{eq:system1} est sous-déterminée : il existe 3 inconnues pour
+seulement 2 contraintes (bilan de masse et isotopie). De fortes incertitudes sont donc
+attendues, voir des concentrations calculées seront invraisemblables, notamment pour les
+concentrations de la combustion de biomasse.
+Deux nouvelles contraintes pourraient être ajoutées pour ajouter de l'information et
+réduire le degré de liberté du système : 1) une information sur l'isotopie de l'hydrogène
+et 2) une connaissance \textit{a priori} de la géochimie des sources.  La deuxième
+solution est retenue.  En effet un proxy de la combustion de biomasse, le lévoglucosan,
+est déjà mesuré pour la quasi totalité des sites d'études.
+
+\subparagraph{Concentrations de lévoglucosan et d'ammonium}%
+\label{par:concentrations_de_lévoglucosan_et_d_ammonium}
+
+De par le recensemement en une base de donnée unique de la filtrothèque de l'équipe
+CHIANTI (voir \ref{sec:harmonisation_et_gestion_de_base_de_donnée}), il a été possible
+d'estimer empiriquement des gammes de concentrations possible pour l'ammonium en fonction
+des concentrations en lévoglucosan. Puisque les vallées alpines sont connues pour présenter
+des épisodes de pollutions aux particules fines dont la source est quasi exclusivement
+la combustion de biomasse \autocite{piotAtmospheric2011,gollyEtude2014} et que le lévoglucosan
+est considéré comme traceur univoque de la combustion de biomasse, en utilisant les
+données chimiques de ces sites, il est possible de trouver une relation entre la
+concentration de \NHq~issue de la combustion de biomasse et la concentration en
+lévoglucosan. 
+
+Le seuil de concentration en lévoglucosan à \SI{5000}{\ugm} est considéré comme critère de
+sélection des jours où la source biomasse est prépondérante. 
+Pour ces jours ci, le \NHq~émis est considéré comme provenant de la combustion de
+biomasse.
+Avec ces hypothèses, une régression linéaire entre l'ammonium et le lévoglucosan montre la
+relation $[\NHq] = 0.221 \times \text{[levoglucosan]}$ (trait plein sur la
+figure~\ref{fig:correlNH4Levo}).
+L'écart-type est volontairement choisi très large pour rendre compte du faible nombre
+d'échantillon (18) et du caractère expérimental de cette relation (trait pointillés sur la
+figure~\ref{fig:correlNH4Levo}).
+
+Ainsi, l'équation suivante est ajoutée au système à résoudre
+\begin{numcases}{\label{eq:system3}}
+    f_{bio} &$= \{\mathcal{N}(m_{bio},\sigma_{bio})\}$ / [\NHq$_{total}$] \label{eq:bioChimie}\\
+    1 &$= f_{bio} + f_{agr} + f_{veh}$ \label{eq:bilanMasse}\\
+    \dN(\NHt)_{atm} &$= f_{bio} \cdot \dN(\NHt)_{bio} + f_{agr} \cdot \dN(\NHt)_{agr} + f_{veh} \cdot \dN(\NHt)_{veh}$\label{eq:isotopie}.
+\end{numcases}
+L'équation~\ref{eq:bioChimie} étant une contrainte a priori et non isotopique. 
+Elle réduit la listes des valeurs théoriquement possibles, tandis que
+l'équation~\ref{eq:isotopie} sélectionne celles qui sont en accords avec l'observation
+isotopique.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/INACS/MCA_correlNH4Levo_alea.pdf}
+    \caption{Estimation du ratio \NHq/lévoglucosan pour les jours de fortes concentrations en
+        lévoglucosan. La droite noire en trait plein représente la droite $[\NHq_{bio}]=
+        0.221 \times \text{[lévoglucosan]}$, les droites en trait pointillés les
+        écart-types considérés ($\frac{1}{8}\times \text{[lévoglucosan]}$) et la zone
+        verte les jours où la source de combustion de biomasse est considérée comme
+        prépondérante ([lévoglucosan] > \SI{5000}{\ugm}]).
+    }
+    \label{fig:correlNH4Levo}
+\end{figure}
+
 
 \subsubsection{Principaux résultats}%
 \label{ssub:principaux_résultats}
+
+\subsubsection{Conclusion}%
+\label{ssub:conclusion}
+
 
 
 \subsection{Émission biogénique primaire}%
