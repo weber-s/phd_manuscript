@@ -438,9 +438,23 @@ dans la section~\ref{sub:processus_secondaires}.
 \section{Amélioration des solutions PMF par ajout de traceurs spécifiques}%
 \label{sec:amélioration_des_solutions_pmf}
 
-\subsection{Apport de l'isotopie de l’azote sur la caractérisation des sources de pollution émettrices d’ammonium}%
+\subsection{Apport de l'isotopie de l'azote sur la caractérisation des sources de pollution émettrices d’ammonium}%
 \label{sub:isotopie}
-\todo{contextualiser ces recherches}
+
+Les résultats présentés dans cette partie sont en partie issu d'un travail antérieur à ma
+thèse dans l'équipe CHIANTI dans le cadre du projet INACS de l'ADEME portant sur
+la caractérisation des épisodes de pollutions printanier au nitrate d'ammonium.
+
+Ces travaux ont été présenté dans le rapport INACS-2 (présenté en
+annexe~\ref{annexe:INACS}) et lors d'une présentation oral à l'EAC de Tours en 2016. 
+Les principales méthodes et résultats sont repris dans cette section.
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Certaines valeures ne sont pas identiques entre le rapport et celles présentées içi
+    car ces travaux ont continué et certains paramètres ont changés entre la publication
+    du rapport et l'écriture de la thèse.
+\end{tcolorbox}
+
 
 \subsubsection{Problématique}%
 \label{ssub:problématique}
@@ -595,17 +609,412 @@ isotopique.
     \label{fig:correlNH4Levo}
 \end{figure}
 
+\subsubsection{Détermination des sources de \NHq}%
+\label{ssub:determination_des_sources_de_NHq}
 
-\subsubsection{Principaux résultats}%
-\label{ssub:principaux_résultats}
+\paragraph{Importance de la source agricole pour le \NHq}%
+\label{par:importance_de_la_source_agricole_pour_le_nhq}
+
+Le site rural de l'OPE est un site typique des tendances générales de l'ensemble des sites
+d'études.
+Il est donc utilisé comme illustration dans la suite, pour des prélèvements s'étalant sur
+l'année 2013.
+
+Durant la période chaude (de mai à septembre) le fond atmosphérique est très
+majoritairement dû au secteur véhiculaire qui explique à lui seul 90$\pm$8~\% du
+\NHq~total (\textit{cf.} figure~\ref{fig:timeSerieOPE}.a).
+La quantité d'ammonium apportée par cette source est sensiblement constante autour
+\SI{0.6(4)}{\ugm} tout au long de l'année (figure~\ref{fig:timeSerieOPE}.b).
+
+D'après le modèle, les épisodes de printemps (mars et avril) sont imputables
+majoriatirement à la source agricole, qui apporte en $80\pm10$~\% du \NHq~ces jours ci.
+Ce secteur apporte jusqu'à \SI{5}{\ugm} d'ammonium le 2 avril, soit plus de 8 fois
+l'apport moyen du véhiculaire.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/INACS/MCA_OPE_S3-BioFerVeh_e-30_timeSerie2013.pdf}
+    \caption{Série temporelle du site de l'OPE. Sont représentés la moyenne de la densité
+        de probabilité et l'écart-type (1$\sigma$) associé. \textbf{a)} Contribution relative
+        de chaque source à l'observation. \textbf{b)} Contribution absolue de chaque source. Le
+        trait noir pointillé est le \NHq~observé. \textbf{c)} \dN~observé et reconstruit en bleu,
+        \dN~reconstruit à partir de la totalité des valeurs des sources possibles en oranges.
+    }
+    \label{fig:timeSerieOPE}
+\end{figure}
+
+\paragraph{Fond atmosphérique de l'ensemble des sites}
+L'été, lorsque seule la source véhiculaire est active, la même quantité d'ammonium est
+observé sur l'ensemble des sites comme le montre la figure~\ref{fig:summerNH4}.
+La source véhiculaire est donc sensiblement constante sur l'ensemble du territoire à
+raison de $\sim0.6$~\si{\ugm}.
+Toutefois les sites de Lens et de Turin semblent être au dessus de ces tendances, et sont
+discutés en annexe \ref{annexe:INACS}.
+
+\paragraph{Épisodes synchrones à l'échelle du territoire}
+Sur les sites étudiés, il apparait également que les pics de pollution sont synchrones à
+l'échelle nationale : février 2012, février 2013 et mars 2013.
+La plupart des pics de pollution lors de ces événements sont attribués pour une grande
+part au secteur agricole.
+La contribution du \NHq$_{agr}$ au \NHq~total lors de ces épisodes est reportée sur la
+figure~\ref{fig:contribSpringAgr}.
+
+Les sites où l'influence du facteur agricole est la plus marquée sont les deux sites
+ruraux de Revin et l'OPE pour lesquels les jours les plus impactés sont attribués à plus
+de 80~\% à l'agriculture pour des concentrations excédent respectivement 7 et 5
+\si{\micro\g\per\cubic\meter}, soit environ 10 fois plus que le fond atmosphérique.
+
+\begin{figure}[ht]
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{center}
+    \includegraphics[width=.9\textwidth]{figures/INACS/MCA_contribSummerVeh.pdf}
+    \end{center}
+    \caption{Contribution moyenne de la source véhiculaire durant les jours de la période chaude.}
+    \label{fig:summerNH4}
+    \end{subfigure}
+    \begin{subfigure}[t]{0.5\textwidth}
+    \begin{center}
+    \includegraphics[width=.9\textwidth]{figures/INACS/MCA_contribSpringEventAgr.pdf}
+    \end{center}
+    \caption{Contribution relative moyenne de la source agricole pour les jours des trois
+    pics de pollution printaniers observés.}
+    \label{fig:contribSpringAgr}
+    \end{subfigure}
+    \caption{Contribution des sources véhiculaire et agricole.}
+\end{figure}
+
+\subsubsection{Utilisation couplée de l'isotopie et des PMF}%
+\label{ssub:utilisation_couplée_de_l_isotopie_et_des_pmf}
+
+\paragraph{Paramètrage de la PMF et solution de référence}%
+\label{par:paramètrage_de_la_pmf_et_solution_de_référence}
+
+Une fois le \NHq~séparé en trois variables distinctes cette information peut être utilisée
+dans une approche de type Positive Matrix Factorization (PMF) pour mieux comprendre la
+dynamique des différents facteurs.
+L'avantage majeur de l'utilisation de la PMF sera aussi de faire le lien entre les sources
+du nitrate d'ammonium et les sources de PM.
+
+Sur le site de l'OPE a été choisi pour tester la méthodologie car une étude PMF intégrant
+les données chimiques de 2012 à 2014 pur la fraction \PMdc{} a déjà été conduite sur ce
+site, offrant un comparatif intéressant pour le couplage isotopie/PMF. C'est donc ce site
+qui est retenu.
+
+Les variables utilisées sont donc les mêmes que celles de l'étude précédente
+de~\cite{gollyCaracterisation2015} auxquelles s'ajoute le chlore et sont rappelées dans le
+tableau~\ref{tab:varPMF}.
+Pour l'étude couplée chimie et isotopie, seul diffère le \NHq~qui est séparé en trois
+espèces \NHq$_{bio}$, \NHq$_{agr}$ et \NHq$_{veh}$. 
+
+\begin{table}[ht]
+    \centering
+    \footnotesize
+    \begin{tabular}{r P{2cm} P{1.5cm} P{5.0cm} P{3.0cm}}
+        \toprule
+                    & Matière carbonnée       &   Métaux      &   Ions                                                &   Composés organiques \\
+        \midrule
+        PMF         & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq   & Levoglucosan, $\sum$polyols, HAP \\
+        \midrule
+        PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
+        \midrule
+        Incertitudes& Élargie (10~\%, 15~\%)  & \multicolumn{3}{P{10cm}}{Méthode proposée par \cite{gianiniSource2013}, sauf pour les trois \NHq$_{src}$ où $\sigma_{src}/4$ est utilisé.}\\
+        \bottomrule
+    \end{tabular}
+    \caption{Espèces chimiques sélectionnées comme variables d'entrée dans les PMF la pour
+    fraction \PMdc.}
+    \label{tab:varPMF}
+\end{table}
+
+\paragraph{Solution obtenue}%
+\label{par:solution_obtenue}
+
+En substituant le \NHq~par ses trois contributions \NHq$_{src}$ dans la PMF, il n'y a pas
+de changement significatif pour les facteurs ne présentant pas déjà du \NHq (Secondaire
+organique, Sels de mer, Sels de mer vieilli, Biogénique marin et Poussières/Biogénique
+primaire).
+
+Le \NHq$_{bio}$ se retrouve bien dans le facteur de combustion de biomasse à raison de
+70~\% du \NHq$_{bio}$ total.
+Ce résultat était attendu car par construction le modèle Monte-Carlo introduit une
+dépendance forte entre le lévoglucosan et le \NHq$_{bio}$.
+Il est également intéressant de voir que \textit{seul} l'ammonium issue de la combustion
+de biomasse se retrouve dans se facteur.
+Il faut cependant noter que le \NHq$_{bio}$ n'est pas entièrement attribué à ce facteur
+mais également au facteur \og Nitrate rich \fg{} (20~\%) et dans un moindre mesure au sel
+de mer vieilli (10~\%).
+
+La source Industrie/traffic se voit attribuer 45~\% de l'ammonium dit véhiculaire.
+De plus aucune des deux autres sources d'ammonium n'est présente dans ce facteur, ce qui
+tend à accentuer l'étiquette \og traffic \fg{} de ce facteur.
+Une autre observation importante concerne l'activité de cette source au long de l'année :
+l'industrie et le trafic sont connus pour avoir une activité constante, ou du moins non
+saisonnière.
+Or en n'utilisant pas les données isotopiques deux pics étaient observés fin février et
+fin mars.
+L'utilisation de l'isotopie diminue l'importance de ces pics, qui étaient
+vraisemblablement une erreur d'attribution entre du \NHq~entre le \NHq$_{veh}$ et le
+\NHq$_{agr}$.
+
+Une part non négligeable de l'ammonium dit véhiculaire est également retrouvée dans le
+facteur Secondaire organique (>20~\%).
+Il serait intéressant d'investiguer plus en avant cet ammonium afin de savoir s'il s'agit
+véritablement d'ammonium véhiculaire.
+
+Enfin, le résultat sans doute le plus important réside dans l'identification du facteur
+\og Nitrate rich \fg, où la quasi-intégralité (>90~\%) de l'ammonium agricole se retrouve.
+Or il n'existe pas à notre connaissance une autre source ayant une signature isotopique
+voisine ou plus négative en \dN~que la source agricole.
+Ainsi, il n'y a pas d'ambiguïté de source possible et le facteur \og Nitrate rich \fg{}
+peut être identifié et renommé Agriculture.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{INACS/PMF_OPE_contrib_profiles.pdf}
+    \caption{
+        Profils PMF pour une solution à 8 facteurs. Les histogrammes représentent la
+        contribution de l'espèces dans chaque facteurs par rapport à la masse de l'espèce
+        totale et les courbes la contribution temporelle du facteur aux PM$_{2.5}$ [\si{\ugm}].
+    }
+    \label{fig:PMF}
+\end{figure}
+
+\paragraph{L'isotopie est-elle respectée ?}%
+\label{par:l_isotopie_est_elle_respectée_}
+
+Finalement, il est important de vérifier que la valeur isotopique reconstruite par les
+concentration de \NHq{} estimées par la PMF sont proches des valeurs estimées par méthode
+Monte-Carlo.
+
+Si les concentrations estimées par la PMF sont proches du modèle Monte-Carlo en été, on
+observe cependant une erreur plus importante durant les pics de pollution (voir
+figure~\ref{fig:PMFreconstruct}.a).
+La conséquence est une reconstruction de l'isotopie moins bonne pendant ces périodes
+(figure~\ref{fig:PMFreconstruct}.c).
+Plus important encore, les prédictions de la PMF sont en dehors des écart-types du modèle
+Monte-Carlo pour les pics de pollutions de fin février et fin mars-début avril, alors même
+que la quantité totale d'ammonium est respectée (figure~\ref{fig:PMFreconstruct}.b).
+
+Il est donc important de noter que les résultats de la PMF couplée vont dans le sens d'une
+meilleure attribution des sources mais possèdent néanmoins encore une marge d'évolution
+importante.
+En \og forçant \fg{} davantage la PMF d'après les données issues de Monte-Carlo,
+l'importance du facteur agricole augmenterait et celle du trafic/industrie diminuerait.
+L'estimation PMF présentée ici est donc une estimation basse de l'importance du facteur
+agricole.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/INACS/PMF_OPE_reconstruction.pdf}
+    \caption{Reconstruction des variables \textbf{a)} \NHq$_{src}$, \textbf{b)} \NOt~et
+        \NHq$_{tot}$ et \textbf{c)} \dN~par modèle inverse d'après les données de sorties
+        de PMF.
+        \textbf{b)} Le \NOt~prédit est celui reconstruit par la PMF et le \NHq~est la
+        somme des trois \NHq$_{src}$ donnés par la PMF.
+        \textbf{c)} L'observation isotopique \dN~est notée en trait plein bleu et le
+        \dN~reconstruit depuis les \NHq estimés par PMF en orange dont l'incertitude
+        correspond à l'écart type de 2000 tirages aléatoires des valeurs des sources.
+    }
+    \label{fig:PMFreconstruct}
+\end{figure}
 
 \subsubsection{Conclusion}%
 \label{ssub:conclusion}
 
 
+Grâce à l'isotopie, nous avons pu montrer que l'ammonium provient très majoritairement
+de la source agricole lors des pics de pollutions printanier, et ce à très grande échelle
+spatiale, alors que la source véhiculaire constituant le fond ambiant tout le long de
+l'année.
+
+Également, la méthodologie établie permet l'utilisation d'informations isotopiques dans
+une étude PMF alors même que l'isotopie n'est pas aditive, à condition d'effectuer un
+traitement préalable du signal isotopique. Une contrainte forte de cette méthode est la
+connaissance préalable de la signature isotopique des sources, ce qui rend la PMF moins
+``agnostique'' sur la géochimie des facteurs.
+
+Ainsi, la contribution du secteur agricole du facteur ``Nitrate rich'', déterminé dans de
+nombreuseis PMF, est maintenant démontrée sur le site de l'OPE.
+L'ajout de l'information isotopique permet également d'affiner la contribution et les
+profiles chimiques des autres facteurs contenant de l'ammonium, les rendant plus proche de
+ce que l'on s'attend à observer (contribution du traffic homogène sur l'année, etc).
+
+Cependant, l'une des limitations majeures concerne le choix des sources d'ammonium
+considérées. Cette limitation est d'avantage explorée dans l'annexe~\ref{annexe:INACS}.
+
+\todo{faire une phrase de conclusion}
 
 \subsection{Émission biogénique primaire}%
 \label{sub:émission_biogénique_primaire}
+
+\subsubsection{Problématique : la matière organique}%
+\label{ssub:problématique_la_matière_organique}
+
+La matière organique présente une large part d'espèce non identifiée et peut avoir de
+nombreuse provenances. Bien que pour certaines sources, différentes espèces nous
+permettent d'identifier et quantifier la contribution de différentes sources à la matière
+organique (lévoglucosan et potatium pour la combustion de biomass par exemple), certaines
+espèces organiques mesurées ne présentes pas de corrélation évidente avec les facteurs PMF
+lorsqu'aucun de ceux ci n'est identifié comme provenant des émissions biogénique. C'est
+notamment le cas de l'arabitol et mannitol, composés émis par les champignons et
+bactéries.
+
+Aussi, la microbiologie présente sur les aérosols peut influer de manière importante
+sur le PO des aérosols \autocite{samakeUnexpected2017}.
+
+Ainsi, mieux quantifier et identifier la provenance des sources d'émissions biogéniques
+primaires permettrait peut-être d'identifier l'une des raisons de la sous-estimations des
+PM par les modèles CTM, en pointant une source actuellement mal prise en compte dans ces
+modèles.
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Cette étude a été menée dans le cadre de la thèse de~\cite{samakeAtmospheric2019}, et
+    mon implication dans ces travaux concerne la partie recensement des données à partir
+    de la base de donnée établie et présentée
+    section~\ref{sec:harmonisation_et_gestion_de_base_de_donnée}, ainsi que l'utilisation
+    et le traitement des résultats issues des PMF des projets DECOMBIO et SOURCES
+    (présentée en détail section~\ref{sec:sources}).
+\end{tcolorbox}
+
+\subsubsection{Synthèse grande échelle de la climatologie des polyols}%
+\label{ssub:synthèse_grande_échelle_de_la_climatologie_des_polyols}
+
+Pour comprendre la dynamique spatiale et temporelle des émissions biogéniques primaires,
+28 stations Française présentant a minima un cycle anuelle de prélèvement analysant
+l'arabitol, sorbitol, mannitol et glucose ont été
+selectionnées~\autocite{samakePolyols2019}.
+
+Ainsi, nous avons montrée que l'arabitol et mannitol présente de très forte corrélation 
+($0.58 \leq r^2 \leq 0.93$), avec un coefficient de droite de régression entre 0.59 et 1.10 pour un
+intercepte faible (toujours inférieur à \SI{9}{\ugm})). Ainsi, il parait raisonable de
+penser que ces 2 espèces sont co-émisent par une ou plusieurs sources.
+Le sorbitol et le glucose présentent quant à eux des dynamiques propres, non nécessairement corrélés à ces
+deux espèces.
+L'arabitol et le mannitol sont sommées et appelé \textit{polyols} par la suite.
+
+Les polyols, en plus d'être ubiquitaire, présente le même signal saisonier sur l'ensemble
+des sites d'études (voir figure~\ref{fig:polyols_samake2019}) et sont d'avantage présent
+dans la fraction grossière (\PMdix) que fine (\PMdc), avec des concentrations variant de 
+\SI{7.5\pm10.9}{\ngm} à \SI{27.8\pm33.3}{\ngm} pour les \PMdc, et
+\SI{48.9\pm38.2}{\ngm} à \SI{73.5\pm61.8}{\ngm} pour les \PMdix, sur respectivement le site de
+Revin et de l'OPE, correspondant à un ratio \PMdix/\PMdc{} variant en moyenne de 3 à 5.
+Cette ségrégation suivant la taille des particules est identique pour le glucose.
+
+Les polyols ne représentent cependant qu'une faible fraction de la matière organique. En effet, en
+considérant un ratio entre l'OM et l'OC de 1.8 typique des écosytèmes d'europe de
+l'ouest, les polyols ne représentent qu'entre 0.1 et 2.1\%. La même contribution relative
+est trouvée pour le glucose.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter03/polyols_samake2019.png}
+    \caption{
+        Distribution spatio-temporelle des concentrations de polyols (moyenne et écart
+        type) en \si{ngm}.
+        Source : \cite[figure 6]{samakePolyols2019}.
+    }%
+    \label{fig:polyols_samake2019}
+\end{figure}
+
+La taille des spores ou enveloppes microbiennes, riche en polyols, sont de taille supra
+micrométrique (typiquement de \SI{2}{\micro\m} à \SI{10}{\micro\m}), ainsi que l'activité
+bilogique importante en été et très ralentie en hiver vient grandement conforter
+l'hypothèse biogénique de ces composés.
+
+Cette hypothèse a été testé plus en avant par \cite{samakeArabitol2019} sur le site de
+l'OPE, où la cellulose a été mesurée sur 2 années de prélèvements, ainsi que
+l'enregistrement des différentes activités agricoles avoisinantes.
+La coïncidence entre l'augmentation des polyols, de la cellulose (traceuse des débris de
+plante) et des moissons conforte encore une fois la provenance biogénique, mais précise
+cette fois le compartiment en question : les polyols proviennent très certainement des
+plantes et non du sol.
+
+Pour s'en assurer, une troisième étude, annalysant l'ADN de prélèvement d'échantillon
+de plantes, de sols et d'aérosols du site l'OPE, \autocite{samakeHigh2020} précise que
+l'ADN retrouver dans les aérosols correspond bien des taxons de bactérie et champignons
+originaire de la sphère herbacée et non du sol.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{chapter03/ope_polyols_cellulose_agri_samake2019.png}
+    \caption{
+        Évolution conjointe des concentrations de polyols, cellulose, glucose et des
+        activités agricoles sur le site de l'OPE de 2012 à 2018.
+        Les activités de 69 parcelles environnants le site de prélèvement sont
+        comptabilitées et aggrégés en période de 12 jours.
+        Après 2014, seules les enregistrements pour 2 parcelles étaient disponibles, les
+        valeurs sont donc multipliées arbitrairement par 10 pour cette période.
+        Source : \cite[figure 6]{samakeArabitol2019}.
+    }%
+    \label{fig:ope_polyols_cellullose_agri}
+\end{figure}
+
+\subsubsection{Contribution des émissions biogéniques primaires aux \PMdix}%
+\label{ssub:contribution_des_émissions_biogéniques_primaires_aux_pmdix}
+
+Maintenant que l'origine biogénique des polyols est acquise, il reste à quantifier
+l'importance de la source biogénique primaire à l'ensemble des PM.
+Puisque les polyols traces de manière équivoque cette source, l'ajout de ces espèces dans
+les PMF permet d'identifier une profile biogénique primaire.
+
+Pour ce faire, les 16 PMF issues du programme DECOMBIO et SOURCES ont utilisées les polyols
+dans le jeu d'espèces selectionné. Sur ces PMF, un facteur \textit{Primary biogenic
+organic aerosol} ou PBOA a systématiquement été identifié, comprennant la quasi totalité
+des polyols.
+
+La contribution de ce facteur à la matière organique totale varie de 6\% à 28\%, pour une
+moyenne et écart-type de \SI{13\pm6}{\percent} en moyenne annuelle, mais peut représenter
+plus de 40\% de la matière organique en été à certains site (voir
+figure~\ref{fig:chapter03/pboa_pmf_samake2019}).
+De fait, cette source d'émission représente un secteur d'émission important pour comprendre
+les concentrations ambiantes de PM, notamment en période chaude.
+
+On peut se demander si ce facteur est entièrement d'origine primaire et
+n'aggrège pas une partie d'aérosol organique biogénique secondaire. En l'absence d'espèce
+tracant les processus secondaires (comme le 3-MBTCA ou l'acide pinic), cette potentialitée
+reste ouverte.
+Cette hypothèse parait cependant peu probable. En effet, le ratio OC/polyols du profile
+PBOA est relativement peu variable entre les sites, alors qu'il serait peu propable que la
+variabilité des processus secondaires conduisent à une concentration d'OC identique sur
+l'ensemble des sites.
+Aussi, les ratio OC/polyols des profiles PBOA (autour de 16) sont bien dans la gamme attendue de
+variabilité des spores de champignons (entre 12 et 27), d'après \cite{bauerSignificant2008,yttriSource2011}.
+
+
+\todo{expliquer plus en détail la constitution chimique du PBOA ?}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{chapter03/pboa_pmf_samake2019.png}
+    \caption{
+        Mass contribution of polyols to OM in the PBOA factor, and relative contributions
+        of the OM PBOA factor to the total OM in PM for the 16 studied sites where the PMF
+        model was run, over the year and summertime only. Stars and circles refer to urban
+        sites without and with Alpine valley influence, respectively. Pentagons correspond
+        to traffic sites and diamonds to rural sites.
+        Source : \cite[figure 9]{samakePolyols2019}.
+    }%
+    \label{fig:chapter03/pboa_pmf_samake2019}
+\end{figure}
+
+\subsubsection{Conclusion}%
+\label{ssub:conclusion}
+
+Les polyols (arabitol et mannitol) sont des traceurs de l'activité biologiques, notamment
+de la sphère herbacée. Leur présence est ubiquitaire mais représente seulement 0.1 à 2.1\%
+de la matière organique.
+
+Par contre, il peuvent être utilisés comme espèces traceuse des émissions biogéniques
+primaire, et leur ajout dans les PMF permettent d'identifier un nouveau facteur PBOA,
+où la quasi-totalité des polyols sont présents. Très peu d'autres espèces chimiques sont
+retrouvées dans ce facteur, en dehors de l'OC.
+
+La contribution de ce facteur à l'OM totale varie de facons importante selon la saison, mais
+peu représenter jusqu'à 40\% de l'OM pendant la période chaude sur certains sites étudiés,
+en faisant un facteur important pour comprendre la dynamique des PM en période chaude.
+
+Cette importante contribution au PM totale peut paraître trop importante pour n'être
+qu'issu de processus primaire. Seulement, en l'absence d'espèce traçeuse de processus
+secondaire comme le 3-MBTCA ou l'acide pinique, il est difficile d'en savoir d'avantage.
 
 \subsection{Processus secondaires}%
 \label{sub:processus_secondaires}
@@ -643,6 +1052,4 @@ Ouverture : ANDRA et série temporelle
 Limitation : 
 - espèce trop réactive ? (oxalate ?)
 - résolution temporelle
-
-
 
