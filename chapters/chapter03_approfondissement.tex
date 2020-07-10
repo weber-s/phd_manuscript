@@ -713,9 +713,9 @@ espèces \NHq$_{bio}$, \NHq$_{agr}$ et \NHq$_{veh}$.
         \toprule
                     & Matière carbonnée       &   Métaux      &   Ions                                                &   Composés organiques \\
         \midrule
-        PMF         & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq   & Levoglucosan, $\sum$polyols, HAP \\
+        PMF         & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{\ce{K+}}, \ce{\ce{Na+}}, \ce{\ce{Cl-}}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq   & Levoglucosan, $\sum$polyols, HAP \\
         \midrule
-        PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
+        PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{\ce{K+}}, \ce{\ce{Na+}}, \ce{\ce{Cl-}}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
         \midrule
         Incertitudes& Élargie (10~\%, 15~\%)  & \multicolumn{3}{P{10cm}}{Méthode proposée par \cite{gianiniSource2013}, sauf pour les trois \NHq$_{src}$ où $\sigma_{src}/4$ est utilisé.}\\
         \bottomrule
@@ -1016,8 +1016,135 @@ Cette importante contribution au PM totale peut paraître trop importante pour n
 qu'issu de processus primaire. Seulement, en l'absence d'espèce traçeuse de processus
 secondaire comme le 3-MBTCA ou l'acide pinique, il est difficile d'en savoir d'avantage.
 
-\subsection{Processus secondaires}%
+\subsection{Variabilité fine échelle, processus secondaires et traceurs organiques}%
 \label{sub:processus_secondaires}
+
+Afin de tenter de répondre à la problématique de la contribution des facteurs secondaires
+aux PM, 3 sites de prélèvement sur Grenoble et périphérie (fond urbain : Les frènes (LF),
+hypercentre : Caserne de bonne (CB) et périurbain : Vif (Vif)) ont été choisi pour établir une
+étude PMF incluant de nouveaux traceurs organiques spécifiques des processus d'oxydations
+secondaires : le 3-MBTCA, l'acide pinique et phtalique. Sur cette étude, la cellulose a
+également été mesurée pour essayer de distinguer potentiellement différentes émissions
+biogéniques.
+
+Aussi, la proximité géographiques des 3 sites --tous dans un rayon de \SI{15}{\kilo\m}--
+permet l'estimation de la variabilité fine échelle de l'ensemble des sources identifiées
+par la PMF.
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Cette partie s'appuie sur les travaux de \cite{borlazaFinescaleinprep.}, dont je suis
+    second auteur, lors du projet Mobil'Air, destiné également à évaluer l'impacte sur la
+    qualité de l'air d'une zone à faible émission dans la métropole grenobloise 
+    (\url{https://mobilair.univ-grenoble-alpes.fr/}).
+\end{tcolorbox}
+
+\subsubsection{Variabilités saisonières}%
+\label{ssub:variabilites_saisonières}
+
+\paragraph{Corrélation entre espèces}%
+\label{par:correlation_entre_especes}
+
+\subparagraph{Oxydation secondaire biogénique}%
+\label{par:oxydation_secondaire_biogénique}
+
+On s'appercoit tout d'abord que le 3-MBTCA et l'acide pinique présentent de très forte
+corrélation sur les 3 sites, avec un cycle saisonier fort et de forte concentration en été
+(voir figure~\ref{fig:borlaza_evolution_temporelle}). Du fait de l'activité photochimique
+conduisant à la formation d'espèce secondaire issue des terpènes en cette période, ce
+résultat était attendu. On observe aussi de forte variation de concentration à faible
+échelle temporelle (de l'ordre de quelque jours). Ces espèces sont en effet très réactive
+et présente un temps de demie-vie très courte dans l'atmophère.
+
+Aussi, ces espèces partagent le cycle saisonier du MSA, mais présentent cependant des
+contribution asychrone, indiquant alors différents processus secondaires.
+
+\subparagraph{Polyols et cellulose}%
+\label{par:oxydation_secondaire_anthrophique}
+
+Comme attenue d'après \cite{samakePolyols2019}, les polyols ont un cycle saisonier très
+marqués avec une forte concentration en été et faible en hiver. Ce cycle est aussi présent
+pour la cellulose, bien que moins marqué cependant. En revanche, la durée où de la
+cellulose est présente dans l'atmopshère est beaucoup plus grande que pour les polyols.
+Ainsi, les sources émettrices de polyols et de cellulose ne peuvent pas être entièrement
+les mêmes.
+
+\subparagraph{Sulfate et acide phthalic}%
+\label{par:sulfate_et_acide_phthalic}
+
+L'acide phthalique est en très faible concentration tout le long de l'année d'étude,
+exceptés quelques pics très restreint temporellement. La synchronicité de ces pics avec de
+forte concentration en sulfate est également observée, mais n'est pas bien comprise pour
+l'instant.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter03/borlaza/AllInOne.pdf}
+    \caption{
+        Évolution temporelle de \textbf{a)} l'acide phthalic, \textbf{b)} l'acide pinic,
+        \textbf{c)} le 3-MBTCA, \textbf{d)} le MSA, \textbf{e)} les polyols
+        (arabitol+mannitol), \textbf{f)} la cellulose, \textbf{g)} le sulfate et
+        \textbf{h)} le cuivre pour les 3 sites du bassin grenoblois (LF en orange, CB en
+        bleu et Vif en vert).
+    }%
+    \label{fig:borlaza_evolution_temporelle}
+\end{figure}
+
+\paragraph{Similitude et diversité inter-site}%
+\label{par:similitude_et_diversité_inter_site}
+
+Lors que l'on compare les sites entre eux
+(figure~\ref{fig:chapter03/borlaza/correlation}), de très fortes corrélations sont
+observées pour les ions et espèces organiques, à l'exception notoire de la cellulose, qui
+semble avoir une dynamique propre sur chacun des sites.
+
+Les traceurs du traffic routier (Cu et Fe) semble indiquer une proximité entre les sites de
+LF et CB, alors que le site de Vif présente un signal différent. Il en est de même pour
+les traceurs des poussières crustales (\ce{Ca^{2+}}, Al et Ti). Bien que la distance entre
+le centre de Grenoble et le site de Vif puisse expliquer cette différence, il n'est pas a
+exclure que la présence d'un terrain de cross à proximité de la station de Vif rende ces
+mesures singulières et non représentatives d'un fond périurbain.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter03/borlaza/correlation.png}
+    \caption{Corrélation de pearson des concentrations temporelle des espèces mesurée
+    entre les 3 pairs de site (LF-CB, LF-Vif et CB-Vif)}%
+    \label{fig:chapter03/borlaza/correlation}
+\end{figure}
+
+\subsubsection{Résultats PMF}%
+\label{ssub:résultats_pmf}
+
+\begin{table}[ht]
+    \begin{ThreePartTable}
+        \centering
+        \caption{Résumé des facteurs PMF identifiés sur les 3 sites grâce à leur traceurs
+        spécifiques.}
+        \label{tab:pmf_mobilair_species}
+        \begin{tabular}{ll}
+            \toprule
+            Identified factors & Specific tracers\\
+            \midrule
+            Biomass burning              & Levoglucosan, mannosan, \ce{K+}, Rb, \ce{Cl-}\\
+            Primary traffic              & EC, \ce{Ca^{2+}}, Cu, Fe, Sb, Sn\\
+            Nitrate-rich                 & NO3-, NH4+, phthalic acid\\
+            Sulfate-rich                 & SO42-, NH4+, Se, phthalic acid \\
+            Mineral dust                 & \ce{Ca^{2+}}\tnote{*}, Al, Ti, V\\
+            Sea/road salt                & \ce{Na+}, \ce{Cl-}\\
+            Aged sea salt                & \ce{Na+}, \ce{Mg^{2+}} \\
+            Industrial                   & As, Cd, Cr, Mn, Mo, Ni, Pb, Zn\\
+            Primary biogenic             & Polyols, cellulose\\
+            MSA-rich                     & MSA\\
+            Secondary biogenic oxidation & 3-MBTCA, pinic acid\\
+            \bottomrule
+        \end{tabular}
+        \begin{tablenotes}
+        \item[*] Le site de Vif ne présente pas \ce{Ca^{2+}} dans ce facteur.
+        \end{tablenotes}
+    \end{ThreePartTable}
+\end{table}
+
 
 \section{SOURCES}%
 \label{sec:sources}
