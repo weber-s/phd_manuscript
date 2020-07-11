@@ -1041,6 +1041,10 @@ par la PMF.
 \subsubsection{Variabilités saisonières}%
 \label{ssub:variabilites_saisonières}
 
+La cellulose étant très peu courrament mesuré, ainsi que les acides organiques, nous
+présentont dans un premier temps les mesures de concentrations obtenues sur l'année
+2017-2018 sur les 3 sites, en comparaison avec d'autres espèces plus communément mesurées.
+
 \paragraph{Corrélation entre espèces}%
 \label{par:correlation_entre_especes}
 
@@ -1116,11 +1120,20 @@ mesures singulières et non représentatives d'un fond périurbain.
 \subsubsection{Résultats PMF}%
 \label{ssub:résultats_pmf}
 
+Afin d'estimer l'impacte de l'ajout de la cellule, acide pinique et phthalique et 3-MBTCA,
+une PMF ``classique'' (i.e. sans ces nouvelles espèces) sert de référence, et une PMF
+``organique'' incluant ces espèces mais respectant strictement les autres paramètres de la
+PMF classique permet l'évaluation de leurs effets.
+Les PMF sont calculées indépendament pour les 3 sites.
+10 facteurs sont identifiés sur les 3 sites pour la PMF classique, résumés dans le
+tableau~\ref{tab:pmf_mobilair_species}.
+
 \begin{table}[ht]
     \begin{ThreePartTable}
         \centering
         \caption{Résumé des facteurs PMF identifiés sur les 3 sites grâce à leur traceurs
         spécifiques.}
+        \footnotesize
         \label{tab:pmf_mobilair_species}
         \begin{tabular}{ll}
             \toprule
@@ -1128,23 +1141,121 @@ mesures singulières et non représentatives d'un fond périurbain.
             \midrule
             Biomass burning              & Levoglucosan, mannosan, \ce{K+}, Rb, \ce{Cl-}\\
             Primary traffic              & EC, \ce{Ca^{2+}}, Cu, Fe, Sb, Sn\\
-            Nitrate-rich                 & NO3-, NH4+, phthalic acid\\
-            Sulfate-rich                 & SO42-, NH4+, Se, phthalic acid \\
+            Nitrate-rich                 & \ce{NO3-}, \ce{NH4+}, phthalic acid\\
+            Sulfate-rich                 & \ce{SO4^{2-}}, \ce{NH4+}, Se, phthalic acid \\
             Mineral dust                 & \ce{Ca^{2+}}\tnote{*}, Al, Ti, V\\
             Sea/road salt                & \ce{Na+}, \ce{Cl-}\\
             Aged sea salt                & \ce{Na+}, \ce{Mg^{2+}} \\
             Industrial                   & As, Cd, Cr, Mn, Mo, Ni, Pb, Zn\\
             Primary biogenic             & Polyols, cellulose\\
             MSA-rich                     & MSA\\
-            Secondary biogenic oxidation & 3-MBTCA, pinic acid\\
+            Secondary biogenic oxidation\tnote{a} & 3-MBTCA, pinic acid\\
             \bottomrule
         \end{tabular}
         \begin{tablenotes}
         \item[*] Le site de Vif ne présente pas \ce{Ca^{2+}} dans ce facteur.
+        \item[a] Seulement identifié pour les PMF organiques.
         \end{tablenotes}
     \end{ThreePartTable}
 \end{table}
 
+\paragraph{Nouveau facteur d'oxydation secondaire biogénique}%
+\label{par:nouveau_facteur_d_oxydation_secondaire_biogénique}
+
+Lors de l'ajout des nouvelles espèces organiques, un nouveau facteur apparaît, riche en
+3-MBTCA et acide pinique et dont la contribution est maximale en été (voir la composition
+et contribution temporelle de ce profile sur le site de CB
+figure~\ref{fig:chapter03/borlaza/CB-SBO}).
+Ce facteur apporte jusqu'à \SI{10}{\ugm} de \PMdix{} certains jours d'été, en faisant l'un
+des facteurs majeurs contribuant aux \PMdix{} certains jours.
+Aussi, une part importante de l'OC est ammnené par ce facteur (environ 10\% de l'OC
+totale), mais également du sulfate (environ 15\%), suggérant la présence de composés
+organique suflatés.
+Ainsi, en moyenne estivale, c'est entre 20\% et 40\% de la matière organique qui est
+apporté par ce facteur selon le site considéré, ce qui en fait le facteur principale
+d'aport de matière organique pendant cette période.
+
+\paragraph{Primaire biogénique}%
+\label{par:primaire_biogénique}
+
+Le deuxième facteur présentant d'importante contribution de ces traceurs organiques est
+le profile d'émission primaire biogénique (voir
+figure~\ref{fig:chapter03/borlaza/LF-PBOA}). Notamment, près de 60\% de la cellulose est
+apporté par ce facteur, renforcant l'hypothèse de l'émission de ce facteur par la sphère
+herbacée (comme expliqué en section~\ref{sub:émission_biogénique_primaire}). Aussi, et
+comme suspecté auparavant, ce facteur est également responsable d'environ 20\% de l'acide
+pinique et du 3-MBTCA, et par conséquent une part de la matière organique n'est pas
+d'origine primaire mais secondaire, bien que limité. Il est à noté également que la
+quantité totale de matière organique ou de \PMdix{} expliqué par ce ce facteur ne varie
+pas avec l'ajout de ces nouveaux traceurs organique (voir
+figure~\ref{fig:chapter03/borlaza/comparaison-classique-orga}), et de manière générale, à
+part l'ajout de la cellulose et de l'acide pinique et 3-MBTCA, la
+composition chimique de ce facteur reste identique entre la PMF de référence et la PMF
+organique.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[t]{1\textwidth}
+    \begin{center}
+        \includegraphics[width=1\linewidth]{chapter03/borlaza/CB-Secondary biogenic oxidation.pdf}
+    \end{center}
+    \caption{Composition chimique et contribution temporelle aux \PMdix{} du facteur
+    d'oxydation biogénique secondaire sur le site d'hypercentre CB.}%
+    \label{fig:chapter03/borlaza/CB-SBO}
+    \end{subfigure}
+    \begin{subfigure}[t]{1\textwidth}
+    \begin{center}
+        \includegraphics[width=1\linewidth]{chapter03/borlaza/LF-Primary biogenic.pdf}
+    \end{center}
+    \caption{Composition chimique et contribution temporelle aux \PMdix{} du facteur
+    d'émission primaire biogénique sur le site de fond urbain LF.}%
+    \label{fig:chapter03/borlaza/LF-PBOA}
+    \end{subfigure}
+    \caption{Profile chimique et contribution temporelle aux \PMdix{} des 2 facteurs
+        majoritairement impactés par l'ajout de la cellulose, acide pinique et phthalique
+        et 3-MBTCA.
+    }%
+    \label{fig:chapter03/borlaza/pmf_profiles}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter03/borlaza/Comparison_orga-woOrga_profile_Primary biogenic_LF.png}
+    \caption{Comparaison du profile chimique du facteur primaire biogénique sur le site de
+        fond urbain LF entre la PMF classique (en bleue) et celle incluant les nouvelles
+    espèces organique (en orange).}%
+    \label{fig:chapter03/borlaza/comparaison-classique-orga}
+\end{figure}
+
+\paragraph{Contributions des facteurs aux \PMdix}%
+\label{par:contributions_des_facteurs_aux_pmdix}
+
+Comparés aux PMF classiques, la différence majeure de la contribution aux \PMdix{} réside en
+la diminution de l'importance du facteur sulfate rich au profit de l'oxydation biogénique
+secondaire (voir figure~\ref{fig:chapter03/borlaza/Comparison_orga-woOrga_absolute}).
+En effet, on observe une baisse entre \SI{1}{\ugm} et \SI{2}{\ugm} de la contribution du
+facteur sulfate rich en moyenne annuelle sur les 3 sites, et une contribution équivalente à
+la baissse du suflate rich pour le nouveau facteur d'oxydation secondaire biogénique.
+
+Ainsi, l'ajout des nouveaux traceurs organiques a permit de mieux séparer le facteur
+sulfate rich, qui comportait une part importante de l'OC, en deux facteurs de typologie
+plus claire : secondaire inorganique sulfaté (i.e. sulfate rich) et secondaire organique
+biogénique.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapter03/borlaza/Comparison_orga-woOrga_absolute.pdf}
+    \caption{Comparaison des contributions annuelles des différents facteurs aux \PMdix{}
+    pour les 3 sites entre les PMF classiques et organiques.}%
+    \label{fig:chapter03/borlaza/Comparison_orga-woOrga_absolute}
+\end{figure}
+
+\subsubsection{Conclusion}%
+\label{ssub:conclusion}
+
+\todo{La faire...}
+
+\clearpage
 
 \section{SOURCES}%
 \label{sec:sources}
@@ -1154,12 +1265,10 @@ mesures singulières et non représentatives d'un fond périurbain.
 \subsection{Comparison of PM\textsubscript{10} sources profiles at 15 french sites using a harmonized constrained positive matrix factorization approach}%
 \label{sub:article}
 
+\includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/sources.pdf}
+
 \subsection{Conclusion}%
 \label{sub:conclusion}
-
-
-
-% \includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/sources.pdf}
 
 % \subsection{Supporting Information}%
 % \label{sub:supporting_information}
