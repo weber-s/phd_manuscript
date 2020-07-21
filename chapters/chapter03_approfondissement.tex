@@ -738,9 +738,9 @@ espèces \NHq$_{bio}$, \NHq$_{agr}$ et \NHq$_{veh}$.
         \toprule
                     & Matière carbonée       &   Métaux      &   Ions                                                &   Composés organiques \\
         \midrule
-        PMF         & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{\ce{K+}}, \ce{\ce{Na+}}, \ce{\ce{Cl-}}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq   & Lévoglucosan, $\sum$polyols, HAP \\
+        PMF         & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq   & Lévoglucosan, $\sum$polyols, HAP \\
         \midrule
-        PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{\ce{K+}}, \ce{\ce{Na+}}, \ce{\ce{Cl-}}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
+        PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
         \midrule
         Incertitudes& Élargie (10~\%, 15~\%)  & \multicolumn{3}{P{10cm}}{Méthode proposée par \cite{gianiniSource2013}, sauf pour les trois \NHq$_{src}$ où $\sigma_{src}/4$ est utilisé.}\\
         \bottomrule
@@ -843,7 +843,7 @@ agricole.
 \end{figure}
 
 \subsubsection{Conclusion}%
-\label{ssub:conclusion}
+\label{ssub:conclusion_isotopie}
 
 
 Grâce à l'isotopie, nous avons pu montrer que l'ammonium provient très majoritairement
@@ -1024,7 +1024,7 @@ attendue de variabilité des spores de champignons (entre 12 et 27), d'après
 \end{figure}
 
 \subsubsection{Conclusion}%
-\label{ssub:conclusion}
+\label{ssub:conclusion_polyols}
 
 Nous avons donc montré que les polyols (arabitol et mannitol) sont des traceurs de
 l'activité biologiques, notamment de la strate herbacée. Leur présence est ubiquitaire
@@ -1284,7 +1284,7 @@ biogénique.
 \end{figure}
 
 \subsubsection{Conclusion}%
-\label{ssub:conclusion}
+\label{ssub:conclusion_organique}
 
 Ainsi, en plus des conclusions sur les sources de PM et la variabilité fine échelle, qui
 sont abondamment discutés dans l'article et rapidement rappelé ici, cette étude
@@ -1355,6 +1355,8 @@ que la variabilité de leurs incertitudes.
     \cite{favezTraitement2017} (Français). Ce travail a été poursuivi durant ma thèse,
     notamment sur la partie concernant la comparabilité et variabilité des profils
     chimiques, et a été valorisé dans le papier \cite{weberComparison2019}, présenté ici.
+    Le complément d'information est disponible sur \url{http://pmsource.u-ga.fr} et en
+    annexe~\ref{annexe:SOURCES_SI}.
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
@@ -1369,23 +1371,56 @@ que la variabilité de leurs incertitudes.
 
 \subsection{Comparison of PM\textsubscript{10} sources profiles at 15 french sites using a harmonized constrained positive matrix factorization approach}%
 \label{sub:article_SOURCES}
+Article paru dans le journal \textit{Atmosphere} le 4 juin 2019 :
+
+\begin{quote}
+    Samuël Weber, Dalia Salameh, Alexandre Albinet, Laurent Y. Alleman, Antoine Waked,
+    Jean-Luc Besombes, Véronique Jacob, Géraldine Guillaud, Boualem Mesbah, Benoit Rocq, Agnès
+    Hulin, Marta Dominik-Sègue, Eve Chrétien, Jean-Luc Jaffrezo, et Olivier Favez. 2019.
+    \textit{Comparison of \PMdix{} sources profiles at 15 French sites using a harmonized constrained
+    Positive Matrix Factorization approach}. Atmosphere 10(6), p.310.
+    \textsc{doi} : \href{doi:10.3390/atmos10060310}{https://doi.org/10.3390/atmos10060310},
+    \textsc{url} : \url{https://www.mdpi.com/2073-4433/10/6/310}
+\end{quote}
+
+
+Une erreur typographique importante a été vue après publication : dans le tableau 
+\textit{\textbf{Table~2.} Input variables and uncertainties used in the PMF analyses.}, la
+valeur du coefficient $a$ pour les marqueurs organiques n'est pas de $0.01$ mais $0.10$.
+
 
 \includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/sources.pdf}
 
 \subsection{Conclusion}%
-\label{sub:conclusion}
+\label{sub:conclusion_SOURCES}
 
-% \subsection{Supporting Information}%
-% \label{sub:supporting_information}
-%
-% \includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/SOURCES_SI.pdf}
+Des connaissances fines sur les provenances des espèces chimiques permet d'identifier les
+sources prépondérantes de \PMdix{} à grande échelle lors d'étude PMF multi-sites.
+Ces connaissances permettent aussi l'utilisation d'un ensemble de contrainte minimale
+conduisant en l'amélioration des profils chimique PMF obtenus mais également de meilleurs
+stabilité statistiques, tant en termes de diminution de l'erreur aléatoire (bootstrap) que
+de diminution de l'ambiguïté rotationelle (displacment).
+Enfin, la mise en place et l'utilisation d'une méthodologie harmonisée d'étude PMF permet
+une comparabilité inter-sites à travers l'outil DeltaTool.
 
+L'utilisation de cette méthodologie, incorporant des espèces organiques, permet non
+seulement d'établir une phénoménologie des \PMdix{} à grande échelle spatiale, montrant
+des variations saisonnières importantes des sources de PM, mais améliore également la
+robustesse statistique --estimée par bootstrap et displacment-- et géochimique
+--similitude des facteurs et présence à large échelle spatiale--, y compris pour des
+facteurs peu courant dans la littérature comme les émissions primaires biogéniques et le
+MSA-rich.
+
+Ces recherches permettront prochainement la comparaison entre modèle PMF, proche des
+observations, et déterministe CTM, afin de comprendre et si possible d'améliorer, les
+potentiels manquement dans les processus implémentés dans les CTM, et ce pour une large
+gamme de conditions environnementales.
 
 \section{Conclusion}%
 \label{sec:conclusion_chap3}
 
-\subsubsection{Résumé du chapitre}%
-\label{ssub:résumé_du_chapitre_3}
+\subsection{Résumé du chapitre}%
+\label{sub:résumé_du_chapitre_3}
 
 L'ajout de nouveaux traceurs spécifiques permet une meilleure estimation des profils
 chimiques des différents facteurs PMF obtenues. 
@@ -1411,15 +1446,15 @@ PMF harmonisée sur 15 sites différents montre qu'il est possible de réduire l
 subjective de l'expérimentateur tout en ne masquant pas les spécificités propres à chaque
 site.
 
-\subsubsection{Pistes de travaux futurs}%
-\label{ssub:pistes_de_travaux_futurs}
+\subsection{Pistes de travaux futurs}%
+\label{sub:pistes_de_travaux_futurs}
 
 Si certaines espèces sont maintenant mesurées en routines à l'IGE (polyols et MSA),
 d'autres sont encore utilisées à des fins de recherches et ne sont pas encore utilisable
-à des fins opérationelles. En effet, s'il est possible d'agir sur les émissions de
-combustion de biommase ou liés au traffic routier mais également de savoir sur lesquels
+à des fins opérationnelles. En effet, s'il est possible d'agir sur les émissions de
+combustion de biomase ou liés au trafic routier mais également de savoir sur lesquels
 il est difficile d'avoir une action (primaire biogénique), les facteurs organiques
-secondaires sont difficilement attribuables à un ou des secteur⋅s d'activité⋅s. Cette
+secondaires sont difficilement attribuables à un ou des secteur·s d'activité·s. Cette
 limitation propre aux facteurs secondaires peut être levée, comme nous l'avons vu avec
 l'isotopie de l'ammonium, mais doivent faire l'objet d'études approfondies.
 
@@ -1444,8 +1479,14 @@ Enfin, la ``filtrothèque'' construite aux fils des ans à CHIANTI ouvre la voie
 telle série de prélèvement permet l'analyse tendancielle des facteurs PMF et donc
 l'estimation de l'efficacité des différentes mesures de protection de la qualité de l'air
 de la dernière décennie. Les résultats préliminaires semblant notamment indiquer une baisse
-progressive des émissions liés au trafic routier, également retouvé par la tendance à
+progressive des émissions liés au trafic routier, également retrouvé par la tendance à
 la baisse des émissions d'EC observées par les différentes campagnes ACTRIS.
+\todo{mettre la figure}
+
+\todo{trouver une facons de dire que depuis n ans, j'ai pas mal d'expertise et que
+j'encadre stagiaire/début de thèse sur la formation PMF.
+Travaux : bcp de chose, pas tous seul mais en groupe, mais moi encadrement et formation.
+}
 
 %
 % Limitation : 

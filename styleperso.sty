@@ -47,6 +47,8 @@
 % }}}
 % =====================================================================================
 
+\graphicspath{{figures/}}
+
 % =====================================================================================
 % ====== SIunitx {{{
 \sisetup{per-mode = reciprocal} % reciprocal / symbol 
@@ -122,9 +124,56 @@
 % =====================================================================================
 
 % =====================================================================================
+% ============= BOOK MARK {{{
+% \bookmarksetup{color=blue}
+% \bookmark[page=1,level=0]{Sample document}
+% }}}
+% =====================================================================================
+
+% =====================================================================================
 % ===== Commands {{{
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 \newfontfamily\unicodesymbols{DejaVu Sans}
+
+\DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
+\newcolumntype{P}[1]{>{\centering\arraybackslash}m{#1}}
+\renewcommand{\hat}{\widehat}
+
+\newcommand{\E}[1]{\cdot 10^{#1}}
+\newcommand{\dN}{\text{$\delta^{15}$N}}
+\newcommand{\NOt}{\ce{NO3^-}}
+\newcommand{\SOq}{\ce{SO4^2-}}
+\newcommand{\NHt}{\ce{NH3}}
+\newcommand{\NHq}{\ce{NH4^+}}
+\newcommand{\NA}{\ce{NO3NH4}}
+\newcommand{\SA}{\ce{SO4(NH4)2}}
+\newcommand{\OP}{\text{OP}}
+\newcommand{\PM}{\text{PM}}
+\newcommand{\PMdix}{\ce{PM10}}
+\newcommand{\PMdc}{\ce{PM_{2.5}}}
+\newcommand{\PMun}{\ce{PM1}}
+\newcommand{\OPm}{\texorpdfstring{\text{OP\textsubscript{m}}}{OPm}}
+\newcommand{\OPv}{\texorpdfstring{\text{OP\textsubscript{v}}}{OPv}}
+\newcommand{\POm}{\texorpdfstring{\text{PO\textsubscript{m}}}{POm}}
+\newcommand{\POv}{\texorpdfstring{\text{PO\textsubscript{v}}}{POv}}
+\newcommand{\OPDTT}{\text{OP}$^\text{DTT}$}
+\newcommand{\OPDTTv}{\text{OP}$^\text{DTT}_\text{v}$}
+\newcommand{\OPDTTm}{\text{OP}$^\text{DTT}_\text{m}$}
+\newcommand{\OPAA}{\text{OP}$^\text{AA}$}
+\newcommand{\OPAAv}{\text{OP}$^\text{AA}_\text{v}$}
+\newcommand{\OPAAm}{\text{OP}$^\text{AA}_\text{m}$}
+\newcommand{\PODTT}{\text{PO}$^\text{DTT}$}
+\newcommand{\PODTTv}{\text{PO}$^\text{DTT}_\text{v}$}
+\newcommand{\PODTTm}{\text{PO}$^\text{DTT}_\text{m}$}
+\newcommand{\POAA}{\text{PO}$^\text{AA}$}
+\newcommand{\POAAv}{\text{PO}$^\text{AA}_\text{v}$}
+\newcommand{\POAAm}{\text{PO}$^\text{AA}_\text{m}$}
+\newcommand{\BCwb}{BC\textsubscript{wb}}
+\newcommand{\BCff}{BC\textsubscript{ff}}
+\newcommand{\Xg}{{\mathbf{X}^{-g}}}
+\newcommand{\OMEGA}{\mathbf{\Omega}}
+\newcommand{\eN}{\text{$\varepsilon_{\NHq-\NHt}$}}
+
 % }}}
 % =====================================================================================
 
