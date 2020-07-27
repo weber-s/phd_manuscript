@@ -1,7 +1,9 @@
-\section{Methodologie de décolution du PO}%
-\label{sec:methodologie_de_décolution_du_po}
+\section{Introduction}%
+\label{sec:intro_PO}
 
-\subsection{Introduction}
+\subsection{Quelle métrique pour l'impact sanitaire ?}%
+\label{sub:quelle_métrique_pour_l_impact_sanitaire_}
+
 
 Bien que dans les chapitres précédents nous avons vu qu'il était possible d'estimer de
 façon fiable la contribution des différentes sources de PM grâce aux PMF et d'établir une
@@ -62,7 +64,7 @@ transitions ainsi que certaines quinones conduisent à la formation d'un grand n
     \end{ThreePartTable}
 \end{table}
 
-\subsubsection{Un PO par espèces chimiques ?}%
+\subsection{Un PO par espèces chimiques ?}%
 \label{sub:un_po_par_espèces_chimiques_}
 
 Cependant, lorsque l'ensemble des PM est solubilisé, analysé et confronté aux PO, de
@@ -78,7 +80,7 @@ printemps, où la combustion de biomasse est toujours présente.
 Ainsi, ces corrélations sont un premier pas vers l'identification des sources majoritaires
 de PO, mais s'avère insuffisant.
 
-\subsubsection{Du PO par espèces chimiques au PO par sources}
+\subsection{Du PO par espèces chimiques au PO par sources}
 
 L'attribution d'un PO intrinsèque par espèces chimiques est donc estimée par mesure
 directe ou par regression linéaire
@@ -114,8 +116,14 @@ organic carbon}, BrnC\footnote{BrnC: Brown Carbon}, EC, \SOq, \NHt, K, Ca, Mn, F
 Zn, mais également en établissant une régression linéaire entre le \PODTT{} et les sources
 issues du CMB.
 Entre 2014 et 2017, \cite{batesReactive2015} puis \cite{fangOxidative2016}, de la même
-équipe de recherche, ont repris ce principe et l'ont appliqués à plus grande échelle
+équipe de recherche, ont repris ce principe et l'ont appliqué à plus grande échelle
 spatiale et également au \POAAv.
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Lors du commencement de ma thèse, à ma connaissance, seules ces 3 études étaient
+    disponibles dans la littérature. Ce sujet s'est vu largement développés au cours des 3
+    dernières années, et sera discutée dans la suite.
+\end{tcolorbox}
 
 \begin{figure}[ht]
     \centering
@@ -136,7 +144,7 @@ associés à une nouvelle variable, le PO, dont nous ne connaissons a priori que
 sources, peut conduire à des solutions instables statistiquement.
 
 La solution utilisant la régression linéaire à partir du CMB hérite des limitations
-propre au CMB : peu de prise en compte des particularités locales, connaissance a priori
+propres au CMB : peu de prise en compte des particularités locales, connaissance a priori
 forte, etc (voir section
 ~\ref{ssub:atouts_et_limitations_des_différents_modèles_récepteurs}).
 Ainsi, \cite{batesSource2018} utilise un modèle CMB pour prédire à large échelle spatiale
@@ -144,10 +152,11 @@ Ainsi, \cite{batesSource2018} utilise un modèle CMB pour prédire à large éch
 statistique ($r^2 = 0.36$ et intercepte non nul), notamment du fait de l'oubli potentiel de
 sources importantes (bioaérosols \autocite{samakeUnexpected2017}, etc).
 
-\subsubsection{Couplage de PMF avancée avec l'estimation du PO}%
+\subsection{Couplage de PMF avancée avec l'estimation du PO}%
 \label{sub:couplage_de_pmf_avancée_avec_l_estimation_du_po}
 
-Je propose dans cette section de coupler les connaissances acquises sur les PMF présentées
+Dans ce chapitre, je propose tout d'abord une méthodologie permettant de coupler les
+connaissances acquises sur les PMF présentées
 dans le chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}
 précédent, en n'ajoutant pas le PO comme variable explicative pour ne pas perturber le
 modèle, puis d'évaluer le PO intrinsèque (i.e. par microgramme) de chacune des sources
@@ -156,7 +165,14 @@ identifiées, illustré par la figure~\ref{fig:workflow_inversion}.
 Le site de Chamonix entre 2013 et 2014 a été choisi pour tester cette méthode du fait
 d'une étude PMF approfondie par \cite{chevrierChauffage2016} et par les mesures de PO sur
 ce site effectué lors de la thèse de \cite{calasPollution2017}, aussi bien pour le \POAA{}
-que le \PODTT, et a fait l'objet d'une publication présenté ci-après.
+que le \PODTT, et a fait l'objet d'une publication~\autocite{weberApportionment2018}
+présentée dans la section~\ref{sec:weber_et_al_2018}.
+
+Cette méthode ayant présenté des résultats très encourageants, son application à un
+ensemble de 15 séries de prélèvement réparties sur 14 sites en France métropolitaine et
+discutée dans la section~\ref{sec:synthèse_grande_échelle}.
+Cette partie reprend un article en cours de soumission~\autocite{weberSourceinprep.} et a
+déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources2019}.
 
 \begin{figure}[ht]
     \centering
@@ -168,6 +184,15 @@ que le \PODTT, et a fait l'objet d'une publication présenté ci-après.
     chacune des sources aux PO, estimant l'exposition de la population à cette source.}%
     \label{fig:workflow_inversion}
 \end{figure}
+
+
+\section{Climatologie du PO}%
+\label{sec:climatologie_du_po}
+
+\todo{\cite{calasSeasonal2019}}
+
+\section{Développement méthodologique à Chamonix}%
+\label{ssub:développement_méthodologique_à_chamonix}
 
 \clearpage
 \subsection{An apportionment method for the oxidative potential of atmospheric particulate
@@ -220,7 +245,7 @@ facteurs PMF, s'avère comme attendue trompeuse. Le facteur nitrate-rich était 
 secondaire biogénique, tracé par le MSA, est négativement corrélé aux deux \OPv{} alors
 qu'il présente le 2\ieme{} \PODTT{} intrinsèque le plus élevé. Il est donc nécessaire
 d'utiliser des méthodes statistiques plus avancées que la régression uni-variée lorsque
-l'on cherche à estimer les sources de PO afin de s'affranchir des tendances sainonières et
+l'on cherche à estimer les sources de PO afin de s'affranchir des tendances saisonnières et
 des covariations entre espèces.
 
 Cette méthode est donc validée comme outil de déconvolution des sources de PO, et le
@@ -229,10 +254,178 @@ d'étude, afin d'établir à la manière du chapitre précédent, une phénomén
 sources de la masse \PMdix, mais des sources de PO.
 
 
-\section{Synthèse grande échelle}%
+\section{Pertinence géochimique à grande échelle des sources de PO}%
 \label{sec:synthèse_grande_échelle}
+
+\subsection{Introduction}%
+\label{sub:introduction_synthèse_nationale}
+
+La méthode d'estimation des sources de PO établie dans la section précédente permet donc
+d'estimer efficacement les PO intrinsèques des différentes sources de PM déterminer par
+PMF, avec de meilleures performances statistiques que les études similaires précédentes.
+Cela tient certainement au fait de la meilleure prise en compte des différentes sources de
+PM grâce à une PMF plus détaillée que celles présentées dans les études précédentes et non
+perturbée par l'ajout des PO dans le système d'équation de la PMF.
+
+La question suivante est donc naturellement la généralisation ou non de ce résultat.
+Est-il possible d'estimer correctement un PO intrinsèque pour chacune des sources de PM
+estimer par PMF, indépendamment du lieu de prélèvement ? Si oui, est-ce que chaque source
+de PM présente un PO intrinsèque similaire de site en site, avec quelle variabilité ?
+
+Pour répondre à cette question, un ensemble de 14 sites de prélèvement à minima annuel, couvrant les
+années 2013 à 2018 et différents types d'environnements (urbain, trafic, vallée alpine),
+a été choisi pour estimer de manière standardisée leurs sources de PM grâce à la
+méthodologie développée dans le cadre du programme SOURCES présentée
+section~\ref{sub:article_SOURCES}. En effet, la PMF présentée précédemment sur le site de
+Chamonix n'est pas facilement généralisable, car les espèces chimiques utilisées ne sont
+pas disponibles pour un grand nombre de site (hopanes, aethalometre, methoxyphénol).
+
+Ainsi, les sites du programme SOURCES sur lesquels suffisamment de filtres étaient
+disponibles ont été analysées en \POAA{} et \PODTT{}. Afin d'enrichir et améliorer la
+représentativité spatiale de l'étude, j'ai également pris en compte de nouvelles études
+PMF similaire à la méthodologie SOURCES, mais faite dans le cadre de cette étude, pour les
+sites de Passy, Marnaz, GRE-fr (2017), GRE-cb, et Vif.
+Aussi, le site de Rouen présentant un résultat PMF indiquant de potentiel mélanges de
+facteurs a été écarté de cette étude \autocite{weberComparison2019}.
+
+C'est donc plus de 1700 filtres répartis sur 14 sites de prélèvements et 15 séries
+annuelles complètes (voir tableau 1 de l'article suivant) analysées analytiquement suivant
+un protocol standard à tous les échantillons et statistiquement par des PMF harmonisées
+qui permettront, ou non, la généralisation de cette méthode de déconvolution des sources
+de PO.
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Devant la quantité de résultat à présenter (résultat PMF, similitude géochimique des
+    facteurs entre sites, séries temporelles des PO, performance statistiques,
+    contribution saisonnières des sources aux PO, etc.), le choix a été pris de rendre
+    disponible l'ensemble des données et de facilité leur visualisation à travers le site
+    \url{http://getopstandop.u-ga.fr}.
+    Les résultats agrégés sont présentés dans l'article suivant, mais le détail de chacun
+    des sites et facteur PMF peut être retrouvé sur le site.
+\end{tcolorbox}
 
 \subsection{Article}%
 \label{sub:article}
 
+Article actuellement en préparation pour \textit{Atmospheric Chemistry and Physics} :
+
+\begin{quote}
+    Samuël Weber, Gaëlle Uzu, Aude Calas, Dalia Salameh, Florie Chevrier, Julie Allard,
+    Jean-Luc Besombes, Olivier Favez, (Les représentants des différentes AASQA), et
+    Jean-Luc Jaffrezo. in prep.
+    \textit{Source apportionment of the oxidative potential of aerosols at 15 French
+    sites for yearly time series of observation}.
+\end{quote}
+
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/article_allOP/article_nuage.pdf}
+
+\subsection{Conclusion}%
+\label{sec:conclusion_synthèse_OP}
+
+\subsubsection{Une méthodologie statistiquement et géochimiquement validée}%
+\label{ssub:une_méthodologie_statistiquement_et_géochimiquement_validée}
+
+La méthode d'estimation des sources de \POAA{} et \PODTT{} des \PMdix{} couplant des
+analyses PMF avancées et un modèle d'inversion linéaire prenant en compte les incertitudes
+des mesures de PO présente des résultats statistiques très satisfaisant pour l'ensemble
+des sites étudiés ($r^2>0.7$ et intercept faible, à l'exception notable de VIF (\PODTT) et
+STG-cle (\POAA)).
+
+Les mêmes sources de \PMdix{} retrouvées grâces à des PMF harmonisées présentes un potentiel
+oxydant intrinsèque (i.e. par microgramme de PM) similaire, et ce, pour différents types
+d'environnements (urbain, industriel, trafic et vallée alpine). Une étude à si large
+échelle spatiale et temporelle, utilisant à la fois le \POAA{} et \PODTT{} nous permet
+donc de conclure que les PO sont bien distincts selon la source --et donc géochimie--
+considérés, et chaque type de source présent un PO intrinsèque déterminé et indépendant du
+site d'étude.
+
+Ce résultat était un préalable nécessaire à la modélisation du PO par les modèles
+déterministes CTM afin d'établir une couverture spatiale et temporelle beaucoup plus
+large que les études sur sites, permettant à terme des études épidémiologiques sur la
+qualité de l'air à travers la métrique du PO.
+
+\subsection{Une redistribution de l'importance des sources de PM}%
+\label{sub:une_redistribution_de_l_importance_des_sources_de_pm}
+
+Sans attendre la modélisation CTM, il est d'ors et déjà possible de dire que les
+différentes sources de PM présentes des PO intrinsèques distincts et qu'il y a une
+redistribution complète de l'importance de la contribution des sources aux \PMdix{} selon
+la métrique d'observation choisi : masse, \POAAv{} ou \PODTTv. Les sources inorganiques
+secondaires (nitrate-rich et sulfate-rich) contribuant significativement à la masse de PM
+ne contriue en définitive que peu aux PO. Ainsi, sous l'hypothèse que
+la métrique du PO permet une meilleure estimation de la toxicité des PM, les sources
+d'émissions d'importances sanitaires présentes sur l'ensemble de la France se trouvent être
+principalement 2 sources d'émissions primaires anthropiques : le trafic routier et la
+combustion de biomasse domestique. Ces résultats concordent avec les études précédentes de
+\cite{batesReactive2015,fangOxidative2016}, et celles plus récentes de
+\cite{paraskevopoulouYearlong2019,cesariSource2019}. Il est également intéressant de
+voir que l'étude de \cite{cesariSource2019} a confronté les approches 2 approches ``PO comme variable
+dans la PMF'' ou ``PO estimé par régression linéaire des résultats PMF'', et lors
+de l'ajout du \PODTTv{} dans la PMF, la source traffic se voit attribuer davantage de Fe
+et Cr et beaucoup moins de nitrate et ammonium.
+
+Il est a noter que ces 2 sources ont cependant des dynamiques très différentes. L'émission
+primaires du traffic présente un fort PO intrinsèque pour les deux tests de PO.
+En revanche, si la combustion de biomasse domestique présente un \POAA{} intrinsèque du
+même ordre que le traffic routier, son \PODTT{} intrinsèque est près de 2 fois plus
+faible. Aussi, l'importance de la combustion de biomasse vient principalement du fait des
+fortes concentrations de cette source durant l'hiver. L'exposition à cette source est donc
+importante en hiver mais absente en dehors de cette saison à l'inverse de l'émission
+primaire du traffic présentant de plus faible concentrations mais tout au long de l'année.
+Selon l'importance d'une exposition aigüe ou chronique aux PO, il conviendra donc de
+cibler d'abord l'une ou l'autre de ces sources.
+
+Parmi les sources naturelles, les émissions primaires biogéniques et les poussières
+crustales présentes également une activité rédox importante pour le test au \PODTT, mais
+pas pour le \POAA, retrouvant ainsi en condition ambiantes les résultats de mesure de PO
+sur les bioaérosols de \cite{samakeUnexpected2017}.
+
+Cependant, les processus secondaires semblent également pouvoir jouer un rôle important
+dans le PO ambiant, mais l'incertitude liée à cette source est trop grande pour en tirer
+des conclusions avec les connaissances dont nous disposonti actuellmeent. Cette
+incertitude est très certainements liée à la difficulté de la prise en compte des sources
+ou processus conduisant à la formation d'aerosols organiques secondaires par les PMF avec
+spéciation chimique sur filtres.
+\todo{une figure avec PO avec acide orga ?}
+
+
+\section{Conclusion}%
+\label{sec:conclusion_chap4}
+
+\subsection{Une nouvelle vision de l'aérosol, plus proche de l'impact sanitaire}%
+\label{sub:une_nouvelle_vision_de_l_aérosol_plus_proche_de_l_impact_sanitaire}
+
+Grâce à la mise en place et l'harmonisation des nombreuses mesures de chimie et de PO
+ainsi que des résultats issus PMF au sein d'une base de donnée unique, il a été possible
+d'établir une phénoménologie des sources de \POAA{} et \PODTT{} à grande échelle spatiale.
+
+Au cours des dernières années, cette base de donnée s'est considérablement enrichie et
+d'autres groupes de recherches ont commencé à documenter à large échelle spatiale des
+résultats similaires en Italie~\autocite{pietrograndeReview2019} ou en
+Suisse\footnote{Mesures effectuées par l'IGE} grâce au
+PSIr~\autocite{daellenbachSourcessubmitted} ou l'EMPA et des travaux sont également en
+cours pour une collaboration avec le TNO au Pays-bas et l'IDAEA en Espagne dans le cadre
+de l'ANR GetOP-StandOP portée par Gaëlle Uzu.
+\todo{est-ce qu'on peut dire ca?}
+
+À travers ces travaux et l'établissement de méthode de déconvolution des sources de PO, il
+est montré que la vision que l'on a de l'aérosols à travers la métrique de la
+concentration massique doit être repensé lorsque l'on s'intéresse à l'impacte sanitaire
+des sources de PM. Les sources contribuants majoritairement à la masse des PM n'étant pas
+nécessairement celles contribuant le plus aux \POAA{} ou \PODTT, et inversement.
+Ainsi, au cours des dernières années, les études aux \POAA{} et \PODTT{} de
+\cite{vermaReactive2014,batesReactive2015,fangOxidative2016,weberApportionment2018,cesariSource2019,daellenbachSourcessubmitted,weberSourceinprep.}
+semblent indiquer la prédominance de 2 sources anthropiques majoritaire pour l'exposition
+aux PO : le traffic routier et la combustion de biomasse domestique.
+
+\subsection{Limitation et idées pour le futur}%
+\label{sub:limitation_et_idées_pour_le_futur}
+\todo{trouver un meilleur titre}
+
+Seulement, 
+
+
+Limitation des méthodes linéaires alors qu'on sait le PO pas linéaire
+
+Nécessité de descendre en infra journalier.
+
