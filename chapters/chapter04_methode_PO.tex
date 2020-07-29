@@ -12,7 +12,7 @@ pas répondu. En effet, l'ordre de contribution à la concentration moyenne annu
 \PMdix{} présentée par \cite[(figure 3)]{weberComparison2019} ne préjugage pas de leurs
 impacts sanitaires.
 
-En effet, comme détaillé dans en introduction
+En effet, comme détaillé en introduction
 section~\ref{sec:le_potentiel_oxydant_des_aerosols}, la mesure de la masse des PM n'est
 certainement pas l'indicateur le plus adapté pour évaluer leur toxicité, car la composition
 chimique, forme, surface réactive, etc. n'est pas prise en compte par cette métrique.
@@ -22,10 +22,77 @@ est proposé comme nouvel indicateur de l'exposition des populations à la toxic
 Il est maintenant bien documenté que les différents tests de PO présentent une information
 différente de la concentration massique (voir par exemple,
 \cite{choRedox2005,vermaReactive2014,batesReactive2015,fangOxidative2016,fangAmbient2017,calasSeasonal2019},
-ou la revue détaillée récente de \cite{batesReview2019}), comme rappelé dans le
-tableau~\ref{tab:calas_2018_spearman} sur une étude à Chamonix par
-\cite{calasComparison2018} présentant la corrélation entre la masse des \PMdix{} et 5
-mesures de PO.
+ou la revue détaillée récente de \cite{batesReview2019}).
+% , comme rappelé dans le
+% tableau~\ref{tab:calas_2018_spearman} sur une étude à Chamonix par
+% \cite{calasComparison2018} présentant la corrélation entre la masse des \PMdix{} et 5
+% mesures de PO.
+
+À titre d'exemple, les moyennes des concentrations massique et de \POAAv{} pour 4 sites (Bolivie,
+Inde, Suisse et France) analysés à l'IGE sont présentées figure~\ref{fig:OPAAv_4sites}.
+Alors que la concentration massique est identique pour chacun des couples
+Cochambamba-Dehli et Strasbourg-Berne, le \POAAv{} varie d'un facteur 2 à 3.  Ainsi, si
+le site de Berne présente des concentrations en \PMdix{} inférieur au seuil réglementaire
+et 5 fois plus faible que le site urbain de Cochabamba, le \POAAv{} de ces \PMdix{} est
+en réalité 2 fois supérieure, indiquant en définitive des \PMdix{} ayant une activité
+oxydante beaucoup plus importante sur le site de Berne que de Cochabamba, et donc
+probablement un impacte sanitaire plus délétaire alors que la métrique de la masse seule
+donnerait la conclusion inverse.
+Cependant, il existe aussi de lieux de prélèvement où les 2 métriques concordent. Sur le
+site de Dehli, à la fois la masse et le \POAAv{} des \PMdix{} sont élevées, et sur le
+site de Strasbourg, de faible concentration massique sont associés à de faible \POAAv.
+
+Cet exemple illustre la complexité cachée derrière la métrique de la masse des PM, qui,
+si on accepte que le PO est un bon indicateur de l'impact sanitaire des PM, se trouve
+finallement que peu adapté à l'étude de la qualité de l'air concernant l'exposition des
+populations.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/chapter04/OPAAv_4sites.png}
+    \caption{Comparaison de la métrique de la masse et du \POAAv{} des PM, pour 2 pairs
+        de sites urbain et traffic présentant une même concentration massique de PM
+        moyenne identique mais des \POAAv{} très différents. Mesures effetuées à l'IGE.\\
+        Crédit: PSI pour le site de Berne, X pour Dehli, programme interne pour
+        Cochambamba et Strasbourg.
+    }%
+    \label{fig:OPAAv_4sites}
+\end{figure}
+
+
+% \begin{table}[ht]
+%     \begin{ThreePartTable}
+%         \centering
+%         \caption{Corrélation de Spearman entre 5 tests de PO et la masse des \PMdix{} sur
+%             le site de Chamonix (2013) séparer en période chaude (triangle bas) et froide
+%             (triangle haut).\\
+%             Source : \cite[Table 3]{calasComparison2018}
+%         }
+%         \label{tab:calas_2018_spearman}
+%         \footnotesize
+%         \begin{tabular}{lSSSSSS}
+%             \toprule
+%              & {\PMdix} & {OP DTTv\tnote{1}} & {OP AAv\tnote{1}} & {OP ESRv\tnote{2}} & {OP GSHv\tnote{1}} & {OP ASCv\tnote{3}}\\
+%              \midrule
+%             \PMdix  &           & 0.91{***} & 0.91{***} & 0.59{***} & 0.87{***} & 0.90{***}\\
+%             OP DTTv & 0.71{***} &           & 0.89{***} & 0.61{***} & 0.79{***} & 0.72{***}\\
+%             OP AAv  & 0.43{*}   & 0.65{***} &           & 0.54{***} & 0.85{***} & 0.79{***}\\
+%             OP ESRv & 0.088     & 0.17      & 0.36      &           & 0.56{**}  & 0.59{**}\\
+%             OP GSHv & 0.44{*}   & 0.29      & 0.36      & 0.63{*}   &           & 0.92{***}\\
+%             OP ASCv & 0.38{*}   & 0.37{*}   & -0.072    & -0.29     & 0.17      & \\
+%             \bottomrule
+%         \end{tabular}
+%         \begin{tablenotes}
+%         \item[] *** p < 0.001 level, ** p < 0.01 level, * p < 0.05 level
+%         \item[1] n = 30 (cold period), n = 29 (warm period)
+%         \item[2] n = 30 (cold period), n = 14 (warm period)
+%         \item[3] n = 27 (cold period), n = 29 (warm period)
+%         \end{tablenotes}
+%     \end{ThreePartTable}
+% \end{table}
+
+\subsection{Un PO par espèces chimiques ?}%
+\label{sub:un_po_par_espèces_chimiques_}
 
 Il est également connu que les différentes espèces chimiques constitutives des PM ne
 réagissent pas à un même test de PO de la même manière. Notamment, les métaux de
@@ -33,53 +100,32 @@ transitions ainsi que certaines quinones conduisent à la formation d'un grand n
 \ce{HO^.} et sont donc des espèces très réactives à la mesure du PO
 \autocite{charrierRates2015,calasImportance2017}.
 
-\begin{table}[ht]
-    \begin{ThreePartTable}
-        \centering
-        \caption{Corrélation de Spearman entre 5 tests de PO et la masse des \PMdix{} sur
-            le site de Chamonix (2013) séparer en période chaude (triangle bas) et froide
-            (triangle haut).\\
-            Source : \cite[Table 3]{calasComparison2018}
-        }
-        \label{tab:calas_2018_spearman}
-        \footnotesize
-        \begin{tabular}{lSSSSSS}
-            \toprule
-             & {\PMdix} & {OP DTTv\tnote{1}} & {OP AAv\tnote{1}} & {OP ESRv\tnote{2}} & {OP GSHv\tnote{1}} & {OP ASCv\tnote{3}}\\
-             \midrule
-            \PMdix  &           & 0.91{***} & 0.91{***} & 0.59{***} & 0.87{***} & 0.90{***}\\
-            OP DTTv & 0.71{***} &           & 0.89{***} & 0.61{***} & 0.79{***} & 0.72{***}\\
-            OP AAv  & 0.43{*}   & 0.65{***} &           & 0.54{***} & 0.85{***} & 0.79{***}\\
-            OP ESRv & 0.088     & 0.17      & 0.36      &           & 0.56{**}  & 0.59{**}\\
-            OP GSHv & 0.44{*}   & 0.29      & 0.36      & 0.63{*}   &           & 0.92{***}\\
-            OP ASCv & 0.38{*}   & 0.37{*}   & -0.072    & -0.29     & 0.17      & \\
-            \bottomrule
-        \end{tabular}
-        \begin{tablenotes}
-        \item[] *** p < 0.001 level, ** p < 0.01 level, * p < 0.05 level
-        \item[1] n = 30 (cold period), n = 29 (warm period)
-        \item[2] n = 30 (cold period), n = 14 (warm period)
-        \item[3] n = 27 (cold period), n = 29 (warm period)
-        \end{tablenotes}
-    \end{ThreePartTable}
-\end{table}
-
-\subsection{Un PO par espèces chimiques ?}%
-\label{sub:un_po_par_espèces_chimiques_}
-
 Cependant, lorsque l'ensemble des PM est solubilisé, analysé et confronté aux PO, de
 fortes corrélations sont bien observés avec les espèces présentant une forte réactivité aux
 PO, mais certaines autres espèces sont parfois fortement corrélées alors qu'une mesure
 directe de leurs PO montre aucune réactivité --c'est notamment le cas du nitrate,
-de l'ammonium ou de lévoglucosan \autocite{vermaRedox2009,calasComparison2018,calasSeasonal2019}.
+de l'ammonium, du lévoglucosan ou du fer \autocite{vermaRedox2009,calasComparison2018,calasSeasonal2019}.
+La figure~\ref{fig:pairplotOPs} illustre cette association entre \POAAv{} et \PODTTv{}
+pour l'OC, EC, Lévoglucosan, \NOt, Cu et Fe sur un ensemble de 16 sites de prélèvements en
+France pour un total de plus de 3400 échantillons, retrouvant bien les résultats
+précédement obtenus dans la littérature.
 
-Ces corrélations ne reflètent donc pas de réelles causalité mais des co-corrélations. Le
-lévoglucosan est émis en même temps que certaines quinones lors de la combustion de bois,
-qui elles sont redox-active, et le nitrate est émis temporellement en fin d'hiver-début
-printemps, où la combustion de biomasse est toujours présente. 
-Ainsi, ces corrélations sont un premier pas vers l'identification des sources majoritaires
-de PO, mais s'avère insuffisant.
+Ces corrélations ne reflètent donc pas nécessairement de réelles causalité mais des
+co-corrélations. Le lévoglucosan est émis en même temps que certaines quinones lors de la
+combustion de bois, qui elles sont redox-active, et le nitrate est émis temporellement en
+fin de l'hiver alors que la combustion de biomasse est toujours présente.  Ainsi, ces
+corrélations sont un premier pas vers l'identification des sources majoritaires de PO,
+mais s'avère insuffisantes.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/chapter04/pairplot_OPs.png}
+    \caption{Relation entre les \POAAv{} et \PODTTv{} et l'OC, EC, Lévoglucosan, \NOt, Cu et Fe pour
+    3458 échantillons de \PMdix{} en France, répartis sur 16 sites de prélèvement.}%
+    \label{fig:pairplotOPs}
+\end{figure}
+
+\clearpage
 \subsection{Du PO par espèces chimiques au PO par sources}
 
 L'attribution d'un PO intrinsèque par espèces chimiques est donc estimée par mesure
@@ -117,13 +163,9 @@ Zn, mais également en établissant une régression linéaire entre le \PODTT{} 
 issues du CMB.
 Entre 2014 et 2017, \cite{batesReactive2015} puis \cite{fangOxidative2016}, de la même
 équipe de recherche, ont repris ce principe et l'ont appliqué à plus grande échelle
-spatiale et également au \POAAv.
-
-\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
-    Lors du commencement de ma thèse, à ma connaissance, seules ces 3 études étaient
-    disponibles dans la littérature. Ce sujet s'est vu largement développés au cours des 3
-    dernières années, et sera discutée dans la suite.
-\end{tcolorbox}
+spatiale et également au \POAAv.\footnote{Lors du commencement de ma thèse, à ma connaissance, seules ces 3 études étaient
+disponibles dans la littérature. Ce sujet s'est vu largement développés au cours des 3
+dernières années, et sera discutée dans la suite.}
 
 \begin{figure}[ht]
     \centering
@@ -186,10 +228,50 @@ déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources201
 \end{figure}
 
 
+\clearpage
 \section{Climatologie du PO}%
 \label{sec:climatologie_du_po}
 
-\todo{\cite{calasSeasonal2019}}
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Une partie des résultats présentés dans cette section s'appuie sur l'article de
+    \cite{calasSeasonal2019}, pour lequel mon implication a porté notamment sur la mise à
+    disposition et visualisation des données disponible à
+    \url{https://pmall.univ-grenoble-alpes.fr/OP}.\\
+    La généralisation à davantage de site d'étude est également présentée dans cette
+    partie.
+\end{tcolorbox}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter04/variabilite_saisonniere.pdf}
+    \caption{Variabilité saisonière du \POAAv{} et \PODTTv{} sur 16 sites de prélévements
+        de \PMdix{} en France métropolotaine pour un total de 3458 échantillons.
+    }%
+    \label{fig:variabilite_saisonniere}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter04/variabilite_saisonniere_MRS-Passy.pdf}
+    \caption{Variabilité saisonière du \POAAv{} et \PODTTv{} sur 16 sites de prélévements
+        de \PMdix{} en France métropolotaine pour un total de 3458 échantillons.
+    }%
+    \label{fig:variabilite_saisonniere}
+\end{figure}
+
+\subsection{Typologie}%
+\label{sub:typologie}
+
+\subsection{Frenes}%
+\label{sub:frenes}
+
+\subsection{PM10 - PM2.5}%
+\label{sub:pm10_pm2_5}
+
+
+
+
+
+
 
 \section{Développement méthodologique à Chamonix}%
 \label{ssub:développement_méthodologique_à_chamonix}
