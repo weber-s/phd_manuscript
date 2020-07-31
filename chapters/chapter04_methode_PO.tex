@@ -105,10 +105,6 @@ fortes corrélations sont bien observés avec les espèces présentant une forte
 PO, mais certaines autres espèces sont parfois fortement corrélées alors qu'une mesure
 directe de leurs PO montre aucune réactivité --c'est notamment le cas du nitrate,
 de l'ammonium, du lévoglucosan ou du fer \autocite{vermaRedox2009,calasComparison2018,calasSeasonal2019}.
-La figure~\ref{fig:pairplotOPs} illustre cette association entre \POAAv{} et \PODTTv{}
-pour l'OC, EC, Lévoglucosan, \NOt, Cu et Fe sur un ensemble de 16 sites de prélèvements en
-France pour un total de plus de 3400 échantillons, retrouvant bien les résultats
-précédement obtenus dans la littérature.
 
 Ces corrélations ne reflètent donc pas nécessairement de réelles causalité mais des
 co-corrélations. Le lévoglucosan est émis en même temps que certaines quinones lors de la
@@ -117,15 +113,6 @@ fin de l'hiver alors que la combustion de biomasse est toujours présente.  Ains
 corrélations sont un premier pas vers l'identification des sources majoritaires de PO,
 mais s'avère insuffisantes.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.7\linewidth]{figures/chapter04/pairplot_OPs.png}
-    \caption{Relation entre les \POAAv{} et \PODTTv{} et l'OC, EC, Lévoglucosan, \NOt, Cu et Fe pour
-    3458 échantillons de \PMdix{} en France, répartis sur 16 sites de prélèvement.}%
-    \label{fig:pairplotOPs}
-\end{figure}
-
-\clearpage
 \subsection{Du PO par espèces chimiques au PO par sources}
 
 L'attribution d'un PO intrinsèque par espèces chimiques est donc estimée par mesure
@@ -228,9 +215,11 @@ déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources201
 \end{figure}
 
 
-\clearpage
-\section{Climatologie du PO}%
-\label{sec:climatologie_du_po}
+\section{Généralisation de mesure du PO}%
+\label{sec:généralisation_de_mesure_du_po}
+
+\subsection{Climatologie du PO}%
+\label{sub:climatologie_du_po}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     Une partie des résultats présentés dans cette section s'appuie sur l'article de
@@ -241,6 +230,37 @@ déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources201
     partie.
 \end{tcolorbox}
 
+\subsubsection{Variabilité saisonnière}%
+\label{ssub:variabilité_saisonnière}
+
+Les mesures de PO effectuées à l'IGE permettent d'établir une climatologie du potentiel
+oxydant sur une large échelle spatiale, et pour différents types d'environnement. Cette
+base de donnée unique permet la mise en lumière d'une variation temporelle du \POAAv{} et
+\PODTTv{} (voir figure~\ref{fig:variabilite_saisonniere}), comme déjà rapporté dans
+différentes études présentant des résultats annuels
+\autocite{fangOxidative2016,calasComparison2018,calasSeasonal2019,pietrograndePM102018}.
+
+Cependant, cette variation saisonnière n'est pas observée pour l'ensemble des typologies
+de sites. Elle est notamment très marquée sur les sites de vallées alpines mais beaucoup
+moins pour les sites de bord de mer et portuaire (voir
+figure~\ref{fig:variabilite_saisonniere_MRS_PASSY} pour le site de Passy (vallée alpine)
+et Marseille-5 avenues (urbain et marin)).
+
+En définissant la saison chaude comme étant d'avril à septembre et la saison froide
+d'octobre à mars, le \POAAv{} présente des contrastes saisonnier beaucoup plus marqué que
+le \PODTTv. Dans l'étude de \cite[tableau 3]{calasSeasonal2019}, sur les 7 sites étudiés,
+le \POAAv{} est jusqu'à 6 fois plus élevé en hiver qu'en été pour le site de Chamonix
+alors que ce ratio n'est que de 2 pour le \PODTTv. De manière générale, l'amplitude des
+variations saisonières du \PODTTv{} est similaire à celle de la masse des \PMdix{} alors
+que le \POAAv{} présente des variations beaucoup plus importante.
+
+En plus d'être une première indication sur les sources d'émission influencant
+majoritairement les différents tests de PO, la connaissance de cette variation saisonnière
+ou son absence pourrait contraindre de manière plus efficace les extrapolations des
+modèles épidémiologiques et de \textit{Land Use Regression} utilisant des extrapolations à
+partir de quelques semaines de mesures uniquement
+\autocite{yangaileenSpatial2015,jedynskaSpatial2017}.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/chapter04/variabilite_saisonniere.pdf}
@@ -249,20 +269,61 @@ déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources201
     }%
     \label{fig:variabilite_saisonniere}
 \end{figure}
+
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/chapter04/variabilite_saisonniere_MRS-Passy.pdf}
-    \caption{Variabilité saisonière du \POAAv{} et \PODTTv{} sur 16 sites de prélévements
-        de \PMdix{} en France métropolotaine pour un total de 3458 échantillons.
+    \caption{Détail de la variabilité saisonière du \POAAv{} et \PODTTv{} sur le site de
+        Passy (vallée alpine de l'Arve) en orange et le site urbain et portuaire de MRS-5av
+        (Marseille) en bleu.
     }%
-    \label{fig:variabilite_saisonniere}
+    \label{fig:variabilite_saisonniere_MRS_PASSY}
 \end{figure}
 
-\subsection{Typologie}%
-\label{sub:typologie}
+\subsubsection{Variabilité des corrélations chimie -- PO}%
+\label{ssub:_variabilité_des_corrélations_chimie_po}
 
-\subsection{Frenes}%
-\label{sub:frenes}
+À cette différenciation des valeurs de \POv{} selon la typologie des sites s'ajoute des
+corrélations différentes avec les espèces chimiques, notamment entre le \POAAv{} et le
+Cu, Sb et Sn entre les sites de la vallée de l'Arve (Chamonix, Passy et Marnaz) et les
+autres sites (Talence, Grenoble, Nice, Port-de-bouc). La figure 7 de
+\cite{calasSeasonal2019} illustre cette plus forte corrélation entre le Cu et le \POAAv{}
+pour ces 3 sites de la vallée de l'Arve. Cette importance accrue des marqueurs des
+émissions hors échappement dans la vallée de l'Arve reste peu comprise. Une hypothèse
+avancée pourrait être la présence plus importante de camion de transit dans cette valée
+comparée aux autres site d'étude.
+
+Cependant, les tendances des corrélations entre PO et espèces chimiques sont bien
+similaire sur l'ensemble des sites. Une généralisation est présentée
+figure~\ref{fig:pairplotOPs} pour l'OC, EC, Lévoglucosan, \NOt, Cu et Fe sur un ensemble
+de 16 sites de prélèvements en France pour un total de plus de 3400 échantillons.
+Conformément aux études antérieures, l'OC, EC et Lévoglucosan sont fortement corrélés
+aux PO, notamment au \POAAv. Concernant le nitrate, cuivre et fer en revanche, ces
+corrélations semble dépendre du site considéré, bien qu'une corrélation positive semble
+tout le temps observée.
+En revanche, et comme déjà exposé, les corrélations ne sont pas suffisantes pour conclure
+à une quelconque association ou causalité. Par conséquent, le détail site par site n'a pas
+été étudié dans cette thèse.
+\todo{sans doute un peu abrupte comme fin...}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/chapter04/pairplot_OPs.png}
+    \caption{Relation entre les \POAAv{} et \PODTTv{} et l'OC, EC, Lévoglucosan, \NOt, Cu et Fe pour
+    3458 échantillons de \PMdix{} en France, répartis sur 16 sites de prélèvement.}%
+    \label{fig:pairplotOPs}
+\end{figure}
+
+\subsection{Observation longue durrée}%
+\label{sub:observation_longue_durree}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter04/frenes.pdf}
+    \caption{figures/chapter04/Frenes}%
+    \label{fig:figures/chapter04/frenes}
+\end{figure}
 
 \subsection{PM10 - PM2.5}%
 \label{sub:pm10_pm2_5}
