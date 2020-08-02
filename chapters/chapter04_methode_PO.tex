@@ -315,22 +315,105 @@ En revanche, et comme déjà exposé, les corrélations ne sont pas suffisantes 
     \label{fig:pairplotOPs}
 \end{figure}
 
-\subsection{Observation longue durrée}%
-\label{sub:observation_longue_durree}
+\clearpage
+\subsection{Observation longue durée}%
+\label{sub:observation_longue_duree}
+
+La métrique du potentiel oxydant étant relativement récente, nous n'avons pas encore de
+recul sur l'évolution longue durée de cette métrique, et encore moins de l'effet des
+politiques publiques sur le PO des PM. En revanche, sur le site expérimental de Grenoble
+Les Frènes, opéré par Atmo Auvergne Rhônes-alpes, des prélévements journaliers depuis 2013
+ont été effectué dans le cadre de différents programmes de recherche (programme CARA
+notament). Ainsi, une grande partie des filtres sont toujours disponible pour mesure du PO et
+la figure~\ref{fig:TSGREfr} illustre l'état actuel (2 aout 2020) des mesures de PO faites a
+posteriori sur cette série de mesure.
+
+On remarque tout d'abord la grande cyclicité saisonnières des 2 PO et son absence --ou
+tout du moins sa moindre importance-- pour la masse des \PMdix.
+Aussi, il semblerait qu'il y ait une tendance à la baisse des deux \POv, détaillée dans le
+tableau~\ref{tab:statGREfr}. Cette baisse semble être due à une diminution des occurences
+de jours à fortes concentrations de \PMdix{} et de \POv{} plutôt qu'à une baisse
+généralisée au cours de l'année puisque les tendances des 1\iers{} quartiles des valeurs de
+\POv{} et \PMdix{} sont très faibles comparées aux tendances des 3\iemes{} quartiles.
+Seulement, cette tendance est un réultat très préliminaire et un biai de selection est
+très certainement présent du fait de l'échantillonnage non homogène pour les années 2018
+et 2019 (notamment l'absence de mesure pour l'hiver 2019).
+Ces mesures sont actuellement en cours d'analyse à l'IGE, et l'ensemble de la période 2013
+à 2020 devrait être disponible bientôt.
+
+Un tel recul sur les mesures de PO est, à notre connaissance, unique au monde. Cette
+connaissance permettra notamment d'étudié l'impacte du confinnement lié à la pandémie de
+SARS-CoV-2 conduisant à une restriction très importante des déplacements de la population
+et au ralentissement de l'activité économique. De nombreuses sources de \PMdix{} ont dont
+été amoindrie, et la comparaison avec les années antérieures sera un atout pour la
+compréhension du lien entre les sources d'émission et le PO des aérosols. De plus,
+contrairement à ce à quoi nous aurions pu nous attentre, malgrès le confinnement
+généralisé à l'ensemble de l'Europe de l'ouest, seul entre 5 et 10\% de diminution
+des \PMdc{} a été observée dans l'étude récente de \cite{menutImpact2020}, bien que
+l'hypothèse d'une diminution drastique de la source trafic routier a été prise en compte.
+La confrontation de cette faible diminution des \PMdc{} par rapport à la
+dynamique du PO sur la même période est actuellement en cours, notamment grâce aux
+observations de longue durée rendu possible par le site de Grenoble Les Frènes.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/chapter04/frenes.pdf}
-    \caption{figures/chapter04/Frenes}%
-    \label{fig:figures/chapter04/frenes}
+    \caption{Mesure d'observation de la masse des \PMdix, du \POAA{} et du \PODTT{} sur le
+    site de Grenoble Les Frènes (GRE-fr) depuis 2013. La masse des \PMdix{} provient des
+mesures quotidienne d'Atmo AURA.}%
+\label{fig:TSGREfr}
 \end{figure}
+
+\begin{table}[ht]
+    \centering
+    \caption{Statistique descriptive et évolution annuelle de \POAAv, \PODTTv{} et masse
+    des \PMdix{} sur le site de Grenoble Les Frènes depuis 2013.\\
+    Attention, ce travail est encore en cours et la fréquence d'échantillonage varie selon
+    les années (voir figure~\ref{fig:TSGREfr}). Notamment, le PO pour 2018 et 2019 ne
+    couvre pas une année complète.
+}
+    \label{tab:statGREfr}
+    \sisetup{separate-uncertainty=false}
+    \footnotesize
+    \begin{tabular}{cccSSSSSSSS}
+        \toprule
+        variable               & {year} & {count} & {mean}                          & {std} & {min} & {25\%} & {50\%} & {75\%} & {max}\\ \midrule
+                               &        &         & \multicolumn{7}{c}{\si{\opv}}\\
+\multirow{8}{*}{OP$^{{AA}}_v$} & 2013   & 119     & 2.324                           & 2.606 & 0.257 & 0.904  & 1.385  & 2.553  & 16.185\\
+                               & 2014   & 121     & 1.093                           & 1.151 & 0.040 & 0.345  & 0.753  & 1.441  & 7.839\\
+                               & 2015   & 103     & 2.269                           & 2.292 & 0.164 & 0.718  & 1.109  & 3.450  & 11.652\\
+                               & 2016   & 107     & 1.484                           & 1.638 & 0     & 0.506  & 0.905  & 1.673  & 8.369\\
+                               & 2017   & 120     & 1.624                           & 1.726 & 0.119 & 0.469  & 0.941  & 1.974  & 7.372\\
+                               & 2018   & 92      & 1.131                           & 0.864 & 0.003 & 0.513  & 0.913  & 1.549  & 4.905\\
+                               & 2019   & 107     & 1.124                           & 0.982 & 0.150 & 0.447  & 0.758  & 1.420  & 5.366\\
+                               & 2020   & 42      & 0.993                           & 0.819 & 0.188 & 0.463  & 0.671  & 1.187  & 3.796\\\midrule
+                               &        &         & \multicolumn{7}{c}{\si{\opv}}\\
+\multirow{8}{*}{OP$^{{DTT}}_v$}& 2013   & 119     & 3.081                           & 1.983 & 0.564 & 1.771  & 2.643  & 3.819  & 11.402\\
+                               & 2014   & 121     & 2.219                           & 1.566 & 0.059 & 1.320  & 1.694  & 2.473  & 7.965\\
+                               & 2015   & 103     & 1.367                           & 1.230 & 0.170 & 0.446  & 0.810  & 2.243  & 5.002\\
+                               & 2016   & 107     & 1.609                           & 1.248 & 0     & 0.765  & 1.236  & 2.006  & 5.931\\
+                               & 2017   & 120     & 2.034                           & 1.859 & 0.335 & 0.893  & 1.374  & 2.365  & 9.855\\
+                               & 2018   & 92      & 1.436                           & 0.611 & 0.072 & 0.931  & 1.354  & 1.840  & 2.938\\
+                               & 2019   & 107     & 1.176                           & 0.772 & 0.173 & 0.637  & 1.015  & 1.407  & 4.679\\
+                               & 2020   & 42      & 1.000                           & 0.493 & 0.136 & 0.543  & 0.955  & 1.419  & 2.109\\ \midrule
+                               &        &         & \multicolumn{7}{c}{\si{\ugm}}\\
+\multirow{8}{*}{PM$_{{10}}$}   & 2013   & 351     & 24.38                           & 13.73 & 2     & 14.5   & 22     & 30     & 83\\
+                               & 2014   & 360     & 20.38                           & 10.13 & 4     & 13     & 19     & 25     & 67\\
+                               & 2015   & 357     & 22.81                           & 11.15 & 4     & 14     & 20     & 29     & 86\\
+                               & 2016   & 352     & 19.03                           & 11.50 & 3     & 11     & 16     & 24     & 57\\
+                               & 2017   & 350     & 19.62                           & 11.37 & 3     & 12     & 17     & 24     & 70\\
+                               & 2018   & 366     & 17.21                           & 7.62  & 3.1   & 12.12  & 16.15  & 21.7   & 49.8\\
+                               & 2019   & 352     & 17.21                           & 7.90  & 4.6   & 11.2   & 15.6   & 22.02  & 48.2\\
+                               & 2020   & 190     & 17.91                           & 8.25  & 5.2   & 12.65  & 16.8   & 21.12  & 54.3\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 
 \subsection{PM10 - PM2.5}%
 \label{sub:pm10_pm2_5}
 
-
-
-
+\todo{À faire...}
 
 
 
@@ -342,6 +425,7 @@ En revanche, et comme déjà exposé, les corrélations ne sont pas suffisantes 
 matter sources: application to a one-year study in Chamonix, France}
 \label{sec:weber_et_al_2018}
 
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
 Article paru dans le journal \textit{Atmospheric Chemistry and Physics} le 4 juin 2019 :
 
 \begin{quote}
@@ -357,6 +441,7 @@ Article paru dans le journal \textit{Atmospheric Chemistry and Physics} le 4 jui
 Les profils PMF, la corrélation entre espèces chimiques et PO et sources et
 PO à titre de comparaison avec les études antérieures, sont présentés en complément de
 l'article, repris en annexe~\ref{annexe:deconvol_OP_SI}.
+\end{tcolorbox}
 
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/deconvol_OP.pdf}
 
@@ -450,8 +535,8 @@ de PO.
 \subsection{Article}%
 \label{sub:article}
 
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
 Article actuellement en préparation pour \textit{Atmospheric Chemistry and Physics} :
-
 \begin{quote}
     Samuël Weber, Gaëlle Uzu, Aude Calas, Dalia Salameh, Florie Chevrier, Julie Allard,
     Jean-Luc Besombes, Olivier Favez, (Les représentants des différentes AASQA), et
@@ -459,6 +544,7 @@ Article actuellement en préparation pour \textit{Atmospheric Chemistry and Phys
     \textit{Source apportionment of the oxidative potential of aerosols at 15 French
     sites for yearly time series of observation}.
 \end{quote}
+\end{tcolorbox}
 
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/article_allOP/article_nuage.pdf}
 
@@ -571,4 +657,6 @@ Seulement,
 Limitation des méthodes linéaires alors qu'on sait le PO pas linéaire
 
 Nécessité de descendre en infra journalier.
+
+Généralisation spatiale
 
