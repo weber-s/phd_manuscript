@@ -366,7 +366,7 @@ mesures quotidienne d'Atmo AURA.}%
 
 \begin{table}[ht]
     \centering
-    \caption{Statistique descriptive et évolution annuelle de \POAAv, \PODTTv{} et masse
+    \caption{Statistiques descriptives et évolution annuelle du \POAAv, \PODTTv{} et masse
     des \PMdix{} sur le site de Grenoble Les Frènes depuis 2013.\\
     Attention, ce travail est encore en cours et la fréquence d'échantillonage varie selon
     les années (voir figure~\ref{fig:TSGREfr}). Notamment, le PO pour 2018 et 2019 ne
@@ -410,17 +410,91 @@ mesures quotidienne d'Atmo AURA.}%
 \end{table}
 
 
-\subsection{PM10 - PM2.5}%
+\subsection{Variation du PO selon la fraction prélevée (\PMdix{} ou \PMdc)}%
 \label{sub:pm10_pm2_5}
 
-\todo{À faire...}
+Les différentes tailles des particules ne pénétrant pas de la même maière dans le système
+respiratoire, la variation du \POv{} par classe de taille est une information importante
+pour de futurs études épidémiologiques~\cite{fangOxidative2019}.
+
+Sur 6 sites opérés par l'EMPA en Suisse, les prélèvements conjoint de la fraction grossière
+\PMdix{} et plus fine \PMdc{} ont été analysées en PO et sont présentés pour le site de
+Berne figure~\ref{fig:PO_berne} pour juin 2018 à mai 2019. La saisonnalité observée sur
+les sites francais est bien retrouvée pour les \POv{} des \PMdix, et dans une moindre
+mesure pour les \POv{} des \PMdc.
+
+En plus de la distribution des valeurs de \POv{} figure~\ref{fig:PO_berne}, la
+figure~\ref{fig:PO_berne_ratio_PM10_PM25} présente les ratio \POv{} \PMdc/\PMdix{} pour
+l'année complète. 
+Premièrement, on constate que les \POv{} des \PMdix{} sont toujours supérieurs aux \POv{}
+des \PMdc, ce qui s'explique du fait que les \PMdc{} sont comprise dans la fraction
+\PMdix. Plus exactement, le \POv{} des \PMdc{} est en moyenne 2.5 fois plus bas que le
+\POv{} des \PMdix{} pour chacun des PO. Ce résultat conforte l'influence des métaux de
+transition comme le cuivre sur le PO des PM, ces derniers se retrouvant majoritairement
+dans la fraction grossière des PM.
+En revanche, ces ratios sont variables selon la saison. En effet, les \POAAv{} sont
+plus proche en hiver (ratio \PMdc/\PMdix{} = \num{0.62(9)} en janvier) qu'en été (ratio
+\PMdc/\PMdix{} = \num{0.25(5)} en juillet). Cette tendance semble plus faible pour le
+\PODTTv, notamment du fait de faible valeur de \PODTTv{} des \PMdix{} en juillet et aout
+2018, induisant un ratio élevé du \PODTTv{} \PMdc/\PMdix{} sur cette période.
+
+Cette tendance à des ratio plus élevés en période froide qu'en période chaude renforce
+l'hypothèse de l'importance de la source ``combustion de biomasse'' car les HULIS et
+quinones émise par cette source se retrouve principalement dans la fraction fine
+\PMdc{}\autocite{linAbundance2010,fangOxidative2019} et sont connu pour avoir un impact
+important sur le PO~\autocite{vermaFractionating2015,maSources2018} et affecteront donc à
+la fois les \POv{} des \PMdc{} et \PMdix.
+
+Afin de poursuivre cette investiguation, une étude comparative sur 6 sites de l'EMPA est
+en court par Stuart Grange et à laquelle je prend part, sur les fractions \PMdix{} et
+\PMdc{}. Chacune de ces fractions est analysée aux \POAA{} et \PODTT{} mais également en
+chimie détaillée, permettant à terme une comparaison chimie-PO, et même PMF-PO, selon la
+fraction fine et grossière des particules.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter04/PO_berne.pdf}
+    \caption{Variation mensuelle du \POAAv{} et \PODTTv{} sur le site de Berne (Suisse)
+    pour la fraction \PMdix{} et \PMdc{} (juin 2018 à mai 2019).}%
+    \label{fig:PO_berne}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{figures/chapter04/PO_berne_ratio_PM10_PM25.pdf}
+    \caption{Évolution temporelle du ratio \POAAv{} et \PODTTv{} des \PMdix{} sur \POAAv{}
+    et \PODTTv{} des \PMdc{} sur le site de Berne.}%
+    \label{fig:PO_berne_ratio_PM10_PM25}
+\end{figure}
 
 
-
+\clearpage
 \section{Développement méthodologique à Chamonix}%
 \label{ssub:développement_méthodologique_à_chamonix}
 
-\clearpage
+\subsection{Le PO par sources d'émission}%
+\label{sub:le_po_par_sources_d_émission}
+
+Comme expliquée précedemment, la connaissance des ROS émis ou induit par les PM de
+chacunes des sources d'émissions majeure permettrait la mise en place de mesure de
+protection de la qualité de l'air plus efficace qu'une régulation fondée uniquement sur la
+masse des partitucles.
+Cette mesure des ROS peut être estimée en premier ordre par la mesure du PO des PM.
+Seulement, certaine catégorie de PM ne pourront tout simplement pas être directement
+mesurer aux PO, ou nécessiterait des conditions très oportunistes (formation de nitrate
+d'ammonium secondaire, fort épisode de vent saharien, émission biogénique primaire, etc.).
+
+Afin de néanmoins prendre en compte ces processus, il a été choisi de conduire des études
+sur site à l'aide du modèle source-recepteur PMF. Sur chacun des filtres où les espèces
+chimique ont été analysées, le \POv{} a également été mesuré par AA et DTT. Ainsi, suivant
+la procédure décrite en figure~\ref{fig:workflow_inversion}, il est possible d'estimer les
+source de PM au niveau du site recepteur et de leur attribuer un PO intrinsèque (i.e. par
+microgramme de PM), et donc de déterminer la contribution de chacune des sources de PM aux
+potentiels oxydants.
+
+La section suivante applique cette méthodologie sur le site expérimental de Chamonix,
+France.
+
 \subsection{An apportionment method for the oxidative potential of atmospheric particulate
 matter sources: application to a one-year study in Chamonix, France}
 \label{sec:weber_et_al_2018}
@@ -443,12 +517,12 @@ PO à titre de comparaison avec les études antérieures, sont présentés en co
 l'article, repris en annexe~\ref{annexe:deconvol_OP_SI}.
 \end{tcolorbox}
 
+\clearpage
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/deconvol_OP.pdf}
-
 
 \subsection{Conclusion}
 
-Ce chapitre prouve tout d'abord qu'il est possible de déterminer les sources de PO grâce à
+Cette section prouve tout d'abord qu'il est possible de déterminer les sources de PO grâce à
 une étude couplée entre une PMF avancée utilisant différents traceurs organiques résultant
 en 8 facteurs distincts et une régression linéaire multiple prenant en compte
 la mesure du PO à iso-masse utilisant des conditions de bioaccessibilité proche du milieu
@@ -479,7 +553,7 @@ des covariations entre espèces.
 Cette méthode est donc validée comme outil de déconvolution des sources de PO, et le
 prochain chapitre traitera de son application à un large panel d'environnement et année
 d'étude, afin d'établir à la manière du chapitre précédent, une phénoménologie non pas des
-sources de la masse \PMdix, mais des sources de PO.
+sources de la masse \PMdix, mais des sources de potentiels oxydants de particules.
 
 
 \section{Pertinence géochimique à grande échelle des sources de PO}%
@@ -488,32 +562,33 @@ sources de la masse \PMdix, mais des sources de PO.
 \subsection{Introduction}%
 \label{sub:introduction_synthèse_nationale}
 
-La méthode d'estimation des sources de PO établie dans la section précédente permet donc
-d'estimer efficacement les PO intrinsèques des différentes sources de PM déterminer par
+La méthode de déconvolution des sources de PO établie dans la section précédente permet donc
+d'estimer efficacement les PO intrinsèques des différentes sources de PM déterminées par
 PMF, avec de meilleures performances statistiques que les études similaires précédentes.
-Cela tient certainement au fait de la meilleure prise en compte des différentes sources de
-PM grâce à une PMF plus détaillée que celles présentées dans les études précédentes et non
+Cela tient probablement au fait de la meilleure prise en compte des différentes sources de
+PM grâce à une PMF plus détaillée que celles des études antérieurs et non
 perturbée par l'ajout des PO dans le système d'équation de la PMF.
 
 La question suivante est donc naturellement la généralisation ou non de ce résultat.
 Est-il possible d'estimer correctement un PO intrinsèque pour chacune des sources de PM
-estimer par PMF, indépendamment du lieu de prélèvement ? Si oui, est-ce que chaque source
-de PM présente un PO intrinsèque similaire de site en site, avec quelle variabilité ?
+estimée par PMF, indépendamment du lieu de prélèvement ? Si oui, est-ce que chaque source
+de PM présente un PO intrinsèque similaire de site en site, et avec quelle variabilité ?
 
-Pour répondre à cette question, un ensemble de 14 sites de prélèvement à minima annuel, couvrant les
-années 2013 à 2018 et différents types d'environnements (urbain, trafic, vallée alpine),
+Pour répondre à cette question, un ensemble de 14 sites de prélèvement a minima annuel, couvrant les
+années 2013 à 2018 et différents types d'environnements (urbain, trafic, industriel et vallée alpine),
 a été choisi pour estimer de manière standardisée leurs sources de PM grâce à la
 méthodologie développée dans le cadre du programme SOURCES présentée
-section~\ref{sub:article_SOURCES}. En effet, la PMF présentée précédemment sur le site de
+section~\ref{sub:article_SOURCES}~\autocite{weberSources2019}. En effet, la PMF présentée précédemment sur le site de
 Chamonix n'est pas facilement généralisable, car les espèces chimiques utilisées ne sont
-pas disponibles pour un grand nombre de site (hopanes, aethalometre, methoxyphénol).
+pas disponibles pour un grand nombre de site (hopanes, methoxyphénol et mesure de
+l'aethalometre notamment).
 
 Ainsi, les sites du programme SOURCES sur lesquels suffisamment de filtres étaient
-disponibles ont été analysées en \POAA{} et \PODTT{}. Afin d'enrichir et améliorer la
+disponibles ont été analysées en \POAA{} et \PODTT. Afin d'enrichir et améliorer la
 représentativité spatiale de l'étude, j'ai également pris en compte de nouvelles études
-PMF similaire à la méthodologie SOURCES, mais faite dans le cadre de cette étude, pour les
-sites de Passy, Marnaz, GRE-fr (2017), GRE-cb, et Vif.
-Aussi, le site de Rouen présentant un résultat PMF indiquant de potentiel mélanges de
+PMF, similaires à la méthodologie SOURCES, faite spécifiquement dans le cadre de cette
+étude, pour les sites de Passy, Marnaz, GRE-fr (2017), GRE-cb, et Vif.
+Aussi, le site de Rouen présentant un résultat PMF indiquant de potentiels mélanges de
 facteurs a été écarté de cette étude \autocite{weberComparison2019}.
 
 C'est donc plus de 1700 filtres répartis sur 14 sites de prélèvements et 15 séries
@@ -532,7 +607,8 @@ de PO.
     des sites et facteur PMF peut être retrouvé sur le site.
 \end{tcolorbox}
 
-\subsection{Article}%
+\subsection{Source apportionment of the oxidative potential of aerosols at 15 French
+sites for yearly time series of observation}%
 \label{sub:article}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
@@ -546,6 +622,7 @@ Article actuellement en préparation pour \textit{Atmospheric Chemistry and Phys
 \end{quote}
 \end{tcolorbox}
 
+\clearpage
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/article_allOP/article_nuage.pdf}
 
 \subsection{Conclusion}%
@@ -564,17 +641,17 @@ Les mêmes sources de \PMdix{} retrouvées grâces à des PMF harmonisées prés
 oxydant intrinsèque (i.e. par microgramme de PM) similaire, et ce, pour différents types
 d'environnements (urbain, industriel, trafic et vallée alpine). Une étude à si large
 échelle spatiale et temporelle, utilisant à la fois le \POAA{} et \PODTT{} nous permet
-donc de conclure que les PO sont bien distincts selon la source --et donc géochimie--
+donc de conclure que les PO sont bien distincts selon la source --et donc la géochimie--
 considérés, et chaque type de source présent un PO intrinsèque déterminé et indépendant du
 site d'étude.
 
 Ce résultat était un préalable nécessaire à la modélisation du PO par les modèles
 déterministes CTM afin d'établir une couverture spatiale et temporelle beaucoup plus
 large que les études sur sites, permettant à terme des études épidémiologiques sur la
-qualité de l'air à travers la métrique du PO.
+qualité de l'air à travers la métrique du potentiel oxydant.
 
-\subsection{Une redistribution de l'importance des sources de PM}%
-\label{sub:une_redistribution_de_l_importance_des_sources_de_pm}
+\subsubsection{Une redistribution de l'importance des sources de PM}%
+\label{ssub:une_redistribution_de_l_importance_des_sources_de_pm}
 
 Sans attendre la modélisation CTM, il est d'ors et déjà possible de dire que les
 différentes sources de PM présentes des PO intrinsèques distincts et qu'il y a une
@@ -618,7 +695,7 @@ spéciation chimique sur filtres.
 \todo{une figure avec PO avec acide orga ?}
 
 
-\section{Conclusion}%
+\section{Conclusion du chapitre}%
 \label{sec:conclusion_chap4}
 
 \subsection{Une nouvelle vision de l'aérosol, plus proche de l'impact sanitaire}%
@@ -632,7 +709,7 @@ Au cours des dernières années, cette base de donnée s'est considérablement e
 d'autres groupes de recherches ont commencé à documenter à large échelle spatiale des
 résultats similaires en Italie~\autocite{pietrograndeReview2019} ou en
 Suisse\footnote{Mesures effectuées par l'IGE} grâce au
-PSIr~\autocite{daellenbachSourcessubmitted} ou l'EMPA et des travaux sont également en
+PSI~\autocite{daellenbachSourcessubmitted} ou l'EMPA et des travaux sont également en
 cours pour une collaboration avec le TNO au Pays-bas et l'IDAEA en Espagne dans le cadre
 de l'ANR GetOP-StandOP portée par Gaëlle Uzu.
 \todo{est-ce qu'on peut dire ca?}
@@ -647,12 +724,35 @@ Ainsi, au cours des dernières années, les études aux \POAA{} et \PODTT{} de
 semblent indiquer la prédominance de 2 sources anthropiques majoritaire pour l'exposition
 aux PO : le traffic routier et la combustion de biomasse domestique.
 
+En revanche, concernant l'exposition chronique, nous avons montré qu'il est clair que
+l'émission primaire du trafic routier est la source majoritaire du potentiel oxydant des
+aérosols, aussi bien au \POAA{} qu'au \PODTT. Ce secteur d'émission est dans notre étude
+la seule source ayant un impacte très important aussi bien sur la concentration médian des
+\PMdix{}, le \POAAv{} et le \PODTTv.
+Ainsi, même si la ``meilleure'' métrique de l'impact sanitaire n'est pas définitivement
+connu à ce jour, ces 3 métriques convergent vers l'importance du trafic routier. Ce
+résultat, intuitif car il est connu empiriquement depuis longtemps qu'il vaut mieux ne
+pas respirer derrière un pot d'échappement, est néanmoins encourageant car de nombreuses
+villes et métropole, mais aussi individus, se dirigent d'ors et déjà vers une diminution
+de l'utilisation de la voiture individuelle. Il est donc espérable d'avoir dans les années
+future à la fois une lutte efficace contre le déreglement climatique et une amélioration
+de la qualité de l'air.
+
 \subsection{Limitation et idées pour le futur}%
 \label{sub:limitation_et_idées_pour_le_futur}
 \todo{trouver un meilleur titre}
 
-Seulement, 
+Bien que présentant certaines avancées importantes, les travaux de cette thèse présentes
+des limitations à prendre en compte.
 
+Tout d'abord, la méthodologie de déconvolution des sources de PO des PM utilise un modèle
+linéaire. Or, le PO, et notamment le \PODTT, est connu pour ne pas réagir de manière
+linéaire avec la masse des espèces
+chimiques~\autocite{charrierRates2015,charrierBias2016,calasImportance2017}.
+Aussi, aucun terme d'interaction entre les sources n'est pris en compte, or il est
+envisageable que, par exemple, un aérosols sulfaté et donc plus acide augmente la
+solubilisation des particules et donc présente un PO différent du fait uniquement de la
+présence de sulfate.
 
 Limitation des méthodes linéaires alors qu'on sait le PO pas linéaire
 

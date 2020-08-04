@@ -1,5 +1,0 @@
-PWD /home/samuel/Documents/IGE/Articles/manuscript/chapters
-INPUT /usr/share/texmf-dist/web2c/texmf.cnf
-INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
-INPUT chapter02_materiel_et_methode.tex
-OUTPUT chapter02_materiel_et_methode.log
