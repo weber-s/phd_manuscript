@@ -420,7 +420,7 @@ pour de futurs études épidémiologiques~\cite{fangOxidative2019}.
 Sur 6 sites opérés par l'EMPA en Suisse, les prélèvements conjoint de la fraction grossière
 \PMdix{} et plus fine \PMdc{} ont été analysées en PO et sont présentés pour le site de
 Berne figure~\ref{fig:PO_berne} pour juin 2018 à mai 2019. La saisonnalité observée sur
-les sites francais est bien retrouvée pour les \POv{} des \PMdix, et dans une moindre
+les sites français est bien retrouvée pour les \POv{} des \PMdix, et dans une moindre
 mesure pour les \POv{} des \PMdc.
 
 En plus de la distribution des valeurs de \POv{} figure~\ref{fig:PO_berne}, la
@@ -437,6 +437,10 @@ plus proche en hiver (ratio \PMdc/\PMdix{} = \num{0.62(9)} en janvier) qu'en ét
 \PMdc/\PMdix{} = \num{0.25(5)} en juillet). Cette tendance semble plus faible pour le
 \PODTTv, notamment du fait de faible valeur de \PODTTv{} des \PMdix{} en juillet et aout
 2018, induisant un ratio élevé du \PODTTv{} \PMdc/\PMdix{} sur cette période.
+On retrouve ici les résultats de \cite{perronePM22019}, sur les mêmes fractions de taille 
+mais sur un site méditerranéen. De même, \cite{paraskevopoulouYearlong2019} montre un PO 
+différents pour la fraction fine \SI{<2.5}{nm} et celle comprise entre \SIrange{2.5}{10}{nm},
+avec également une importance plus grande de la faction fine en hiver.
 
 Cette tendance à des ratio plus élevés en période froide qu'en période chaude renforce
 l'hypothèse de l'importance de la source ``combustion de biomasse'' car les HULIS et
@@ -445,7 +449,7 @@ quinones émise par cette source se retrouve principalement dans la fraction fin
 important sur le PO~\autocite{vermaFractionating2015,maSources2018} et affecteront donc à
 la fois les \POv{} des \PMdc{} et \PMdix.
 
-Afin de poursuivre cette investiguation, une étude comparative sur 6 sites de l'EMPA est
+Afin de poursuivre cette investigation, une étude comparative sur 6 sites de l'EMPA est
 en court par Stuart Grange et à laquelle je prend part, sur les fractions \PMdix{} et
 \PMdc{}. Chacune de ces fractions est analysée aux \POAA{} et \PODTT{} mais également en
 chimie détaillée, permettant à terme une comparaison chimie-PO, et même PMF-PO, selon la
@@ -738,8 +742,8 @@ de l'utilisation de la voiture individuelle. Il est donc espérable d'avoir dans
 future à la fois une lutte efficace contre le déreglement climatique et une amélioration
 de la qualité de l'air.
 
-\subsection{Limitation et idées pour le futur}%
-\label{sub:limitation_et_idées_pour_le_futur}
+\subsection{Limitation et travaux futur}%
+\label{sub:limitation_et_travaux_futur}
 \todo{trouver un meilleur titre}
 
 Bien que présentant certaines avancées importantes, les travaux de cette thèse présentes
@@ -749,14 +753,16 @@ Tout d'abord, la méthodologie de déconvolution des sources de PO des PM utilis
 linéaire. Or, le PO, et notamment le \PODTT, est connu pour ne pas réagir de manière
 linéaire avec la masse des espèces
 chimiques~\autocite{charrierRates2015,charrierBias2016,calasImportance2017}.
-Aussi, aucun terme d'interaction entre les sources n'est pris en compte, or il est
+Aussi, aucun terme d'interaction entre les sources n'est pris en compte dans ces modèles, or il est
 envisageable que, par exemple, un aérosols sulfaté et donc plus acide augmente la
 solubilisation des particules et donc présente un PO différent du fait uniquement de la
 présence de sulfate.
+La prise en compte de ces non-linéarité et des actions conjointes des différentes sources 
+sur les PO serait certainement un ajout important et changerait potentiellement les résultats présentés ici. Le chapitre suivant explore l'une des façons possibles d'estimer l'importance de cette non linéarité à partir d'un réseau de neurone.
 
-Limitation des méthodes linéaires alors qu'on sait le PO pas linéaire
+La variation infra-journalière du PO est également encore peu documenté, et uniquement pour la mesure du PO par DCFH \autocite{venkatachariMeasurement2005,costabileFirst2017}. Cependant, plusieurs travaux vont en ce sens \autocite{zhouDevelopment2018,jovanovicMeasurements2019} et montrent la forte variation journalière des potentiels oxydants.
+La moyenne journalière utilisée jusqu'à présent est donc un premier pas, mais il apparaît nécessaire
+d'obtenir une résolution temporelle plus fine.
+Des développements méthodologiques pour coupler les différentes mesures hautes fréquences possible (AMS, aethalometre, XRF, and ROS online) afin de déterminer la raison de cette variabilité.
 
-Nécessité de descendre en infra journalier.
-
-Généralisation spatiale
-
+Finalement, et en lien avec le paragraphe précédent, il est également nécessaire pour comprendre les liaisons entre potentiel oxydant et impacte sanitaire d'augmenter la couverture spatiale de mesure ou d'estimation des PO. L'outil le plus adapté pour cela est la modélisation déterministe à travers les modèles CTM, permettant la prédiction et la ré-analyse spatiale et temporelle du potentiel oxydant des aérosols. Maintenant que nous avons montrer que le PO intrinsèque des différentes sources est stable géographiquement, il est envisageable d'estimer géographiquement les PO à partir de ces modèles. Deux exemples en cours sont présentés dans le chapitre suivant.
