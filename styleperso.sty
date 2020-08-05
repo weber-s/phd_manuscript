@@ -183,7 +183,7 @@
 % \renewcommand{\title}[1]{\LaTeXtitle{\color{ChadBlue}{\LARGE #1}}}
 % \renewcommand{\abstractname}{\color{ChadBlue}Abstract}
 % \renewcommand{\figurename}{\color{ChadBlue}Figure}
-% \renewcommand{\tablename}{\color{ChadBlue}Table}
+\renewcommand{\tablename}{Tableau}
 %
 % \let\LaTeX@startsection\@startsection 
 % \renewcommand{\@startsection}[6]{\LaTeX@startsection%
@@ -196,9 +196,8 @@
 \renewcommand{\thefigure}{\thechapter.\thesection-\arabic{figure}}
 \renewcommand{\theequation}{\thechapter.\thesection-\arabic{equation}}
 
-% =====================================================================================
-% ==== Captions setup {{{
 \captionsetup[figure]{labelfont={bf},font=small}
+\captionsetup[table]{labelfont={bf},font=small}
 % }}}
 % =====================================================================================
 
