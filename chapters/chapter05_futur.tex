@@ -1,0 +1,63 @@
+
+\section{Vers une prise en compte plus générale de l'exposition}
+
+Au cours de ma thèse, plusieurs questions ont pu être adressés et certaines réponses apportées. 
+Cependant, le choix a été fait de se limiter principalement sur l'estimation des 
+sources de PO à travers le modèle PMF. Bien qu'apportant des résultats éclairant 
+sur la dynamique des PO, plusieurs aspects ont été volontairement écartés de 
+ces études.
+
+Premièrement, l'utilisation de modèle site-récepteur limite nécessairement la
+couverture spatiale et temporelle à quelques sites d'études et années de mesures. Or la généralisation d'une estimation des mesures de PO à tous points spatio-temporel est souhaitable lorsque l'on s'intéresse à coupler dans une même étude mesures épidémiologiques et qualité de l'air.
+
+Deuxièmement, la méthode utiliser pour estimer un PO par sources de PM présente un développement mathématique linéaire. Or, on sait que le PO ne réagit pas de manière linéaire à la masse des composés chimiques. Si ce modèle présente une première approximation, il est, par construction, limité et biaisé.
+Il existe cependant des modèles d'inversion non-linéaire qui permettraient la prise en compte des interactions entre sources et composés chimiques dans l'estimation des sources de PO.
+
+Finalement, jusqu'à présent seuls des prélèvements en air extérieur ont été considérés. Or nous passons la plus grande partie de notre temps en espace clos intérieur (maison, appartement, bureau, voiture, etc.).
+La représentativité des mesures en air extérieur comme référence de l'exposition de la population n'est donc peut-être suffisante.
+
+\section{Spatialisation du PO}
+
+\subsection{Estimation du PO à partir des PM}
+
+Dans cette thèse, deux synthèses nationnales grande échelle ont été faite : 1) estimation des contributions des sources de PM à la masse \autocite{weberComparison2019} (chapitre~\ref{cha:estimation_des_sources_de_PO}) et 2) attribution du PO intrinsèque à chacune des sources de PM majoritairement présentes \autocite{weberSourceinprep.} (chapitre~\ref{cha:estimation_des_sources_de_PO}).
+
+Ainsi, et en première approximation, il est possible d'estimer la contribution moyenne relative mensuelle des différentes sources à la masse totale des PM. Puis, connaissant le PO intrinsèque (i.e. par microgramme de PM) de chacune de ces sources, une simple multiplication permet une estimation approximative du PO.
+La conséquence est que pour chaque valeur de concentration de \PMdix{} il est possible d'estimer, au premier ordre, une valeur de PO associée.
+
+Bien évidemment, cette méthode possède trois limitations fortes : 
+\begin{itemize}
+    \item Les contributions relatives des sources sont moyennées mensuellement d'après un ensemble de 15 sites de mesures, de typologie plutôt urbaine, et donc non nécessairement représentative de l'ensemble des situations possibles ;
+    \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité plus ou moins importante, et une fois de plus estimés à partir d'un ensemble de site de typologie plutôt urbaine ;
+    \item Il n'est pas pris en compte la spécificité du site en question ni la possible évolution du PO intrinsèque des sources liés à possible une évolution du profile chimique (renouvellement de parc automobile, etc.).
+\end{itemize}
+
+Elle présente néanmoins l'avantage de pouvoir estimer pour n'importe quel site 
+possédant une concentration massique des \PMdix{} une mesure de \POAAv{} et 
+\PODTTv. Il est également possible d'utiliser ce procédé en post-traitement d'un 
+modèle déterministe de prévision de concentration de \PMdix.
+
+Aussi, au fur et à mesure que de nouvelle étude se feront, il est tout à fait possible de raffiner cette technique en ne sélectionnant que des sites de même typologie ou environnement (rurale, vallée alpine, trafic, etc.) aussi bien pour la partie d'estimation de la contribution des sources aux \PMdix{} que pour la partie attribution d'un PO intrinsèque par source.
+
+Afin de tester la faisabilité de cette méthode d'estimation au premier ordre du 
+PO, le site de Grenoble les Frènes a été choisi car bénéficie d'une série de 
+mesure longue durée du PO. Cette méthode est aussi rendu disponible grâce au 
+développement du module python 
+\href{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}{pyOPestimator},
+disponible sur PyPi\footnote{\url{https://pypi.org/project/pyOPestimator/}}
+et sur la forge de l'université de grenoble\footnote{\url{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}}. Il est également possible d'utiliser directement \url{http://getopstandop.u-ga.fr/estimate}, permettant d'estimer directement en ligne le \POAAv{} et \PODTTv{} de n'importe quelle série de mesure concentration de \PMdix.
+
+ 
+
+
+\subsection{PO et CTM}
+- Source dans les CTM (Chimère et LOTOS)
+- Comparaison avec les PMF
+- Inversion du PO par source CTM + Posttraitement avec PO / sources
+
+\section{Non linéarité avec Réseaux de neurone}
+
+\section{Exposition et épidémiologie}
+\subsection{Mesure indoor et personnelle}
+\subsection{Étude épidémio}
+
