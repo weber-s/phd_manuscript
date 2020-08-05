@@ -25,7 +25,7 @@
 \usepackage{multicol}
 \usepackage{tabularx}
 \usepackage{multirow}
-% \usepackage{caption}
+\usepackage{caption}
 \usepackage{subcaption}
 % \usepackage[T1,hyphens]{url}
 \usepackage{adforn}
@@ -189,6 +189,18 @@
 % \renewcommand{\@startsection}[6]{\LaTeX@startsection%
 % {#1}{#2}{#3}{#4}{#5}{\color{ChadBlue}\raggedright #6}} 
 
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+\counterwithin{equation}{section}
+\renewcommand{\thetable}{\thechapter.\thesection-\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\thesection-\arabic{figure}}
+\renewcommand{\theequation}{\thechapter.\thesection-\arabic{equation}}
+
+% =====================================================================================
+% ==== Captions setup {{{
+\captionsetup[figure]{labelfont={bf},font=small}
+% }}}
+% =====================================================================================
 
 % =====================================================================================
 % ==== Table of content {{{
@@ -232,6 +244,8 @@
 % ==== Sections styles {{{
 % set counter up to the subsubsection
 \setcounter{secnumdepth}{3}
+
+\renewcommand\thechapter{\Roman{chapter}}
 
 % remove chapter counter
 \makeatletter
