@@ -269,9 +269,161 @@ post-doctorat\footnote{sous réserve de validation de cette thèse bien entendu}
     \label{fig:figures/chapter05/map_kaspard}
 \end{figure}
 
-\section{Non linéarité avec Réseaux de neurone}
+\section{Contribution non linéarité des sources aux PO : réseaux de neurone}
 
-\cite{borlazaUrbaninprep.}
+\subsection{Limitations inhérentes aux modèles linéaires}%
+\label{sub:limitations_inhérentes_aux_modèles_linéaires}
+
+
+Il est connu que la mesure du PO n'est pas linéaire avec la concentrations des composés
+chimiques. Il est donc logique de dire qu'il en est de même pour la contribution des
+sources.
+Or, jusqu'à présent, le PO des sources de PM a été estimé à partir de modèle linéaire,
+que ce soit par introduction du \POv{} dans une PMF, par régression linéaire multiple ou
+par ACP.
+Aussi, aucun terme d'interaction entre sources n'est pris en compte alors même que
+le potentiel ``effet cocktail'' entre composés chimiques sur le PO est documenté, comme le
+montre la figure~\ref{fig:charrier_hydrogen_2014_fig4} issue de
+\cite{charrierHydrogen2014} ou encore 
+\cites[figure S7 du supplément]{charrierDithiothreitol2012}{xiongRethinking2017}{samakeUnexpected2017}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/chapter05/charrier_hydrogen_2014_fig4.jpg}
+    \caption{\cite[figure 4]{charrierHydrogen2014}: Initial rates of HOOH production in
+    laboratory mixtures of quinones and/or transition metals (gray bars) compared to the
+    sum of the rates from the individual redox-active species (stacked colored bars). Error
+    bars of the colored stacked bars are the propagated errors of the sum (all have replicate
+    samples). The concentrations of metals and quinones are constant: Cu, Fe, and PQN are at
+    500 nM, and 1,2-NQN is at 20 nM.}%
+    \label{fig:charrier_hydrogen_2014_fig4}
+\end{figure}
+
+Si ces modèles permettent une première estimation de la contribution des sources et sont
+facilement interprétables, ils présentent donc, par construction, deux biais majeurs: non
+prise en compte des effets d'interaction entre sources et non prise en compte de la non
+linéarité du PO.
+
+L'ajout de terme d'interaction sous forme de produit des concentrations de sources serait
+une solution pour estimer le premier biais, mais le deuxième bien ne peut tout simplement
+pas s'estimer par un modèle linéaire. Aussi, l'ajout de terme non linéaires n'est pas
+évident car il semble exister une grande diversité de réponses non linéaires selon les
+espèces chimiques
+considérées~\autocite{charrierDithiothreitol2012,charrierBias2016,calasImportance2017}
+
+Par conséquent, il convient de construire un modèle présentant les caractéristiques
+suivantes :
+\begin{itemize}
+    \item prise en compte de la non-linéarité de la dose-réponse de la concentration des
+        sources,
+    \item prise en compte d'effets conjoints, potentiellement non linéaire et négatif,
+        entres les sources,
+    \item ignorant des relations dose-réponse ou entre sources a priori.
+\end{itemize}
+
+\subsection{Les réseaux de neurones}%
+\label{sub:les_réseaux_de_neurones}
+
+Les réseaux de neurones artificiels (\textit{artificial neural network} ANN) semble être
+type de modèle répondant à ces critères. Ils sont plus complexe et flexible que les
+modèles linéaire, et sont connu pour être capable de prendre en compte des phénomènes
+fortement non linéaires. Aussi, leurs capacités à apprendre des relations complexe et ce
+sans aucunes connaissances a priori, simplement en s'entrainant sur un ensemble de données
+suffisant, en font un outil très intéressant.
+Ce type de modèle a été appliqué avec succès en prévision de la qualité de l'air pour le
+\ce{NO2} et les \PMdix{} par~\cite{kukkonenExtensive2003} en comparaison à un modèle
+linéaire et déterministe. Dans d'autres disciplinaires des sciences de l'environnement, ce
+type de modèle a également montrer son intêret pour l'évaluation de la qualité de
+l'eau~\autocite{nathanApplication2017}.
+
+Formellement, un réseaux de neurones est un graph orienté pondéré, où lorsque deux
+nœuds (ou neurones) sont connectés (i.e lié par un bord orienté du graph), le résultat en
+sortie du neurone devant est utilisé comment entrée du neurone de derrière.
+Autrement dit réseau de neurone consiste en une succession de ``nœuds'' (ou synapse, ou
+neurone) connectés entres eux pas des relations linéaires appellées ``poids''. Le principe
+mimique un réseau de neurone biologique naturelle très simpliste, ou chacune des
+informations recu par un neurone se propage à d'autres neurones, afin de prédire une
+valeure finale (par ex. le \POv) en fonction d'un signal initial (par ex. la
+concentration massique des sources de PM).
+On distingue 3 types de neurones:
+\begin{itemize}
+    \item neurones d'entrés (input) (connecté aux variables d'entrées),
+    \item neurones de sortie (output),
+    \item neurones cachés.
+\end{itemize}
+Le plus courrament utilisés est le \textit{Multi Layer Perceptron} (MLP), qui est un
+réseau acyclique où les neurones sont structurés en couche successives\footnote{Il est
+d'ailleurs montré que le MLP est un approximateur universel}, illustré dans la
+figure~\ref{fig:MLP_architecture}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{figures/chapter05/MLP_architecture.pdf}
+    \caption{Architecture d'un MLP à une couche cachée, $d$ neurones d'entrée, $l$
+    neurones sur la couches cachées et $k$ neurones de sortie (notation d-l-k). $x$
+    représente la valeur des variables explicatives (par ex. la concentration massique des
+    sources de \PMdix) et $y$ la variable prédite (par ex. le \POAAv{} et \PODTTv).}%
+    \label{fig:MLP_architecture}
+\end{figure}
+
+Au sein de chaque nœud, l'information recu est condensé en une valeure unique puis propagée à
+son tour aux neurones suivants. En prennant l'exemple du MLP décrit par la
+figure~\ref{fig:MLP_architecture}, cette condensation d'information pour la première
+couche se fait selon l'Eq.~\ref{eq:ANN_neurone}:
+\begin{align}
+    \label{eq:ANN_neurone}
+    \forall j \in \{1, ..., l\}, z_j &= H\left( \sum_{i=1}^d w^x_{i,j} \times x_i + w^x_{0,j} \right)
+\end{align}
+avec $w^x_{i,j}$ les poids entre les neurones de la couches d'entrée et cachée, et
+$w^x_{0,j}$ représente une constante d'activation pour le neurone $j$. La fonction $H$
+peut-être de différents types, mais est très souvent non-linéraire. Le fait de combiner 2
+couches de neurone et d'ajouter une fonction d'activation non linéaire ammène la
+complexité recherché permettant la prise en compte des phénomènes complexes.
+
+Chacun des poids $w$ est inconnu a priori, et sont estimés par processus itératif et
+rétropropagation à partir d'un ensemble de données d'entrainnement pour lesquel les
+valeurs d'entrées et de sorties sont connues. Les poids sont donc ``appris'' --d'où le
+terme de \textit{machine learning}-- par minimisation d'un fonction coût entre prédictions
+et observations (de manière similaire à l'algorithme PMF).
+
+En revanche, du fait de leurs complexités, même si les prédictions se trouvent être
+correctes, il peut être compliqué d'interpreter le modèle obtenu.
+
+
+Dans le cadre d'un financement du DataInstitute de l'Université Grenoble Alpes, j'ai
+obtenu un financement pour l'encadrement d'un stagiaire de M2, Jean-Baptiste Fices, afin
+de travailler spécifiquement sur ces questions :
+\begin{enumerate}
+    \item Est-il possible d'appliquer un réseau de neurone pour la prédiction du potentiel
+        oxydant ?
+    \item Ces réseaux présentent-ils des performances statistiques meilleurs que la
+        régression linéaire ?
+    \item Est-ce que la non-linéarité attendue est bien observée ?
+    \item Comment interpréter ces modèles pour retrouver une information géochimique (i.e.
+        PO des différentes sources de PM) ?
+\end{enumerate}
+Ce travail s'incorporera prochainement dans l'étude de \cite{borlazaUrbaninprep.} du
+projet Mobil'Air, afin de comparer les sources de potentiels oxydants sur la
+métropole Grenobloise
+
+
+\subsubsection{Résultats préliminaires}%
+\label{ssub:résultats_préliminaires}
+
+Appliqué sur les 3 sites de la métropole Grenobloise, les performances statistiques des
+deux types de modèles (MLP et regression linéaire MLR) sont relativement similaires
+(figure~\ref{fig:perfMLPMLR}) et chacuns des deux modèles prédit relativement bien chaque
+\POv{} sur les 3 sites.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter05/perfMLPMLR.pdf}
+    \caption{Performances statistiques des prédictions du modèle MLR et MLP sur les 3
+    sites de Grenoble \autocite{borlazaUrbaninprep}. }%
+    \label{fig:perfMLPMLR}
+\end{figure}
+
+
 
 \begin{figure}[ht]
     \centering
