@@ -6,10 +6,11 @@ La PMF étant un modèle d'apprentissage statistique, le regroupement des espèc
 en différents facteurs est sensible à la méthodologie employée et au jeu de variable
 utilisé.
 
-Les ions et les éléments traces (métaux notamment) permette l'identification de facteur
+Les ions et les éléments traces (métaux notamment) permettent l'identification de
+facteurs
 maintenant bien connus, typiquement : sel de mer, traffic routier, poussière crustale.
 Or des questions sont toujours ouvertes pour certains autres facteurs également souvent
-identifiés. Les facteurs inorganiques secondaires (nitrate d'amonium et sulfate
+identifiés. Les facteurs inorganiques secondaires (contenant majoritairement du nitrate d'amonium et sulfate
 d'ammonium) n'ont pas de source bien établie, s'agissant de processus secondaires après
 émissions.
 Aussi, la pluralité importante des sources de la matière organique et la diversité des
@@ -32,11 +33,11 @@ nouvelles sources, mais également de diminuer l'incertitude de celles déjà bi
 
 À ce titre, le site de Grenoble les Frènes a permis le prélèvement et analyse de composés
 organiques (HULIS, hopanes, oxy- et nitro-HAP ainsi que oxy- et nitro-HAPS) permettant de
-mettre en évidence la saisonalité de ces composés, tracant différent processus : émissions
-lié à la combustion en hiver pour les oxy- et nitro-HAP ainsi que leur transport longue
-distance alors que les oxy- et nitro-HAPS semblent quant à eux être davantage liés aux
+mettre en évidence la saisonalité des concentrations de ces composés, tracant différents processus : émissions
+liées à la combustion en hiver pour les oxy- et nitro-HAP ainsi que leur transport longue
+distance, alors que les oxy- et nitro-HAPS semblent quant à eux être davantage liés aux
 processus d'oxydation secondaires du fait de leur corrélation avec
-l'oxalate~\textcite{tomazSources2017a}.
+l'oxalate~\autocite{tomazSources2017a}.
 
 Les rares études incorporants ces traceurs permettent bien l'identification de facteurs
 distincts (anthropique secondaire grâce à l'acide phthalic
@@ -46,11 +47,11 @@ distincts (anthropique secondaire grâce à l'acide phthalic
 \ce{^14C}, methoxyphénol et hopanes \autocite{chevrierChauffage2016}, combustion de
 charbon grâce aux HAPS \autocite{gollyEtude2014}, etc.).
 Cependant, ces études doivent encore être approfondies car trop peu nombreuses et non
-reproduite sur un ensemble important de site de mesure. Aussi, certaines de ces espèces ne
+reproduites sur un ensemble important de sites de mesure. Aussi, certaines de ces espèces ne
 sont pas analysées en routines.
 Enfin, certaines questions restent ouvertes sur la provenance exacte de certains de ces
 composés (MSA, oxalate, glucose…) complexifiant l'interprétation des solutions PMF
-obtenue.
+obtenues.
 
 Cela est particulièrement vrai pour les réactions secondaires. En effet, par définition
 une espèce traceuse est peu réactive, or la matière organique est au contraire très
@@ -70,8 +71,8 @@ dernières années.
 \section{Validation externe des solutions PMF}%
 \label{sec:confrontation_des_solutions_pmf}
 
-Comme discuter précédemment, un modèle doit être évalué par des mesures externes. Or, il
-est compliqué voire impossible de « mesurer » la concentration des sources de PM (c'est
+Comme discuté précédemment, un modèle doit être évalué par des mesures externes. Or, il
+est compliqué voire impossible de ``mesurer'' la concentration des sources de PM (c'est
 justement le travail demandé à la PMF). On ne peut donc faire que des confrontations
 indirectes, à travers d'autres types de mesure ou modèle, chimique ou géophysique, afin
 d'estimer la fiabilité d'une solution PMF.
@@ -84,8 +85,8 @@ traditionnelles sur filtre, \textcite{bonvalotEstimating2016} ont également est
 traçage isotopique au radiocarbone \ce{^{14}C} l'origine fossile ou récente du carbone.
 Les études PMF sur le site de Passy et Chamonix de \textcite{chevrierChauffage2016},
 illustrées figure~\ref{fig:chapter03/radiocarbon_chevrier_winter} ont
-montrées une très bonne concordance entre la quantité de carbone provenant de source
-fossile estimée par radiocarbone et les facteurs PMF traçant des sources de combustion de
+montrées une très bonne concordance entre la quantité de carbone provenant de sources
+fossiles estimée par radiocarbone et les facteurs PMF traçant des sources de combustion de
 carbone fossile. Réciproquement, le carbone récent est en très bon accord entre les mesures
 radiocarbone et PMF.
 
@@ -126,7 +127,7 @@ vitesse de vent et d'établir une rose des polluants, projetant sur un graphique
 coordonnée polaire la concentration des polluants suivant la direction en $\theta$ et
 vitesse du vent en $r$ au moment de l'observation.
 
-Cependant, cette méthode n'est utile que pour la détermination de source proche du site
+Cependant, cette méthode n'est utile que pour la détermination de sources proches du site
 récepteur car dès lors que l'on s'en éloigne, l'orientation et vitesse des vents varient
 et l'hypothèse de déplacement uniforme de la masse d'air est invalidée.  Or, il est
 courant que les aérosols proviennent de sources non locales, limitant l'utilisabilité de
@@ -137,7 +138,8 @@ cette méthode.
 \label{sub:prendre_en_compte_l_histoire_de_la_masse_d_air_PSCF}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
-    Ces étapes fastidieuses de calcul des rétrotrajectoires et de PSCF ont été automatisés
+    Ces étapes fastidieuses de calcul des rétrotrajectoires et de PSCF ont été
+    automatisées
     dans un paquet python, pyPSCF\footnote{Dépôt git pyPSCF:
     \url{https://gricad-gitlab.univ-grenoble-alpes.fr/webersa/pyPSCF}}, permettant le
     traitement d'un grand nombre de rétrotrajectoires en utilisant le modèle lagrangian
@@ -161,7 +163,7 @@ des modèles récepteurs. Le principe consiste à calculer les rétrotrajectoire
 récepteur donné et d'associer à chacune d'elle la concentration du polluant ou de la
 source considéré le jour de son passage au niveau du site récepteur. En discrétisant les
 trajectoires en 1 point toutes les X minutes ou heures et en appliquant une grille
-régionale, il est alors possible de dénombrer combien de rétrotrajectoires sont passés par
+régionale, il est alors possible de dénombrer combien de rétrotrajectoires sont passées par
 chacune des grilles.  Le ratio du nombre de trajectoire associée à une forte concentration
 aux coordonnées $i$, $j$, noté $m_{ij}$, par le nombre total de trajectoire étant passé
 par ces coordonnées notées $n_{ij}$, nous donne une probabilité de provenance géographique
@@ -176,7 +178,7 @@ ayant un faible pourcentage de passage de rétrotrajectoires, augmentant artific
 le ratio $\frac{M}{N}$. Une manière de contrebalancer ce biais et d'ajouter une fonction
 poids, dépendant de la fréquence de passage des rétrotrajectoires sur chacune des
 cellules. Dans la figure~\ref{fig:chapter02/PSCF_method}, illustrant la PSCF, on voit que
-la cellule où 2 rétrotrajectoires sont passés se voit attribuer la même probabilité que
+la cellule où 2 rétrotrajectoires sont passées se voit attribuer la même probabilité que
 celles avoisinantes, où seule une rétrotrajectoire a résidé. Or, il serait plus pertinent
 d'avoir une probabilité plus forte pour cette cellule, indiquant que chaque
 rétrotrajectoire ayant résidé à ces coordonnées est riche du composé suivit.  Différentes
@@ -193,7 +195,7 @@ jours de prélèvement sur le site récepteur.
     \caption{Illustration de la méthode PSCF : les rétrotrajectoires depuis le site de
         mesure sont calculées, celles associées à une concentration seuil sont
         représentées en rouge, les autres en orange. Les matrices N et M s'obtiennent par
-        simple décompte du nombre de rétrotrajectoires passés dans chaque cellule de
+        simple décompte du nombre de rétrotrajectoires passées dans chaque cellule de
         taille prédéfinies, puis le ratio nous donne une estimation de l'origine
     géographique, représentée ici terme d'intensité de rouge.}%
     \label{fig:chapter02/PSCF_method}
@@ -214,19 +216,21 @@ appliquée sur le site de l'OPE.
 
 Comme expliqué précedemment, une part importante des aérosols provient de sources
 secondaires, c'est-à-dire du vieillissement et des réactions dans l'atmosphère. Une part
-importante de ces aérosols secondaires sont d'origines organiques. Les travaux
+importante de ces aérosols secondaires est d'origine organique. Les travaux
 de~\textcite{gollyOrganic2019}, s'attachent notamment à la quantification de cette matière
 organique secondaire sur 5 sites ruraux en France pendant l'année 2013, par la mesure de
 deux espèces issues de processus secondaires : le MSA et l'oxalate.  Nous avons pu montrer
 que le MSA, considéré comme provenant de l'oxydation du DMS, peut contribuer jusqu'à 10 à
-20\% de l'OC en période chaude, indiquant une forte proportion d'aérosols organiques
+\SI{20}{\percent} de l'OC en période chaude, indiquant une forte proportion d'aérosols organiques
 secondaires durant l'été. Mais surtout, le MSA est considéré comme provenant des émissions
 de DMS du phytoplancton marin, au point qu'il est proposé comme méthode de séparation
-entre le sulfate d'origine marine et ses autres provenances.
+entre le sulfate d'origine marine et ses autres provenances, en particulier en milieux
+polaires.
 
-En conduisant une analyse PSCF sur les 25\% des jours les plus fortement chargés en MSA
+En conduisant une analyse PSCF sur les \SI{25}{\percent} des jours les plus fortement chargés en MSA
 sur les 5 sites, nous avons pu confirmer l'importance marine de ce composé. 
-Cependant, une part non négligeable semble également provenir d'environnement terrigène (voir
+Cependant, une part non négligeable semble également provenir d'environnements
+contnentaux (voir
 figure~\ref{fig:chapter03/golly_PSCF_MSA}), confortant les études suggérant des processus
 d'émissions du MSA par des sources biologiques terrestres~\autocite{bozzettiArgon2017},
 pouvant provenir des forêts ou des
@@ -262,7 +266,7 @@ facteur \textit{sel de mer} provienne géographiquement d'un océan ou d'une mer
 exemple.
 
 Un exemple d'utilisation de ce procédé est expliqué et illustré dans la section dédiée aux
-PMF et isotopie, section~\ref{sub:isotopie}.
+PMF et couplées aux mesures isotopiques, section~\ref{sub:isotopie}.
 
 
 
@@ -270,16 +274,16 @@ PMF et isotopie, section~\ref{sub:isotopie}.
 \label{sub:incertitudes_associées}
 
 Le modèle PMF est maintenant relativement couramment utilisé dans le domaine de la
-qualité de l'air. Seulement, peu d'étude rapportent en même temps que leur solution
+qualité de l'air. Seulement, peu d'études rapportent en même temps que leur solution
 finale, les incertitudes associées. Or, le solveur ME-2 permet l'estimation de ces
 incertitudes à travers les méthodes de bootstrap et de displacment (voir
 section~\ref{par:incertitudes}).
 
 Seulement, ces incertitudes ne sont rapportées par l'EPAPMF5.0 que pour les concentrations
 des espèces chimiques des différents facteurs et non pour leurs contributions temporelles.
-Notamment, leur de l'estimation de la variabilité via bootstrap, les différents facteurs
+Notamment, lors de l'estimation de la variabilité via la technique du bootstrap, les différents facteurs
 sont attribués aux facteurs de références d'après leur corrélation temporelle (par défaut
-$r > 0.6$), mais seuls les profils chimiques sont rendu à l'utilisateur par la suite.
+$r > 0.6$), mais seuls les profils chimiques sont rendus à l'utilisateur par la suite.
 Une solution serait de manuellement explorer 100 solutions PMF, avec ou sans tirage
 aléatoire des échantillons, pour estimer respectivement la variabilité provenant du modèle
 statistique ou de la représentativité du jeu de donnée. Malheureusement, cette
@@ -289,30 +293,31 @@ utilisée. C'est pourtant un besoin important lors de la transférabilité de no
 vers l'opérationnel, avec des questions très pratiques cherchant l'incertitude
 sur la contribution de telle source pour tels jours de pic de pollution en particulier.
 
-Une «astuce» consiste alors à réestimer la variabilité des contributions temporelles
+Une ``astuce'' consiste alors à réestimer la variabilité des contributions temporelles
 $X_{err}$ à partir de la variabilité de la composition chimique des profils, i.e. en gardant
-$G$ fixe (celle de référence, $G_{ref}$) mais en utilisant les profils $F_{err}$ issue
+$G$ fixe (celle de référence, $G_{ref}$) mais en utilisant les profils $F_{err}$ issus
 des bootstraps et ambiguïté rotationelle :
 \begin{align}
     \label{eq:hack_unc}
     X_{err} &= G_{ref} \times F_{err}.
 \end{align}
 
-Même si en théorie pour la méthode du bootstrap à la fois $G$ et $F$ doivent
+Même si en théorie pour la méthode du bootstrap, à la fois $G$ et $F$ doivent
 évoluer en même temps, cela donne une première estimation de la gamme d'incertitude pour
 chaque espèce et chaque jour d'observation.
 
 Cette visualisation, présentée à titre d'exemple pour la PMF de Vif
 figure~\ref{fig:chapter03/vif_nitraterich_all} permet de rapidement se rendre compte du
 type d'incertitude prépondérant pour chacune des espèces (représentativité de
-l'échantillonnage et ambiguïté rotationelle) mais également de la gamme de valeur possible
-pour chaque jour étant donnée les incertitudes estimées.
+l'échantillonnage et ambiguïté rotationelle) mais également de la gamme de valeurs
+possibles pour chaque jour étant donnée les incertitudes estimées.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter03/vif_nitraterich_all.pdf}
     \caption{Incertitudes temporelles des concentrations de \PMdix, \NOt et OC* dans le
-        facteur Nitrate-rich de Vif estimé par boostrap (écart type de 100 bootstraps en bleu)
+        facteur Nitrate-rich de Vif (programme QAMECS/Mobil'air,
+        \cite{borlazaFinescaleinprep.}) estimé par boostrap (écart type de 100 bootstraps en bleu)
         et displacment (min et max en orange). La solution de référence est représenté par les
     traits et étoiles grises.}%
     \label{fig:chapter03/vif_nitraterich_all}
@@ -336,20 +341,20 @@ métriques permettant d'estimer la distance géochimique entre 2 profils de fact
 \paragraph{Distance de Pearson}%
 \label{par:distance_de_pearson}
 
-La distance de Pearson (\textit{Pearson distance} PD) estime la proximité entre 2 série de
-donnée en utilisant leur corrélation de Pearson, soit :
+La distance de Pearson (\textit{Pearson distance} PD) estime la proximité entre 2 séries
+de données en utilisant leur corrélation de Pearson, soit :
 \begin{align}
     \label{eq:PD}
     PD &= 1 - r^2
 \end{align}
-avec $r$ la corrélation entre les 2 séries de données. Pour les profils chimiqes des
+avec $r$ la corrélation entre les 2 séries de données. Pour les profils chimiques des
 facteurs, il s'agit de la concentration relative des espèces chimiques les constituants
 (i.e. pourcentage massique de chacune des espèces).
 
 Seulement, cette distance est très sensible aux extrêmes du fait de sa dépendance au
 coefficient de correlation. Ainsi, si seul l'OC est similaire pour les 2 profils mais la
 totalité des métaux présentent des concentrations très différentes, alors le PD pourra
-être acceptable car l'OC présente des concentrations relative bien supérieure à celles
+être acceptable car l'OC présente des concentrations relatives bien supérieures à celles
 des métaux (voir figure~\ref{fig:chapter03/PD_belis2015a}).
 De plus, la distance de Pearson ne teste que l'hypothèse de relation linéaire entre les
 deux profils, et non leur égalité stricte.
@@ -357,7 +362,7 @@ deux profils, et non leur égalité stricte.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\linewidth]{chapter03/PD_belis2015a.png}
-    \caption{Mesure de la distance de pearson de 2 sources \textit{wood burning}. L'image
+    \caption{Mesure de la distance de Pearson de 2 sources \textit{wood burning}. L'image
         de droite montre l'influence des espèces dominant la masse pour le calcul du PD, alors
         qu'en leur absence, le PD change drastiquement (image de droite). Source: adapté de
         \cite[figure 3]{belisNew2015}.
@@ -369,13 +374,13 @@ deux profils, et non leur égalité stricte.
 \paragraph{Distance identitaire standardisée}%
 \label{par:distance_identitaire_standardisée}
 
-Pour répondre aux problèmes soulevés par la distance de Pearson, \textcite{belisNew2015}
-propose l'utilisation de la distance identitaire standardisée (\textit{Standardized
+Pour répondre aux problèmes soulevés par la distance de Pearson, \cite{belisNew2015}
+proposent l'utilisation de la distance identitaire standardisée (\textit{Standardized
 Identity Distance} SID). Sa formulation a légèrement évoluée entre son expression
-initiale par \textcite{belisNew2015} et celle actuellement utilisée par SPECIEUROPE
-\autocite{pernigottiSPECIEUROPE2016,pernigottiDeltaSA2018}.
+initiale par~\cite{belisNew2015} et celle actuellement utilisée par
+SPECIEUROPE\footnote{\url{https://source-apportionment.jrc.ec.europa.eu/Specieurope/index.aspx}}~\autocite{pernigottiSPECIEUROPE2016,pernigottiDeltaSA2018}.
 
-L'idée principale consiste à exprimer la distance entre chaque pair d'espèce $i$ pour les 2
+L'idée principale consiste à exprimer la distance entre chaque paire d'espèces $i$ pour les 2
 profils considérés $x$ et $y$ et la droite unitée, noté $ID_i$ pour \textit{identity
 distance}, telle que:
 \begin{align}
@@ -422,8 +427,9 @@ soit :
 
 Ces 2 métriques de distances entre profils sont utiles pour l'aide à l'identification
 d'un nouveau profils, notamment via SPECIEUROPE. Cependant, toutes les espèces chimiques
-que nous utilisons «en routine» ne sont pas nécessairement présente dans les profils de
-SPECIEUROPE. Aussi, SPECIEUROPE nous permet de comparer aux profils déjà existant, et non
+que nous utilisons ``en routine'' ne sont pas nécessairement présentes dans les profils de
+SPECIEUROPE. Aussi, SPECIEUROPE nous permet essentiellement de comparer des profils déjà
+existant dans cette base, et non
 par exemple des PMF sur 2 sites non encore dans la base de donnée SPECIEUROPE.
 
 Ainsi, pour comparer les profils chimiques issues d'une même méthodologie PMF (même
@@ -446,7 +452,7 @@ thèse :
         3 sites de prélèvement dans un rayon de \SI{15}{\kilo\m} autour de Grenoble, France
         (projet Mobil'Air);
     \item Évaluer l'impact de l'ajout de traceurs organiques (acide pinique, phthalique,
-        3-MBTCA et cellulose) par rapport à une PMF «standard» sur les 3 sites
+        3-MBTCA et cellulose) par rapport à une PMF ``standard'' sur les 3 sites
         Grenoblois (projet Mobil'Air).
 \end{enumerate}
 
@@ -461,9 +467,10 @@ dans la section~\ref{sub:processus_secondaires}.
 \subsection{Apport de l'isotopie de l'azote sur la caractérisation des sources de pollution émettrices d’ammonium}%
 \label{sub:isotopie}
 
-Les résultats présentés dans cette partie sont en partie issus d'un travail antérieur à ma
+Les résultats présentés dans cette partie sont en partie issus d'un travail que j'ai
+effectué antérieurement à ma
 thèse dans l'équipe CHIANTI dans le cadre du projet INACS de l'ADEME portant sur
-la caractérisation des épisodes de pollutions printanier au nitrate d'ammonium.
+la caractérisation des épisodes de pollution printaniers au nitrate d'ammonium.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     Ces travaux ont été présentés dans le rapport INACS-2 (présenté en
@@ -474,7 +481,7 @@ la caractérisation des épisodes de pollutions printanier au nitrate d'ammonium
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=ProcessBlue,title=Note]
-    Certaines valeurs ne sont pas identiques entre le rapport et celles présentées içi
+    Certaines valeurs ne sont pas identiques entre le rapport INACS et celles présentées içi
     car ces travaux ont continué et certains paramètres ont changé entre la publication
     du rapport et l'écriture de la thèse.
 \end{tcolorbox}
@@ -486,14 +493,14 @@ la caractérisation des épisodes de pollutions printanier au nitrate d'ammonium
 Dans de nombreuses PMF, il est rapporté un facteur secondaire inorganique contennant une
 grande part du sulfate, du nitrate et de l'ammonium, indiquant la présence de sulfate
 d'ammonium \ce{SO4(NH4)2} et nitrate d'ammonium \ce{NO3NH4}. Ces deux facteurs sont
-également souvent distincts, formant un facteur «sulfate rich», présentant le sulfate
-d'ammonium mais sans nitrate, et «nitrate rich» présentant du nitrate d'ammonium mais
+également souvent distincts, formant un facteur ``sulfate rich'', présentant le sulfate
+d'ammonium mais sans nitrate, et ``nitrate rich'' présentant du nitrate d'ammonium mais
 sans sulfate.
 
-Le facteur \textit{Nitrate-rich} présente des émissions très saisonnière, responsable des grands
-événements de dépassement des seuils d'alerte printanier. Seulement, s'agissant d'un
+Le facteur \textit{Nitrate-rich} présente des émissions très saisonnières, responsable des grands
+événements de dépassement des seuils d'alerte printanieris. Seulement, s'agissant d'un
 facteur secondaire issu de condensation des NOx et de l'ammoniac \ce{NH3}, sa provenance
-n'est pas clairement établi. En effet, si les NOx sont supposés venir du traffic routier,
+n'est pas clairement établie. En effet, si les NOx sont supposés venir du traffic routier,
 la provenance de l'ammoniac peut aussi bien être agricole via l'urée ou les fertilisants de
 synthèse que liée au trafic routier. Aussi, une source importante émettant pendant les
 pics de pollution pourrait être la combustion de biomasse domestique, notamment en vallées
@@ -502,8 +509,8 @@ alpines, où cette source est active et corrélée au nitrate d'ammonium au déb
 \subsubsection{Objectifs et méthode}%
 \label{ssub:objectif_et_methode}
 
-L'isotopie est une technique connue permettant l'estimation des sources d'émission,
-seulement, il n'est pas possible de l'utiliser tel quel dans une analyse PMF et donc
+L'isotopie est une technique permettant l'estimation des sources d'émission,
+seulement il n'est pas possible de l'utiliser tel quel dans une analyse PMF et donc
 d'avoir cette information pour identifier plus précisément la source nitrate rich.
 En effet, la PMF résout une équation d'équilibre des masses et est donc purement
 additive. Or, l'isotopie se traduit par une équation de mélange, résultant en une moyenne
@@ -511,24 +518,24 @@ pondérée de la signature isotopique des sources par leurs contributions.
 
 Par contre, s'il n'est pas possible d'inclure directement le signal isotopique dans les
 PMF, il est possible d'effectuer un traitement en amont de la PMF, permettant de séparer
-l'ammonium ou le nitrate en différentes « sous espèces », selon leurs sources de
+l'ammonium ou le nitrate en différentes ``sous espèces'', selon leurs sources de
 provenances, grâce à l'isotopie.
 
 Dans ce cadre, le programme INACS de l'ADEME a permis les mesures de l'isotopie de l'azote
-du nitrate et de l'ammonium sur des cycles annuel complet à X sites.  Parallèlement, les
+du nitrate et de l'ammonium sur des cycles annuels complets à 8 sites.  Parallèlement, les
 mesures de la signature isotopique à l'émission de différentes sources ont été faites,
 notamment en tunnel et à l'émission de cheminée (combustion de biomasse domestique), ainsi
 que de substances issues de sources agricoles (fumier, fertilisant de synthèse, bâtiment
 d'élevage, etc).
 
 L'ensemble de cette étude est disponible en annexe \ref{annexe:INACS} et ne sont présentés
-ci-après que les étapes et résultats majeurs de cette étude.
+ci-après que les étapes et les résultats majeurs.
 
 \paragraph{Équation de mélange}%
 \label{par:équation_de_mélange}
 
 La première partie du programme INACS a montré que ces sources présentent des signatures
-isotopiques de l'azote distincte pour l'ammoniac, noté \dN(\NHq).
+isotopiques de l'azote distinctes pour l'ammoniac, noté \dN(\NHq).
 Nous pouvons alors, sous certaines conditions, proposer une déconvolution de l'équation de mélange
 \begin{align}
     \dN(\NHq)_{atm} \cdot [NH_4^+]_{atm} &= \sum_{i=1}^{n} \dN(\NHq)_i \cdot [NH_4^+]_i
@@ -543,28 +550,33 @@ contribution de la source $i$ au mélange final. Ainsi on a
     \label{eq:melangeContrib}
 \end{align}
 
-Selon certaines hypothèses, détaillées dans l'annexe~\ref{annexe:INACS}, en considérant les
-trois sources précédemment citées supposées majoritaires, à savoir combustion de biomasse,
-agricole et véhiculaire, pour chaque observation de \dN(\NHq)$_{atm}$ le système
+Selon certaines hypothèses, détaillées dans l'annexe~\ref{annexe:INACS}, en considérant
+les trois sources précédemment citées supposées majoritaires, à savoir combustion de
+biomasse, agricole et véhiculaire, et un coefficient de fractionnement \eN{} de
+\num{-30}~‰
+pour chaque observation de \dN(\NHq)$_{atm}$ le système
 d'équation~\ref{eq:system1} suivant doit alors être vérifié :
 \begin{numcases}{\label{eq:system1}}
+    \small
     1 &$= f_{bio} + f_{agr} + f_{veh}$ \label{eq:bilanMass1} \\
-    \dN(\NHq)_{atm} &$= f_{bio} \cdot \dN(\NHq)_{bio} + f_{agr} \cdot \dN(\NHq)_{agr} + f_{veh} \cdot \dN(\NHq)_{veh}$ \label{eq:systemNH4}
+    \dN(\NHt)_{atm} &$= f_{bio} \cdot \dN(\NHt)_{bio} + f_{agr} \cdot \dN(\NHt)_{agr} +
+    f_{veh} \cdot \dN(\NHt)_{veh}$\label{eq:systemNH4}
+    % \dN(\NHq)_{atm} &$= f_{bio} \cdot \dN(\NHq)_{bio} + f_{agr} \cdot \dN(\NHq)_{agr} + f_{veh} \cdot \dN(\NHq)_{veh}$ \label{eq:systemNH4}
 \end{numcases}
 où $f_{bio}$, $f_{agr}$ et $f_{veh}$ sont respectivement la contribution de la source de
-biomasse, agricole et véhiculaire et $\dN(\NHq)_{bio}$, $\dN(\NHq)_{agr}$ et
-$\dN(\NHq)_{veh}$ les compositions isotopiques respectives des sources biomasse, agricole
+biomasse, agricole et véhiculaire et $\dN(\NHt)_{bio}$, $\dN(\NHt)_{agr}$ et
+$\dN(\NHt)_{veh}$ les compositions isotopiques respectives des sources biomasse, agricole
 et véhiculaire.
 
 \paragraph{Résolution par méthode Monte-Carlo}%
 \label{par:résolution_par_méthode_monte_carlo}
 
-La signature isotopique des sources étant connues avec une incertitude, l'équation de
+La signature isotopique des sources étant connue avec une incertitude, l'équation de
 mélange est résolue par méthode Monte-Carlo : pour chaque jour d'observation, l'équation
-\ref{eq:systemNH4} est résolue pour un triplet de valeur possible de chacune des
+\ref{eq:systemNH4} est résolue pour un triplet de valeurs possibles de chacune des
 signatures isotopiques des 3 sources, suivant une loi normale établit par la moyenne et
 l'écart type de chacun des prélèvements de ces sources. Le processus est répété 1000 fois
-pour chaque jour d'observation, résultat ainsi en 1000 triplets $(f_{agr}, f_{bio},
+pour chaque jour d'observation, résultant ainsi en 1000 triplets $(f_{agr}, f_{bio},
 f_{veh})$ possibles, permettant de calculer la concentration et l'incertitude associée de
 l'ammonium apporté par chacune de ces sources.
 
@@ -576,7 +588,7 @@ l'ammonium apporté par chacune de ces sources.
 
 Le système d'équation \ref{eq:system1} est sous-déterminée : il existe 3 inconnues pour
 seulement 2 contraintes (bilan de masse et isotopie). De fortes incertitudes sont donc
-attendues, voir des concentrations calculées seront invraisemblables, notamment pour les
+attendues, voir des concentrations calculées qui seront invraisemblables, notamment pour les
 concentrations de la combustion de biomasse.
 Deux nouvelles contraintes pourraient être ajoutées pour ajouter de l'information et
 réduire le degré de liberté du système : 1) une information sur l'isotopie de l'hydrogène
@@ -589,7 +601,7 @@ est déjà mesuré pour la quasi-totalité des sites d'études.
 
 De par le recensement en une base de donnée unique de la filtrothèque de l'équipe
 CHIANTI (voir \ref{sec:harmonisation_et_gestion_de_base_de_donnée}), il a été possible
-d'estimer empiriquement des gammes de concentrations possible pour l'ammonium en fonction
+d'estimer empiriquement des gammes de concentrations possibles pour l'ammonium en fonction
 des concentrations en lévoglucosan. Puisque les vallées alpines sont connues pour présenter
 des épisodes de pollutions aux particules fines dont la source est quasi exclusivement
 la combustion de biomasse \autocite{piotAtmospheric2011,gollyEtude2014} et que le lévoglucosan
@@ -598,7 +610,7 @@ données chimiques de ces sites, il est possible de trouver une relation entre l
 concentration de \NHq~issue de la combustion de biomasse et la concentration en
 lévoglucosan. 
 
-Le seuil de concentration en lévoglucosan à \SI{5000}{\ugm} est considéré comme critère de
+Le seuil de concentration en lévoglucosan à \SI{5000}{\ngm} est considéré comme critère de
 sélection des jours où la source biomasse est prépondérante. 
 Pour ces jours-ci, le \NHq~émis est considéré comme provenant de la combustion de
 biomasse.
@@ -606,7 +618,7 @@ Avec ces hypothèses, une régression linéaire entre l'ammonium et le lévogluc
 relation $[\NHq] = 0.221 \times \text{[levoglucosan]}$ (trait plein sur la
 figure~\ref{fig:correlNH4Levo}).
 L'écart-type est volontairement choisi très large pour rendre compte du faible nombre
-d'échantillon (18) et du caractère expérimental de cette relation (trait pointillés sur la
+d'échantillons (18) et du caractère expérimental de cette relation (trait pointillés sur la
 figure~\ref{fig:correlNH4Levo}).
 
 Ainsi, l'équation suivante est ajoutée au système à résoudre
@@ -615,7 +627,7 @@ Ainsi, l'équation suivante est ajoutée au système à résoudre
     1 &$= f_{bio} + f_{agr} + f_{veh}$ \label{eq:bilanMasse}\\
     \dN(\NHt)_{atm} &$= f_{bio} \cdot \dN(\NHt)_{bio} + f_{agr} \cdot \dN(\NHt)_{agr} + f_{veh} \cdot \dN(\NHt)_{veh}$\label{eq:isotopie}.
 \end{numcases}
-L'équation~\ref{eq:bioChimie} étant une contrainte a priori et non isotopique. 
+L'équation~\ref{eq:bioChimie} est une contrainte a priori et non isotopique. 
 Elle réduit la liste des valeurs théoriquement possibles, tandis que
 l'équation~\ref{eq:isotopie} sélectionne celles qui sont en accords avec l'observation
 isotopique.
@@ -628,7 +640,7 @@ isotopique.
         0.221 \times \text{[lévoglucosan]}$, les droites en trait pointillés les
         écart-types considérés ($\frac{1}{8}\times \text{[lévoglucosan]}$) et la zone
         verte les jours où la source de combustion de biomasse est considérée comme
-        prépondérante ([lévoglucosan] > \SI{5000}{\ugm}]).
+        prépondérante ([lévoglucosan] > \SI{5000}{\ngm}]).
     }
     \label{fig:correlNH4Levo}
 \end{figure}
@@ -644,16 +656,16 @@ d'études.
 Il est donc utilisé comme illustration dans la suite, pour des prélèvements s'étalant sur
 l'année 2013.
 
-Durant la période chaude (de mai à septembre) le fond atmosphérique est très
-majoritairement dû au secteur véhiculaire qui explique à lui seul 90$\pm$8~\% du
-\NHq~total (\textit{cf.} figure~\ref{fig:timeSerieOPE}.a).
+Durant la période chaude (de mai à septembre) le fond atmosphérique en ammonium est très
+majoritairement dû au secteur véhiculaire qui explique à lui seul \SI{90(8)}{\percent} du
+\NHq{} total (\textit{cf.} figure~\ref{fig:timeSerieOPE}.a).
 La quantité d'ammonium apportée par cette source est sensiblement constante autour
 \SI{0.6(4)}{\ugm} tout au long de l'année (figure~\ref{fig:timeSerieOPE}.b).
 
 D'après le modèle, les épisodes de printemps (mars et avril) sont imputables
-majoritairement à la source agricole, qui apporte en $80\pm10$~\% du \NHq~ces jours-ci.
-Ce secteur apporte jusqu'à \SI{5}{\ugm} d'ammonium le 2 avril, soit plus de 8 fois
-l'apport moyen du véhiculaire.
+majoritairement à la source agricole, qui apporte de l'ordre de \SI{80(10)}{\percent} du
+\NHq{} ces jours-ci.  Ce secteur apporte jusqu'à \SI{5}{\ugm} d'ammonium le 2 avril, soit
+plus de 8 fois l'apport moyen du véhiculaire.
 
 \begin{figure}[ht]
     \centering
@@ -661,8 +673,8 @@ l'apport moyen du véhiculaire.
     \caption{Série temporelle du site de l'OPE. Sont représentés la moyenne de la densité
         de probabilité et l'écart-type (1$\sigma$) associé. \textbf{a)} Contribution
         relative de chaque source à l'observation. \textbf{b)} Contribution absolue de
-        chaque source. Le trait noir pointillé est le \NHq~observé. \textbf{c)}
-        \dN~observé et reconstruit en bleu, \dN~reconstruit à partir de la totalité des
+        chaque source. Le trait noir pointillé est le \NHq{} observé. \textbf{c)}
+        \dN{} observé et reconstruit en bleu, \dN{} reconstruit à partir de la totalité des
         valeurs des sources possibles en oranges.
     }
     \label{fig:timeSerieOPE}
@@ -670,7 +682,7 @@ l'apport moyen du véhiculaire.
 
 \paragraph{Fond atmosphérique de l'ensemble des sites}
 L'été, lorsque seule la source véhiculaire est active, la même quantité d'ammonium est
-observé sur l'ensemble des sites comme le montre la figure~\ref{fig:summerNH4}.
+observée sur l'ensemble des sites comme le montre la figure~\ref{fig:summerNH4}.
 La source véhiculaire est donc sensiblement constante sur l'ensemble du territoire à
 raison de $\sim0.6$~\si{\ugm}.
 Toutefois les sites de Lens et de Turin semblent être au-dessus de ces tendances, et sont
@@ -686,7 +698,7 @@ figure~\ref{fig:contribSpringAgr}.
 
 Les sites où l'influence du facteur agricole est la plus marquée sont les deux sites
 ruraux de Revin et l'OPE pour lesquels les jours les plus impactés sont attribués à plus
-de 80~\% à l'agriculture pour des concentrations excédent respectivement 7 et 5
+de \SI{80}{\percent} à l'agriculture pour des concentrations excédent respectivement 7 et 5
 \si{\ugm}, soit environ 10 fois plus que le fond atmosphérique.
 
 \begin{figure}[ht]
@@ -714,19 +726,18 @@ de 80~\% à l'agriculture pour des concentrations excédent respectivement 7 et 
 \paragraph{Paramètrage de la PMF et solution de référence}%
 \label{par:paramètrage_de_la_pmf_et_solution_de_référence}
 
-Une fois le \NHq~séparé en trois variables distinctes cette information peut être utilisée
+Une fois le \NHq{} séparé en trois variables distinctes cette information peut être utilisée
 dans une approche de type Positive Matrix Factorization (PMF) pour mieux comprendre la
 dynamique des différents facteurs.
 L'avantage majeur de l'utilisation de la PMF sera aussi de faire le lien entre les sources
 du nitrate d'ammonium et les sources de PM.
 
-Sur le site de l'OPE a été choisi pour tester la méthodologie car une étude PMF intégrant
+Le site de l'OPE a été choisi pour tester la méthodologie car une étude PMF intégrant
 les données chimiques de 2012 à 2014 pour la fraction \PMdc{} a déjà été conduite sur ce
-site, offrant un comparatif intéressant pour le couplage isotopie/PMF. C'est donc ce site
-qui est retenu.
+site, offrant un comparatif intéressant pour le couplage isotopie/PMF.
 
 Les variables utilisées sont donc les mêmes que celles de l'étude précédente
-de~\cite{gollyCaracterisation2015} auxquelles s'ajoute le chlore et sont rappelées dans le
+de~\cite{gollyCaracterisation2015} auxquelles s'ajoute le chlore. Elles sont rappelées dans le
 tableau~\ref{tab:varPMF}.
 Pour l'étude couplée chimie et isotopie, seul diffère le \NHq~qui est séparé en trois
 espèces \NHq$_{bio}$, \NHq$_{agr}$ et \NHq$_{veh}$. 
@@ -742,7 +753,7 @@ espèces \NHq$_{bio}$, \NHq$_{agr}$ et \NHq$_{veh}$.
         \midrule
         PMF + MC    & OC, EC                  & As, Pb, Ti, V & MSA, \NOt, \SOq, Oxalate, \ce{K+}, \ce{Na+}, \ce{Cl-}, \ce{Ca^2+}, \ce{Mg^2+}, \NHq$_{bio}$, \NHq$_{agr}$, \NHq$_{veh}$ & Levoglucosan, $\sum$polyols, HAP \\
         \midrule
-        Incertitudes& Élargie (10~\%, 15~\%)  & \multicolumn{3}{P{10cm}}{Méthode proposée par \cite{gianiniSource2013}, sauf pour les trois \NHq$_{src}$ où $\sigma_{src}/4$ est utilisé.}\\
+        Incertitudes& Élargie (\SI{10}{\percent}, \SI{15}{\percent})  & \multicolumn{3}{P{10cm}}{Méthode proposée par \cite{gianiniSource2013}, sauf pour les trois \NHq$_{src}$ où $\sigma_{src}/4$ est utilisé.}\\
         \bottomrule
     \end{tabular}
     \caption{Espèces chimiques sélectionnées comme variables d'entrée dans les PMF la pour
@@ -759,18 +770,18 @@ organique, Sels de mer, Sels de mer vieilli, Biogénique marin et Poussières/Bi
 primaire).
 
 Le \NHq$_{bio}$ se retrouve bien dans le facteur de combustion de biomasse à raison de
-70~\% du \NHq$_{bio}$ total.
+\SI{70}{\percent} du \NHq$_{bio}$ total.
 Ce résultat était attendu car par construction le modèle Monte-Carlo introduit une
 dépendance forte entre le lévoglucosan et le \NHq$_{bio}$.
 Il est également intéressant de voir que \textit{seul} l'ammonium issu de la combustion
 de biomasse se retrouve dans ce facteur.
 Il faut cependant noter que le \NHq$_{bio}$ n'est pas entièrement attribué à ce facteur
-mais également au facteur \og Nitrate rich \fg{} (20~\%) et dans un moindre mesure au sel
-de mer vieilli (10~\%).
+mais également au facteur \og Nitrate rich \fg{} (\SI{20}{\percent}) et dans un moindre mesure au sel
+de mer vieilli (\SI{10}{\percent}).
 
-La source Industrie/traffic se voit attribuer 45~\% de l'ammonium dit véhiculaire.
+La source Industrie/traffic se voit attribuer \SI{45}{\percent} de l'ammonium dit véhiculaire.
 De plus aucune des deux autres sources d'ammonium n'est présente dans ce facteur, ce qui
-tend à accentuer l'étiquette \og traffic \fg{} de ce facteur.
+tend à accentuer l'étiquette ``traffic'' de ce facteur.
 Une autre observation importante concerne l'activité de cette source au long de l'année :
 l'industrie et le trafic sont connus pour avoir une activité constante, ou du moins non
 saisonnière.
@@ -781,15 +792,15 @@ vraisemblablement une erreur d'attribution du \NHq~entre le \NHq$_{veh}$ et le
 \NHq$_{agr}$.
 
 Une part non négligeable de l'ammonium dit véhiculaire est également retrouvée dans le
-facteur Secondaire organique (>20~\%).
+facteur Secondaire organique (\SI{>20}{\percent}).
 Il serait intéressant d'investiguer plus en avant cet ammonium afin de savoir s'il s'agit
 véritablement d'ammonium véhiculaire.
 
 Enfin, le résultat sans doute le plus important réside dans l'identification du facteur
-\og Nitrate rich \fg, où la quasi-intégralité (>90~\%) de l'ammonium agricole se retrouve.
+``Nitrate rich'', où la quasi-intégralité (\SI{>90}{\percent}) de l'ammonium agricole se retrouve.
 Or il n'existe pas à notre connaissance une autre source ayant une signature isotopique
-voisine ou plus négative en \dN~que la source agricole.
-Ainsi, il n'y a pas d'ambiguïté de source possible et le facteur \og Nitrate rich \fg{}
+voisine ou plus négative en \dN{} que la source agricole.
+Ainsi, il n'y a pas d'ambiguïté de source possible et le facteur ``Nitrate rich''
 peut être identifié et renommé Agriculture.
 
 \begin{figure}[ht]
@@ -822,7 +833,7 @@ que la quantité totale d'ammonium est respectée (figure~\ref{fig:PMFreconstruc
 Il est donc important de noter que les résultats de la PMF couplée vont dans le sens d'une
 meilleure attribution des sources mais possèdent néanmoins encore une marge d'évolution
 importante.
-En \og forçant \fg{} davantage la PMF d'après les données issues de Monte-Carlo,
+En ``forçant'' davantage la PMF d'après les données issues de Monte-Carlo,
 l'importance du facteur agricole augmenterait et celle du trafic/industrie diminuerait.
 L'estimation PMF présentée ici est donc une estimation basse de l'importance du facteur
 agricole.
@@ -831,12 +842,12 @@ agricole.
     \centering
     \includegraphics[width=1.0\textwidth]{figures/INACS/PMF_OPE_reconstruction.pdf}
     \caption{Reconstruction des variables \textbf{a)} \NHq$_{src}$, \textbf{b)} \NOt~et
-        \NHq$_{tot}$ et \textbf{c)} \dN~par modèle inverse d'après les données de sorties
+        \NHq$_{tot}$ et \textbf{c)} \dN{} par modèle inverse d'après les données de sorties
         de PMF.
-        \textbf{b)} Le \NOt~prédit est celui reconstruit par la PMF et le \NHq~est la
+        \textbf{b)} Le \NOt{} prédit est celui reconstruit par la PMF et le \NHq{} est la
         somme des trois \NHq$_{src}$ donnés par la PMF.
-        \textbf{c)} L'observation isotopique \dN~est notée en trait plein bleu et le
-        \dN~reconstruit depuis les \NHq estimés par PMF en orange dont l'incertitude
+        \textbf{c)} L'observation isotopique \dN{} est notée en trait plein bleu et le
+        \dN{} reconstruit depuis les \NHq{} estimés par PMF en orange dont l'incertitude
         correspond à l'écart type de 2000 tirages aléatoires des valeurs des sources.
     }
     \label{fig:PMFreconstruct}
@@ -847,9 +858,9 @@ agricole.
 
 
 Grâce à l'isotopie, nous avons pu montrer que l'ammonium provient très majoritairement
-de la source agricole lors des pics de pollutions printanier, et ce à très grande échelle
-spatiale, alors que la source véhiculaire constituant le fond ambiant tout le long de
-l'année.
+de la source agricole lors des pics de pollutions printaniers, et ce à très grande échelle
+spatiale, alors que la source véhiculaire semble bien constituer le fond ambiant en
+nitrate d'ammonium tout le long de l'année.
 
 Également, la méthodologie établie permet l'utilisation d'informations isotopiques dans
 une étude PMF alors même que l'isotopie n'est pas additive, à condition d'effectuer un
@@ -874,14 +885,13 @@ considérées. Cette limitation est davantage explorée dans l'annexe~\ref{annex
 \subsubsection{Problématique : la matière organique}%
 \label{ssub:problématique_la_matière_organique}
 
-La matière organique présente une large part d'espèce non identifiée et peut avoir de
-nombreuse provenances. Bien que pour certaines sources, différentes espèces nous
+La matière organique présente une large part d'espèces non identifiées et peut avoir de
+nombreuses provenances. Bien que différentes espèces chimiques nous
 permettent d'identifier et quantifier la contribution de différentes sources à la matière
 organique (lévoglucosan et potatium pour la combustion de biomasse par exemple), certaines
-espèces organiques mesurées ne présentent pas de corrélation évidente avec les facteurs PMF
-lorsqu'aucun de ceux-ci n'est identifié comme provenant des émissions biogéniques. C'est
-notamment le cas de l'arabitol et mannitol, composés émis par les champignons et
-bactéries.
+espèces organiques mesurées ne présentent pas de corrélation évidente avec les facteurs
+PMF . C'est notamment le cas de l'arabitol et mannitol, composés émis par les champignons
+et bactéries.
 
 Aussi, la microbiologie présente sur les aérosols peut influer de manière importante
 sur le PO des aérosols \autocite{samakeUnexpected2017}.
@@ -924,10 +934,10 @@ dans la fraction grossière (\PMdix) que fine (\PMdc), avec des concentrations v
 Revin et de l'OPE, correspondant à un ratio \PMdix/\PMdc{} variant en moyenne de 3 à 5.
 Cette ségrégation suivant la taille des particules est identique pour le glucose.
 
-Les polyols ne représentent cependant qu'une faible fraction de la matière organique. En effet, en
-considérant un ratio entre l'OM et l'OC de 1.8 typique des écosystèmes d'Europe de
-l'ouest, les polyols ne représentent qu'entre 0.1 et 2.1\%. La même contribution relative
-est trouvée pour le glucose.
+Les polyols ne représentent cependant qu'une faible fraction de la matière organique. En
+effet, en considérant un ratio entre l'OM et l'OC de 1.8 typique des écosystèmes d'Europe
+de l'ouest, les polyols ne représentent qu'entre \SIrange{0.1}{2.1}{\percent}. La même
+contribution relative est trouvée pour le glucose.
 
 \begin{figure}[ht]
     \centering
@@ -987,9 +997,9 @@ dans le jeu d'espèces sélectionné. Sur ces PMF, un facteur \textit{Primary bi
 organic aerosol} ou PBOA a systématiquement été identifié, comprenant la quasi-totalité
 des polyols.
 
-La contribution de ce facteur à la matière organique totale varie de 6\% à 28\%, pour une
+La contribution de ce facteur à la matière organique totale varie de \SI{6}{\percent} à \SI{28}{\percent}, pour une
 moyenne et écart-type de \SI{13\pm6}{\percent} en moyenne annuelle, mais peut représenter
-plus de 40\% de la matière organique en été à certains sites (voir
+plus de \SI{40}{\percent} de la matière organique en été à certains sites (voir
 figure~\ref{fig:chapter03/pboa_pmf_samake2019}).
 De fait, cette source d'émission représente un secteur d'émission important pour comprendre
 les concentrations ambiantes de PM, notamment en période chaude.
@@ -1028,7 +1038,7 @@ attendue de variabilité des spores de champignons (entre 12 et 27), d'après
 
 Nous avons donc montré que les polyols (arabitol et mannitol) sont des traceurs de
 l'activité biologiques, notamment de la strate herbacée. Leur présence est ubiquitaire
-mais représente seulement 0.1 à 2.1\% de la matière organique.
+mais représente seulement 0.1 à \SI{2.1}{\percent} de la matière organique.
 
 Ainsi, ces études approfondies sur la dynamique et la provenance des polyols nous ont
 permis de les identifier comme étant des espèces traceuses de source unique et présente
@@ -1038,7 +1048,7 @@ et bactérienne.
 
 Leur ajout dans les analyses multifactorielles nous apprend que la contribution de ce
 facteur PBOA à la matière organique totale varie de façons importante selon la saison,
-mais peut représenter jusqu'à 40\% de la matière organique en période chaude sur certains
+mais peut représenter jusqu'à \SI{40}{\percent} de la matière organique en période chaude sur certains
 sites étudiés, en faisant un facteur important pour comprendre la dynamique des PM en
 période chaude.
 
@@ -1201,10 +1211,10 @@ et contribution temporelle de ce profil sur le site de CB
 figure~\ref{fig:chapter03/borlaza/CB-SBO}).
 Ce facteur apporte jusqu'à \SI{10}{\ugm} de \PMdix{} certains jours d'été, en faisant l'un
 des facteurs majeurs contribuant aux \PMdix{} certains jours.
-Aussi, une part importante de l'OC est amené par ce facteur (environ 10\% de l'OC
-total), mais également du sulfate (environ 15\%), suggérant la présence de composés
+Aussi, une part importante de l'OC est amené par ce facteur (environ \SI{10}{\percent} de l'OC
+total), mais également du sulfate (environ \SI{15}{\percent}), suggérant la présence de composés
 organiques suflatés.
-Ainsi, en moyenne estivale, c'est entre 20\% et 40\% de la matière organique qui est
+Ainsi, en moyenne estivale, c'est entre \SI{20}{\percent} et \SI{40}{\percent} de la matière organique qui est
 apporté par ce facteur selon le site considéré, ce qui en fait le facteur principal
 d'apport de matière organique pendant cette période.
 
@@ -1213,10 +1223,10 @@ d'apport de matière organique pendant cette période.
 
 Le deuxième facteur présentant d'importante contribution de ces traceurs organiques est
 le profile d'émission primaire biogénique (voir
-figure~\ref{fig:chapter03/borlaza/LF-PBOA}). Notamment, près de 60\% de la cellulose est
+figure~\ref{fig:chapter03/borlaza/LF-PBOA}). Notamment, près de \SI{60}{\percent} de la cellulose est
 apporté par ce facteur, renforcant l'hypothèse de l'émission de ce facteur par la strate
 herbacée (comme expliqué en section~\ref{sub:émission_biogénique_primaire}). Aussi, et
-comme suspecté auparavant, ce facteur est également responsable d'environ 20\% de l'acide
+comme suspecté auparavant, ce facteur est également responsable d'environ \SI{20}{\percent} de l'acide
 pinique et du 3-MBTCA, et par conséquent une part de la matière organique n'est pas
 d'origine primaire mais secondaire, bien que limité. Il est à noter également que la
 quantité totale de matière organique ou de \PMdix{} expliqué par ce facteur ne varie
@@ -1309,7 +1319,7 @@ qui était jusqu'alors un mélange entre de l'inorganique et de l'organique.
 Cependant, l'ajout de la cellulose, présentant pourtant un signal unique, ne permet pas
 l'identification d'un nouveau facteur dans la solution présentée ici. En revanche, lors de
 nos essais sur cette PMF, nous avons expérimenté plusieurs incertitudes pour cette espèce,
-et un ``seuil'' aux alentours de 15\% d'incertitude fait basculer la solution entre 11 et
+et un ``seuil'' aux alentours de \SI{15}{\percent} d'incertitude fait basculer la solution entre 11 et
 12 facteurs, faisant apparaître un nouveau facteur très incertain statistiquement,
 comportant la majorité de la cellulose.
 
@@ -1366,7 +1376,7 @@ que la variabilité de leurs incertitudes.
     chimiques, contributions, incertitudes, deltaTool…) : \url{http://pmsource.u-ga.fr}.
 
     Au 20 juillet 2020, ce site a déjà été visionné par plus de 400 personnes provenant
-    d'une vingtaine de pays, donc 30\% y sont revenus plusieurs fois.
+    d'une vingtaine de pays, donc \SI{30}{\percent} y sont revenus plusieurs fois.
 \end{tcolorbox}
 
 \subsection{Comparison of PM\textsubscript{10} sources profiles at 15 french sites using a harmonized constrained positive matrix factorization approach}%
@@ -1463,6 +1473,10 @@ BNT, hopanes, alcanes…), et permettraient potentiellement une meilleure caract
 plusieurs sources anthropiques (trafic, portuaire, industrielle…) ou liés aux débris végétaux.
 À ce titre, une PMF sur La Paz (Bolivie) est en cours dans le cadre de la thèse de Valéria
 Mardonez dans le groupe CHIANTI.
+Notamment, grâce a des mesures sous tunnel et a un jeu d'espèces organiques plus détaillé,
+nous espérons pouvoir séparer différents types d'émissions véhiculaires dans cet
+environnement particulier de très haute altitude ou les processus de combustion sont
+appauvris en oxygène.
 
 Cependant, l'ajout de nouveau traceur présentant un signal singulier ne suffit pas
 nécessairement à la caractérisation d'un nouveau facteur, comme nous le pensions pour la
