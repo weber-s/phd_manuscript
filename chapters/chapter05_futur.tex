@@ -28,7 +28,7 @@ comme référence de l'exposition de la population n'est donc peut-être suffisa
 
 \subsection{Estimation du PO à partir des PM}
 
-Dans cette thèse, deux synthèses nationnales grande échelle ont été faite : 1) estimation
+Dans cette thèse, deux synthèses nationales grande échelle ont été faite : 1) estimation
 des contributions des sources de PM à la masse \autocite{weberComparison2019}
 (chapitre~\ref{cha:estimation_des_sources_de_PO}) et 2) attribution du PO intrinsèque à
 chacune des sources de PM majoritairement présentes \autocite{weberSourceinprep.}
@@ -99,8 +99,8 @@ approximations faites par cette méthode, ce résultat présente des performance
 \end{figure}
 
 
-Il est donc possible d'estimer en premier ordre la contribution des sources majoriatire de
-PM aux PO, et ce en prennant en compte l'intégralité des mesure annuelle disponible. La
+Il est donc possible d'estimer en premier ordre la contribution des sources majoritaires de
+PM aux PO, et ce en prenant en compte l'intégralité des mesure annuelle disponible. La
 prise en compte de toutes ces mesures nous affranchi du biais de sélection présent dû
 fait de la fréquence d'échantillonage et d'annalyse sur filtre. Les contributions des
 sources de PO d'après les mesures journalières d'Atmo AURA sur la station de GRE-fr sont
@@ -123,11 +123,11 @@ mieux en lumière la différence entre contribution moyenne et contribution méd
 sources de \PMdix{} aux PO.
 
 Enfin, il est possible de propager la variabilité aussi bien de la contribution mensuelle
-moyenne de chacune de source que de leur PO intrinsèque dans cette methode. Ce travail n'a
-pas encore été entammé, mais nous disposons de l'ensemble des informations nécessaire pour
+moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce travail n'a
+pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaire pour
 cela.
 
-En définitive, puisqu'il est raisonable d'estimer le PO des \PMdix{} par cette technique,
+En définitive, puisqu'il est raisonnable d'estimer le PO des \PMdix{} par cette technique,
 il parait envisageable d'établir une cartographie du PO à partir soit des mesures satellites
 de concentration de \PMdix, soit des sorties de modèle CTM.
 
@@ -211,7 +211,7 @@ apporté par ces sources.
 Dans les 2 cas, le développement de la technique de ``source-labelling'' et la base de
 donnée unique d'attribution des sources en site récepteur appelle à une étude de
 sensibilité des prédiction des CTM. Notamment, LOTOS-EUROS\footnote{LOTOS-EUROS:
-    \url{https://lotos-euros.tno.nl/}} (abbrégé LE) développé au TNO (\textit{Netherlands Organisation for
+    \url{https://lotos-euros.tno.nl/}} (abrégé LE) développé au TNO (\textit{Netherlands Organisation for
 Applied Scientific Research}) a récemment rendu disponible à travers TOPAS\footnote{TOPAS:
 TNO Operational Pollution Apportionment Service (\url{https://topas.tno.nl/})}. Cette
 avancée est rendu possible par l'implémentation de \cite{kranenburgSource2013} dans
@@ -239,12 +239,12 @@ estimée par \cite{weberSourceinprep.} appliqué aux prévisions de LOTOS-EUROS.
 
 Cette preuve de concept en 2018 a aiguisé la curiosité des chercheurs et développeurs
 d'un autre modèle de chimie transport: Chimère. Chimère a donc maintenant implémenté la
-même technique de ``source-labelling'' et un travail identique à celui entammé avec le
+même technique de ``source-labelling'' et un travail identique à celui entamé avec le
 TNO et LE est en cours avec le LISA et Chimère. Notamment, de février à juillet 2020, le
 stage de M2 de Matthieu Vida portait sur cette thématique, qu'il va poursuivre en thèse à
 la rentrée universitaire 2020.
 
-Parallélement, \cite{daellenbachSourcessubmitted} ont conduit une étude similaire à celle
+Parallèlement, \cite{daellenbachSourcessubmitted} ont conduit une étude similaire à celle
 de \cite{weberSourceinprep.}, mais n'incluant que 109 mesures composites de potentiel
 oxydant sur 6 sites de prélèvement en Suisse. Dans cette étude, à laquelle j'ai pris
 part, le couplage entre PO intrinsèque et sources déterminée par le CTM CAMx est proposé.
@@ -253,7 +253,7 @@ l'importance de la combustion de biomasse mais aussi de la source trafic routiè
 les zones densément peuplées. En estimant l'exposition des populations comme la masse de
 \PMdix{} ou la quantité de \POv{} inhalé, cette étude montre une fois de plus une
 redistribution complète de l'importance des sources entre concentration massique et
-potentiels oxydants. Encore une fois, l'importance du trafic routier s'accroit
+potentiels oxydants. Encore une fois, l'importance du trafic routier s'accroît
 considérablement et l'aérosol inorganique, pourtant dominant en terme de masse, n'a plus
 qu'une influence minime sur l'exposition aux \POv.
 
@@ -333,26 +333,26 @@ suffisant, en font un outil très intéressant.
 Ce type de modèle a été appliqué avec succès en prévision de la qualité de l'air pour le
 \ce{NO2} et les \PMdix{} par~\cite{kukkonenExtensive2003} en comparaison à un modèle
 linéaire et déterministe. Dans d'autres disciplinaires des sciences de l'environnement, ce
-type de modèle a également montrer son intêret pour l'évaluation de la qualité de
+type de modèle a également montrer son intérêt pour l'évaluation de la qualité de
 l'eau~\autocite{nathanApplication2017}.
 
-Formellement, un réseaux de neurones est un graph orienté pondéré, où lorsque deux
-nœuds (ou neurones) sont connectés (i.e lié par un bord orienté du graph), le résultat en
+Formellement, un réseaux de neurones est un graphe orienté pondéré, où lorsque deux
+nœuds (ou neurones) sont connectés (i.e lié par un bord orienté du graphe), le résultat en
 sortie du neurone devant est utilisé comment entrée du neurone de derrière.
 Autrement dit réseau de neurone consiste en une succession de ``nœuds'' (ou synapse, ou
-neurone) connectés entres eux pas des relations linéaires appellées ``poids''. Le principe
+neurone) connectés entres eux pas des relations linéaires appelées ``poids''. Le principe
 mimique un réseau de neurone biologique naturelle très simpliste, ou chacune des
-informations recu par un neurone se propage à d'autres neurones, afin de prédire une
-valeure finale (par ex. le \POv) en fonction d'un signal initial (par ex. la
+informations reçu par un neurone se propage à d'autres neurones, afin de prédire une
+valeur finale (par ex. le \POv) en fonction d'un signal initial (par ex. la
 concentration massique des sources de PM).
 On distingue 3 types de neurones:
 \begin{itemize}
-    \item neurones d'entrés (input) (connecté aux variables d'entrées),
-    \item neurones de sortie (output),
+    \item neurones d'entrées (input) (connecté aux variables d'entrées),
+    \item neurones de sorties (output),
     \item neurones cachés.
 \end{itemize}
-Le plus courrament utilisés est le \textit{Multi Layer Perceptron} (MLP), qui est un
-réseau acyclique où les neurones sont structurés en couche successives\footnote{Il est
+Le plus couramment utilisés est le \textit{Multi Layer Perceptron} (MLP), qui est un
+réseau a-cyclique où les neurones sont structurés en couche successives\footnote{Il est
 d'ailleurs montré que le MLP est un approximateur universel}, illustré dans la
 figure~\ref{fig:MLP_architecture}.
 
@@ -366,8 +366,8 @@ figure~\ref{fig:MLP_architecture}.
     \label{fig:MLP_architecture}
 \end{figure}
 
-Au sein de chaque nœud, l'information recu est condensé en une valeure unique puis propagée à
-son tour aux neurones suivants. En prennant l'exemple du MLP décrit par la
+Au sein de chaque nœud, l'information reçue est condensée en une valeur unique puis propagée à
+son tour aux neurones suivants. En prenant l'exemple du MLP décrit par la
 figure~\ref{fig:MLP_architecture}, cette condensation d'information pour la première
 couche se fait selon l'Eq.~\ref{eq:ANN_neurone}:
 \begin{align}
@@ -377,21 +377,21 @@ couche se fait selon l'Eq.~\ref{eq:ANN_neurone}:
 avec $w^x_{i,j}$ les poids entre les neurones de la couches d'entrée et cachée, et
 $w^x_{0,j}$ représente une constante d'activation pour le neurone $j$. La fonction $H$
 peut-être de différents types, mais est très souvent non-linéraire. Le fait de combiner 2
-couches de neurone et d'ajouter une fonction d'activation non linéaire ammène la
+couches de neurone et d'ajouter une fonction d'activation non linéaire amène la
 complexité recherché permettant la prise en compte des phénomènes complexes.
 
 Chacun des poids $w$ est inconnu a priori, et sont estimés par processus itératif et
-rétropropagation à partir d'un ensemble de données d'entrainnement pour lesquel les
+rétro-propagation à partir d'un ensemble de données d'entraînement pour lesquels les
 valeurs d'entrées et de sorties sont connues. Les poids sont donc ``appris'' --d'où le
 terme de \textit{machine learning}-- par minimisation d'un fonction coût entre prédictions
 et observations (de manière similaire à l'algorithme PMF).
 
 En revanche, du fait de leurs complexités, même si les prédictions se trouvent être
-correctes, il peut être compliqué d'interpreter le modèle obtenu.
+correctes, il peut être compliqué d'interpréter le modèle obtenu.
 
 
 Dans le cadre d'un financement du DataInstitute de l'Université Grenoble Alpes, j'ai
-obtenu un financement pour l'encadrement d'un stagiaire de M2, Jean-Baptiste Fices, afin
+obtenu un financement pour l'encadrement d'un stagiaire de M2, Jean-Baptiste Fiches, afin
 de travailler spécifiquement sur ces questions :
 \begin{enumerate}
     \item Est-il possible d'appliquer un réseau de neurone pour la prédiction du potentiel
@@ -411,10 +411,10 @@ artificiel (MLP).
 \subsubsection{Résultats préliminaires}%
 \label{ssub:résultats_préliminaires}
 
-Appliqué sur les 3 sites de la métropole Grenobloise, les 2 modèles ont été entrainés sur
+Appliqué sur les 3 sites de la métropole Grenobloise, les 2 modèles ont été entraînés sur
 \SI{80}{\percent} des données et testés sur les \SI{20}{\percent} restant. Les performances
 statistiques des deux types de modèles (MLP et MLR) sont relativement
-similaires (figure~\ref{fig:perfMLPMLR}) et chacuns des deux modèles prédit chaque \POv{}
+similaires (figure~\ref{fig:perfMLPMLR}) et chacun des deux modèles prédit chaque \POv{}
 (mesuré par AA, DTT et DCFH) sur les 3 sites avec relativement les mêmes performances.
 Ce type de modèle permet donc d'expliquer au moins aussi bien que le MLR les PO à partir
 des sources d'émissions de \PMdix.
@@ -428,10 +428,10 @@ des sources d'émissions de \PMdix.
 \end{figure}
 
 Pour estimer si le MLP capture bien des relations non-linéaire, 2 expériences sont menées.
-Dans les deux cas, le MLP est entrainé sur le jeu de données du site de GRE-fr. Deux
+Dans les deux cas, le MLP est entraîne sur le jeu de données du site de GRE-fr. Deux
 situations fictives sont ensuite imaginées.
 
-La première conciste à estimer le \PODTTv{} par le MLP, toutes contributions des sources
+La première consiste à estimer le \PODTTv{} par le MLP, toutes contributions des sources
 nulles sauf une, variant de 0 à 24~\si{\ugm}. La réponse du \PODTTv{} en fonction de
 l'augmentation linéaire de la contribution de chacune des sources est présentée
 figure~\ref{fig:figures/chapter05/10sourcesLinearite}. On y observe bien une réponse
@@ -456,8 +456,7 @@ Dans le cas contraire, cela indiquera un effet cocktail entre ces 2 sources.
     \centering
     \includegraphics[width=0.8\linewidth]{figures/chapter05/10sourcesLinearite.PNG}
     \caption{Effet non linéaire de l'augmentation de la concentration d'une source
-        d'émission sur le \PODTTv{} d'après un réseau de neurone entrainé sur Grenoble Les
-    frènes. Source: \cite{fichesMachine2020}.}%
+        d'émission sur le \PODTTv{} d'après un réseau de neurone entraîné sur GRE-fr. Source: \cite{fichesMachine2020}.}%
     \label{fig:figures/chapter05/10sourcesLinearite}
 \end{figure}
 
@@ -490,19 +489,19 @@ La mesure du PO et son application outil de mesure de la qualité de l'air deman
 nécessairement des études sur la capacités prédictives des PO sur les impacts sanitaires.
 Aussi, dans le mode de vie occidental, nous passons le plus clair de notre temps en espace
 clos intérieur (maison ou travail
-principallement)~\autocite{netheryTime2009,ouidirEstimation2015}. La qualité de l'air
+principalement)~\autocite{netheryTime2009,ouidirEstimation2015}. La qualité de l'air
 mesuré dans les stations conventionnelles n'est donc peut-être pas représentative de
-l'exposition réelle des individus.
+l'exposition réelle des individus~\autocite{sauvainOxidative2015}.
 
-\subsection{Mesure \textit{indoor} et personnelle}
+\subsection{Mesures intérieure et personnelle}
 
 Sur Grenoble, après une étude pilote de \cite{ouidirEstimation2015} portant sur
 l'exposition personnelle de 40 femmes enceintes, le projet
 SEPAGES~\autocite{lyon-caenDeciphering2019} a pour ambition la mesure d'un très large
 ensemble de marqueurs phénotypiques pour un corpus d'environ 480 couple mères-enfants
-suivis pendant leur grossesses et des premières années des enfants. Parrallèlement,
-l'exposome est mesuré très finnement, prennant en compte l'exposition personnelle des
-sujets dès le premier trimestre de la grossesse grâce au port de microcapteurs autonomes.
+suivis pendant leur grossesses et des premières années des enfants. Parallèlement,
+l'exposôme est mesuré très finement, prenant en compte l'exposition personnelle des
+sujets dès le premier trimestre de la grossesse grâce au port de micro-capteurs autonomes.
 
 Grâce au projet Mobil'air, en plus des \ce{NO2} et masse des \PMdc, le PO a également été
 mesurés sur ces micro-filtres\footnote{Les faibles masses prélevées ont fait l'objet
@@ -513,8 +512,9 @@ Aussi, des échantillons d'air intérieur pour 140 foyers pour deux périodes en
 échantillons de fraction \PMdc{} pour sur lesquels une chimie détaillée et les PO sont en
 cours d'analyse. Une partie déjà analysées des mesures de carbone organique est présentée
 figure~\ref{fig:figures/chapter05/OC_mobilair}, confrontée au mesure extérieur sur la
-station de GRE-fr d'Atmo AURA pour la même période. Une saisonnalité des mesures
-intérieure est retrouvée, similairement aux mesures extérieures. En revanche, il existe
+station de GRE-fr d'Atmo AURA pour la même période. De même que pour les mesures extérieures,
+une saisonnalité des mesures intérieure est retrouvée.
+En revanche, il existe
 des échantillons où la concentration intérieure est plus élevées que celle extérieure,
 alors même que seule la fraction \PMdc{} est prise en compte pour les mesures intérieures.
 
@@ -548,13 +548,13 @@ en clairs.}%
 
 \subsection{Étude épidémiologique -- cohorte SEPAGES}
 
-La cohortes SEPAGES nous permet une caractérisation précise de l'exposition personelle
+La cohortes SEPAGES nous permet une caractérisation précise de l'exposition personnelle
 maternelle en lien avec un ensemble conséquent de variables phénotypiques du nouveau-né.
 De façons similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition aux
 \ce{NO2}, concentration massique des \PMdc mais surtout aux \POAAv{} et \PODTTv{} est en
-cours d'étude par \cite{borlazaHealthinprep.}.
+cours d'étude par \cite{borlazaHealthinprep.},.
 Grâce à cette étude, le pouvoir prédictif de la métrique de la masse ou du PO des \PMdc{}
-sur le petit poids de naissance ou la circonférence crannienne, parmi d'autres variables,
+sur le petit poids de naissance ou la circonférence crânienne, parmi d'autres variables,
 pourra être évaluer.
 
 De même, la thèse d'Anouk Marshal débutant à l'automne 2020 aura pour objectif d'établir

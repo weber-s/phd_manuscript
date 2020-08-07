@@ -6,19 +6,19 @@
 
 
 Bien que dans les chapitres précédents nous avons vu qu'il était possible d'estimer de
-façon fiable la contribution des différentes sources de PM grâce aux PMF et d'établir une
-phénoménologie des sources de \PMdix, la question de leur effet sanitaire n'est toujours
-pas répondu. En effet, l'ordre de contribution à la concentration moyenne annuelle des
-\PMdix{} présentée par \cite[(figure 3)]{weberComparison2019} ne préjugage pas de leurs
+façon fiable la contribution des différentes sources de PM grâce à la méthodologie PMF et d'établir une
+phénoménologie des sources de \PMdix, la question de leurs effets sanitaires respectifs est toujours sans réponse. En effet, l'ordre de contribution à la concentration moyenne annuelle des
+\PMdix{} présentée par \cite[(figure 3)]{weberComparison2019} ne préjuge pas de leurs
 impacts sanitaires.
 
 En effet, comme détaillé en introduction
 section~\ref{sec:le_potentiel_oxydant_des_aerosols}, la mesure de la masse des PM n'est
-certainement pas l'indicateur le plus adapté pour évaluer leur toxicité, car la composition
-chimique, forme, surface réactive, etc. n'est pas prise en compte par cette métrique.
+certainement pas l'indicateur le plus adapté pour évaluer leur toxicité, car les propriétés
+physico-chimiques qui la détermine (la composition
+chimique, forme, surface réactive, etc.) ne sont pas prises en compte par cette métrique.
 C'est pourquoi le potentiel oxydant (PO ou OP en anglais), mesurant indirectement les
-espèces réactives de l'oxygène (ERO ou ROS en anglais) apportées ou induites par les PM,
-est proposé comme nouvel indicateur de l'exposition des populations à la toxicité des PM. 
+espèces réactives de l'oxygène (ERO ou ROS en anglais) apportées ou générées par les PM,
+est proposé comme nouvel indicateur de l'exposition des populations à la pollution particulaire. 
 Il est maintenant bien documenté que les différents tests de PO présentent une information
 différente de la concentration massique (voir par exemple,
 \cite{choRedox2005,vermaReactive2014,batesReactive2015,fangOxidative2016,fangAmbient2017,calasSeasonal2019},
@@ -28,6 +28,7 @@ ou la revue détaillée récente de \cite{batesReview2019}).
 % \cite{calasComparison2018} présentant la corrélation entre la masse des \PMdix{} et 5
 % mesures de PO.
 
+\todo{il faut penser à faire un mail à Imad/André pour mettre ce graphique dans ta thèse. Pour cochabama c'est bon, pour Strasbourg il faut demander à Jluc à qui il faut demander}
 À titre d'exemple, les moyennes des concentrations massiques et de \POAAv{} pour 4 sites (Bolivie,
 Inde, Suisse et France) analysés à l'IGE sont présentées figure~\ref{fig:OPAAv_4sites}.
 Alors que la concentration massique est identique pour chacun des couples
@@ -36,23 +37,28 @@ le site de Berne présente des concentrations en \PMdix{} inférieur au seuil r�
 et 5 fois plus faible que le site urbain de Cochabamba, le \POAAv{} de ces \PMdix{} est
 en réalité 2 fois supérieure, indiquant en définitive des \PMdix{} ayants une activité
 oxydante beaucoup plus importante sur le site de Berne que de Cochabamba, et donc
-probablement un impact sanitaire plus délétaire alors que la métrique de la masse seule
+probablement un impact sanitaire plus délétère alors que la métrique de la masse seule
 donnerait la conclusion inverse.
 Cependant, il existe aussi de lieux de prélèvement où les 2 métriques concordent. Sur le
 site de Dehli, à la fois la masse et le \POAAv{} des \PMdix{} sont élevées, et sur le
 site de Strasbourg, de faible concentration massique sont associés à de faible \POAAv.
 
-Cet exemple illustre la complexité cachée derrière la métrique de la masse des PM, qui,
-si on accepte que le PO est un bon indicateur de l'impact sanitaire des PM, se trouve
-finallement que peu adapté à l'étude de la qualité de l'air concernant l'exposition des
-populations.
+La mise en regard de ces deux métriques, apporte une vision différente de l'exposition
+aux particules.
+En ne mesurant qu'une quantité, la concentration massique des PM ne capture pas la complexité
+des propriétés physico-chimiques de l'aérosol en présence. Si on postule que le PO est
+un meilleur indicateur de l'impact sanitaire des PM car il intègre un plus grand 
+nombre des propriétés qui font la toxicité des particules, alors, cet exemple illustre
+que la masse est peu adaptée à l'étude de la qualité de l'air concertant l'exposition 
+des populations.
+
 
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=0.7\linewidth]{figures/chapter04/OPAAv_4sites.png}
     \caption{Comparaison de la métrique de la masse et du \POAAv{} des PM, pour 2 pairs
-        de sites urbain et traffic présentant une même concentration massique de PM
-        moyenne identique mais des \POAAv{} très différents. Mesures effetuées à l'IGE.\\
+        de sites urbain et trafic présentant une même concentration massique de PM
+        moyenne identique mais des \POAAv{} très différents. Mesures effectuées à l'IGE.\\
         Crédit: PSI pour le site de Berne, X pour Dehli, programme interne pour
         Cochambamba et Strasbourg.
     }%
@@ -100,29 +106,28 @@ transitions ainsi que certaines quinones conduisent à la formation d'un grand n
 \ce{HO^.} et sont donc des espèces très réactives à la mesure du PO
 \autocite{charrierRates2015,calasImportance2017}.
 
-Cependant, lorsque l'ensemble des PM est solubilisé, analysé et confronté aux PO, de
-fortes corrélations sont bien observés avec les espèces présentant une forte réactivité aux
-PO, mais certaines autres espèces sont parfois fortement corrélées alors qu'une mesure
-directe de leurs PO montre aucune réactivité --c'est notamment le cas du nitrate,
-de l'ammonium, du lévoglucosan ou du fer \autocite{vermaRedox2009,calasComparison2018,calasSeasonal2019}.
+Cependant, lorsque l'ensemble des PM est solubilisé, analysé et confronté aux différents tests de PO, de
+fortes corrélations sont bien observées avec les espèces présentant une forte réactivité aux
+PO, mais certaines autres espèces sont parfois fortement corrélées alors que la mesure directe de leur PO est nulle (tous tests confondus) --c'est notamment le cas du nitrate,
+de l'ammonium, du lévoglucosan ou du \ce{Fe^{II}}~\autocite{vermaRedox2009,calasComparison2018,calasSeasonal2019}.
 
 Ces corrélations ne reflètent donc pas nécessairement de réelles causalité mais des
 co-corrélations. Le lévoglucosan est émis en même temps que certaines quinones lors de la
-combustion de bois, qui elles sont redox-active, et le nitrate est émis temporellement en
+combustion de bois, qui elles sont redox-actives, et le nitrate est émis de façon saisonnière en
 fin de l'hiver alors que la combustion de biomasse est toujours présente.  Ainsi, ces
 corrélations sont un premier pas vers l'identification des sources majoritaires de PO,
 mais s'avère insuffisantes.
 
-\subsection{Du PO par espèces chimiques au PO par sources}
+\subsection{Du PO par espèce chimique au PO par source}
 
-L'attribution d'un PO intrinsèque par espèces chimiques est donc estimée par mesure
-directe ou par regression linéaire
+L'attribution d'un PO intrinsèque par espèce chimique est donc estimée par mesure
+directe ou par régression linéaire
 multiple~\autocite{calasImportance2017,borlazaOxidative2018}. La première solution permet
 la mesure exacte du PO de l'espèce mais présente des limitations analytiques évidentes
 (composé pur, grand nombre d'espèces et de gamme de concentration à étudier), et la
 deuxième peut présenter des ``faux positifs'' dans le cas où toutes les espèces chimiques
 ne sont pas mesurées --ce qui est toujours le cas-- du fait de l'émission conjointe
-d'espèce redox-active et non-redox-active (quinones et lévoglucosan par exemple).
+d'espèces redox-actives et non-redox-actives (quinones et lévoglucosan par exemple).
 
 Aussi, d'un point de vue réglementaire, il est souvent plus compréhensible d'agir sur
 un secteur d'émission que sur une espèce chimique en particulier.
@@ -132,16 +137,16 @@ que par espèce chimique est intéressante :
 \begin{enumerate}
     \item le nombre d'inconnues diminue drastiquement (plusieurs milliers d'espèces
         chimique à une dizaine de sources d'émission);
-    \item pas besoin d'identifier chaque espèce chimiques du moment que les sources
+    \item le besoin d'identifier chaque espèce chimique disparaît si les sources
         majoritaires sont bien représentées;
-    \item la contribution des sources aux potentiels oxydants est davantage transmissible
+    \item la contribution des sources au potentiel oxydant est davantage transmissible
         en termes de politiques publiques que la contribution d'espèces chimiques;
 \end{enumerate}
 
-Pour estimer un PO par sources, plusieurs méthodes sont possibles : 1) introduire le PO
+Pour estimer un PO par source, plusieurs méthodes sont possibles : 1) introduire le PO
 comme variable dans une étude de source (CMB, PMF, etc.) 2) faire une étude de source
 (CMB, PMF, etc.) grâce à l'information chimique et ensuite établir un modèle d'inversion
-entre les sources identifiées et les PO.
+entre les sources identifiées et les différentes mesures de PO.
 
 \cite{vermaReactive2014} ont utilisé les 2 méthodes en introduisant le
 \PODTT{} dans une PMF avec comme autres espèces WSOC\footnote{WSOC: Water soluble
@@ -152,7 +157,8 @@ Entre 2014 et 2017, \cite{batesReactive2015} puis \cite{fangOxidative2016}, de l
 équipe de recherche, ont repris ce principe et l'ont appliqué à plus grande échelle
 spatiale et également au \POAAv.\footnote{Lors du commencement de ma thèse, à ma connaissance, seules ces 3 études étaient
 disponibles dans la littérature. Ce sujet s'est vu largement développés au cours des 3
-dernières années, et sera discutée dans la suite.}
+dernières années, et sera discuté dans la suite.}
+%Gaëlle : Tu en étais ici. J'ai accepté les modifications avant
 
 \begin{figure}[ht]
     \centering
@@ -165,17 +171,16 @@ dernières années, et sera discutée dans la suite.}
 \end{figure}
 
 Seulement, nous avons vu que les PMF sont très sensibles aux variables utilisées. Or, leurs
-études PMF inclut un ensemble d'espèce chimiques restreint (une dizaine de métaux et le
-WSOC), en plus du PO. Seuls 4 facteurs sont identifiés par \cite{fangOxidative2016}, ce
-qui semble peu au regard des PMF utilisant un jeu d'espèce chimique plus conséquente (voir
-notamment tous le chapitre précédent). En plus, ce faible nombre d'espèces chimiques
+études PMF incluent un ensemble d'espèces chimiques restreint (une dizaine de métaux et le
+WSOC), en plus du PO. Seuls 4 facteurs sont identifiés par~\cite{fangOxidative2016}, ce
+qui semble peu au regard des PMF utilisant un jeu d'espèce chimique plus conséquent (voir
+notamment tout le chapitre précédent). En plus, ce faible nombre d'espèces chimiques
 associés à une nouvelle variable, le PO, dont nous ne connaissons a priori que peu de chose de ses
 sources, peut conduire à des solutions instables statistiquement.
 
 La solution utilisant la régression linéaire à partir du CMB hérite des limitations
 propres au CMB : peu de prise en compte des particularités locales, connaissance a priori
-forte, etc (voir section
-~\ref{ssub:atouts_et_limitations_des_différents_modèles_récepteurs}).
+forte, etc (voir section~\ref{ssub:atouts_et_limitations_des_différents_modèles_récepteurs}).
 Ainsi, \cite{batesSource2018} utilise un modèle CMB pour prédire à large échelle spatiale
 (Amérique du Nord) le PO, mais le modèle établit présente de faible performance
 statistique ($r^2 = 0.36$ et intercepte non nul), notamment du fait de l'oubli potentiel de
@@ -208,7 +213,7 @@ déjà été présentée à l'EAC de 2019 à Göteburg \autocite{weberSources201
     \includegraphics[width=0.8\linewidth]{figures/chapter04/flowchart_inversion.pdf}
     \caption{Processus suivi afin d'estimer la contribution des sources de PM aux
         potentiels oxydants. La méthode d'inversion utilisée dans ce chapitre est une
-        régréssion linéaire multiple, permettant d'attribuer un PO par microgramme de source
+        régression linéaire multiple, permettant d'attribuer un PO par microgramme de source
         (\textit{PO intrinsèque}), estimant la ``toxicité de la source'', et la contribution de
     chacune des sources aux PO, estimant l'exposition de la population à cette source.}%
     \label{fig:workflow_inversion}
@@ -751,11 +756,12 @@ des limitations à prendre en compte.
 Tout d'abord, la méthodologie de déconvolution des sources de PO des PM utilise un modèle
 linéaire. Or, le PO, et notamment le \PODTT, est connu pour ne pas réagir de manière
 linéaire avec la masse des espèces
-chimiques~\autocite{charrierRates2015,charrierBias2016,calasImportance2017}.  Aussi, aucun
+chimiques~\autocite{charrierDithiothreitol2012,sauvainComparison2013,charrierRates2015,charrierBias2016,calasImportance2017}.
+Aussi, aucun
 terme d'interaction entre les sources n'est pris en compte dans ces modèles, or il est
 envisageable que, par exemple, un aérosol sulfaté et donc plus acide augmente la
 solubilisation des particules et donc présente un PO différent du fait uniquement de la
-présence de sulfate.  La prise en compte de ces non-linéarité et des actions conjointes
+présence de sulfate.  La prise en compte de ces non-linéarités et des actions conjointes
 des différentes sources sur les PO serait certainement un ajout important et changerait
 potentiellement les résultats présentés ici. Le chapitre suivant explore l'une des façons
 possibles d'estimer l'importance de cette non linéarité à partir d'un réseau de neurone.
