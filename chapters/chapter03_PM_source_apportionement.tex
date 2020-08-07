@@ -893,13 +893,14 @@ espèces organiques mesurées ne présentent pas de corrélation évidente avec 
 PMF . C'est notamment le cas de l'arabitol et mannitol, composés émis par les champignons
 et bactéries.
 
-Aussi, la microbiologie présente sur les aérosols peut influer de manière importante
-sur le PO des aérosols \autocite{samakeUnexpected2017}.
-
 Ainsi, mieux quantifier et identifier la provenance des sources d'émissions biogéniques
 primaires permettrait peut-être d'identifier l'une des raisons de la sous-estimation des
-PM par les modèles CTM, en pointant une source actuellement mal prise en compte dans ces
+PM (et particulièrement la composante carbonnée) par les modèles CTM, en pointant une source actuellement mal prise en compte dans ces
 modèles.
+De plus, nous avons pu montrer~\cite{samakeUnexpected2017} que la fraction biologique des
+PM apportée par cette source liée aux bactéries et champignons pouvait avoir une certaine
+importance sur le PO des PM, et il est donc important de la prendre en compte
+correctement pour la suite de notre travail.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     Cette étude a été menée dans le cadre de la thèse de~\cite{samakeAtmospheric2019}, et
@@ -907,27 +908,30 @@ modèles.
     de la base de donnée établie et présentée
     section~\ref{sec:harmonisation_et_gestion_de_base_de_donnée}, ainsi que l'utilisation
     et le traitement des résultats issues des PMF des projets DECOMBIO et SOURCES
-    (présentée en détail section~\ref{sec:sources}).
+    (tavaux présentés en détail section~\ref{sec:sources}).
+    Ils ont notamment conduit à la publication de
+\cite{samakeArabitol2019,samakePolyols2019,samakeHigh2020}, pour lesquels je suis
+co-autheur.}
 \end{tcolorbox}
 
 \subsubsection{Synthèse grande échelle de la climatologie des polyols}%
 \label{ssub:synthèse_grande_échelle_de_la_climatologie_des_polyols}
 
 Pour comprendre la dynamique spatiale et temporelle des émissions biogéniques primaires,
-28 stations française présentant a minima un cycle annuelle de prélèvement analysant
-l'arabitol, sorbitol, mannitol et glucose ont été
+28 stations françaises présentant a minima un cycle annuelle de prélèvement analysant
+l'arabitol, le sorbitol, le mannitol et le glucose ont été
 selectionnées~\autocite{samakePolyols2019}.
 
-Ainsi, nous avons montré que l'arabitol et mannitol présente de très forte corrélation 
+Nous avons montré que l'arabitol et le mannitol présentent de très fortes corrélations 
 ($0.58 \leq r^2 \leq 0.93$), avec un coefficient de droite de régression entre 0.59 et
 1.10 pour un intercepte faible (toujours inférieur à \SI{9}{\ngm})). Ainsi, il parait
-raisonable de penser que ces 2 espèces sont co-émisent par une ou plusieurs sources.
-Le sorbitol et le glucose présentent quant à eux des dynamiques propres, non nécessairement corrélés à ces
-deux espèces.
-L'arabitol et le mannitol sont sommées et appelé \textit{polyols} par la suite.
+raisonnable de penser que ces 2 espèces sont co-émises par une ou plusieurs sources.
+Le sorbitol et le glucose présentent quant à eux des dynamiques propres, non
+nécessairement corrélées à l'arabitol ou au mannitol.
+L'arabitol et le mannitol sont sommés et appelés \textit{polyols} par la suite.
 
-Les polyols, en plus d'être ubiquitaire, présente le même signal saisonnier sur l'ensemble
-des sites d'études (voir figure~\ref{fig:polyols_samake2019}) et sont davantage présent
+Les polyols, en plus d'être ubiquitaires, présentes le même signal saisonnier sur l'ensemble
+des sites d'études (voir figure~\ref{fig:polyols_samake2019}) et sont davantages présents
 dans la fraction grossière (\PMdix) que fine (\PMdc), avec des concentrations variant de 
 \SI{7.5\pm10.9}{\ngm} à \SI{27.8\pm33.3}{\ngm} pour les \PMdc, et
 \SI{48.9\pm38.2}{\ngm} à \SI{73.5\pm61.8}{\ngm} pour les \PMdix, sur respectivement le site de
@@ -936,37 +940,38 @@ Cette ségrégation suivant la taille des particules est identique pour le gluco
 
 Les polyols ne représentent cependant qu'une faible fraction de la matière organique. En
 effet, en considérant un ratio entre l'OM et l'OC de 1.8 typique des écosystèmes d'Europe
-de l'ouest, les polyols ne représentent qu'entre \SIrange{0.1}{2.1}{\percent}. La même
-contribution relative est trouvée pour le glucose.
+de l'ouest, les polyols ne représentent qu'entre \SIrange{0.1}{2.1}{\percent} de l'OM. La
+même contribution relative est trouvée pour le glucose.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{chapter03/polyols_samake2019.png}
     \caption{
         Distribution spatio-temporelle des concentrations de polyols (moyenne et écart
-        type) en \si{ngm}.
+        type) en \si{\ngm}.
         Source : \cite[figure 6]{samakePolyols2019}.
     }%
     \label{fig:polyols_samake2019}
 \end{figure}
 
-La taille des spores ou enveloppes microbiennes, riche en polyols, sont de taille supra
+La taille des spores ou enveloppes microbiennes riches en polyols, généralement supra
 micrométrique (typiquement de \SI{2}{\micro\m} à \SI{10}{\micro\m}), ainsi que l'activité
-biologique importante en été et très ralentie en hiver vient grandement conforter
+biologique importante en été et très ralentie en hiver viennent grandement conforter
 l'hypothèse biogénique de ces composés.
 
-Cette hypothèse a été testée plus en avant par \cite{samakeArabitol2019} sur le site de
-l'OPE, où la cellulose a été mesurée sur 2 années de prélèvements, ainsi que
-l'enregistrement des différentes activités agricoles avoisinantes (voir
+Cette hypothèse a été testée par \cite{samakeArabitol2019} sur le site de
+l'OPE, où la cellulose a été mesurée sur 2 années de prélèvements et les différentes
+activités agricoles avoisinantes enregistrées (voir
 figure~\ref{fig:ope_polyols_cellullose_agri}).
-La coïncidence entre l'augmentation des polyols, de la cellulose (traceuse des débris de
-plante) et des moissons mais beaucoup moins des labours conforte encore une fois la provenance
-biogénique, mais précise cette fois le compartiment en question : les polyols proviennent
-très certainement des plantes et non du sol.
+La coïncidence entre l'augmentation des concentrations des polyols, de la cellulose
+(traceuse des débris de plantes) et des moissons mais une bien plus faible concomitance
+avec les labours conforte encore une fois la provenance biogénique, mais précise cette
+fois le compartiment en question : les polyols proviennent très certainement des plantes
+et non du sol.
 
 Pour s'en assurer, une troisième étude, analysant l'ADN de prélèvement d'échantillon
 de plantes, de sols et d'aérosols du site l'OPE, \autocite{samakeHigh2020} précise que
-l'ADN retrouver dans les aérosols correspond bien des taxons de bactéries et champignons
+l'ADN retrouvée dans les aérosols correspond bien des taxons de bactéries et champignons
 originaires de la strate herbacée et non du sol.
 
 \begin{figure}[ht]
@@ -999,35 +1004,30 @@ des polyols.
 
 La contribution de ce facteur à la matière organique totale varie de \SI{6}{\percent} à \SI{28}{\percent}, pour une
 moyenne et écart-type de \SI{13\pm6}{\percent} en moyenne annuelle, mais peut représenter
-plus de \SI{40}{\percent} de la matière organique en été à certains sites (voir
+plus de \SI{40}{\percent} de la matière organique en moyenne estivale à certains sites (voir
 figure~\ref{fig:chapter03/pboa_pmf_samake2019}).
 De fait, cette source d'émission représente un secteur d'émission important pour comprendre
-les concentrations ambiantes de PM, notamment en période chaude.
+les concentrations ambiantes de PM organiques, notamment en période chaude.
 
-On peut se demander si ce facteur est entièrement d'origine primaire et
-n'agrège pas une partie d'aérosol organique biogénique secondaire. En l'absence d'espèce
-tracant les processus secondaires (comme le 3-MBTCA ou l'acide pinic), cette possibilité
-reste ouverte.
-Cette hypothèse parait cependant peu probable. En effet, le ratio OC/polyols du profil
-PBOA est relativement peu variable entre les sites, alors qu'il serait peu probable que la
-variabilité des processus secondaires conduisent à une concentration d'OC identique sur
-l'ensemble des sites.
-Aussi, les ratios OC/polyols des profils PBOA (autour de 16) sont bien dans la gamme
-attendue de variabilité des spores de champignons (entre 12 et 27), d'après
-\cite{bauerSignificant2008,yttriSource2011}.
-
-
-\todo{expliquer plus en détail la constitution chimique du PBOA ?}
+On peut se demander si ce facteur est entièrement d'origine primaire et n'agrège pas une
+partie d'aérosol organique biogénique secondaire. En l'absence d'espèce tracant les
+processus secondaires (comme le 3-MBTCA ou l'acide pinic), cette possibilité reste
+ouverte.  Cette hypothèse parait cependant peu probable. En effet, le ratio OC/polyols du
+profil PBOA est relativement peu variable entre les sites, alors qu'il serait peu
+probable que la variabilité des processus secondaires conduisent à une concentration d'OC
+identique sur l'ensemble de ces sites.  Aussi, les ratios OC/polyols des profils PBOA
+(autour de 16) sont bien dans la gamme attendue de variabilité des spores de champignons
+(entre 12 et 27), d'après \cite{bauerSignificant2008,yttriSource2011}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\linewidth]{chapter03/pboa_pmf_samake2019.png}
     \caption{
         Mass contribution of polyols to OM in the PBOA factor, and relative contributions
-        of the OM PBOA factor to the total OM in PM for the 16 studied sites where the PMF
-        model was run, over the year and summertime only. Stars and circles refer to urban
-        sites without and with Alpine valley influence, respectively. Pentagons correspond
-        to traffic sites and diamonds to rural sites.
+        of the OM PBOA factor to the total OM in PM for the 16 studied sites where the
+        PMF model was run, over the year and summertime only. Stars and circles refer to
+        urban sites without and with Alpine valley influence, respectively. Pentagons
+        correspond to traffic sites and diamonds to rural sites.
         Source : \cite[figure 9]{samakePolyols2019}.
     }%
     \label{fig:chapter03/pboa_pmf_samake2019}
@@ -1038,37 +1038,37 @@ attendue de variabilité des spores de champignons (entre 12 et 27), d'après
 
 Nous avons donc montré que les polyols (arabitol et mannitol) sont des traceurs de
 l'activité biologiques, notamment de la strate herbacée. Leur présence est ubiquitaire
-mais représente seulement 0.1 à \SI{2.1}{\percent} de la matière organique.
+mais représente seulement 0.1 à \SI{2.1}{\percent} de la matière organique des \PMdix.
 
 Ainsi, ces études approfondies sur la dynamique et la provenance des polyols nous ont
-permis de les identifier comme étant des espèces traceuses de source unique et présente
-sur une large étendue spatiale. Leur ajout dans les études PMF nous permettent donc
+permis de les identifier comme étant des espèces traceuses de source unique et présentes
+sur une large étendue spatiale. Leur ajout dans les études PMF nous permet donc
 l'isolement d'une source biogénique primaire provenant de l'activité biologique fongique
 et bactérienne.
 
 Leur ajout dans les analyses multifactorielles nous apprend que la contribution de ce
 facteur PBOA à la matière organique totale varie de façons importante selon la saison,
-mais peut représenter jusqu'à \SI{40}{\percent} de la matière organique en période chaude sur certains
-sites étudiés, en faisant un facteur important pour comprendre la dynamique des PM en
-période chaude.
+mais peut représenter jusqu'à \SI{40}{\percent} de la matière organique en moyenne
+estivale sur certains sites étudiés, en faisant un facteur important pour comprendre la
+dynamique des PM en période chaude.
 
-Cependant, les polyols ne sont pas la seule source d'émission primaire biogénique (on peut
-notamment penser aux débris végétaux par exemple). Aussi, la question de la part
-secondaire provenant d'oxydation des composés biogéniques présents dans ce facteur reste
-ouverte, en l'absence d'espèce traceuse de processus secondaire comme le 3-MBTCA
-ou l'acide pinique. La section suivante~\ref{sub:processus_secondaires} permettra de
-répondre en partie à cette question.
+Cependant, les polyols ne sont pas la seule source d'émission primaire biogénique : on
+peut notamment penser aux débris végétaux par exemple, ce qui reste à étudier. De même,
+la question de la part secondaire provenant d'oxydation des composés biogéniques présents
+dans ce facteur reste ouverte, en l'absence d'espèce traceuse de processus secondaire
+comme le 3-MBTCA ou l'acide pinique. La section suivante~\ref{sub:processus_secondaires}
+permettra de répondre en partie à cette question.
 
 \subsection{Variabilité fine échelle, processus secondaires et traceurs organiques}%
 \label{sub:processus_secondaires}
 
 Afin de tenter de répondre à la problématique de la contribution des facteurs secondaires
-aux PM, 3 sites de prélèvement sur Grenoble et périphérie (fond urbain : Les frènes (LF),
-hypercentre : Caserne de bonne (CB) et périurbain : Vif (Vif)) ont été choisi pour établir une
-étude PMF incluant de nouveaux traceurs organiques spécifiques des processus d'oxydations
-secondaires : le 3-MBTCA, l'acide pinique et phtalique. Sur cette étude, la cellulose a
-également été mesurée pour essayer de distinguer potentiellement différentes émissions
-biogéniques.
+aux PM, 3 sites de prélèvement sur Grenoble et sa périphérie (fond urbain : Les frènes
+(LF), hypercentre : Caserne de bonne (CB) et périurbain : Vif (Vif)) ont été choisis pour
+établir une étude PMF incluant de nouveaux traceurs organiques spécifiques des processus
+d'oxydations secondaires : le 3-MBTCA, l'acide pinique et l'acide phtalique. Sur cette
+étude, la cellulose a également été mesurée pour essayer de distinguer potentiellement
+différentes émissions biogéniques.
 
 Aussi, la proximité géographique des 3 sites --tous dans un rayon de \SI{15}{\kilo\m}--
 permet l'estimation de la variabilité fine échelle de l'ensemble des sources identifiées
@@ -1079,14 +1079,16 @@ par la PMF.
     second auteur, lors du projet Mobil'Air, destiné également à évaluer l'impacte sur la
     qualité de l'air d'une zone à faible émission dans la métropole grenobloise 
     (\url{https://mobilair.univ-grenoble-alpes.fr/}).
+    L'intégralité du papier est disponible en annexe~\ref{annexe:borlazaSA}.
 \end{tcolorbox}
 
 \subsubsection{Variabilités saisonières}%
 \label{ssub:variabilites_saisonières}
 
-La cellulose étant très peu couramment mesuré, ainsi que les acides organiques, est içi
-présenté dans un premier temps les mesures de concentrations obtenues sur l'année
-2017-2018 pour les 3 sites, en comparaison avec d'autres espèces plus communément mesurées.
+La cellulose étant très peu couramment mesurée, ainsi que les acides organiques, nous
+présentons içi dans un premier temps les mesures de concentrations obtenues sur l'année
+2017-2018 pour les 3 sites, en comparaison avec d'autres espèces plus communément
+mesurées.
 
 \paragraph{Corrélation entre espèces}%
 \label{par:correlation_entre_especes}
@@ -1095,41 +1097,42 @@ présenté dans un premier temps les mesures de concentrations obtenues sur l'an
 \label{par:oxydation_secondaire_biogénique}
 
 On s'aperçoit tout d'abord que le 3-MBTCA et l'acide pinique présentent de très forte
-corrélation sur les 3 sites, avec un cycle saisonnier fort et de forte concentration en été
-(voir figure~\ref{fig:borlaza_evolution_temporelle}). Du fait de l'activité photochimique
-conduisant à la formation d'espèce secondaire issue des terpènes en cette période, ce
-résultat était attendu. On observe aussi de forte variation de concentration à faible
-échelle temporelle (de l'ordre de quelques jours). Ces espèces sont en effet très réactive
-et présente un temps de demie-vie très courte dans l'atmosphère.
+corrélations sur les 3 sites, avec un cycle saisonnier fort et des forte concentrations
+en été (voir figure~\ref{fig:borlaza_evolution_temporelle}). Du fait de l'activité
+photochimique conduisant à la formation d'espèces secondaires issues des terpènes en
+cette période, ce résultat était attendu. On observe aussi de forte variation de
+concentration à faible échelle temporelle (de l'ordre de quelques jours). Ces espèces
+sont en effet très réactives et présentent un temps de demie-vie court dans l'atmosphère.
 
 Aussi, ces espèces partagent le cycle saisonnier du MSA, mais présentent cependant des
-contributions asynchrones, indiquant alors différents processus secondaires.
+contributions asynchrones, indiquant donc des processus secondaires ou de transport
+différenciés.
 
 \subparagraph{Polyols et cellulose}%
 \label{par:oxydation_secondaire_anthrophique}
 
 Comme attendue d'après \cite{samakePolyols2019}, les polyols ont un cycle saisonier très
-marqués avec une forte concentration en été et faible en hiver. Ce cycle est aussi présent
-pour la cellulose, bien que moins marqué cependant. En revanche, la durée où de la
-cellulose est présente dans l'atmosphère est beaucoup plus grande que pour les polyols.
-Ainsi, les sources émettrices de polyols et de cellulose ne peuvent pas être entièrement
-les mêmes.
+marqués avec une forte concentration en été et faible en hiver. Ce cycle est aussi
+présent pour la cellulose, bien que cependant moins marqué. En revanche, la durée où de
+la cellulose est présente dans l'atmosphère est beaucoup plus grande que pour les
+polyols.  Ainsi, les sources émettrices de polyols et de cellulose ne peuvent pas être
+entièrement les mêmes.
 
 \subparagraph{Sulfate et acide phthalic}%
 \label{par:sulfate_et_acide_phthalic}
 
 L'acide phthalique est en très faible concentration tout le long de l'année d'étude,
-exceptés quelques pics très restreints temporellement. La synchronicité de ces pics avec de
-forte concentration en sulfate est également observée, mais n'est pas bien comprise pour
-l'instant.
+exceptés quelques pics très restreints temporellement. La synchronicité de ces pics avec
+de fortes concentrations en sulfate est également observée, mais n'est pas totalement
+expliquée pour l'instant.
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{chapter03/borlaza/AllInOne.pdf}
     \caption{
-        Évolution temporelle de \textbf{a)} l'acide phthalic, \textbf{b)} l'acide pinic,
-        \textbf{c)} le 3-MBTCA, \textbf{d)} le MSA, \textbf{e)} les polyols
+        Évolutions temporelles de \textbf{a)} l'acide phthalic, \textbf{b)} l'acide
+        pinic, \textbf{c)} le 3-MBTCA, \textbf{d)} le MSA, \textbf{e)} les polyols
         (arabitol+mannitol), \textbf{f)} la cellulose, \textbf{g)} le sulfate et
         \textbf{h)} le cuivre pour les 3 sites du bassin grenoblois (LF en orange, CB en
         bleu et Vif en vert).
@@ -1140,36 +1143,35 @@ l'instant.
 \paragraph{Similitude et diversité inter-site}%
 \label{par:similitude_et_diversité_inter_site}
 
-Lorsque l'on compare les sites entre eux
-(figure~\ref{fig:chapter03/borlaza/correlation}), de très fortes corrélations sont
-observées pour les ions et espèces organiques, à l'exception notoire de la cellulose, qui
-semble avoir une dynamique propre sur chacun des sites.
+Lorsque l'on compare entre elles les mesures réalisées sur les différents sites, de très
+fortes corrélations sont observées pour les ions et espèces organiques, à l'exception
+notoire de la cellulose, qui semble avoir une dynamique propre sur chacun des sites
+(figure~\ref{fig:chapter03/borlaza/correlation}).
 
-Les traceurs du trafic routier (Cu et Fe) semble indiquer une proximité entre les sites de
-LF et CB, alors que le site de Vif présente un signal différent. Il en est de même pour
-les traceurs des poussières crustales (\ce{Ca^{2+}}, Al et Ti). Bien que la distance entre
-le centre de Grenoble et le site de Vif puisse expliquer cette différence, il n'est pas à
-exclure que la présence d'un terrain de cross à proximité de la station de Vif rende ces
-mesures singulières et non représentatives d'un fond périurbain.
+De même, une partie des espèces métalliques montre des variabilités fortes entre sites.
+Les traceurs du trafic routier (Cu et Fe) semblent indiquer une proximité entre les sites
+de LF et CB, alors que le site de Vif présente un signal différent. Il en est de même
+pour les traceurs des poussières crustales (\ce{Ca^{2+}}, Al et Ti). Ces différences sont
+discutées plus en avant dans l'article en annexe~\ref{annexe:borlazaSA}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{chapter03/borlaza/correlation.png}
     \caption{Corrélation de pearson des concentrations temporelle des espèces mesurée
-    entre les 3 pairs de site (LF-CB, LF-Vif et CB-Vif)}%
+    entre les 3 paires de sites (LF-CB, LF-Vif et CB-Vif)}%
     \label{fig:chapter03/borlaza/correlation}
 \end{figure}
 
 \subsubsection{Résultats PMF}%
 \label{ssub:résultats_pmf}
 
-Afin d'estimer l'impacte de l'ajout de la cellulose, acide pinique et phthalique et 3-MBTCA,
-une PMF ``classique'' (i.e. sans ces nouvelles espèces) sert de référence, et une PMF
-``organique'' incluant ces espèces mais respectant strictement les autres paramètres de la
-PMF classique permet l'évaluation de leurs effets.
-Les PMF sont calculées indépendamment pour les 3 sites.
-10 facteurs sont identifiés sur les 3 sites pour la PMF classique, résumés dans le
-tableau~\ref{tab:pmf_mobilair_species}.
+Afin d'estimer l'impacte de l'ajout de la cellulose, des acides pinique et phthalique et
+du 3-MBTCA, une PMF ``classique'' (i.e. sans ces nouvelles espèces et et telle que
+réalisé dans le programme SOURCES) sert de référence, et une PMF ``organique'' incluant
+ces espèces mais respectant strictement les autres paramètres de la PMF classique permet
+l'évaluation de leurs effets.  Les PMF sont calculées indépendamment pour chacun des 3
+sites.  10 facteurs sont identifiés sur les 3 sites pour la PMF classique, résumés dans
+le tableau~\ref{tab:pmf_mobilair_species}.
 
 \begin{table}[ht]
     \begin{ThreePartTable}
@@ -1208,33 +1210,32 @@ tableau~\ref{tab:pmf_mobilair_species}.
 Lors de l'ajout des nouvelles espèces organiques, un nouveau facteur apparaît, riche en
 3-MBTCA et acide pinique et dont la contribution est maximale en été (voir la composition
 et contribution temporelle de ce profil sur le site de CB
-figure~\ref{fig:chapter03/borlaza/CB-SBO}).
-Ce facteur apporte jusqu'à \SI{10}{\ugm} de \PMdix{} certains jours d'été, en faisant l'un
-des facteurs majeurs contribuant aux \PMdix{} certains jours.
-Aussi, une part importante de l'OC est amené par ce facteur (environ \SI{10}{\percent} de l'OC
-total), mais également du sulfate (environ \SI{15}{\percent}), suggérant la présence de composés
-organiques suflatés.
-Ainsi, en moyenne estivale, c'est entre \SI{20}{\percent} et \SI{40}{\percent} de la matière organique qui est
-apporté par ce facteur selon le site considéré, ce qui en fait le facteur principal
-d'apport de matière organique pendant cette période.
+figure~\ref{fig:chapter03/borlaza/CB-SBO}).  Ce facteur apporte jusqu'à \SI{10}{\ugm} de
+\PMdix{} certains jours d'été, en faisant l'un des facteurs majeurs contribuant aux
+\PMdix{} certains jours.  Aussi, une part importante de l'OC est amené par ce facteur
+(environ \SI{10}{\percent} de l'OC total), mais également du sulfate (environ
+\SI{15}{\percent}), suggérant la présence de composés organiques suflatés.  Ainsi, en
+moyenne estivale, c'est entre \SI{20}{\percent} et \SI{40}{\percent} de la matière
+organique qui sont apportés par ce facteur selon le site considéré, ce qui en fait le
+facteur principal d'apport de matière organique pendant cette période.
 
 \paragraph{Primaire biogénique}%
 \label{par:primaire_biogénique}
 
-Le deuxième facteur présentant d'importante contribution de ces traceurs organiques est
+Le deuxième facteur présentant d'importantes contributions de ces traceurs organiques est
 le profile d'émission primaire biogénique (voir
-figure~\ref{fig:chapter03/borlaza/LF-PBOA}). Notamment, près de \SI{60}{\percent} de la cellulose est
-apporté par ce facteur, renforcant l'hypothèse de l'émission de ce facteur par la strate
-herbacée (comme expliqué en section~\ref{sub:émission_biogénique_primaire}). Aussi, et
-comme suspecté auparavant, ce facteur est également responsable d'environ \SI{20}{\percent} de l'acide
-pinique et du 3-MBTCA, et par conséquent une part de la matière organique n'est pas
-d'origine primaire mais secondaire, bien que limité. Il est à noter également que la
-quantité totale de matière organique ou de \PMdix{} expliqué par ce facteur ne varie
-pas avec l'ajout de ces nouveaux traceurs organiques (voir
+figure~\ref{fig:chapter03/borlaza/LF-PBOA}). Notamment, près de \SI{60}{\percent} de la
+cellulose est apporté par ce facteur, renforcant l'hypothèse de l'émission de ce facteur
+par la strate herbacée (comme expliqué en
+section~\ref{sub:émission_biogénique_primaire}). Aussi, et comme suspecté auparavant, ce
+facteur est également responsable d'environ \SI{20}{\percent} de l'acide pinique et du
+3-MBTCA, et par conséquent une part (assez faible) de la matière organique ne semble pas
+d'origine primaire mais bien secondaire. Il est à noter également que la quantité totale
+de matière organique ou de \PMdix{} expliquée par ce facteur ne varie pas avec l'ajout de
+ces nouveaux traceurs organiques (voir
 figure~\ref{fig:chapter03/borlaza/comparaison-classique-orga}), et de manière générale, à
-part l'ajout de la cellulose et de l'acide pinique et 3-MBTCA, la
-composition chimique de ce facteur reste identique entre la PMF de référence et la PMF
-organique.
+part l'ajout de la cellulose et de l'acide pinique et 3-MBTCA, la composition chimique de
+ce facteur reste identique entre la PMF de référence et la PMF ``organique''.
 
 \begin{figure}[ht]
     \centering
@@ -1273,12 +1274,13 @@ organique.
 \paragraph{Contributions des facteurs aux \PMdix}%
 \label{par:contributions_des_facteurs_aux_pmdix}
 
-Comparés aux PMF classiques, la différence majeure de la contribution aux \PMdix{} réside en
-la diminution de l'importance du facteur sulfate rich au profit de l'oxydation biogénique
-secondaire (voir figure~\ref{fig:chapter03/borlaza/Comparison_orga-woOrga_absolute}).
-En effet, on observe une baisse entre \SI{1}{\ugm} et \SI{2}{\ugm} de la contribution du
-facteur sulfate rich en moyenne annuelle sur les 3 sites, et une contribution équivalente à
-la baisse du suflate rich pour le nouveau facteur d'oxydation secondaire biogénique.
+Comparés aux PMF classiques, la différence majeure de la contribution aux \PMdix{} réside
+en la diminution de l'importance du facteur sulfate rich au profit de l'oxydation
+biogénique secondaire (voir
+figure~\ref{fig:chapter03/borlaza/Comparison_orga-woOrga_absolute}).  En effet, on
+observe une baisse entre \SI{1}{\ugm} et \SI{2}{\ugm} de la contribution du facteur
+sulfate rich en moyenne annuelle sur les 3 sites, et une contribution équivalente à la
+baisse du suflate rich pour le nouveau facteur d'oxydation secondaire biogénique.
 
 Ainsi, l'ajout des nouveaux traceurs organiques a permis de mieux séparer le facteur
 sulfate rich, qui comportait une part importante de l'OC, en deux facteurs de typologie
@@ -1297,7 +1299,7 @@ biogénique.
 \label{ssub:conclusion_organique}
 
 Ainsi, en plus des conclusions sur les sources de PM et la variabilité fine échelle, qui
-sont abondamment discutés dans l'article et rapidement rappelé ici, cette étude
+sont abondamment discutés dans l'article et rapidement rappelée ici, cette étude
 multi-sites sur le bassin de la métropole grenobloise nous permet les conclusions
 suivantes :
 \begin{itemize}
@@ -1312,22 +1314,23 @@ suivantes :
         filtres, notamment grâce au 3-MBTCA et à l'acide pinique.
 \end{itemize}
 
-Méthodologiquement, l'ajout de nouveaux traceurs spécifiques permet, même sur une solution
-à 10 facteurs, de mieux séparer certains facteurs. Notamment, le 3-MBTCA et l'acide pinique
-permette une meilleure estimation du facteur inorganique secondaire \textit{suflate rich}
-qui était jusqu'alors un mélange entre de l'inorganique et de l'organique.
-Cependant, l'ajout de la cellulose, présentant pourtant un signal unique, ne permet pas
-l'identification d'un nouveau facteur dans la solution présentée ici. En revanche, lors de
-nos essais sur cette PMF, nous avons expérimenté plusieurs incertitudes pour cette espèce,
-et un ``seuil'' aux alentours de \SI{15}{\percent} d'incertitude fait basculer la solution entre 11 et
-12 facteurs, faisant apparaître un nouveau facteur très incertain statistiquement,
-comportant la majorité de la cellulose.
+Méthodologiquement, l'ajout de nouveaux traceurs spécifiques permet, même sur une
+solution à 10 facteurs, de mieux séparer certains facteurs. Notamment, le 3-MBTCA et
+l'acide pinique permettent une meilleure estimation du facteur inorganique secondaire
+\textit{Sulfate rich} qui était jusqu'alors un mélange entre de l'inorganique et de
+l'organique.  Cependant, l'ajout de la cellulose, présentant des évolutions de
+concentrations assez différenciées, ne permet pas l'identification d'un nouveau facteur
+dans la solution présentée ici. En revanche, lors de nos essais sur cette PMF, nous avons
+expérimenté plusieurs incertitudes pour cette espèce, et un ``seuil'' aux alentours de
+\SI{15}{\percent} d'incertitude fait basculer la solution entre 11 et 12 facteurs,
+faisant apparaître un nouveau facteur très incertain statistiquement, comportant la
+majorité de la cellulose.
 
 Aussi, et dans la suite de la discussion de la section précédente
 \ref{ssub:synthèse_grande_échelle_de_la_climatologie_des_polyols}, l'identification d'un
 facteur d'oxydation secondaire en été ne change pas la contribution du profil primaire
-biogénique, ce qui indique que ce facteur est suffissament contraint et bien déterminé par
-ces espèces chimiques.
+biogénique, ce qui indique que ce facteur est suffissament contraint et bien déterminé
+par ces espèces chimiques.
 
 \clearpage
 
@@ -1337,26 +1340,26 @@ ces espèces chimiques.
 \subsection{Introduction}
 
 Les travaux présentés précédemment nous apprennent que les solutions d'une étude PMF sont
-très dépendant des variables utilisées. Ainsi, il est compliqué de comparer 2 PMF
-réalisées en définitive avec des méthodologies différentes.
+très dépendantes des variables utilisées. Ainsi, il est compliqué de comparer 2 PMF
+réalisées avec des méthodologies différentes.
 
-Le projet SOURCES de l'ADEME avait pour ambition d'établir une synthèse nationale des
+Le projet SOURCES avait pour ambition d'établir une synthèse nationale des
 sources de PM, à travers des approches site-recepteurs --et donc PMF-- afin être au plus
 près des observations de terrains.
-Ainsi, 15 sites d'études ont été sélectionnés, reflétant la diversité des environnemnets
-de la France métropolitaine, pour établir une méthodologie harmonisée d'étude PMF :
+Ainsi, 15 sites d'études ont été sélectionnés, reflétant une diversité d'environnements
+urbain de France métropolitaine, pour établir une méthodologie harmonisée d'étude PMF :
 \begin{itemize}
-    \item estimation des incertitudes communes,
-    \item même espèces chimiques sélectionnées,
-    \item même contraintes appliquées au modèle,
-    \item estimation des incertitudes,
+    \item Une estimation des incertitudes communes,
+    \item Les mêmes espèces chimiques sélectionnées,
+    \item Les mêmes contraintes appliquées au modèle,
+    \item Estimation des incertitudes des solutions obtenues,
 \end{itemize}
 et ainsi établir une phénoménologie des sources de PM à l'échelle nationale.
 Le rapport \cite{favezTraitement2017}, établi grâce au post-doctorat de Dalia Salameh,
-décrit en détail la méthodologie utilisée ainsi que les profils et contribution
-temporelles obtenues.
+décrit en détail la méthodologie utilisée ainsi que les profils de source et les
+contributions temporelles obtenues.
 
-Dans cette partie, la comparaison géochimique des différents facteurs est discuté ainsi
+Dans cette partie, la comparaison géochimique des différents facteurs est discutée ainsi
 que la variabilité de leurs incertitudes.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
@@ -1381,8 +1384,9 @@ que la variabilité de leurs incertitudes.
 
 \subsection{Comparison of PM\textsubscript{10} sources profiles at 15 french sites using a harmonized constrained positive matrix factorization approach}%
 \label{sub:article_SOURCES}
-Article paru dans le journal \textit{Atmosphere} le 4 juin 2019 :
 
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+Article paru dans le journal \textit{Atmosphere} le 4 juin 2019 :
 \begin{quote}
     Samuël Weber, Dalia Salameh, Alexandre Albinet, Laurent Y. Alleman, Antoine Waked,
     Jean-Luc Besombes, Véronique Jacob, Géraldine Guillaud, Boualem Mesbah, Benoit Rocq, Agnès
@@ -1392,6 +1396,7 @@ Article paru dans le journal \textit{Atmosphere} le 4 juin 2019 :
     \textsc{doi} : \href{doi:10.3390/atmos10060310}{https://doi.org/10.3390/atmos10060310},
     \textsc{url} : \url{https://www.mdpi.com/2073-4433/10/6/310}
 \end{quote}
+\end{tcolorbox}
 
 
 Une erreur typographique importante a été vue après publication : dans le tableau 
@@ -1404,27 +1409,27 @@ valeur du coefficient $a$ pour les marqueurs organiques n'est pas de $0.01$ mais
 \subsection{Conclusion}%
 \label{sub:conclusion_SOURCES}
 
-Des connaissances fines sur les provenances des espèces chimiques permet d'identifier les
-sources prépondérantes de \PMdix{} à grande échelle lors d'étude PMF multi-sites.
-Ces connaissances permettent aussi l'utilisation d'un ensemble de contrainte minimale
+Des connaissances fines sur les provenances des espèces chimiques permettent d'identifier
+les sources prépondérantes de \PMdix{} à grande échelle lors d'étude PMF multi-sites.
+Ces connaissances permettent aussi l'utilisation d'un ensemble de contraintes minimales
 conduisant en l'amélioration des profils chimique PMF obtenus mais également de meilleurs
-stabilité statistiques, tant en termes de diminution de l'erreur aléatoire (bootstrap) que
-de diminution de l'ambiguïté rotationelle (displacment).
-Enfin, la mise en place et l'utilisation d'une méthodologie harmonisée d'étude PMF permet
-une comparabilité inter-sites à travers l'outil DeltaTool.
+stabilité statistiques, tant en termes de diminution de l'erreur aléatoire
+(\textit{bootstrap}) que de diminution de l'ambiguïté rotationelle
+(\textit{displacment}).  Enfin, la mise en place et l'utilisation d'une méthodologie
+harmonisée d'étude PMF permet une comparabilité inter-sites à travers l'outil DeltaTool.
 
 L'utilisation de cette méthodologie, incorporant des espèces organiques, permet non
 seulement d'établir une phénoménologie des \PMdix{} à grande échelle spatiale, montrant
 des variations saisonnières importantes des sources de PM, mais améliore également la
-robustesse statistique --estimée par bootstrap et displacment-- et géochimique
---similitude des facteurs et présence à large échelle spatiale--, y compris pour des
-facteurs peu courant dans la littérature comme les émissions primaires biogéniques et le
-MSA-rich.
+robustesse statistique --estimée par \textit{bootstrap} et \textit{displacment}-- et
+géochimique --similitude des facteurs et présence à large échelle spatiale--, y compris
+pour des facteurs peu courants dans la littérature comme les émissions primaires
+biogéniques et le MSA-rich.
 
-Ces recherches permettront prochainement la comparaison entre modèle PMF, proche des
-observations, et déterministe CTM, afin de comprendre et si possible d'améliorer, les
-potentiels manquement dans les processus implémentés dans les CTM, et ce pour une large
-gamme de conditions environnementales.
+Ces recherches permettront prochainement la comparaison entre résultats des modèles PMF,
+proches des observations, et résultats des modèles déterministes CTM, afin de comprendre
+et si possible d'améliorer, les potentiels manquements dans les processus implémentés
+dans les CTM, et ce pour une large gamme de conditions environnementales.
 
 \section{Conclusion}%
 \label{sec:conclusion_chap3}
@@ -1436,18 +1441,18 @@ L'ajout de nouveaux traceurs spécifiques permet une meilleure estimation des pr
 chimiques des différents facteurs PMF obtenues. 
 
 Une nouvelle source primaire et une part du biogénique secondaire sont identifiées
-respectivement grâce aux polyols (arabitol et mannitol) et MSA, avec une grande robustesse
-statistique tant intra-site (faible incertitudes pour ce facteur) qu'inter-site (retrouvés
-sur l'ensemble des études où ces espèces sont introduites, et fortes similitudes
-géochimiques entre les différents profils sur différents sites mesurées par l'approche deltaTool).
-Nous avons aussi montré que grâce à un traitement préalable du signal isotopique de
-l'ammonium, il est possible d'attribuer le facteur inorganique \textit{Nitrate-rich} au
-secteur agricole.
-Enfin, une part secondaire de la matière organique peut efficacement être regroupée dans un
-facteur d'oxydation secondaire par l'introduction du 3-MBTCA et de l'acide pinic.
+respectivement grâce aux polyols (arabitol et mannitol) et MSA, avec une grande
+robustesse statistique tant intra-site (faible incertitudes pour ce facteur)
+qu'inter-site (retrouvés sur l'ensemble des études où ces espèces sont introduites, et
+fortes similitudes géochimiques entre les différents profils sur différents sites,
+mesurées par l'approche deltaTool).  Nous avons aussi montré que grâce à un traitement
+préalable du signal isotopique de l'ammonium, il est possible d'attribuer le facteur
+inorganique \textit{Nitrate-rich} au secteur agricole.  Enfin, une part secondaire de la
+matière organique peut efficacement être regroupée dans un facteur d'oxydation secondaire
+par l'introduction du 3-MBTCA et de l'acide pinic.
 
-Il est important de noter qu'à chaque ajout d'un nouveau traceur, seul un facteur,
-jusqu'alors étant manifestement un mélange de différente sources ou processus, évolue.
+Il est important de noter qu'à chaque ajout d'un nouveau traceur, seul un facteur qui
+jusqu'alors était manifestement un mélange de différente sources ou processus, évolue.
 C'est donc bien un raffinement des solutions et non une remise en cause des solutions
 précédentes.
 
@@ -1462,45 +1467,52 @@ site.
 Si certaines espèces sont maintenant mesurées en routines à l'IGE (polyols et MSA),
 d'autres sont encore utilisées à des fins de recherches et ne sont pas encore utilisable
 à des fins opérationnelles. En effet, s'il est possible d'agir sur les émissions de
-combustion de biomase ou liés au trafic routier mais également de savoir sur lesquels
-il est difficile d'avoir une action (primaire biogénique), les facteurs organiques
+combustion de biomase ou liés au trafic routier mais également de savoir sur lesquels il
+est difficile d'avoir une action (primaire biogénique), les facteurs organiques
 secondaires sont difficilement attribuables à un ou des secteur·s d'activité·s. Cette
-limitation propre aux facteurs secondaires peut être levée, comme nous l'avons vu avec
-l'isotopie de l'ammonium, mais doivent faire l'objet d'études approfondies.
+limitation propre aux facteurs secondaires pourrait peut être être levée, comme nous
+l'avons vu avec l'isotopie de l'ammonium, mais doit faire l'objet d'études approfondies.
 
-Aussi, d'autres espèces organiques peuvent être utilisées comme vu en introduction (HAP,
-BNT, hopanes, alcanes…), et permettraient potentiellement une meilleure caractérisation de
-plusieurs sources anthropiques (trafic, portuaire, industrielle…) ou liés aux débris végétaux.
-À ce titre, une PMF sur La Paz (Bolivie) est en cours dans le cadre de la thèse de Valéria
-Mardonez dans le groupe CHIANTI.
-Notamment, grâce a des mesures sous tunnel et a un jeu d'espèces organiques plus détaillé,
-nous espérons pouvoir séparer différents types d'émissions véhiculaires dans cet
-environnement particulier de très haute altitude ou les processus de combustion sont
-appauvris en oxygène.
+Dans cette voie, d'autres espèces organiques peuvent être utilisées, comme nous l'avons
+vu en introduction (HAP, BNT, hopanes, alcanes…), et permettraient potentiellement une
+meilleure caractérisation de plusieurs sources anthropiques (trafic, portuaire,
+industrielle…) ou liés aux débris végétaux.  À ce titre, une PMF sur La Paz (Bolivie) est
+en cours dans le cadre de la thèse de Valéria Mardonez dans le groupe CHIANTI.
+Notamment, grâce a des mesures sous tunnel et a un jeu d'espèces organiques plus
+détaillé, nous espérons pouvoir séparer différents types d'émissions véhiculaires dans
+cet environnement particulier de très haute altitude et où les processus de combustion
+sont appauvris en oxygène.
 
-Cependant, l'ajout de nouveau traceur présentant un signal singulier ne suffit pas
+Cependant, l'ajout de nouveaux traceurs présentant un signal singulier ne suffit pas
 nécessairement à la caractérisation d'un nouveau facteur, comme nous le pensions pour la
-cellulose. L'estimation des incertitudes semble jouer ici un rôle prépondérant.
-Afin d'en apprendre plus à ce sujet, 6 séries annuelles de prélèvement \PMdix{} et \PMdc{}
-en Suisse ont été analysées à l'IGE et permettent une étude PMF incluant ces nouveaux marqueurs
-organiques, et ce sur les 2 fractions des PM. Cette étude est en cours par Stuart Grange de
-l'EMPA, avec lequel j'interagis régulièrement sur ces questions.
+cellulose. L'estimation des incertitudes semble jouer ici un rôle prépondérant.  Afin
+d'en apprendre plus à ce sujet, des séries annuelles de prélèvements de \PMdix{} et
+\PMdc{} simultanés sur 6 sites en Suisse ont été analysées à l'IGE et permettent une
+étude PMF incluant ces nouveaux marqueurs organiques, et donc sur ces 2 fractions des PM.
+Cette étude est en cours avec le groupe de l'EMPA, avec lequel j'interagis régulièrement
+sur ces questions.
 
 % Question : SPECIEUROPE et contrainte trop fortes sur certains profils ?
 
-Enfin, la ``filtrothèque'' construite aux fils des ans à CHIANTI ouvre la voie à une
-étude PMF de 2011 à 2020 sur site de l'OPE, pour la fraction \PMdix{} et \PMdc. Une
-telle série de prélèvement permet l'analyse tendancielle des facteurs PMF et donc
-l'estimation de l'efficacité des différentes mesures de protection de la qualité de l'air
-de la dernière décennie. Les résultats préliminaires semblant notamment indiquer une baisse
-progressive des émissions liés au trafic routier, également retrouvé par la tendance à
-la baisse des émissions d'EC observées par les différentes campagnes ACTRIS.
-\todo{mettre la figure}
+Enfin, la ``filtrothèque'' construite aux fils des ans à CHIANTI dans le cadre d'une
+collaboration avec l'ANDRA ouvre la voie à une étude PMF de 2011 à 2020 sur site de fond
+rural de l'OPE, pour la fraction \PMdix{} et \PMdc. Une telle série de prélèvement permet
+l'analyse tendancielle des facteurs PMF et donc l'estimation de l'efficacité des
+différentes mesures de protection de la qualité de l'air de la dernière décennie. Les
+résultats préliminaires semblant notamment indiquer une baisse progressive des émissions
+liées au trafic routier, également retrouvé par la tendance à la baisse des émissions d'EC
+observées par les différentes campagnes ACTRIS.
+
+\todo{mettre la figure et ref}
 
 \todo{trouver une facons de dire que depuis n ans, j'ai pas mal d'expertise et que
 j'encadre stagiaire/début de thèse sur la formation PMF.
 Travaux : bcp de chose, pas tous seul mais en groupe, mais moi encadrement et formation.
 }
+
+Dans l'ensemble, ma participation à ces différents travaux se concrétise à la fois par
+des contributions directes, mais aussi pas des encadrements de stagiaires (Anouk Marsal,
+stage d'ingénieur ; Nicole Montégnégro, stage de M1, etc ).
 
 %
 % Limitation : 

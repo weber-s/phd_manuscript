@@ -180,6 +180,10 @@
 
 % Fix title, sections, etc.
 
+\makeatletter
+\renewcommand{\l@figure}{\@dottedtocline{1}{1.5em}{3.3em}}
+\renewcommand{\l@table}{\@dottedtocline{1}{1.5em}{3.3em}}
+\makeatother
 % \let\LaTeXtitle\title
 % \renewcommand{\title}[1]{\LaTeXtitle{\color{ChadBlue}{\LARGE #1}}}
 % \renewcommand{\abstractname}{\color{ChadBlue}Abstract}
