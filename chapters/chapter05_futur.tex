@@ -404,37 +404,163 @@ de travailler spécifiquement sur ces questions :
 \end{enumerate}
 Ce travail s'incorporera prochainement dans l'étude de \cite{borlazaUrbaninprep.} du
 projet Mobil'Air, afin de comparer les sources de potentiels oxydants sur la
-métropole Grenobloise
+métropole Grenobloise estimer par régression linéaire multiple (MLR) et réseau de neurone
+artificiel (MLP).
 
 
 \subsubsection{Résultats préliminaires}%
 \label{ssub:résultats_préliminaires}
 
-Appliqué sur les 3 sites de la métropole Grenobloise, les performances statistiques des
-deux types de modèles (MLP et regression linéaire MLR) sont relativement similaires
-(figure~\ref{fig:perfMLPMLR}) et chacuns des deux modèles prédit relativement bien chaque
-\POv{} sur les 3 sites.
+Appliqué sur les 3 sites de la métropole Grenobloise, les 2 modèles ont été entrainés sur
+\SI{80}{\percent} des données et testés sur les \SI{20}{\percent} restant. Les performances
+statistiques des deux types de modèles (MLP et MLR) sont relativement
+similaires (figure~\ref{fig:perfMLPMLR}) et chacuns des deux modèles prédit chaque \POv{}
+(mesuré par AA, DTT et DCFH) sur les 3 sites avec relativement les mêmes performances.
+Ce type de modèle permet donc d'expliquer au moins aussi bien que le MLR les PO à partir
+des sources d'émissions de \PMdix.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1.0\linewidth]{figures/chapter05/perfMLPMLR.pdf}
     \caption{Performances statistiques des prédictions du modèle MLR et MLP sur les 3
-    sites de Grenoble \autocite{borlazaUrbaninprep}. }%
+    sites de Grenoble \autocite{borlazaUrbaninprep.}. (UB = GRE-fr, UH = GRE-cb, PU = Vif)}%
     \label{fig:perfMLPMLR}
 \end{figure}
 
+Pour estimer si le MLP capture bien des relations non-linéaire, 2 expériences sont menées.
+Dans les deux cas, le MLP est entrainé sur le jeu de données du site de GRE-fr. Deux
+situations fictives sont ensuite imaginées.
 
+La première conciste à estimer le \PODTTv{} par le MLP, toutes contributions des sources
+nulles sauf une, variant de 0 à 24~\si{\ugm}. La réponse du \PODTTv{} en fonction de
+l'augmentation linéaire de la contribution de chacune des sources est présentée
+figure~\ref{fig:figures/chapter05/10sourcesLinearite}. On y observe bien une réponse
+non-linéaire en fonction d'une augmentation linéaire de la contributions de
+chaque source. On note par ailleurs dans ce modèle un biais constant de l'ordre de
+\SI{-0.5}{\opv} lorsqu'aucune source n'est présente.
+On remarque également l'influence négative des sources primaire biogénique, nitrate-rich
+et MSA-rich (i.e Marine SOA dans la figure) mais aussi la forte influence de la source
+trafic primaire et industrielle.
+\todo{je n'arrive pas à tout distinguer sur cette figure. J'ai demandé à JB de la refaire.
+En attente}
+
+Dans la deuxième situation, on cherche à estimer si le MLP prévoit des effets non-additif
+lors de la présence conjointe de plusieurs sources de \PMdix. L'expérience prédit donc le
+\PODTTv{} pour un ensemble d'échantillons de test où cette fois 2 sources présentes des
+concentration variant chacune de 0 à \SI{10}{\ugm}. Les résultats sont encore attendus,
+mais si l'effet est additif, le gradient de l'augmentation du \PODTTv{} dans un espace en
+2 dimensions représentant la contribution de chacune des sources est sensé être linéaire.
+Dans le cas contraire, cela indiquera un effet cocktail entre ces 2 sources.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\linewidth]{figures/chapter05/10sourcesLinearite.PNG}
     \caption{Effet non linéaire de l'augmentation de la concentration d'une source
-        d'émission sur le \PODTTv{} d'après le réseau de neurone entrainé sur Grenoble Les
-    frènes lors du stage de M2 de Jean-Baptiste Fiches.}%
+        d'émission sur le \PODTTv{} d'après un réseau de neurone entrainé sur Grenoble Les
+    frènes. Source: \cite{fichesMachine2020}.}%
     \label{fig:figures/chapter05/10sourcesLinearite}
 \end{figure}
 
+Enfin, il se pose la question de l'estimation de la contribution des sources aux PO. Du
+fait de la complexité du modèle, il n'est pas possible d'attribuer \emph{un} PO
+intrinsèque par source, celui-ci étant changeant en fonction d'autres paramètres.
+La technique utilisée est donc similaire à celle présentée
+en~\ref{par:source_apportionment} dite de \textit{brute-force} pour les CTM. À une
+simulation de référence pour laquelle toutes les sources sont prisent en compte est
+soustrait différentes simulations où une sources est mise artificiellement à une
+contribution nulle.  La différence nous apprend donc quel aurait été le \POv{} en
+l'absence de chacune des sources.
+Cette technique permet donc de répondre à la question
+\begin{quote}
+   Si les émissions de cette source sont diminuées ou supprimées, quels impacts cela va-t-il
+   avoir sur le \POv{} final ?
+\end{quote}
+mais ne répond en revanche pas à
+\begin{quote}
+   Dans la concentration ambiante de PM, à combien s'estime la contribution de cette source
+   d'émission ?
+\end{quote}
+
+De même, cette étude est actuellement en cours au sein du stage de Jean-Baptiste Fiches
+que j'encadre et de \cite{borlazaUrbaninprep.}.
+
 \section{Exposition et épidémiologie}
-\subsection{Mesure indoor et personnelle}
-\subsection{Étude épidémio}
+
+La mesure du PO et son application outil de mesure de la qualité de l'air demande
+nécessairement des études sur la capacités prédictives des PO sur les impacts sanitaires.
+Aussi, dans le mode de vie occidental, nous passons le plus clair de notre temps en espace
+clos intérieur (maison ou travail
+principallement)~\autocite{netheryTime2009,ouidirEstimation2015}. La qualité de l'air
+mesuré dans les stations conventionnelles n'est donc peut-être pas représentative de
+l'exposition réelle des individus.
+
+\subsection{Mesure \textit{indoor} et personnelle}
+
+Sur Grenoble, après une étude pilote de \cite{ouidirEstimation2015} portant sur
+l'exposition personnelle de 40 femmes enceintes, le projet
+SEPAGES~\autocite{lyon-caenDeciphering2019} a pour ambition la mesure d'un très large
+ensemble de marqueurs phénotypiques pour un corpus d'environ 480 couple mères-enfants
+suivis pendant leur grossesses et des premières années des enfants. Parrallèlement,
+l'exposome est mesuré très finnement, prennant en compte l'exposition personnelle des
+sujets dès le premier trimestre de la grossesse grâce au port de microcapteurs autonomes.
+
+Grâce au projet Mobil'air, en plus des \ce{NO2} et masse des \PMdc, le PO a également été
+mesurés sur ces micro-filtres\footnote{Les faibles masses prélevées ont fait l'objet
+    d'une adaptation méthodologique sur la mesure du PO afin de réduire les seuils de
+quantification de ces tests.}.
+Aussi, des échantillons d'air intérieur pour 140 foyers pour deux périodes entre 2018 et
+2019 ont été prélevés dans l'agglomération grenobloise. Cela représente un total de 280
+échantillons de fraction \PMdc{} pour sur lesquels une chimie détaillée et les PO sont en
+cours d'analyse. Une partie déjà analysées des mesures de carbone organique est présentée
+figure~\ref{fig:figures/chapter05/OC_mobilair}, confrontée au mesure extérieur sur la
+station de GRE-fr d'Atmo AURA pour la même période. Une saisonnalité des mesures
+intérieure est retrouvée, similairement aux mesures extérieures. En revanche, il existe
+des échantillons où la concentration intérieure est plus élevées que celle extérieure,
+alors même que seule la fraction \PMdc{} est prise en compte pour les mesures intérieures.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.\linewidth]{figures/chapter05/OC_mobilair.png}
+    \caption{figures/chapter05/OC_mobilair}%
+    \label{fig:figures/chapter05/OC_mobilair}
+\end{figure}
+
+Concernant les mesures personnelles, la figure~\ref{fig:figures/chapter05/personnal_OP}
+présentes la confrontation des mesures de la station GRE-fr et personnelles pour l'année
+2015, 2016 et 2017. Bien que l'on observe toujours un cycle saisonnier pour le \POAAv{} et
+\PODTTv{} personnel, son amplitude est plus faible que celui du \POv{} d'extérieur. Aussi,
+alors que l'on a montrée dans section~\ref{sub:pm10_pm2_5} que le \POv{} des \PMdc{} est
+toujours plus faible que celui des \PMdix{} lorsqu'il proviennent de la même station de
+prélèvement, ce résultat n'est pas retrouvé pour le \POv{} personnel. Notamment, le \POv{}
+personnel en été est plus élevés que le \POv{} de l'air extérieur, indiquant des sources
+de PO différente entre air extérieur et air ``personnel''.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter05/personnal_OP.pdf}
+    \caption{Mesures de \POAAv{} et \PODTTv{} en extérieur (station GRE-fr) et
+    personnelles des sujets de la cohortes SEPAGES. La moyenne et l'écart type par mois
+sont présentés en b) pour le \POAAv{} et d) pour le \PODTTv. L'orange représente le
+\POAAv{} et le bleu le \PODTTv{}. Les prélèvements en extérieur sont en foncés et personel
+en clairs.}%
+    \label{fig:figures/chapter05/personnal_OP}
+\end{figure}
+
+\subsection{Étude épidémiologique -- cohorte SEPAGES}
+
+La cohortes SEPAGES nous permet une caractérisation précise de l'exposition personelle
+maternelle en lien avec un ensemble conséquent de variables phénotypiques du nouveau-né.
+De façons similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition aux
+\ce{NO2}, concentration massique des \PMdc mais surtout aux \POAAv{} et \PODTTv{} est en
+cours d'étude par \cite{borlazaHealthinprep.}.
+Grâce à cette étude, le pouvoir prédictif de la métrique de la masse ou du PO des \PMdc{}
+sur le petit poids de naissance ou la circonférence crannienne, parmi d'autres variables,
+pourra être évaluer.
+
+De même, la thèse d'Anouk Marshal débutant à l'automne 2020 aura pour objectif d'établir
+un modèle de \textit{land use regression} (LUR) sur Grenoble et périphérie afin de
+quantifier l'importance de l'environnement géographique sur l'exposition personnel à la
+masse et aux PO des particules, en lien avec les effets sanitaires observées dans la
+cohortes SEPAGES.
+
 
