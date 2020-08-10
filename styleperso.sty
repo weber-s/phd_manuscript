@@ -60,6 +60,8 @@
 \DeclareSIUnit\min{\minute}
 \DeclareSIUnit\ugm{\micro\gram\per\cubic\meter}
 \DeclareSIUnit\ngm{\nano\gram\per\cubic\meter}
+\DeclareSIUnit\um{\micro\meter}
+\DeclareSIUnit\nm{\nano\meter}
 
 % Note that the sign must be
 %  µ
@@ -108,14 +110,14 @@
 % =====================================================================================
 % ==== Hyperlink {{{
 \usepackage[
-	colorlinks,breaklinks,   % deleted ps2pdf 11/6/15
-	bookmarks=false,
-	pdfstartview=Fit,  % for fitting entire page; FitW just fits width
-	pdfview=Fit,       % after traversing a hyperlink
-	linkcolor=ChadRed,
-	urlcolor=ChadGreen,
-	citecolor=ChadRoyal,
-	hyperfootnotes=false,
+    colorlinks,breaklinks,   % deleted ps2pdf 11/6/15
+    bookmarks=false,
+    pdfstartview=Fit,  % for fitting entire page; FitW just fits width
+    pdfview=Fit,       % after traversing a hyperlink
+    linkcolor=ChadRed,
+    urlcolor=ChadGreen,
+    citecolor=ChadRoyal,
+    hyperfootnotes=false,
 ]{hyperref}
 %\usepackage[figure,table]{hypcap} % Correct a problem with hyperref
 %\urlstyle{rm} %so it doesn't use a typewriter font for url's.
@@ -228,7 +230,7 @@
 % H: Header
 % F: Footer
 \pagestyle{fancy}
-\fancyhead[L]{\textsl{\rightmark}}
+\fancyhead[L]{\small\thechapter.\textsl{\rightmark}}
 \fancyhead[R]{\thepage}
 \fancyfoot{}
 \renewcommand\headrule{%
@@ -310,7 +312,7 @@
 
 % This is how to control linespacing using setspace
 % (\singlespacing or doublespacing just call this command)
-\setstretch{1.2}
+\setstretch{1.0}
 % }}}
 % =====================================================================================
 

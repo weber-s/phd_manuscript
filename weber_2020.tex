@@ -1,5 +1,5 @@
 % vim : foldmethod=marker
-\documentclass[a4paper,12pt]{book}
+\documentclass[a4paper,11pt]{book}
 
 \usepackage{styleperso}
 \usepackage{todonotes}
@@ -107,13 +107,15 @@
 
 \chapter{Annexes}
 \PartialToc
-\appendix
+
+\fancyhead[L]{\small Annexe \textsl{\rightmark}}
 \setcounter{table}{0}
 \setcounter{figure}{0}
 \setcounter{equation}{0}
 \renewcommand{\thetable}{\thesection-\arabic{table}}
 \renewcommand{\thefigure}{\thesection-\arabic{figure}}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}
+% \renewcommand{\thesection}{Annexe \thesection}
 
 \clearpage
 \section{INACS : isotopie et PMF}%
@@ -131,6 +133,11 @@
 \section{Méthodologie de déconvolution du PO : complément d'information}
 \label{annexe:deconvol_OP_SI}
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/deconvol_OP_SI.pdf}
+
+\section{Liste de publications}
+\label{annexe:CV}
+\includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/CV.pdf}
+
 
 % }}}
 % % =====================================================================================
