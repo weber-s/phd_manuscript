@@ -1,5 +1,5 @@
 
-\section{Vers une prise en compte plus générale de l'exposition}
+\section*{Vers une prise en compte plus générale de l'exposition}
 
 Au cours de ma thèse, plusieurs questions ont pu être adressées et certaines réponses
 apportées.  Cependant, le choix a été fait de se limiter principalement sur l'estimation
@@ -174,6 +174,20 @@ de concentration de \PMdix, soit des sorties de modèle CTM.
 
 \subsection{Prévision déterministe du PO (modélisation CTM)}
 
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    L'utilisation des CTM pour l'étude du PO a commencé grâce à une collaboration avec le
+    TNO et une première visite de 2 semaines (sur financement du DataInstitute) lors du
+    workshop LOTOS-EUROS de janvier 2019, qui je devrais poursuivre après ma thèse dans le
+    cadre de l'ANR JC de Gaëlle Uzu GetOP-StandOP.
+
+    Le même travail a commencé lors du stage et la poursuite en thèse de Matthieu Vida, en
+    collaboration IGE-LISA pour le modèle Chimère.
+
+    Un résultat d'ors et déjà très encourageant est déjà soumis utilisant CAMx
+    \parencite{daellenbachSourcessubmitted}, pour lequel mon implication a principalement
+    porté sur la validation des résultats du modèle.
+\end{tcolorbox}
+
 Si la partie précédente présentait une méthode approximative de prévision du PO à partir
 du calcul de la masse des \PMdix{} estimée par les CTM, il est certainement cependant
 préférable d'inclure directement la variable ``potentiel oxydant'' dans ces modèles.
@@ -221,7 +235,7 @@ Une collaboration entre l'IGE et le TNO a donc été engagée afin de confronter
 prédictions de LE aux sorties PMF. Aussi, dans lors de mon séjour en 2018, nous
 avons pu apporté une preuve de concept de la faisabilité de la prédiction du PO par
 LE pour 2 sources chimiquement proches entre LE et les PMF.
-La figure~\ref{fig:OPmap} présente pour 10 février 2017 à 11:30 la contribution du
+La figure~\ref{fig:OPmap} présente pour 10 février 2017 à 11h30 la contribution du
 transport routier et de la combustion résidentielle à la masse et au \PODTTv{} pour
 l'ensemble de l'Europe.
 
@@ -269,7 +283,16 @@ post-doctorat\footnote{sous réserve de validation de cette thèse bien entendu}
 %     \label{fig:map_kaspard}
 % \end{figure}
 
-\section{Contribution non linéarité des sources aux PO : réseaux de neurone}
+\section{Contribution non linéarité des sources aux PO : réseaux de neurone}%
+\label{sec:reseau_neurone}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Cette partie présente les travaux préliminaires de \cite{borlazaUrbaninprep.} sur 
+    l'attribution du PO aux sources d'émission sur 3 sites Grenoblois. Le stage de M2 de
+    \cite{fichesMachine2020}, que j'ai encadré, s'est également attaché à la mise en place et
+    l'interprétabilité des réseaux de neurones dans une optiques d'attribution des sources
+    de potentiel oxydant des particules atmosphèriques.
+\end{tcolorbox}
 
 \subsection{Limitations inhérentes aux modèles linéaires}%
 \label{sub:limitations_inhérentes_aux_modèles_linéaires}
@@ -483,9 +506,9 @@ mais ne répond en revanche pas à
 De même, cette étude est actuellement en cours au sein du stage de Jean-Baptiste Fiches
 que j'encadre et de \cite{borlazaUrbaninprep.}.
 
-\section{Exposition et épidémiologie}
+\section{Vers l'exposition fine et les impacts épidémiologiques du PO}
 
-La mesure du PO et son application outil de mesure de la qualité de l'air demande
+La mesure du PO et son application comme outil de mesure de la qualité de l'air demande
 nécessairement des études sur la capacités prédictives des PO sur les impacts sanitaires.
 Aussi, dans le mode de vie occidental, nous passons le plus clair de notre temps en espace
 clos intérieur (maison ou travail
@@ -493,64 +516,27 @@ principalement)~\autocite{netheryTime2009,ouidirEstimation2015}. La qualité de 
 mesuré dans les stations conventionnelles n'est donc peut-être pas représentative de
 l'exposition réelle des individus~\autocite{sauvainOxidative2015}.
 
-\subsection{Mesures intérieure et personnelle}
-
-Sur Grenoble, après une étude pilote de \cite{ouidirEstimation2015} portant sur
-l'exposition personnelle de 40 femmes enceintes, le projet
-SEPAGES~\autocite{lyon-caenDeciphering2019} a pour ambition la mesure d'un très large
+Dans le cadre du project IDEX Mobil'Air interdisciplinaire de l'UGA, la mesure de qualité
+de l'air extérieur avant et après la mise en place d'une zone à faible émission dans la
+métropole sera couplée à des mesures d'exposition interieur et personnel. Les mesures
+d'exposition personnelle seront similaire à l'étude pilote de \cite{ouidirEstimation2015}
+portant sur l'exposition personnelle de 40 femmes enceintes, mais grandement étendu (projet
+SEPAGES~\autocite{lyon-caenDeciphering2019}). Il a pour ambition la mesure d'un très large
 ensemble de marqueurs phénotypiques pour un corpus d'environ 480 couple mères-enfants
 suivis pendant leur grossesses et des premières années des enfants. Parallèlement,
 l'exposôme est mesuré très finement, prenant en compte l'exposition personnelle des
 sujets dès le premier trimestre de la grossesse grâce au port de micro-capteurs autonomes.
 
-Grâce au projet Mobil'air, en plus des \ce{NO2} et masse des \PMdc, le PO a également été
-mesurés sur ces micro-filtres\footnote{Les faibles masses prélevées ont fait l'objet
-    d'une adaptation méthodologique sur la mesure du PO afin de réduire les seuils de
-quantification de ces tests.}.
-Aussi, des échantillons d'air intérieur pour 140 foyers pour deux périodes entre 2018 et
-2019 ont été prélevés dans l'agglomération grenobloise. Cela représente un total de 280
-échantillons de fraction \PMdc{} pour sur lesquels une chimie détaillée et les PO sont en
-cours d'analyse. Une partie déjà analysées des mesures de carbone organique est présentée
-figure~\ref{fig:figures/chapter05/OC_mobilair}, confrontée au mesure extérieur sur la
-station de GRE-fr d'Atmo AURA pour la même période. De même que pour les mesures extérieures,
-une saisonnalité des mesures intérieure est retrouvée.
-En revanche, il existe
-des échantillons où la concentration intérieure est plus élevées que celle extérieure,
-alors même que seule la fraction \PMdc{} est prise en compte pour les mesures intérieures.
+La mise en commun de SEPAGES et Mobil'Air permettra la mesure de l'exposition personnelle
+du PO, en plus de celle des \ce{NO2} et masse des \PMdc\footnote{Les faibles masses
+    prélevées ont fait l'objet d'une adaptation méthodologique sur la mesure du PO afin de
+    réduire les seuils de quantification de ces tests.}.
+L'exposition intérieurs des foyers sera également quantifié en chimie détaillée et PO.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1.\linewidth]{figures/chapter05/OC_mobilair.png}
-    \caption{Mesure de l'OC en air extérieur (station de GRE-fr) et intérieur chez les
-    participants de l'étude sur la métropole grenobloise.}%
-    \label{fig:figures/chapter05/OC_mobilair}
-\end{figure}
-
-Concernant les mesures personnelles, la figure~\ref{fig:figures/chapter05/personnal_OP}
-présentes la confrontation des mesures de la station GRE-fr et personnelles pour l'année
-2015, 2016 et 2017. Bien que l'on observe toujours un cycle saisonnier pour le \POAAv{} et
-\PODTTv{} personnel, son amplitude est plus faible que celui du \POv{} d'extérieur. Aussi,
-alors que l'on a montrée dans section~\ref{sub:pm10_pm2_5} que le \POv{} des \PMdc{} est
-toujours plus faible que celui des \PMdix{} lorsqu'il proviennent de la même station de
-prélèvement, ce résultat n'est pas retrouvé pour le \POv{} personnel. Notamment, le \POv{}
-personnel en été est plus élevés que le \POv{} de l'air extérieur, indiquant des sources
-de PO différente entre air extérieur et air ``personnel''.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=1.0\linewidth]{figures/chapter05/personnal_OP.pdf}
-    \caption{Mesures de \POAAv{} et \PODTTv{} en extérieur (station GRE-fr) et
-    personnelles des sujets de la cohortes SEPAGES. La moyenne et l'écart type par mois
-sont présentés en b) pour le \POAAv{} et d) pour le \PODTTv. L'orange représente le
-\POAAv{} et le bleu le \PODTTv{}. Les prélèvements en extérieur sont en foncés et personel
-en clairs.}%
-    \label{fig:figures/chapter05/personnal_OP}
-\end{figure}
-
-\subsection{Étude épidémiologique -- cohorte SEPAGES}
-
-La cohortes SEPAGES nous permet une caractérisation précise de l'exposition personnelle
-maternelle en lien avec un ensemble conséquent de variables phénotypiques du nouveau-né.
+Cette collaboration fortes entre l'équipe de chimie atmosphérique de l'IGE et
+d'épidémiologie de l'IAB (mené par Rémy Slama), nous permet une caractérisation précise de
+l'exposition personnelle maternelle en lien avec un ensemble conséquent de variables
+phénotypiques du nouveau-né.
 De façons similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition aux
 \ce{NO2}, concentration massique des \PMdc mais surtout aux \POAAv{} et \PODTTv{} est en
 cours d'étude par \cite{borlazaPersonalinprep.}.
@@ -558,10 +544,69 @@ Grâce à cette étude, le pouvoir prédictif de la métrique de la masse ou du 
 sur le petit poids de naissance ou la circonférence crânienne, parmi d'autres variables,
 pourra être évaluer.
 
-De même, la thèse d'Anouk Marshal débutant à l'automne 2020 aura pour objectif d'établir
-un modèle de \textit{land use regression} (LUR) sur Grenoble et périphérie afin de
-quantifier l'importance de l'environnement géographique pour la mesure du PO et
-l'exposition personnel, en lien avec les effets sanitaires observées dans la
-cohortes SEPAGES.
+Finallement, afin d'augmenter la résolution spatiale nécessaire aux prévisions
+épidémiologiques, la thèse d'Anouk Marshal (fiancement ADEME) débutant à l'automne 2020
+aura pour objectif d'établir un modèle de \textit{land use regression} (LUR) sur Grenoble
+et périphérie afin de quantifier l'importance de l'environnement géographique pour la
+mesure du PO et l'exposition personnel, en lien avec les effets sanitaires observées dans
+la cohortes SEPAGES.
+
+%
+% 140 foyers pour deux périodes entre 2018 et
+% 2019 ont été prélevés dans l'agglomération grenobloise. Cela représente un total de 280
+% échantillons de fraction \PMdc{} pour sur lesquels une chimie détaillée et les PO sont en
+% cours d'analyse. Une partie déjà analysées des mesures de carbone organique est présentée
+% figure~\ref{fig:figures/chapter05/OC_mobilair}, confrontée au mesure extérieur sur la
+% station de GRE-fr d'Atmo AURA pour la même période. De même que pour les mesures extérieures,
+% une saisonnalité des mesures intérieure est retrouvée.
+% En revanche, il existe
+% des échantillons où la concentration intérieure est plus élevées que celle extérieure,
+% alors même que seule la fraction \PMdc{} est prise en compte pour les mesures intérieures.
+
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=1.\linewidth]{figures/chapter05/OC_mobilair.png}
+%     \caption{Mesure de l'OC en air extérieur (station de GRE-fr) et intérieur chez les
+%     participants de l'étude sur la métropole grenobloise.}%
+%     \label{fig:figures/chapter05/OC_mobilair}
+% \end{figure}
+
+% Concernant les mesures personnelles, la figure~\ref{fig:figures/chapter05/personnal_OP}
+% présentes la confrontation des mesures de la station GRE-fr et personnelles pour l'année
+% 2015, 2016 et 2017. Bien que l'on observe toujours un cycle saisonnier pour le \POAAv{} et
+% \PODTTv{} personnel, son amplitude est plus faible que celui du \POv{} d'extérieur. Aussi,
+% alors que l'on a montrée dans section~\ref{sub:pm10_pm2_5} que le \POv{} des \PMdc{} est
+% toujours plus faible que celui des \PMdix{} lorsqu'il proviennent de la même station de
+% prélèvement, ce résultat n'est pas retrouvé pour le \POv{} personnel. Notamment, le \POv{}
+% personnel en été est plus élevés que le \POv{} de l'air extérieur, indiquant des sources
+% de PO différente entre air extérieur et air ``personnel''.
+%
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=1.0\linewidth]{figures/chapter05/personnal_OP.pdf}
+%     \caption{Mesures de \POAAv{} et \PODTTv{} en extérieur (station GRE-fr) et
+%     personnelles des sujets de la cohortes SEPAGES. La moyenne et l'écart type par mois
+% sont présentés en b) pour le \POAAv{} et d) pour le \PODTTv. L'orange représente le
+% \POAAv{} et le bleu le \PODTTv{}. Les prélèvements en extérieur sont en foncés et personel
+% en clairs.}%
+%     \label{fig:figures/chapter05/personnal_OP}
+% \end{figure}
+
+% \subsection{Étude épidémiologique -- cohorte SEPAGES}
+%
+% La cohortes SEPAGES nous permet une caractérisation précise de l'exposition personnelle
+% maternelle en lien avec un ensemble conséquent de variables phénotypiques du nouveau-né.
+% De façons similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition aux
+% \ce{NO2}, concentration massique des \PMdc mais surtout aux \POAAv{} et \PODTTv{} est en
+% cours d'étude par \cite{borlazaPersonalinprep.}.
+% Grâce à cette étude, le pouvoir prédictif de la métrique de la masse ou du PO des \PMdc{}
+% sur le petit poids de naissance ou la circonférence crânienne, parmi d'autres variables,
+% pourra être évaluer.
+%
+% De même, la thèse d'Anouk Marshal débutant à l'automne 2020 aura pour objectif d'établir
+% un modèle de \textit{land use regression} (LUR) sur Grenoble et périphérie afin de
+% quantifier l'importance de l'environnement géographique pour la mesure du PO et
+% l'exposition personnel, en lien avec les effets sanitaires observées dans la
+% cohortes SEPAGES.
 
 
