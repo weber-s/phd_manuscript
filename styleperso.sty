@@ -216,6 +216,28 @@
 	\vbox{\bf\Large Table des matières}
     \printcontents[chapters]{}{1}[3]{}
 }
+% \titlecontents{〈section〉}[〈left〉]{〈above-code〉}
+%       {〈numbered-entry-format〉}{〈numberless-entry-format〉}{〈filler-page-format〉}[〈below-code〉]
+\titlecontents{chapter}
+    [0em] %
+    {\medskip\bfseries}
+    {\thecontentslabel\quad}%numbered chapters
+    {}%numberless chapter
+    {\hfill\contentspage}
+
+\titlecontents{section}
+    [1.72em]
+    {\vspace{1ex}}%
+    {\thecontentslabel.\enspace}%numbered sections
+    {}%numberless section
+    {\titlerule*[1.2pc]{.}\contentspage}%
+
+\titlecontents{subsection}
+    [3.44em]
+    {\vspace{-2.0ex}}%
+    {\thecontentslabel.\enspace}%numbered sections
+    {}%numberless section
+    {\titlerule*[1.2pc]{.}\contentspage}%
 
 % }}}
 % =====================================================================================
@@ -230,7 +252,8 @@
 % H: Header
 % F: Footer
 \pagestyle{fancy}
-\fancyhead[L]{\small\thechapter.\textsl{\rightmark}}
+% \fancyhead[L]{\small\thechapter.\textsl{\rightmark}}
+\fancyhead[L]{\chaptertitle}
 \fancyhead[R]{\thepage}
 \fancyfoot{}
 \renewcommand\headrule{%
@@ -245,6 +268,18 @@
 %}}}
 % =====================================================================================
 
+% =====================================================================================
+% ==== Paragraph setup {{{
+% Paragraph Setup
+\onehalfspacing
+% \setlength{\parsep}{0pt}
+\setlength{\parskip}{10pt}
+
+% This is how to control linespacing using setspace
+% (\singlespacing or doublespacing just call this command)
+% \setstretch{1.1}
+% }}}
+% =====================================================================================
 
 % =====================================================================================
 % ==== Sections styles {{{
@@ -263,7 +298,7 @@
 \titleformat{\chapter}% command
 	[display]% shape
 	{\normalfont\scshape\huge}% format
-	{\vspace{-5cm}\color{darkblue}\flushright\chaptertitlename\hspace{1ex}\thechapter}% label
+	{\vspace{-7\parskip}\color{darkblue}\flushright\chaptertitlename\hspace{1ex}\thechapter}% label
 	{0.5ex}% sep
 	{%
 		\rule{\textwidth}{1pt}
@@ -280,7 +315,7 @@
     {\usefont{T1}{qhv}{b}{n}\selectfont} % "qhv" - TeX Gyre Heros, "b" - bold
     {} 
     {0em}
-    {\hspace{-0.4pt}\Large \thesection\hspace{0.6em}}
+    {\hspace{-0.5pt}\Large \thesection\hspace{0.6em}}
 
 
 \titleformat{\subsection}% command
@@ -289,7 +324,7 @@
 	{\thesubsection}%label
 	{0.5em}%sep
 	{\large}%before-code
-	[]%after-code
+    [\vspace{-\parskip}]%after-code
 
 \titleformat{\subsubsection}% command
 	[hang]%shape
@@ -298,23 +333,28 @@
 	{0.5em}%sep
 	{}%before-code
 	[]%after-code
+
+\titleformat{\paragraph}% command
+	[hang]%shape
+    {\textbf}%format
+	{\theparagraph}%label
+	{0.5em}%sep
+	{}%before-code
+    []%after-code
+
+
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+%
+% (there's an additional optional argument, but it's not important here). <left> increases the left margin; <before-sep> controls the vertical space before the title; <after-sep> controls the vertical space after the title. (Please refer to the package documentation for further information). A complete example:
+
+\titlespacing*{\section}      {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}   {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.3ex plus .2ex}
+\titlespacing*{\paragraph}    {0pt}{1.0ex plus .2ex minus .2ex}{0.5ex plus .1ex}
+
 % }}}
 % =====================================================================================
 
-% =====================================================================================
-% ==== Paragraph setup {{{
-% Paragraph Setup
-\onehalfspacing
-%\setlength{\parindent}{0em} 
-%\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
-%\setlength{\parsep}{0pt}
-\setlength{\parskip}{0pt}
-
-% This is how to control linespacing using setspace
-% (\singlespacing or doublespacing just call this command)
-\setstretch{1.1}
-% }}}
-% =====================================================================================
 
 % =====================================================================================
 % ==== Bibliography setup {{{
