@@ -260,7 +260,8 @@
 % F: Footer
 \pagestyle{fancy}
 % \fancyhead[L]{\small\thechapter.\textsl{\rightmark}}
-\fancyhead[L]{\chaptertitle}
+\fancyhead[L]{\small\leftmark}
+% \fancyhead[L]{\chaptertitle}
 \fancyhead[R]{\thepage}
 \fancyfoot{}
 \renewcommand\headrule{%
@@ -280,7 +281,8 @@
 % Paragraph Setup
 \onehalfspacing
 % \setlength{\parsep}{0pt}
-\setlength{\parskip}{10pt}
+% \setlength{\parskip}{10pt}
+\setlength{\parskip}{1.2ex plus 0.5ex minus 0.3ex}
 
 % This is how to control linespacing using setspace
 % (\singlespacing or doublespacing just call this command)
@@ -343,12 +345,20 @@
 
 \titleformat{\paragraph}% command
 	[hang]%shape
-    {\textbf}%format
-	{\theparagraph}%label
+    {\bfseries}%format
+	{}%label
 	{0.5em}%sep
 	{}%before-code
     []%after-code
 
+
+\titleformat{\subparagraph}% command
+	[hang]%shape
+    {\bfseries}%format
+	{}%label
+	{}%sep
+    {\hspace{0.5em}}%before-code
+    []%after-code
 
 % \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
 %
@@ -357,7 +367,9 @@
 \titlespacing*{\section}      {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \titlespacing*{\subsection}   {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \titlespacing*{\subsubsection}{0pt}{2.5ex plus 1ex minus .2ex}{1.3ex plus .2ex}
-\titlespacing*{\paragraph}    {0pt}{1.0ex plus .2ex minus .2ex}{0.5ex plus .1ex}
+\titlespacing*{\paragraph}    {0pt}{1.0ex plus .2ex minus .2ex}{0.5ex plus .1ex minus
+\titlespacing*{\subparagraph} {0pt}{.0ex plus .0ex minus .0ex}{0.0ex plus .0ex minus
+.0ex}
 
 % }}}
 % =====================================================================================
