@@ -37,9 +37,6 @@
 % =====================================================================================
 % ====== TableofContent {{{
 \tableofcontents
-\listoftables
-\listoffigures
-
 % }}}
 % =====================================================================================
 
@@ -94,15 +91,19 @@
 
 \chapter*{Conclusion}%
 \label{cha:conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
 \input{chapters/conclusion.tex}
 \clearpage
 
 % =====================================================================================
-% Bibliographie complète {{{
+% Bibliographie complète et LOF LOT{{{
 % \addcontentsline{toc}{part}{Bibliography}
 % \printbibheading
 \printbibliography
 % \bibbysegment[heading=subbibliography]
+
+\listoftables
+\listoffigures
 
 % }}}
 % =====================================================================================
@@ -111,16 +112,21 @@
 % Appendix {{{
 
 \chapter*{Annexes}
+\addcontentsline{toc}{chapter}{Annexes}
 \PartialToc
 
-\fancyhead[L]{\small Annexe \textsl{\rightmark}}
+\fancyhead[L]{\small\textsl{\rightmark}}
 \setcounter{table}{0}
 \setcounter{figure}{0}
 \setcounter{equation}{0}
+\setcounter{section}{0}
 \renewcommand{\thetable}{\thesection-\arabic{table}}
 \renewcommand{\thefigure}{\thesection-\arabic{figure}}
 \renewcommand{\theequation}{\thesection-\arabic{equation}}
-% \renewcommand{\thesection}{Annexe \thesection}
+\makeatletter
+\renewcommand\thesection{Annexe \@Roman\c@section}
+\renewcommand\thesubsection{Annexe \@Roman\c@section-\@arabic\c@subsection}
+\makeatother
 
 \clearpage
 \section{INACS : isotopie et PMF}%
@@ -129,6 +135,10 @@
 
 \section{Fine scale source-apportionment with organic tracers}%
 \label{annexe:borlazaSA}
+\begin{tcolorbox}[colback=red!5!white,colframe=blue,title=Note]
+    Au 20 août 2020, ce papier a été envoyé mais non encore revu par les différents
+    co-auteurs. De même, le choix du journal n'est pas encore définitif.
+\end{tcolorbox}
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/Mobil'Air_SA-Organics_LB_01082020.pdf}
 
 \section{SOURCES : complément d'information}
@@ -139,13 +149,15 @@
 \label{annexe:deconvol_OP_SI}
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/deconvol_OP_SI.pdf}
 
-\section{Programmes ayant financés la thèses}%
+\section{Programmes de recherches ayant financés la thèses}%
 \label{annexe:programmes_ayant_financés_la_thèses}
 \input{chapters/annexes/programmes.tex}
+\clearpage
 
-\section{Liste de publications}
+\section{Liste de mes publications et autres travaux}
 \label{annexe:CV}
-\includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/CV.pdf}
+% \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/CV.pdf}
+\input{chapters/annexes/biblioperso.tex}
 
 
 % }}}
