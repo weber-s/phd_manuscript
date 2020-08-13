@@ -1,26 +1,25 @@
 
-\section{Vers une prise en compte plus générale de l'exposition}%
+\section{Vers une prise en compte plus générale de l'exposition  => Vers une prise en compte améliorée de l'exposition sanitaire? ou vers une meilleure prise en compte etc etc }%
 
 Au cours de ma thèse, plusieurs questions ont pu être adressées et certaines réponses
-apportées.  Cependant, le choix a été fait de se limiter principalement sur l'estimation
-des sources de PO à travers le modèle PMF. Bien qu'apportant des résultats éclairant sur
-la dynamique des PO, plusieurs aspects ont été volontairement écartés de ces études.
+apportées.  Cependant, le choix a été fait de se limiter principalement à l'estimation
+des sources du potentiel oxydant à travers le modèle source-récepteur PMF. Bien qu'apportant des résultats éclairant sur
+la dynamique des différents tests de PO, plusieurs aspects ont été volontairement écarté de ces études.
 
-Premièrement, l'utilisation de modèle site-récepteur limite nécessairement la couverture
+Premièrement, l'utilisation des modèles site-récepteur limite nécessairement la couverture
 spatiale et temporelle à quelques sites d'études et années de mesures. Or la
-généralisation d'une estimation des mesures de PO à tous points spatio-temporel est
+généralisation d'une estimation des mesures de PO en tous points spatio-temporel est
 souhaitable lorsque l'on s'intéresse à coupler dans une même étude mesures
-épidémiologiques et qualité de l'air.
+épidémiologiques et qualité de l'air et indispensable si l'on souhaite faire de la prévision dans le futur.
 
-Deuxièmement, la méthode utiliser pour estimer un PO par sources de PM présente un
+Deuxièmement, la méthode utilisée pour estimer un PO par source d'émission de particules présente un
 développement mathématique linéaire. Or, on sait que le PO ne réagit pas de manière
-linéaire à la masse des composés chimiques. Si ce modèle présente une première
+linéaire à la masse des composés chimiques et que la génération des ROS dans les fluides pulmonaires n'est pas linéaire pour tous les composés atmosphériques . Si ce modèle présente une première
 approximation, il est, par construction, limité et biaisé.  Il existe cependant des
 modèles d'inversion non-linéaire qui permettraient la prise en compte des interactions
 entre sources et composés chimiques dans l'estimation des sources de PO.
 
-Finalement, jusqu'à présent seuls des prélèvements en air extérieur ont été considérés. Or
-nous passons la plus grande partie de notre temps en espace clos intérieur (maison,
+Finalement, jusqu'à présent seuls des prélèvements en air extérieur ont été considérés. Or, en moyenne, un européen passe la majeur partie de son temps en espace clos intérieur (maison,
 appartement, bureau, voiture, etc.).  La représentativité des mesures en air extérieur
 comme référence de l'exposition de la population n'est donc peut-être suffisante.
 
@@ -45,12 +44,12 @@ Bien évidemment, cette méthode possède trois limitations fortes :
 \begin{itemize}
     \item Les contributions relatives des sources sont moyennées mensuellement d'après un
         ensemble de 15 sites de mesures, de typologie plutôt urbaine, et donc non
-        nécessairement représentative de l'ensemble des situations possibles ;
+        nécessairement représentatives de l'ensemble des situations possibles ;
     \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité
-        plus ou moins importante, et une fois de plus estimés à partir d'un ensemble de
+        plus ou moins importante, et une fois de plus estimé à partir d'un ensemble de
         site de typologie plutôt urbaine ;
-    \item Il n'est pas pris en compte la spécificité du site en question ni la possible
-        évolution du PO intrinsèque des sources liés à possible une évolution du profil
+    \item Il n'est pas pris en compte la spécificité du site (industrie non classique, topographie, climat...) en question ni la possible
+        évolution du PO intrinsèque des sources qui serait lié à possible une évolution du profil
         chimique (renouvellement de parc automobile, etc.).
 \end{itemize}
 
@@ -59,15 +58,14 @@ une concentration massique des \PMdix{} une mesure de \POAAv{} et \PODTTv. Il es
 également possible d'utiliser ce procédé en post-traitement d'un modèle déterministe de
 prévision de concentration de \PMdix.
 
-Aussi, au fur et à mesure que de nouvelle étude se feront, il est tout à fait possible de
-raffiner cette technique en ne sélectionnant que des sites de même typologie ou
-environnement (rurale, vallée alpine, trafic, etc.) aussi bien pour la partie d'estimation
+Aussi, au fur et à mesure de la parution future de nouvelles études, il sera tout à fait possible d'affiner cette technique en ne sélectionnant que des sites de même typologie ou
+environnement (rural, vallée alpine, trafic, etc.) aussi bien pour la partie d'estimation
 de la contribution des sources aux \PMdix{} que pour la partie attribution d'un PO
 intrinsèque par source.
 
 Afin de tester la faisabilité de cette méthode d'estimation au premier ordre du PO, le
-site de Grenoble les Frènes a été choisi car bénéficie d'une série de mesure longue durée
-du PO. Cette méthode est aussi rendu disponible grâce au développement du module python
+site de Grenoble les Frènes a été choisi car il bénéficie d'une série de mesures longue durée
+du PO depuis 2013. Cette méthode est aussi rendue disponible grâce au développement du module python
 \href{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}{pyOPestimator},
 disponible sur PyPi\footnote{\url{https://pypi.org/project/pyOPestimator/}} et sur la
 forge de l'université de
@@ -77,12 +75,12 @@ Il est également possible d'utiliser directement
 \POAAv{} et \PODTTv{} de n'importe quelle série de mesure concentration de \PMdix.
 
 Les \POAAv{} et \PODTTv{} mesurés et estimés par cette méthode sont présentés
-figure~\ref{fig:OPGRE-fr-estimated}.  Les cycles saisonnier sont bien retrouvés et les
+figure~\ref{fig:OPGRE-fr-estimated}.  Les cycles saisonniers sont bien retrouvés et les
 amplitudes respectées. Cependant et comme attendu, certains évènements peu fréquent sont
 mal estimés. Au final, une corrélation (Pearson) respective de 0.75 et 0.79 pour le
 \POAAv{} et \PODTTv{} est obtenu en prenant en compte les 769 échantillons où les PO ont
 été mesurés (voir figure~\ref{fig:OPGRE-fr-estimated_scatter}).  Considérant les grandes
-approximations faites par cette méthode, ce résultat présente des performance étonnante !
+approximations faites par cette méthode, ce résultat présente des performances étonnantes ! oui bah t'as qu'à essayer de le prévoir pour l'OPE que je marre un peu....t'as essayé pour les sites suisses? et sur les séries PM10 et PM2.5? et sur le confinement?  tu peux pas dire c'est étonnant quand tu fais prédire sur le même style de site que là tu as fait le calcul...bon après c'est vrai que vu es approximations, au final c'est un r2 meilleur que pour plein de modèles style chimère, c'est fun...si tu es capable de me montrer qu'il savait reproduire le PO qu'on a retrouvé pendant le confinement je veux bien commencer à te prendre au sérieux
 
 \begin{figure}[ht]
     \centering
@@ -100,19 +98,19 @@ approximations faites par cette méthode, ce résultat présente des performance
 
 
 Il est donc possible d'estimer en premier ordre la contribution des sources majoritaires de
-PM aux PO, et ce en prenant en compte l'intégralité des mesure annuelle disponible. La
-prise en compte de toutes ces mesures nous affranchi du biais de sélection présent dû
-fait de la fréquence d'échantillonage et d'annalyse sur filtre. Les contributions des
+PM aux PO, et ce en prenant en compte l'intégralité des mesures annuelles disponibles. La
+prise en compte de toutes ces mesures nous affranchit du biais de sélection présent dû
+fait de la fréquence d'échantillonage et d'analyse sur filtre. Les contributions des
 sources de PO d'après les mesures journalières d'Atmo AURA sur la station de GRE-fr sont
 présentées figure~\ref{fig:OPGRE-fr_source_estimated} et détaillées dans le
 tableau~\ref{tab:OPGRE-fr_source_estimated}.
 
 Du fait de l'importance du PO intrinsèque de la source combustion de biomasse
 (\textit{Biomass burning} dans le graphique), sa contribution moyenne annuelle est
-également importante, notamment pour le \POAAv.  En revanche, puisque l'ont dispose de
+également importante, notamment pour le \POAAv.  En revanche, puisque l'on dispose de
 l'ensemble des jours de mesures et que cette source présente une dynamique très
 saisonnière, l'écart entre contribution moyenne et médiane est très important.
-En revanche, conformément aux PO intrinsèque élevés de la source trafic primaire
+En revanche, conformément aux POs intrinsèques élevés de la source trafic primaire
 (\textit{Road traffic} dans le graphique) et sa contribution relativement homogène tout au
 long de l'année, cette source est la première contributrice au \PODTTv, aussi bien en
 moyenne qu'en médiane.
@@ -120,7 +118,7 @@ moyenne qu'en médiane.
 Si elle n'apprend rien de bien nouveau, cette méthode d'estimation certes grossière,
 permet la prise en compte d'un très grand nombre de jours d'observation et met d'autant
 mieux en lumière la différence entre contribution moyenne et contribution médiane des
-sources de \PMdix{} aux PO.
+sources de \PMdix{} aux différents tests de PO.
 
 Enfin, il est possible de propager la variabilité aussi bien de la contribution mensuelle
 moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce travail n'a
