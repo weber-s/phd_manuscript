@@ -1,5 +1,5 @@
 
-\section{Vers une prise en compte plus générale de l'exposition  => Vers une prise en compte améliorée de l'exposition sanitaire? ou vers une meilleure prise en compte etc etc }%
+\section{Vers une prise en compte améliorée de l'exposition sanitaire}%
 
 Au cours de ma thèse, plusieurs questions ont pu être adressées et certaines réponses
 apportées.  Cependant, le choix a été fait de se limiter principalement à l'estimation
@@ -14,7 +14,7 @@ souhaitable lorsque l'on s'intéresse à coupler dans une même étude mesures
 
 Deuxièmement, la méthode utilisée pour estimer un PO par source d'émission de particules présente un
 développement mathématique linéaire. Or, on sait que le PO ne réagit pas de manière
-linéaire à la masse des composés chimiques et que la génération des ROS dans les fluides pulmonaires n'est pas linéaire pour tous les composés atmosphériques . Si ce modèle présente une première
+linéaire à la masse des composés chimiques et que la génération des ROS dans les fluides pulmonaires n'est pas linéaire pour tous les composés atmosphériques. Si ce modèle présente une première
 approximation, il est, par construction, limité et biaisé.  Il existe cependant des
 modèles d'inversion non-linéaire qui permettraient la prise en compte des interactions
 entre sources et composés chimiques dans l'estimation des sources de PO.
@@ -70,8 +70,7 @@ du PO depuis 2013. Cette méthode est aussi rendue disponible grâce au dévelop
 disponible sur PyPi\footnote{\url{https://pypi.org/project/pyOPestimator/}} et sur la
 forge de l'université de
 grenoble\footnote{\url{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}}.
-Il est également possible d'utiliser directement
-\url{http://getopstandop.u-ga.fr/estimate}, permettant d'estimer directement en ligne le
+Il est également possible d'utiliser \url{http://getopstandop.u-ga.fr/estimate}, permettant d'estimer directement en ligne le
 \POAAv{} et \PODTTv{} de n'importe quelle série de mesure concentration de \PMdix.
 
 Les \POAAv{} et \PODTTv{} mesurés et estimés par cette méthode sont présentés
@@ -80,7 +79,8 @@ amplitudes respectées. Cependant et comme attendu, certains évènements peu fr
 mal estimés. Au final, une corrélation (Pearson) respective de 0.75 et 0.79 pour le
 \POAAv{} et \PODTTv{} est obtenu en prenant en compte les 769 échantillons où les PO ont
 été mesurés (voir figure~\ref{fig:OPGRE-fr-estimated_scatter}).  Considérant les grandes
-approximations faites par cette méthode, ce résultat présente des performances étonnantes ! oui bah t'as qu'à essayer de le prévoir pour l'OPE que je marre un peu....t'as essayé pour les sites suisses? et sur les séries PM10 et PM2.5? et sur le confinement?  tu peux pas dire c'est étonnant quand tu fais prédire sur le même style de site que là tu as fait le calcul...bon après c'est vrai que vu es approximations, au final c'est un r2 meilleur que pour plein de modèles style chimère, c'est fun...si tu es capable de me montrer qu'il savait reproduire le PO qu'on a retrouvé pendant le confinement je veux bien commencer à te prendre au sérieux
+approximations faites par cette méthode, ce résultat présente des performances étonnantes !
+\todo{oui bah t'as qu'à essayer de le prévoir pour l'OPE que je marre un peu....t'as essayé pour les sites suisses? et sur les séries PM10 et PM2.5? et sur le confinement?  tu peux pas dire c'est étonnant quand tu fais prédire sur le même style de site que là tu as fait le calcul...bon après c'est vrai que vu es approximations, au final c'est un r2 meilleur que pour plein de modèles style chimère, c'est fun...si tu es capable de me montrer qu'il savait reproduire le PO qu'on a retrouvé pendant le confinement je veux bien commencer à te prendre au sérieux}
 
 \begin{figure}[ht]
     \centering
@@ -125,7 +125,7 @@ moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce
 pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaire pour
 cela.
 
-En définitive, puisqu'il est raisonnable d'estimer le PO des \PMdix{} par cette technique,
+En définitive, puisqu'il est raisonnable\todo{ (je sais pas si je dirais raisonnable!)} d'estimer le PO des \PMdix{} par cette technique,
 il parait envisageable d'établir une cartographie du PO à partir soit des mesures satellites
 de concentration de \PMdix, soit des sorties de modèle CTM.
 
@@ -174,14 +174,13 @@ de concentration de \PMdix, soit des sorties de modèle CTM.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     L'utilisation des CTM pour l'étude du PO a commencé grâce à une collaboration avec le
-    TNO et une première visite de 2 semaines (sur financement du DataInstitute) lors du
-    workshop LOTOS-EUROS de janvier 2019, qui je devrais poursuivre après ma thèse dans le
-    cadre de l'ANR JC de Gaëlle Uzu GetOP-StandOP.
+    TNO et une première visite de 2 semaines (sur financement de l'IDEX DataInstitute de l'université Grenoble Alpes) lors du
+    workshop LOTOS-EUROS de janvier 2019 et constituera le cadre de mon post-doctorat 2021-2022.
 
     Le même travail a commencé lors du stage et la poursuite en thèse de Matthieu Vida, en
     collaboration IGE-LISA pour le modèle Chimère.
 
-    Un résultat d'ors et déjà très encourageant est déjà soumis utilisant CAMx
+    Un résultat d'ores et déjà très encourageant est déjà soumis utilisant CAMx
     \parencite{daellenbachSourcessubmitted}, pour lequel mon implication a principalement
     porté sur la validation des résultats du modèle.
 \end{tcolorbox}
@@ -190,23 +189,24 @@ Si la partie précédente présentait une méthode approximative de prévision d
 du calcul de la masse des \PMdix{} estimée par les CTM, il est certainement cependant
 préférable d'inclure directement la variable ``potentiel oxydant'' dans ces modèles.
 
-Cependant, le ``PO'' n'étant pas une espèce chimique évoluant et réagissant, son
+Cependant, le ``PO'' n'étant pas une espèce chimique évoluant et réagissant dans le temps
+\todo{(=>  attention c'est pas une espèce chimique qui évolue, mais c'est une propriété liée à chaque particule qui va évoluer en fonction de l'évolution (vieillissement, réaction chimique) de la particule) }, son
 estimation ne peut se faire que a posteriori et à partir soit du PO intrinsèque de chacune
 des espèces chimiques, soit en estimant la contribution des sources à la masse de \PMdix
-Mais les mêmes limitations que pour l'inversion par espèces chimiques se retrouve. Il faut donc
+Mais nous retrouvons les mêmes limitations que pour l'inversion par espèces chimiques. Il faut donc
 réussir à estimer les sources de \PMdix{} dans les modèles CTM.
 
 Ensuite, deux solutions sont envisageables:
 \begin{enumerate}
     \item estimer un PO intrinsèque par source d'émission des CTM en utilisant le même
-        procédé que celui développée durant cette thèse en utilisant les mesures de PO à
+        procédé que celui développé durant cette thèse en utilisant les mesures de PO à
         différentes stations;
     \item établir une équivalence entre source CTM et facteur PMF, puis appliquer les
-        PO intrinsèque des facteurs PMF aux sources estimées par CTM.
+        PO intrinsèques des facteurs PMF aux sources estimées par CTM.
 \end{enumerate}
 
-La première solutions permettrait le prise en compte d'un nombre de source beaucoup plus
-grand que celles retenues dans les PMF (émission portuaire, différent type de résidentiel
+La première solution permettrait la prise en compte d'un nombre de source beaucoup plus
+grand que celles retenues dans les PMF (émissions portuaires, différents type de résidentiel
 ou trafic, feu de forêt, etc) puisque les sources des CTM sont fondées sur les SNAP, qui
 sont très nombreux.
 En revanche, cette solution, dans son implémentation actuelle à travers le ``source
@@ -215,7 +215,7 @@ condensation des NOx du trafic routier et de l'ammoniac de l'agriculture forme d
 nitrate-d'ammonium et est attribué selon une moyenne pondérée à la source trafic et
 agricole. Il y a donc une perte d'information entre source primaire et secondaire.
 
-La deuxième solution nécessite une comparaison des émissions chimique considérés dans
+La deuxième solution nécessite une comparaison des émissions chimiques considérées dans
 chacun des SNAP utilisés avec les profils chimiques des facteurs PMF. S'il est possible
 d'établir un rapprochement entre ces 2 nomenclatures, il sera possible d'estimer le PO
 apporté par ces sources.
