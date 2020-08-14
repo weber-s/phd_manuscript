@@ -486,13 +486,7 @@ LOTOS-EUROS...
 La raison de la pluralité de ces modèles provient des différentes paramétrisations
 possibles des équations physiques, mais également des choix conceptuels de recherche.
 
-\paragraph{Limitations}%
-\label{par:limitations}
-
-Comparaison Chimire-DECOMBIO : \cite{bessagnetHigh2020}
-\todo{à faire}
-
-\paragraph{Source apportionment}%
+\paragraph{Estimation de la contribution des sources d'émissions par CTM}%
 \label{par:source_apportionment}
 
 Concernant l'attribution des sources, il est possible d'utiliser deux techniques au sein
@@ -529,24 +523,42 @@ et elle est détaillée dans le rapport de~\cite{mirceaEuropean2020}. Elle prés
 l'avantage de pouvoir tagguer non seulement les sources des espèces chimiques, mais
 également leur provenance géographique, c'est-à-dire leur lieu d'émission.
 
+\paragraph{Limitations}%
+\label{par:limitations}
+
 Cependant, l'utilisation des CTM présente certaines limites du fait de leur complexité.
 Notamment, il semble illusoire de pouvoir un jour inclure toutes les réactions chimiques
 possibles dans les modèles déterministes. Par exemple, les interactions aérosols/neige ou
-même plus simplement les interactions aérosol nuages et la chimie aqueuse qui s'y produit
+même plus simplement les interactions aérosols/nuages et la chimie aqueuse qui s'y produit
 ne sont pas encore complètement comprises ni bien représentées dans ces modèles.
 
 Quand bien même ce serait le cas --car les modèles réactionnels sont de plus en plus
-poussés--, il faudrait alors avoir des inventaires d'émissions beaucoup plus complets et
+poussés--, 
+ces modèles déterministes reposant sur une connaissance a priori la plus complète
+possible, il faudrait alors avoir des inventaires d'émissions beaucoup plus complets et
 précis temporellement, avec aucune certitude d'un oubli potentiel d'une source non prise
 en compte. Ce sont par exemple, une industrie locale non-encore répertorié, la sous-estimation de
 la contribution d'un écosystème, une consommation de bois de chauffage individuel non
 inventoriée, etc.
+En plus de cette connaissances de la quantité des émissions, leurs distributions
+temporelles et spatiale s'avère également compliquée. Notamment, la répartition annuelle
+de la quantité de bois de chauffage totale peut s'avérer approximative selon les
+paramétrisations des modèles et ne pas représenter la réalité des émissions.
 
 Aussi, la limitation physique des modèles météorologiques se retrouvent dans les CTM. Il
 est donc compliqué d'envisager, du fait du coût de calcul et de stockage, une simulation à
 \SI{10}{\m} de résolution spatiale (ou moins), ce qui serait cependant nécessaire pour
-appréhender correctement des phénomènes précis, comme les inversions thermiques des
-vallées alpines.
+appréhender correctement des phénomènes précis.
+Notamment, les milieux complexes comme les vallées alpines demandent une résolution fine
+du fait d'une topographie très variable et des sources d'émissions localisées.
+\cite{bessagnetHigh2020} ont montré que l'augmentation de la résolution spatiale améliore
+en partie les prédictions de ces modèles sur la vallée de l'Arve et Grenoble, mais un
+biais négatif de l'ordre de \SI{10}{\ugm} pour les \PMdix{} demeure.
+En dehors de ces travaux de recherches à fine échelle, les prévisions opérationelles
+francçaise de PREV'AIR \parencite{rouilPrev2009} se font à résolution spatiale de l'ordre
+de \SI{4}{\kilo\m} alors que la vallée de l'Arve ne fait qu'un kilomètre de large. De
+fait, les prévisions ne pourront pas prendre en compte certains phénomènes très locaux.
+
 
 \subsubsection{Modèles récepteurs}%
 \label{ssub:model_recepteur}
@@ -1016,19 +1028,34 @@ temporelle fine, réduisant l'intérêt de cette méthode pour cette thèse.
 \subsubsection{Nécessité d'inclure des espèces traceuses dans les PMF}%
 \label{ssub:nécessité_d_inclure_des_espèces_traceuses}
 
-L'une des limitations des PMF provient de leur sensibilité aux espèces chimiques
-utilisées.
+L'une des limitations des PMF provient de leur sensibilité aux variables d'entrées
+utilisées. La détermination de facteur sera grandement facilité par la présence d'une
+espèce chimique permettant l'identification précise de ce facteur.
+Par exemple, un facteur ``combustion de biomasse'' peut être déterminé avec uniquement des
+espèces métaliques et la présence de potassium, mais l'ajout du lévoglucosan --produit de
+pyrolyse de la cellulose-- permet une identification beaucoup plus clair et non équivoque
+de ce facteur.
 
-\todo{Discussion espèce organique}
-\autocite{srivastavaSpeciation2018a}etc
+L'utilisation d'\textit{espèces traceuses} rend l'identification de facteur plus aisé,
+mais permet aussi la détermination de nouvelle source qui aurait été jusqu'alors peu ou
+pas visible.
+Par exemple, \cite{srivastavaSpeciation2018a} ont pu déterminer des facteurs peu courrant
+grâce à l'ajout de certanes espèces organiques traceuses de différents processus :
+\textit{fungal spores} (présence de près de \SI{80}{\percent} de l'arabitol et du sorbitol),
+\textit{plant debris} (présence d'alcanes impairs), \textit{biogenic SOA}
+(présence de produits d'oxydation de l'isoprène (acide $\alpha$-methylglycerique et 2-methylerythritol) et de
+l'$\alpha$-pinène (acide hydroxyglutarique)) et \textit{anthropogenic SOA} (présence
+d'acenaphthenequinone, de 6H–dibenzo[b,d]pyran-6-one, de 1,8-naphthalique anhydre et de
+DHOPA).
+De même, l'analyses des HULIS a permis une meilleure déterminantion des facteurs organiques.
+\cite{chevrierChauffage2016} a également utilisée des mesures de radiocarbone et la
+séparation en carbone \textit{fossil fuel} et \textit{wood burning} provennant de mesure
+d'aethalomètre 33, permettant une séparation et une évaluation des
+contributions des facteurs plus précise grâce à ces traceurs spécifiques.
 
-
-\todo{
-introduire la notion de limitations liées au cout analytique : on sait faire les HULIS sur
-les filtre, et on sait que cela représente une espèces importante pour la compréhension
-des sources (Srivastava) et potentiellement pour le PO. Mais cette analyse demande bcp de
-temps, et on ne peut pas la mesurer sur toutes nos séries
-}
+Cependant, bien que l'on sait maintenant l'importance de l'ajout de ces espèces dans les
+PMF, la généralisation de l'emploi de ces traceurs est limité par le coût analytique
+et l'automatisation de certaines de ces mesures.
 
 \section{Vers une mesure unifiée de l'impact sanitaire : le potentiel oxydant}%
 \label{sec:le_potentiel_oxydant_des_aerosols}
@@ -1114,14 +1141,16 @@ explicités dans le chapitre suivant (section~\ref{sub:potentiels_oxydants}).
 D'autres méthodes de mesures du PO existent, mais n'ont pas été utilisées au courant de
 cette thèse, à savoir :
 \begin{description}
-    \item[Electron spin résonance ESR] sensé ciblé particulièrement le radical
+    \item[Electron spin résonance ESR] Sensé ciblé particulièrement le radical
         \ce{HO^{.}} \autocite{shiHydroxyl2003,shiTemporal2003}
-    \item[DCFH]\todo{ref}
-    \item[Mélange d'anti-oxydant] Bien que la plupart du temps testé indépendamment, il est
+    \item[DCFH] Mesure de la consomation DCFH par suivi de son produit oxydé la DCF, par
+        fluorescence \parencite{foucaudMeasurement2007}.
+    \item[Mélange d'anti-oxydant (RTLF)] Bien que la plupart du temps testé indépendamment, il est
         possible d'estimer un ``PO moyen'' par la mise en contact de différents
-        anti-oxydants simultanément (acide ascorbique, glutation et urée par exemple)~\autocite{calasComparison2018}
-    \item[todo] \todo{Mesure directe de OH° (mise en place en à l'IGE dans le cadre d'un
-        programme financé par le LEFE-CHAT)}
+        anti-oxydants simultanément (acide ascorbique, glutation et urée par
+        exemple)~\autocite{mudwayDifferences2001,calasComparison2018}
+    \item[Mesure directe de \ce{HO^{.}}] Développement en cours à l'IGE dans le cadre du
+        programme MHYRIAM financé par le LEFE-CHAT.
 \end{description}
 
 \subsubsection{Un ``meilleur'' test que les autres ?}%
@@ -1154,26 +1183,51 @@ travaux de \cite{fangSemiautomated2015}, parallèlement aux travaux de
 prélèvements et les premières séries annuelles de mesure des PO, conjointement avec
 l'analyse de la chimie des filtres prélevés.
 
+\subsubsection{Mesure directe du PO des espèces chimiques}%
+\label{ssub:mesure_directe_du_po}
+
+La famille des quinones est suspectée d'avoir un rôle majeur dans le stress oxydatif.
+La mesure du PO de solutions de différentes quinones montre en effet leurs fortes
+réactivitées vis-à-vis des différents tests de PO
+\parencite{ayresEvaluating2008,charrierDithiothreitol2012,jiangOxidative2016,calasImportance2017,wangRelationship2018}.
+Certains métaux, et notamment le cuivre ou le manganese, présentent aussi un potentiel
+oxydant important \parencite{charrierDithiothreitol2012,charrierBias2016}.
+Cependant, tous les métaux ne réagissent pas de façons similaire et d'autres comme le fer,
+le zinc ou le cromium ne présentent pas de réactivité particulière au test du DTT.
+
+Il faut noter également que la consomation d'antioxydant de ces différents composés
+n'augmente pas systématiquement linéairement avec la masse
+\parencite{ayresEvaluating2008,charrierDithiothreitol2012,calasImportance2017}.
+De plus, des effets synergiques sont observés 
+\parencite{charrierDithiothreitol2012,charrierHydrogen2014,xiongRethinking2017,samakeUnexpected2017}
+où le mélange de deux composés n'est pas nécessairement la somme de l'action des composés
+pris individuellement.
+
+Cependant, il n'est pas possible de mesurer l'ensemble des espèces chimiques constituant
+les PM. Devant cette foultitude, il paraît donc illusoire de pouvoir attribuer un PO
+intrinsèque à chacune des espèces chimique.
+
 \subsubsection{Corrélation PO -- chimie}%
 \label{ssub:corrélation_po_chimie}
 
-Les liens entre la chimie des particules et les résultats de PO s'est dans un premier temps focalisé
-sur la simple corrélation univariée. Ainsi, le Cu présente de fortes corrélations
-avec le \PODTT{} et \POAA, de même que le carbone organique, etc. Seulement, la simple
-corrélation montre également une forte corrélation entre le \PODTT{} et le \ce{NO3-},
-pourtant inerte en termes d'oxydo-réduction.
-En effet, une corrélation n'implique pas une causalité, et cette corrélation ne résulte
-que d'une co-correlation entre le \ce{NO3-} et d'autres espèces, rédox-actives.
+Afin d'estimer la provenance du PO des particules, les liens entre la chimie PM et les
+résultats de PO s'est dans un premier temps focalisé sur la simple corrélation univariée.
+Conformément aux mesures directes, le cuivre présente une
+forte corrélation avec le \PODTT{} et \POAA, de même que le carbone organique et les HULIS
+\parencite{vermaFractionating2015,batesReview2019}.
+Seulement, il est aussi mis en évidence une forte corrélation entre le \PODTT{} et le
+\NOt, pourtant inerte en termes d'oxydo-réduction.
 
-\todo{parler des quinones, add ref, etc}
+En effet, une corrélation n'implique pas une causalitéi. Cette corrélation ne résulte donc
+que d'une co-correlation entre le \NOt{} d'autres espèces qui, elles, sont, rédox-actives.
+
+L'étude de la corrélation simple permet donc une première estimation des déterminants du
+PO, mais se révèle être insufissante.
 
 
 \subsubsection{Sources de PM et de PO}%
 \label{ssub:sources_de_pm_et_de_po}
 
-% Enfin, il n'est pas possible de mesurer l'ensemble des espèces chimiques constituant les
-% PM. Devant cette foultitude, il paraît donc illusoire de pouvoir attribuer un PO
-% intrinsèque à chacune des espèces chimique.
 % En revanche, si l'on bénéficie d'un nombre suffisant d'échantillon, il est alors possible
 % d'estimer les sources ou facteurs d'émissions (voir
 % section~\ref{sec:source_apportionment_of_pm}). Ce faisant, la vision par ``source'' plutôt
@@ -1182,19 +1236,34 @@ que d'une co-correlation entre le \ce{NO3-} et d'autres espèces, rédox-actives
 % Ainsi, il est possible d'attribuer un PO à une source donnée, sans pour autant avoir
 % besoin de savoir quelles sont les espèces chimiques émises par cette source qui
 % contribuent au PO.
-% De plus, en termes de régulation, la vision par source est davantage pertinente car permet
-% potentiellement une action politique plus rapide que s'il s'agissait de cibler une espèce
-% chimique particulière.
-
 Il est aussi possible de chercher à attribuer un PO non pas à une espèce chimique mais à
-une source spécifique.
-\todo{work in progress}
+une source d'émission spécifique.
+Cette vision par source présente également l'avantage de pouvoir se traduire plus
+simplement en terme de régulation de la qualité de l'air et permet
+potentiellement une action politique plus rapide que s'il s'agissait de cibler une espèce
+chimique particulière.
 
 \paragraph{Mesures directes à l'émission}%
 \label{par:mesures_directes_à_l_émission}
 
-\todo{parler de l'étude de Lucille dans sa thèse. Citer un projet possible avec l'INERIS,
-en cours d'écriture. }
+La méthode la plus intuitive de mesure du PO des sources de PM est de faire les analyses
+directement à l'émission. Les sources les plus échantillonées sont différentes émissions
+liées aux trafic routier \parencite{biswasOxidative2009,parkDifferential2018} ou à l'industrie
+\cite{jooPhysicochemical2018}, ainsi que la combustion de biomasse
+\parencite{jiangOxidative2016,parkDifferential2018} (voir notamment la revue de \cite{batesReview2019}).
+Certaines autres mesures peuvent être effectuées également en chambre de simulation : SOA, spray marin, etc.
+\parencite{parkDifferential2018}.
+
+Les sources d'émissions liés aux émissions primaire du trafic semblent avoir un \PODTTm{}
+intrinsèque (i.e. par microgramme de PM) du même ordre de grandeur que les émissions de
+combustion de biomasse. En revanche, les OAS d'origines biogéniques présentent un \PODTTm{}
+plus faible et une variabilité importante.
+
+\todo{Comment il s'appelle le projet en cours avec l'INERIS ?}
+
+Seulement, bien que renseignant sur la potentiel toxicité des sources, ces mesures à
+l'émissions ne permette pas directement de quantifier l'exposition des populations, qui
+doit également prendre en compte la contribution de chacune des sources aux PM ambiantes.
 
 \paragraph{Études sur sites et en air ambiant}%
 \label{par:études_sur_sites_et_en_air_ambiant}
@@ -1236,29 +1305,40 @@ chapitre~\ref{cha:estimation_des_sources_de_PO}.
 \section{Objectifs de cette thèse}%
 \label{sec:positionnement_de_cette_thèse}
 
+\subsection{Problématique générale}%
+\label{sub:problématique_générale}
+
 Ma thèse s'inscrit donc dans cette double problématique de l'identification et de la
 quantification des contributions massiques des différentes sources d'émission de PM en air
 extérieur, mais aussi de leurs contributions au nouvel indicateur qu'est le potentiel
 oxydant.
 
 Premièrement, il s'agit d'améliorer l'outil de déconvolution des sources de PM
-\textit{Positive Matrix Factorization}, non pas par de nouveaux développements mathématiques de
-résolution de l'équation de conservation des masses, mais par l'élaboration d'une
-expertise dans les différentes paramétrisations de ce modèle, dans son entraînement et
-dans la critique de ses résultats. Notamment, la question de la présence de l'ensemble
-des sources majoritaires se posera dans le
+\textit{Positive Matrix Factorization}. Cette amélioration ne concernent pas de nouveaux
+développements mathématiques de résolution de l'équation de conservation des masses, mais
+l'élaboration d'une expertise dans les différentes paramétrisations de ce modèle, dans son
+entraînement et dans la critique de ses résultats.
+Notamment, la question de la prise en compte ou non des sources majoritaires de PM dans
+les solutions PMF se posera dans le
 chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}, à travers
 l'implémentation de nouveaux traceurs chimiques ou isotopiques.
-Également, les incertitudes des solutions PMF ne sont quasiment jamais explicitées alors
-que c'est une question centrale qui intéressent d'autant plus les décideurs publics. Mes
-travaux tenteront donc de quantifier les incertitudes des contributions des sources aux
-espèces mesurées.
-Aussi, pour pouvoir généraliser des études PMF à différents sites, il faut auparavant
-non seulement s'assurer que les méthodes sont similaires entre les études (mêmes espèces
-chimiques…) mais aussi estimer objectivement la similitude de deux facteurs que l'on estime provenir
-de la même source d'émission, c'est-à-dire comparer les solutions entre elles.
+Également, les incertitudes des solutions PMF ne sont que rarement explicitées alors
+mêmes que c'est une question centrale qui intéressent d'autant plus les décideurs publics.
+Mes travaux s'appliquerons donc à systématiquement quantifier les incertitudes des
+contributions des sources de \PMdix{} aux espèces mesurées.
+Aussi, afin de pouvoir généraliser à large échelle spatiale des résultats issus d'études
+PMF sur différents sites, une méthodologie harmonisée doit être employée (mêmes espèces
+chimiques, mêmes contraintes…), mais la similitude géochimique des différents facteurs
+doit également être objectivée.
 
-\todo{Blabla PO}
+Enfin, l'estimation des sources majoritaires du potentiel oxydant des PM se doit d'être
+quantifiée, aussi bien en termes de \POm{} --PO par microgramme, reflétant la toxicité de
+la source-- que de \POv{} --PO par mètre cube d'air, reflétant l'exposition à cette
+source.  Aussi, les différences de contributions des sources entre concentration massique
+et potentiel oxydant, qui ont commencés à être mise en évidence par les études
+antérieures, manque de généralisation spatiale. Les études précédentes ne couvrant que peu
+de sites de prélèvements différents et présentant une étendue temporelle limitée.
+
 
 \subsection{Questionnement et plan de la thèse}%
 \label{sub:plan_de_la_thèse}

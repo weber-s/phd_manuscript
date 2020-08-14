@@ -113,6 +113,12 @@ nécessairement émis à cet endroit spécifique, il est également possible d'e
 provenance géographique et leur vraisemblance. Nous verrons d'abord le cas simple de la
 rose des polluants, avant d'expliciter plus en avant la méthode PSCF.
 
+Il est a noter que \cite{daiImproving2020} ont présenté récemment une méthodologie de
+couplage entre PMF et météorologie, utilisant des données de force
+et direction du vent ainsi que hauteur de la couche limite. Ce couplage permet notamment
+une diminution des biais liés aux effets météorologiques dans l'estimation de la
+contribution des sources.
+
 \subsubsection{Cas simple : la rose des polluants}%
 \label{ssub:cas_simple_la_rose_des_polluants}
 
@@ -132,9 +138,6 @@ récepteur car dès lors que l'on s'en éloigne, l'orientation et vitesse des ve
 et l'hypothèse de déplacement uniforme de la masse d'air est invalidée.  Or, il est
 courant que les aérosols proviennent de sources non locales, limitant l'utilisabilité de
 cette méthode.
-
-\todo{référencer la publie de Dai et Hopke 2020 ou ils introduisent la direction du vent
-et la hauteur de couche limite locale dans la PMF ? }
 
 \subsubsection{Prendre en compte l'histoire de la masse d'air : PSCF}%
 \label{sub:prendre_en_compte_l_histoire_de_la_masse_d_air_PSCF}
@@ -276,7 +279,17 @@ PMF et couplées aux mesures isotopiques, section~\ref{sub:isotopie}.
 \label{sub:incertitudes_associées}
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
-    \todo{Mettre qqch ici}
+    Le logiciel EPAPMF5 permet l'estimation des incertitudes des profils chimiques des
+    facteurs PMF identifié, mais les incertitudes des contributions temporelle ne sont pas
+    facilement accessibles.
+
+    Aussi, devant analyser de nombreux résultats PMF, j'ai simplifier leur traitement
+    et abstrait le chargement des résultats au sein du module python
+    \href{https://gricad-gitlab.univ-grenoble-alpes.fr/webersa/py4pm/}{py4pm.pmfutilities}\footnote{documentation
+        : \url{https://webersa.gricad-pages.univ-grenoble-alpes.fr/py4pm/usage.html}
+    }
+    permettant, entre autres, une estimation des incertitudes des contributions
+    temporelles.
 \end{tcolorbox}
 
 Le modèle PMF est maintenant relativement couramment utilisé dans le domaine de la
@@ -328,7 +341,6 @@ possibles pour chaque jour étant donnée les incertitudes estimées.
     traits et étoiles grises.}%
     \label{fig:chapter03/vif_nitraterich_all}
 \end{figure}
-
 
 \section{Comparabilité des solutions}%
 \label{sub:comparabilité_des_solutions}
@@ -441,8 +453,8 @@ par exemple des PMF sur 2 sites non encore dans la base de donnée SPECIEUROPE.
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     Ainsi, pour comparer les profils chimiques issues d'une même méthodologie PMF (mêmes
     variables d'entrée, mêmes contraintes, etc) à différents lieux, j'ai ré-implémenté une version
-    de deltaTool en python\footnote{Disponible dans le paquet
-        \href{https://pypi.org/project/py4pm/}{py4pm}, dépot git:
+    de deltaTool en python\footnote{Disponible dans le module
+        \href{https://pypi.org/project/py4pm/}{py4pm.deltatool}, dépot git:
         \url{https://gricad-gitlab.univ-grenoble-alpes.fr/webersa/py4pm}
     } permettant une
     utilisation plus flexible et une comparabilité des PMF étudiées pendant ma thèse.
@@ -1507,6 +1519,12 @@ d'en apprendre plus à ce sujet, des séries annuelles de prélèvements de \PMd
 Cette étude est en cours avec le groupe de l'EMPA, avec lequel j'interagis régulièrement
 sur ces questions.
 
+Une piste non encore explorée concerne également la possibilité des études PMF multisites.
+Ce genre d'étude, similaire à celle récente de \cite{pandolfiLongrange2020}, a l'avantage
+d'une estimation standardisée des différents profils chimiques sur les différents sites
+mais aussi l'augmentation du nombre d'observation, renforcant la stabilité statistiques
+des solutions.
+
 % Question : SPECIEUROPE et contrainte trop fortes sur certains profils ?
 
 Enfin, la ``filtrothèque'' construite aux fils des ans à CHIANTI dans le cadre d'une
@@ -1517,10 +1535,8 @@ différentes mesures de protection de la qualité de l'air de la dernière déce
 résultats préliminaires semblant notamment indiquer une baisse progressive des émissions
 liées au trafic routier, également retrouvé par la tendance à la baisse des émissions d'EC
 observées par les différentes campagnes ACTRIS.
-
-\todo{
- Un article est en cours d'écriture, incluant cet aspect (Borlaza et al., 2020), suite à 2 stages (ingénieur et M1) que j'ai encadrés.
- }
+Un article est en cours d'écriture, incluant cet aspect~\parencite{borlazaLonginprep.}, suite
+notamment à 2 stages (ingénieur et M1) que j'ai encadrés.
 
 Dans l'ensemble, ma participation à ces différents travaux se concrétise à la fois par
 des contributions directes, mais aussi pas des encadrements de stagiaires (Anouk Marsal,
@@ -1531,5 +1547,3 @@ thèse de Valéria Mardonez, stage de M2 de Jean-baptiste Fiches…).
 % Limitation : 
 % - espèce trop réactive ? (oxalate ?)
 % - résolution temporelle \cite{wangSource2018}
-% - PMF multisite ? \cite{pandolfiLongrange2020,daiImproving2020}
-

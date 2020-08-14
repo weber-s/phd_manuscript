@@ -653,8 +653,8 @@ Aussi, le volume de donnée généré, sans être à proprement parler du \texti
 \footnote{Bien qu'il n'y ait pas de définition formelle de \textit{big data}…  Une
     définition que j'apprécie stipule que le \textit{big data} commence lorsque tout
     n'est plus visible sur un tableur. Dans ce cas, nous pouvons catégoriser cette base de
-donnée de \textit{big data}.}
-, demande un traitement automatique de diverses vérifications (balance ionique, détection
+donnée de \textit{big data}.},
+demande un traitement automatique de diverses vérifications (balance ionique, détection
 d'erreur de mesure…) et pré-calcul de variables d'intérêts (bilan de masse des PM,
 fraction crustale…).
 
@@ -665,12 +665,14 @@ des mesures (analyse de points sortant de l'ordinaire…) que pour des recherche
 préliminaires (cycle saison de telle espèce chimique sur sites côtiers ou alpins, évolution
 inter-annuelle, ratio lévoglucosan/OC…).
 
+Aussi, et c'est la raison originale pour laquelle je me suis attaché à cette
+problématique, le croissement de l'ensemble des mesures n'était pas possible. La question
+s'était posée initialement de connaitre les filtres présentant une concentration d'OC
+élevée associés à une concentration de sélénium importante pour une possible collaboration
+du groupe de recherche \parencite{toluDistribution2014,luxemStudying2017}.
+
 Enfin, il n'existait pas de gestion de sauvegarde ou de suivi de l'édition
 de chacun de ces fichiers, rendant ces mesures dépendantes d'un seul support.
-%Ainsi la perte
-%d'une clef USB, un fichier corrompu, un virus informatique, un incendie… mais également
-%des erreurs liés à l'utilisateur via un glisser/déposer un peu trop rapide ou une
-%suppression de cellule pourrait conduire à la perte entière de série annuelle d'analyse.
 
 \subsection{Mise en place et gestion d'une base de données pour la filtrothèque}%
 \label{sub:mise_en_place_et_gestion_d_une_base_de_donnée_pour_la_filtrothèque}
@@ -681,6 +683,9 @@ très nombreuses mesures, une des premières étapes de mon travail a consisté 
 base de données centralisée et homogène de la filtrothèque, pouvant ainsi être traitée de
 manière automatisée.
 \end{tcolorbox}
+
+L'ensemble des actions nécessaires et des procédures mises en place pour la gestion des
+données dans le groupe est présenté dans le schéma~\ref{fig:bdd}.
 
 \paragraph{Différents usages et utilisateurs}%
 \label{par:différents_usages_et_utilisateurs}
@@ -730,22 +735,6 @@ pour la mesure du PO à masse de PM constante. Seulement, les estimations des di
 parties (crustale, sel marin, etc) peuvent dépendre des espèces mesurées, rendant complexe
 leur estimation.
 
-\subsection{Visualisation facilitée}%
-\label{sub:visualisation_facilité}
-
-L'ensemble des actions nécessaires et des procédures mises en place pour la gestion des
-données dans le groupe est présenté dans le shéma~\ref{fig:bdd} ci-dessous.
-
-\todo{Mettre un ou deux graph et exemple d'utilisation}
-
-
-Après avoir présenté dans ce chapitre les différents outils et concepts utilisés ou
-développés dans ce travail de thèse, les chapitres suivants vont s'attacher a présenter
-les résultats sur les avancées de la déconvolution des sources de PM en ce qui concerne
-les contributions massiques
-(chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}) et les
-contributions au potentiel oxydant (chapitre~\ref{cha:estimation_des_sources_de_PO}).
-
 \begin{landscape}
 \begin{figure}[ht]
     \centering
@@ -756,6 +745,37 @@ contributions au potentiel oxydant (chapitre~\ref{cha:estimation_des_sources_de_
     \label{fig:bdd}
 \end{figure}
 \end{landscape}
+
+\subsection{Visualisation facilitée}%
+\label{sub:visualisation_facilité}
+
+La mise en place d'une interface de visualisation simple et rapide permet une première
+exploration facilité et centralisée en un même lieu
+(voir~\ref{fig:figures/chapter02/pmall_example}). Aussi, le croissement de différentes
+variables (lieu de prélèvement, espèces chimiques, sources issues des études PMF, mesure
+du potentiel oxydant, variables météorologiques, etc.) est grandement simplifié.  De même,
+cet outil est évolutif et des fonctionnalités peuvent être très facilement ajoutées. À la
+simple évolution temporelle s'est ajoutée la dispersion et moyenne saisonière et mensuelle
+ou encore la corrélation entre variable.
+
+Ces différentes étapes de visualisation ne se substitue pas à un travail d'analyses
+appronfondi, mais facilite l'analyse exploratoire et la détection d'erreur éventuelle.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figures/chapter02/pmall_example.png}
+    \caption{Example d'utilisation de l'interface de visualisation de PMall.}%
+    \label{fig:figures/chapter02/pmall_example}
+\end{figure}
+
+
+Après avoir présenté dans ce chapitre les différents outils et concepts utilisés ou
+développés dans ce travail de thèse, les chapitres suivants vont s'attacher a présenter
+les résultats sur les avancées de la déconvolution des sources de PM en ce qui concerne
+les contributions massiques
+(chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}) et les
+contributions au potentiel oxydant (chapitre~\ref{cha:estimation_des_sources_de_PO}).
+
 
 
 
