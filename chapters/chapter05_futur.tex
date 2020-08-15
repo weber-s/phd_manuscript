@@ -1,4 +1,11 @@
 
+Les résultats présentées dans cette thèse portent principalement sur la détermination des contributions des sources de PO à travers un modèle linéaire.
+Cependant, le contournement des limitations soulevées et certaines pistes de travail dans le cadre plus général de la recherche d'un meilleur indicateur de l'exposition à travers la métrique du potentiel oxydant ont également commencées à être abordées.
+Ces travaux, pleinement intégrés au projet de recherche de l'équipe CHIANTI, s'appuie en partie sur mes résultats de thèse et en sont sa continuité logique ou explorent des axes volontairement écartés de ma thèse.
+Mon implication y est donc importante et continuera de l'être lors de mes recherches futures.
+
+Dans ce chapitre, deux des axes principaux qui constituerons mon travail post-thèse sont développés et des résultats préliminaires sont brièvement exposés.
+
 \section{Vers une prise en compte améliorée de l'exposition sanitaire}%
 
 Au cours de ma thèse, plusieurs questions ont pu être adressées et certaines réponses
@@ -19,28 +26,43 @@ approximation, il est, par construction, limité et biaisé.  Il existe cependan
 modèles d'inversion non-linéaire qui permettraient la prise en compte des interactions
 entre sources et composés chimiques dans l'estimation des sources de PO.
 
-Finalement, jusqu'à présent seuls des prélèvements en air extérieur ont été considérés. Or, en moyenne, un européen passe la majeur partie de son temps en espace clos intérieur (maison,
+Finalement, jusqu'à présent seuls des prélèvements en air extérieur ont été considérés. Or, en moyenne, un européen passe la majeur partie de son temps en espace clos intérieur (domicile,
 appartement, bureau, voiture, etc.).  La représentativité des mesures en air extérieur
 comme référence de l'exposition de la population n'est donc peut-être suffisante.
 
 \section{Spatialisation du PO}
 
-\subsection{Estimation du PO à partir des PM}
+\subsection{Estimation du PO à partir de la concentration massique des PM}
 
 Dans cette thèse, deux synthèses nationales grande échelle ont été faite : 1) estimation
 des contributions des sources de PM à la masse \autocite{weberComparison2019}
-(chapitre~\ref{cha:estimation_des_sources_de_PO}) et 2) attribution du PO intrinsèque à
-chacune des sources de PM majoritairement présentes \autocite{weberSourceinprep.}
+(chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}) et 2) attribution du PO intrinsèque à
+chacune des sources de PM majoritairement déterminées \autocite{weberSourceinprep.}
 (chapitre~\ref{cha:estimation_des_sources_de_PO}).
 
-Ainsi, et en première approximation, il est possible d'estimer la contribution moyenne
-relative mensuelle des différentes sources à la masse totale des PM. Puis, connaissant le
-PO intrinsèque (i.e. par microgramme de PM) de chacune de ces sources, une simple
-multiplication permet une estimation approximative du PO.  La conséquence est que pour
-chaque valeur de concentration de \PMdix{} il est possible d'estimer, au premier ordre,
+Ainsi, et en première approximation, il est possible d'estimer la contribution relative 
+mensuelle moyenne des différentes sources à la masse totale des PM. 
+Puis, connaissant le PO intrinsèque (i.e. par microgramme de PM) de chacune de ces sources, une estimation au premier ordre du PO est envisageable.
+La conséquence est que pour chaque valeur de concentration de \PMdix{} il est possible d'estimer
 une valeur de PO associée.
 
-Bien évidemment, cette méthode possède trois limitations fortes : 
+Formellement, cela revient à généraliser la figure 6 de \cite{weberSourceinprep.} à un site quelconque et donc à attribuer les PO par microgramme de \PMdix{} mensuels présentés dans le tableau~\ref{tab:monthly_opi}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{lrrrrrrrrrrrr}
+    \toprule
+    month &        1  &        2  &        3  &        4  &        5  &        6  &        7  &        8  &        9  &        10 &        11 &        12 \\
+    \midrule
+    \OPAAm &  0.114 &  0.090 &  0.066 &  0.049 &  0.043 &  0.033 &  0.037 &  0.042 &  0.051 &  0.077 &  0.104 &  0.124 \\
+    \OPDTTm &  0.115 &  0.104 &  0.099 &  0.099 &  0.105 &  0.107 &  0.109 &  0.111 &  0.113 &  0.125 &  0.119 &  0.119 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Approximation du PO intrinsèque (i.e. par microgramme de \PMdix{} mensuel en ne prenant en compte que les 8 sources de PM majoritaires déterminées par \cite{weberSourceinprep.}}
+    \label{tab:monthly_opi}
+\end{table}
+
+Cette méthode possède trois hypothèses et limitations fortes : 
 \begin{itemize}
     \item Les contributions relatives des sources sont moyennées mensuellement d'après un
         ensemble de 15 sites de mesures, de typologie plutôt urbaine, et donc non
@@ -48,17 +70,16 @@ Bien évidemment, cette méthode possède trois limitations fortes :
     \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité
         plus ou moins importante, et une fois de plus estimé à partir d'un ensemble de
         site de typologie plutôt urbaine ;
-    \item Il n'est pas pris en compte la spécificité du site (industrie non classique, topographie, climat...) en question ni la possible
-        évolution du PO intrinsèque des sources qui serait lié à possible une évolution du profil
-        chimique (renouvellement de parc automobile, etc.).
+    \item Il n'est pas pris en compte la spécificité du site en question (source atypique, topographie, climat...) ni la possible évolution du PO intrinsèque des sources qui serait lié à une
+        évolution du profil chimique (renouvellement de parc automobile, etc.).
 \end{itemize}
 
 Elle présente néanmoins l'avantage de pouvoir estimer pour n'importe quel site possédant
-une concentration massique des \PMdix{} une mesure de \POAAv{} et \PODTTv. Il est
-également possible d'utiliser ce procédé en post-traitement d'un modèle déterministe de
-prévision de concentration de \PMdix.
+une concentration massique des \PMdix{} une mesure au premier ordre de \POAAv{} et \PODTTv, 
+qu'il s'agisse d'un site de mesure ``standard'' ou d'une prévision déterministe.
 
-Aussi, au fur et à mesure de la parution future de nouvelles études, il sera tout à fait possible d'affiner cette technique en ne sélectionnant que des sites de même typologie ou
+Aussi, au fur et à mesure de la parution future de nouvelles études, cette technique pourra être 
+affiner en ne sélectionnant que des sites de même typologie ou
 environnement (rural, vallée alpine, trafic, etc.) aussi bien pour la partie d'estimation
 de la contribution des sources aux \PMdix{} que pour la partie attribution d'un PO
 intrinsèque par source.
