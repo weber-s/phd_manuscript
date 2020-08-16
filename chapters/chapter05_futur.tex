@@ -34,31 +34,49 @@ comme référence de l'exposition de la population n'est donc peut-être suffisa
 
 \subsection{Estimation du PO à partir de la concentration massique des PM}
 
-Dans cette thèse, deux synthèses nationales grande échelle ont été faite : 1) estimation
-des contributions des sources de PM à la masse \autocite{weberComparison2019}
+\subsubsection{Principe générale}
+
+Ayant attribué un PO intrinsèque aux sources déterminées sur un site récepteur, il est
+possible de généraliser la prédiction des valeurs de PO sur ce site en estimant une
+contribution moyenne mensuelle de chacune des sources. Ainsi, on peut envisager un ``gap
+filling'' des mesures de PO. Par exemple, le site de GRE-fr n'a été échantilloné qu'un
+jour sur 3, mais la station d'AtmoAURA procurent les mesures journalières des
+concentrations de \PMdix. Il est donc envisageable, en utilisant les contributions
+relatives des sources estimée sur ce site, de ``prédire'' un \POAAv{} et \PODTTv{} pour
+les jours manquants.
+
+Il est aussi possible d'aller plus loins dans la réflexion. Dans cette thèse, deux
+synthèses nationales grande échelle ont été faite : 1) estimation des contributions des
+sources de PM à la masse \autocite{weberComparison2019}
 (chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}) et 2) attribution du PO intrinsèque à
 chacune des sources de PM majoritairement déterminées \autocite{weberSourceinprep.}
 (chapitre~\ref{cha:estimation_des_sources_de_PO}).
 
-Ainsi, et en première approximation, il est possible d'estimer la contribution relative 
-mensuelle moyenne des différentes sources à la masse totale des PM. 
-Puis, connaissant le PO intrinsèque (i.e. par microgramme de PM) de chacune de ces sources, une estimation au premier ordre du PO est envisageable.
-La conséquence est que pour chaque valeur de concentration de \PMdix{} il est possible d'estimer
-une valeur de PO associée.
+Ainsi, et en première approximation et en supposant une généralité suffisante des 2
+synthèses précédentes, il est possible d'estimer la contribution relative mensuelle
+moyenne des différentes sources à la masse totale des PM pour un site quelconque.  Puis,
+connaissant le PO intrinsèque (i.e. par microgramme de PM) de chacune de ces sources, une
+estimation au premier ordre du PO est envisageable.  La conséquence est que pour chaque
+valeur de concentration de \PMdix{} il est possible d'estimer une valeur de PO associée.
 
-Formellement, cela revient à généraliser la figure 6 de \cite{weberSourceinprep.} à un site quelconque et donc à attribuer les PO par microgramme de \PMdix{} mensuels présentés dans le tableau~\ref{tab:monthly_opi}.
+Formellement, cela revient à généraliser la figure 6 de \cite{weberSourceinprep.} à un
+site quelconque et donc à attribuer les \OPm{} (\si{\opm}) par microgramme de \PMdix{}
+mensuels présentés dans le tableau~\ref{tab:monthly_opi}.
 
 \begin{table}[ht]
     \centering
+    \small
     \begin{tabular}{lrrrrrrrrrrrr}
     \toprule
-    month &        1  &        2  &        3  &        4  &        5  &        6  &        7  &        8  &        9  &        10 &        11 &        12 \\
-    \midrule
-    \OPAAm &  0.114 &  0.090 &  0.066 &  0.049 &  0.043 &  0.033 &  0.037 &  0.042 &  0.051 &  0.077 &  0.104 &  0.124 \\
-    \OPDTTm &  0.115 &  0.104 &  0.099 &  0.099 &  0.105 &  0.107 &  0.109 &  0.111 &  0.113 &  0.125 &  0.119 &  0.119 \\
+    month   & 1     & 2     & 3     & 4     & 5     & 6     & 7     & 8     & 9     & 10    & 11    & 12 \\ \midrule
+    \OPAAm  & 0.114 & 0.090 & 0.066 & 0.049 & 0.043 & 0.033 & 0.037 & 0.042 & 0.051 & 0.077 & 0.104 & 0.124 \\
+    \OPDTTm & 0.115 & 0.104 & 0.099 & 0.099 & 0.105 & 0.107 & 0.109 & 0.111 & 0.113 & 0.125 & 0.119 & 0.119 \\
     \bottomrule
     \end{tabular}
-    \caption{Approximation du PO intrinsèque (i.e. par microgramme de \PMdix{} mensuel en ne prenant en compte que les 8 sources de PM majoritaires déterminées par \cite{weberSourceinprep.}}
+    \caption{Approximation du PO intrinsèque en \si{\opm} (i.e. par microgramme) de
+        \PMdix{} mensuel en ne prenant en compte que les 8 sources de PM majoritaires
+        déterminées par \cite{weberSourceinprep.}
+    }
     \label{tab:monthly_opi}
 \end{table}
 
@@ -70,8 +88,10 @@ Cette méthode possède trois hypothèses et limitations fortes :
     \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité
         plus ou moins importante, et une fois de plus estimé à partir d'un ensemble de
         site de typologie plutôt urbaine ;
-    \item Il n'est pas pris en compte la spécificité du site en question (source atypique, topographie, climat...) ni la possible évolution du PO intrinsèque des sources qui serait lié à une
-        évolution du profil chimique (renouvellement de parc automobile, etc.).
+    \item Il n'est pas pris en compte la spécificité du site en question (source atypique,
+        topographie, climat...) ni la possible évolution du PO intrinsèque des sources qui
+        serait lié à une évolution du profil chimique (renouvellement de parc automobile,
+        etc.).
 \end{itemize}
 
 Elle présente néanmoins l'avantage de pouvoir estimer pour n'importe quel site possédant
@@ -84,32 +104,71 @@ environnement (rural, vallée alpine, trafic, etc.) aussi bien pour la partie d'
 de la contribution des sources aux \PMdix{} que pour la partie attribution d'un PO
 intrinsèque par source.
 
-Afin de tester la faisabilité de cette méthode d'estimation au premier ordre du PO, le
-site de Grenoble les Frènes a été choisi car il bénéficie d'une série de mesures longue durée
-du PO depuis 2013. Cette méthode est aussi rendue disponible grâce au développement du module python
-\href{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}{pyOPestimator},
-disponible sur PyPi\footnote{\url{https://pypi.org/project/pyOPestimator/}} et sur la
-forge de l'université de
-grenoble\footnote{\url{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}}.
-Il est également possible d'utiliser \url{http://getopstandop.u-ga.fr/estimate}, permettant d'estimer directement en ligne le
-\POAAv{} et \PODTTv{} de n'importe quelle série de mesure concentration de \PMdix.
+Enfin, il est possible de propager la variabilité aussi bien de la contribution mensuelle
+moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce travail n'a
+pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaire pour
+cela.
 
-Les \POAAv{} et \PODTTv{} mesurés et estimés par cette méthode sont présentés
-figure~\ref{fig:OPGRE-fr-estimated}.  Les cycles saisonniers sont bien retrouvés et les
-amplitudes respectées. Cependant et comme attendu, certains évènements peu fréquent sont
-mal estimés. Au final, une corrélation (Pearson) respective de 0.75 et 0.79 pour le
-\POAAv{} et \PODTTv{} est obtenu en prenant en compte les 769 échantillons où les PO ont
-été mesurés (voir figure~\ref{fig:OPGRE-fr-estimated_scatter}).  Considérant les grandes
-approximations faites par cette méthode, ce résultat présente des performances étonnantes !
-\todo{oui bah t'as qu'à essayer de le prévoir pour l'OPE que je marre un peu....t'as essayé pour les sites suisses? et sur les séries PM10 et PM2.5? et sur le confinement?  tu peux pas dire c'est étonnant quand tu fais prédire sur le même style de site que là tu as fait le calcul...bon après c'est vrai que vu es approximations, au final c'est un r2 meilleur que pour plein de modèles style chimère, c'est fun...si tu es capable de me montrer qu'il savait reproduire le PO qu'on a retrouvé pendant le confinement je veux bien commencer à te prendre au sérieux}
+\begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
+    Cette méthode est aussi rendue disponible grâce au développement du module python
+    \href{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}{pyOPestimator},
+    disponible sur PyPi\footnote{\url{https://pypi.org/project/pyOPestimator/}} et sur la
+    forge de l'université de
+    grenoble\footnote{\url{https://gricad-gitlab.univ-grenoble-alpes.fr/pmall/pyopestimator}}.
+
+    Il est également possible d'utiliser \url{http://getopstandop.u-ga.fr/estimate},
+    permettant d'estimer directement en ligne le \POAAv{} et \PODTTv{} de n'importe quelle
+    série de mesure concentration de \PMdix.
+\end{tcolorbox}
+
+\subsubsection{Application sur un site urbain hors des études précédentes}
+
+Afin de tester la faisabilité et la généralisation suffisante des synthèses nationales,
+cette méthode d'estimation au premier ordre du PO a été appliquée sur le site de Zurich,
+de l'EMPA. N'ont été gardé que les 8 sources majoritaires et leurs \OPm{} moyens.
+
+Les \POAAv{} et \PODTTv{} mesurés sur les échantillons et estimés par cette méthode sont présentés
+figure~\ref{fig:figures/chapter05/pyopestimator_EMPA_ZURICH}.
+Les cycles saisonniers sont bien retrouvés et les amplitudes respectées. Cependant et
+comme attendu, certains évènements peu fréquent sont mal estimés. Au final, une
+corrélation (Pearson) respective de 0.74 et 0.80 pour le
+\POAAv{} et \PODTTv{} est obtenu.
+Considérant les grandes approximations faites par cette méthode, ce résultat présente des
+performances étonnantes.
+% \todo{oui bah t'as qu'à essayer de le prévoir pour l'OPE que je marre un peu....t'as essayé pour les sites suisses? et sur les séries PM10 et PM2.5? et sur le confinement?  tu peux pas dire c'est étonnant quand tu fais prédire sur le même style de site que là tu as fait le calcul...bon après c'est vrai que vu es approximations, au final c'est un r2 meilleur que pour plein de modèles style chimère, c'est fun...si tu es capable de me montrer qu'il savait reproduire le PO qu'on a retrouvé pendant le confinement je veux bien commencer à te prendre au sérieux}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/chapter05/OPGRE-fr_estimated.pdf}
-    \caption{\POAAv{} (haut) et \PODTTv{} (bas) estimés en orange et mesurés en bleu sur le site de GRE-fr depuis 2011.}
-    \label{fig:OPGRE-fr-estimated}
+    \includegraphics[width=1.0\linewidth]{figures/chapter05/pyopestimator_EMPA_ZURICH.pdf}
+    \caption{\POAAv{} (haut) et \PODTTv{} (bas) mesurés et estimés sur le site de l'EMPA
+    de Zurich. $r_p$ et $r_s$ sont respectivement les coefficients corrélations de Pearson
+et Spearman.}
+    \label{fig:figures/chapter05/pyopestimator_EMPA_ZURICH}
 \end{figure}
- 
+
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=1.0\textwidth]{figures/chapter05/OPGRE-fr_estimated.pdf}
+%     \caption{\POAAv{} (haut) et \PODTTv{} (bas) estimés en orange et mesurés en bleu sur le site de GRE-fr depuis 2011.}
+%     \label{fig:OPGRE-fr-estimated}
+% \end{figure}
+%  
+
+\subsubsection{Applicatibilité du ``gap-filling'' sur GRE-fr}
+
+La même analyse est conduite sur le site de GRE-fr, afin d'estimer la faisabilité du
+``gap-filling'', en prenant en compte l'intégralité des mesures annuelles disponibles de
+la station d'AtmoAURA. La prise en compte de toutes ces mesures nous affranchit du biais
+de sélection présent du fait de la fréquence d'échantillonage et d'analyse sur filtre.
+
+\paragraph{Confrontation aux mesures}%
+\label{par:confrontation_aux_mesures}
+
+La confrontation entre estimations et mesures sur l'ensemble de cette série de mesure
+(entre 2013 et début 2020) est présentée figure~\ref{fig:OPGRE-fr-estimated_scatter} et
+est également satisfaisante (coefficient de pearson respectivement de r=0.75 et r=0.79 pour
+le \POAAv{} et \PODTTv).
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/chapter05/OPGRE-fr_estimated_scatter.pdf}
@@ -117,14 +176,12 @@ approximations faites par cette méthode, ce résultat présente des performance
     \label{fig:OPGRE-fr-estimated_scatter}
 \end{figure}
 
+\paragraph{Importance de l'échantillonage et de l'exposition chronique}%
+\label{par:importance_de_l_échantillonage_et_de_l_exposition_chronique}
 
-Il est donc possible d'estimer en premier ordre la contribution des sources majoritaires de
-PM aux PO, et ce en prenant en compte l'intégralité des mesures annuelles disponibles. La
-prise en compte de toutes ces mesures nous affranchit du biais de sélection présent dû
-fait de la fréquence d'échantillonage et d'analyse sur filtre. Les contributions des
-sources de PO d'après les mesures journalières d'Atmo AURA sur la station de GRE-fr sont
-présentées figure~\ref{fig:OPGRE-fr_source_estimated} et détaillées dans le
-tableau~\ref{tab:OPGRE-fr_source_estimated}.
+Les contributions des sources de PO d'après les mesures journalières d'Atmo AURA sur la
+station de GRE-fr sont présentées figure~\ref{fig:OPGRE-fr_source_estimated} et détaillées
+dans le tableau~\ref{tab:OPGRE-fr_source_estimated}.
 
 Du fait de l'importance du PO intrinsèque de la source combustion de biomasse
 (\textit{Biomass burning} dans le graphique), sa contribution moyenne annuelle est
@@ -140,15 +197,6 @@ Si elle n'apprend rien de bien nouveau, cette méthode d'estimation certes gross
 permet la prise en compte d'un très grand nombre de jours d'observation et met d'autant
 mieux en lumière la différence entre contribution moyenne et contribution médiane des
 sources de \PMdix{} aux différents tests de PO.
-
-Enfin, il est possible de propager la variabilité aussi bien de la contribution mensuelle
-moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce travail n'a
-pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaire pour
-cela.
-
-En définitive, puisqu'il est raisonnable\todo{ (je sais pas si je dirais raisonnable!)} d'estimer le PO des \PMdix{} par cette technique,
-il parait envisageable d'établir une cartographie du PO à partir soit des mesures satellites
-de concentration de \PMdix, soit des sorties de modèle CTM.
 
 \begin{figure}[ht]
     \centering
@@ -190,6 +238,11 @@ de concentration de \PMdix, soit des sorties de modèle CTM.
     \label{tab:OPGRE-fr_source_estimated}
 \end{table}
 
+En définitive, il est également envisageable d'établir une cartographie du PO à partir
+soit des mesures satellites de concentration de \PMdix, soit des sorties de modèle CTM.
+Cependant, du fait de ses nombreuses hypothèses et limitations, cette première estimation
+ne peut en revanche pas se substituer à une étude complète de la prévision du PO par
+modèle déterministe.
 
 \subsection{Prévision déterministe du PO (modélisation CTM)}
 
@@ -326,7 +379,7 @@ Aussi, aucun terme d'interaction entre sources n'est pris en compte alors même 
 le potentiel ``effet cocktail'' entre composés chimiques sur le PO est documenté, comme le
 montre la figure~\ref{fig:charrier_hydrogen_2014_fig4} issue de
 \cite{charrierHydrogen2014} ou encore 
-\cites[figure S7 du supplément]{charrierDithiothreitol2012}{xiongRethinking2017}{samakeUnexpected2017}.
+\cites[figure S7 du supplément]{charrierDithiothreitol2012}{xiongRethinking2017}{samakeUnexpected2017}{yuSynergistic2018}.
 
 \begin{figure}[ht]
     \centering
