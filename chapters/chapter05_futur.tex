@@ -180,9 +180,7 @@ le \POAAv{} et \PODTTv).
 \label{par:importance_de_l_échantillonage_et_de_l_exposition_chronique}
 
 Les contributions des sources de PO d'après les mesures journalières d'Atmo AURA sur la
-station de GRE-fr sont présentées figure~\ref{fig:OPGRE-fr_source_estimated} et détaillées
-dans le tableau~\ref{tab:OPGRE-fr_source_estimated}.
-
+station de GRE-fr sont présentées figure~\ref{fig:OPGRE-fr_source_estimated}.% et détaillées dans le tableau~\ref{tab:OPGRE-fr_source_estimated}.
 Du fait de l'importance du PO intrinsèque de la source combustion de biomasse
 (\textit{Biomass burning} dans le graphique), sa contribution moyenne annuelle est
 également importante, notamment pour le \POAAv.  En revanche, puisque l'on dispose de
@@ -206,43 +204,47 @@ sources de \PMdix{} aux différents tests de PO.
     \label{fig:OPGRE-fr_source_estimated}
 \end{figure}
 
-\begin{table}[ht]
-    \centering
-    \footnotesize
-    \begin{tabular}{cp{1cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}}
-        \toprule
-        & & \multicolumn{8}{c}{Estimated source contribution to OP in \si{\opv}}\\
-
-                       &      & Aged salt & Biomass burning & Dust  & MSA rich & Nitrate rich & Primary biogenic & Road traffic & Sulfate rich\\\midrule
-
-\multirow{6}{*}{AAv}   & mean & 0.045 & 0.871 & 0.121 & -0.014 & 0.030 & 0.051 & 0.482 & 0.031\\
-                       & std  & 0.023 & 1.178 & 0.066 & 0.014  & 0.032 & 0.038 & 0.285 & 0.017\\
-                       & min  & 0.002 & 0.008 & 0.005 & -0.114 & 0.001 & 0.001 & 0.041 & 0.001\\
-                       & 25\% & 0.028 & 0.066 & 0.074 & -0.020 & 0.007 & 0.021 & 0.275 & 0.019\\
-                       & 50\% & 0.041 & 0.308 & 0.111 & -0.008 & 0.016 & 0.038 & 0.409 & 0.028\\
-                       & 75\% & 0.058 & 1.265 & 0.158 & -0.004 & 0.042 & 0.072 & 0.626 & 0.041\\
-                       & max  & 0.167 & 6.347 & 0.502 & -0.000 & 0.259 & 0.235 & 1.867 & 0.138\\
-                          \midrule
- \multirow{6}{*}{DTTv} & mean & 0.070 & 0.571 & 0.392 & 0.096 & 0.131 & 0.202 & 0.668 & 0.266\\
-                       & std  & 0.036 & 0.772 & 0.214 & 0.096 & 0.142 & 0.153 & 0.395 & 0.145\\
-                       & min  & 0.003 & 0.005 & 0.016 & 0.001 & 0.004 & 0.006 & 0.057 & 0.013\\
-                       & 25\% & 0.043 & 0.043 & 0.239 & 0.027 & 0.033 & 0.084 & 0.382 & 0.162\\
-                       & 50\% & 0.064 & 0.202 & 0.361 & 0.058 & 0.073 & 0.154 & 0.568 & 0.245\\
-                       & 75\% & 0.090 & 0.829 & 0.510 & 0.140 & 0.184 & 0.286 & 0.868 & 0.348\\
-                       & max  & 0.261 & 4.162 & 1.623 & 0.772 & 1.129
-                       & 0.937 & 2.587 & 1.170\\
-                          \bottomrule
-    \end{tabular}
-    \caption{Contributions estimées des sources de PM aux \POAAv{} et \PODTTv{} pour
-    Grenoble Les Frènes entre 2011 et 2019 (n=3162 jours)}
-    \label{tab:OPGRE-fr_source_estimated}
-\end{table}
+% \begin{table}[ht]
+%     \centering
+%     \footnotesize
+%     \begin{tabular}{cp{1cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}p{1.3cm}}
+%         \toprule
+%         & & \multicolumn{8}{c}{Estimated source contribution to OP in \si{\opv}}\\
+%
+%                        &      & Aged salt & Biomass burning & Dust  & MSA rich & Nitrate rich & Primary biogenic & Road traffic & Sulfate rich\\\midrule
+%
+% \multirow{6}{*}{AAv}   & mean & 0.045 & 0.871 & 0.121 & -0.014 & 0.030 & 0.051 & 0.482 & 0.031\\
+%                        & std  & 0.023 & 1.178 & 0.066 & 0.014  & 0.032 & 0.038 & 0.285 & 0.017\\
+%                        & min  & 0.002 & 0.008 & 0.005 & -0.114 & 0.001 & 0.001 & 0.041 & 0.001\\
+%                        & 25\% & 0.028 & 0.066 & 0.074 & -0.020 & 0.007 & 0.021 & 0.275 & 0.019\\
+%                        & 50\% & 0.041 & 0.308 & 0.111 & -0.008 & 0.016 & 0.038 & 0.409 & 0.028\\
+%                        & 75\% & 0.058 & 1.265 & 0.158 & -0.004 & 0.042 & 0.072 & 0.626 & 0.041\\
+%                        & max  & 0.167 & 6.347 & 0.502 & -0.000 & 0.259 & 0.235 & 1.867 & 0.138\\
+%                           \midrule
+%  \multirow{6}{*}{DTTv} & mean & 0.070 & 0.571 & 0.392 & 0.096 & 0.131 & 0.202 & 0.668 & 0.266\\
+%                        & std  & 0.036 & 0.772 & 0.214 & 0.096 & 0.142 & 0.153 & 0.395 & 0.145\\
+%                        & min  & 0.003 & 0.005 & 0.016 & 0.001 & 0.004 & 0.006 & 0.057 & 0.013\\
+%                        & 25\% & 0.043 & 0.043 & 0.239 & 0.027 & 0.033 & 0.084 & 0.382 & 0.162\\
+%                        & 50\% & 0.064 & 0.202 & 0.361 & 0.058 & 0.073 & 0.154 & 0.568 & 0.245\\
+%                        & 75\% & 0.090 & 0.829 & 0.510 & 0.140 & 0.184 & 0.286 & 0.868 & 0.348\\
+%                        & max  & 0.261 & 4.162 & 1.623 & 0.772 & 1.129
+%                        & 0.937 & 2.587 & 1.170\\
+%                           \bottomrule
+%     \end{tabular}
+%     \caption{Contributions estimées des sources de PM aux \POAAv{} et \PODTTv{} pour
+%     Grenoble Les Frènes entre 2011 et 2019 (n=3162 jours)}
+%     \label{tab:OPGRE-fr_source_estimated}
+% \end{table}
 
 En définitive, il est également envisageable d'établir une cartographie du PO à partir
 soit des mesures satellites de concentration de \PMdix, soit des sorties de modèle CTM.
 Cependant, du fait de ses nombreuses hypothèses et limitations, cette première estimation
 ne peut en revanche pas se substituer à une étude complète de la prévision du PO par
 modèle déterministe.
+En effet, il n'est pris en compte que des généralités et il n'est donc pas possible
+de prévoir quoi que ce soit en dehors de cette état moyen. Par exemple, il est impossible
+d'estimer le PO lors du confinnement de 2020 avec cette méthode, tant l'écart entre la
+normalitée et cette période est importante.
 
 \subsection{Prévision déterministe du PO (modélisation CTM)}
 
