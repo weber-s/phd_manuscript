@@ -14,7 +14,7 @@ développés et des résultats préliminaires sont brièvement exposés.
 
 \section{Vers une prise en compte améliorée de l'exposition sanitaire}%
 
-Au cours de ma thèse, plusieurs questions ont pu être adressées et certaines réponses
+Au cours de ma thèse, plusieurs questions ont pu être posées et certaines réponses
 apportées.  Cependant, le choix a été fait de se limiter principalement à l'estimation des
 sources du potentiel oxydant à travers le modèle source-récepteur PMF. Bien qu'apportant
 des résultats éclairant sur la dynamique des différents tests de PO, plusieurs aspects ont
@@ -22,7 +22,7 @@ des résultats éclairant sur la dynamique des différents tests de PO, plusieur
 
 Premièrement, l'utilisation des modèles site-récepteur limite nécessairement la couverture
 spatiale et temporelle à quelques sites d'études et années de mesures. Or la
-généralisation d'une estimation des mesures de PO en tous points spatio-temporel est
+généralisation d'une estimation des mesures de PO en tous points spatio-temporels est
 souhaitable lorsque l'on s'intéresse à coupler dans une même étude mesures
 épidémiologiques et qualité de l'air, et elle est indispensable si l'on souhaite faire de
 la prévision dans le futur.
@@ -99,10 +99,10 @@ Cette méthode possède trois hypothèses et limitations fortes :
         nécessairement représentative de l'ensemble des situations possibles ;
     \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité
         plus ou moins importante, et une fois de plus estimé à partir d'un ensemble de
-        site de typologie plutôt urbaine ;
+        sites de typologie plutôt urbaine ;
     \item Il n'est pas pris en compte la spécificité du site en question (source atypique,
         topographie, climat...) ni la possible évolution du PO intrinsèque des sources qui
-        serait lié à une évolution du profil chimique (renouvellement de parc automobile,
+        serait liés à une évolution du profil chimique (renouvellement de parc automobile,
         etc.).
 \end{itemize}
 
@@ -118,8 +118,8 @@ de la contribution des sources aux \PMdix{} que pour la partie attribution d'un 
 intrinsèque par source.
 
 Enfin, il est possible de propager la variabilité aussi bien de la contribution mensuelle
-moyenne de chacune de source que de leur PO intrinsèque dans cette méthode. Ce travail n'a
-pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaire pour
+moyenne de chacune des sources que de leur PO intrinsèque dans cette méthode. Ce travail n'a
+pas encore été entamé, mais nous disposons de l'ensemble des informations nécessaires pour
 cela.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
@@ -139,8 +139,8 @@ cela.
 Afin de tester la faisabilité et la généralisation suffisante des synthèses nationales,
 cette méthode d'estimation au premier ordre du PO a été appliquée sur le site de Zurich,
 pour les échantillons de l'étude en cours avec l'EMPA. 
-L'estimation a été faite en n'utilisant que les 8 sources issues de majoritaires de la
-synthèse françaises, et leur \OPm{} moyen pour l'ensemble des 15 sites français.
+L'estimation a été faite en n'utilisant que les huit sources issues de majoritaires de la
+synthèse françaises, et leur \OPm{} moyen pour l'ensemble des quinze sites français.
 
 Les \POAAv{} et \PODTTv{} mesurés sur les échantillons et estimés par cette méthode sont
 présentés figure~\ref{fig:figures/chapter05/pyopestimator_EMPA_ZURICH} pour tous les
@@ -283,7 +283,7 @@ peuvent éventuellement apporter une meilleure prévisibilité.
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     L'utilisation des CTM pour l'étude du PO a commencé grâce à une collaboration avec le
-    TNO et une première visite de 2 semaines (sur financement de l'IDEX DataInstitute de l'université Grenoble Alpes) lors du
+    TNO et une première visite de deux semaines (sur financement de l'IDEX DataInstitute de l'université Grenoble Alpes) lors du
     workshop LOTOS-EUROS de janvier 2019 et constituera le cadre de mon post-doctorat 2021-2022.
 
     Le même travail a commencé lors du stage et la poursuite en thèse de Matthieu Vida, en
@@ -295,7 +295,7 @@ peuvent éventuellement apporter une meilleure prévisibilité.
 \end{tcolorbox}
 
 Si la partie précédente présentait une première méthode approchant de façon imparfaite la prévision du PO à partir
-du calcul de la masse des \PMdix{} estimée par les CTM, il est certainement cependant
+du calcul de la masse des \PMdix{} estimée par les CTM, il est certainement
 préférable d'inclure directement la variable ``potentiel oxydant'' dans ces modèles.
 
 Cependant, le ``PO'' n'étant pas une espèce chimique évoluant et réagissant dans le temps, son
@@ -313,22 +313,22 @@ Ensuite, deux solutions sont envisageables:
         PO intrinsèques des facteurs PMF aux sources estimées par CTM.
 \end{enumerate}
 
-La première solution permettrait la prise en compte d'un nombre de source beaucoup plus
-grand que celles retenues dans les PMF (émissions portuaires, différents type de résidentiel
+La première solution permettrait la prise en compte d'un nombre de sources beaucoup plus
+grand que celui retenu dans les PMF (émissions portuaires, différents type de résidentiel
 ou trafic, feu de forêt, etc) puisque les sources des CTM sont fondées sur les SNAP, qui
 sont très nombreux.
 En revanche, cette solution, dans son implémentation actuelle à travers le ``source
-labelling'', ne prend en compte uniquement les sources primaires. Par exemple, la
-condensation des NOx du trafic routier et de l'ammoniac de l'agriculture forme du
+labelling'', ne prend en compte uniquement que les sources primaires. Par exemple, la
+condensation des \ce{NO_x} du trafic routier et de l'ammoniac de l'agriculture forme du
 nitrate-d'ammonium et est attribué selon une moyenne pondérée à la source trafic et
 agricole. Il y a donc une perte d'information entre source primaire et secondaire.
 
 La deuxième solution nécessite une comparaison des émissions chimiques considérées dans
 chacun des SNAP utilisés avec les profils chimiques des facteurs PMF. S'il est possible
-d'établir un rapprochement entre ces 2 nomenclatures, il sera possible d'estimer le PO
+d'établir un rapprochement entre ces deux nomenclatures, il sera possible d'estimer le PO
 apporté par ces sources.
 
-Dans les 2 cas, le développement de la technique de ``source-labelling'' et la base de
+Dans les deux cas, le développement de la technique de ``source-labelling'' et la base de
 données unique d'attribution des sources en site récepteur appellent à une étude de
 sensibilité des prédictions des CTM. Notamment, LOTOS-EUROS\footnote{LOTOS-EUROS:
     \url{https://lotos-euros.tno.nl/}} (abrégé LE) développé au TNO (\textit{Netherlands Organisation for
@@ -338,10 +338,10 @@ avancée est possible grâce à l'implémentation de la méthode de \cite{kranen
 LOTOS-EUROS v2 \autocite{mandersCurriculum2017}.
 
 Une collaboration entre l'IGE et le TNO a donc été engagée afin de confronter les
-prédictions de LE aux sorties PMF. Aussi, dans lors de mon séjour au TNO en 2018, nous
+prédictions de LE aux sorties PMF. Aussi, lors de mon séjour au TNO en 2018, nous
 avons pu apporter une preuve de concept de la faisabilité de la prédiction du PO par
-LE pour 2 sources chimiquement proches entre LE et les PMF.
-La figure~\ref{fig:OPmap} présente pour 10 février 2017 à 11h30 la contribution du
+LE pour deux sources chimiquement proches entre LE et les PMF.
+La figure~\ref{fig:OPmap} présente pour le 10 février 2017 à 11h30 la contribution du
 transport routier et de la combustion résidentielle à la masse et au \PODTTv{} pour
 l'ensemble de l'Europe.
 
@@ -370,16 +370,16 @@ de \cite{weberSourceinprep.}, mais n'incluant que 109 mesures composites de pote
 oxydant sur 6 sites de prélèvement en Suisse. Dans cette étude, à laquelle j'ai pris
 part, le couplage entre PO intrinsèque et sources déterminées par le CTM CAMx est proposé.
 Les résultats obtenus montrent une fois de plus
-l'importance de la combustion de biomasse mais aussi de la source trafic routière dans
+l'importance de la combustion de biomasse mais aussi de la source trafic routier dans
 les zones densément peuplées. En estimant l'exposition des populations avec soit la masse de
-\PMdix{} soit la quantité de \POv{} inhalé, cette étude montre une
-redistribution complète de l'importance des sources entre concentration massique et
+\PMdix{} soit la quantité de \POv{} inhalée, cette étude montre une
+redistribution complète de l'importance des sources entre concentrations massiques et
 potentiels oxydants. Encore une fois, l'importance du trafic routier s'accroît
 considérablement et l'aérosol inorganique, pourtant dominant en terme de masse, n'a plus
 qu'une influence minime sur l'exposition aux \POv.
 
-Le même type d'étude, fondée sur une représentativité spatiale et temporelle des données
-d'entrée plus importante à l'échelle européenne devra être généralisée dans le futur.
+Le même type d'étude, fondé sur une représentativité spatiale et temporelle des données
+d'entrée plus importante à l'échelle européenne devra être généralisé dans le futur.
 
 % \begin{figure}[ht]
 %     \centering
@@ -394,7 +394,7 @@ d'entrée plus importante à l'échelle européenne devra être généralisée d
 
 \begin{tcolorbox}[colback=red!5!white,colframe=Melon,title=Note]
     Cette partie reprend les travaux préliminaires présentés par \cite{borlazaUrbaninprep.} sur 
-    l'attribution du PO aux sources d'émission sur 3 sites Grenoblois. Le stage de M2 de
+    l'attribution du PO aux sources d'émissions sur trois sites Grenoblois. Le stage de M2 de
     \cite{fichesMachine2020}, que j'ai encadré, s'est également attaché à la mise en place et
     l'interprétabilité des réseaux de neurones dans une optique d'attribution des sources
     de potentiel oxydant des particules atmosphériques.
@@ -459,18 +459,18 @@ suivantes :
 \label{sub:les_réseaux_de_neurones}
 
 Les réseaux de neurones artificiels (\textit{artificial neural network} ANN) semblent être
-type de modèle répondant à ces critères. Ils sont plus complexes et flexibles que les
+un type de modèle répondant à ces critères. Ils sont plus complexes et flexibles que les
 modèles linéaires, et sont connus pour être capables de prendre en compte des phénomènes
 fortement non linéaires. Aussi, leurs capacités à apprendre des relations complexes et ce
 sans aucune connaissance a priori, simplement en s'entraînant sur un ensemble de données
 suffisant, en font un outil très intéressant.
 Ce type de modèle a été appliqué avec succès en prévision de la qualité de l'air pour le
 \ce{NO2} et les \PMdix{} par~\cite{kukkonenExtensive2003} en comparaison à un modèle
-linéaire et déterministe. Dans d'autres disciplinaires des sciences de l'environnement, ce
+linéaire et déterministe. Dans d'autres disciplines des sciences de l'environnement, ce
 type de modèle a également montré son intérêt pour l'évaluation de la qualité de
 l'eau~\autocite{nathanApplication2017}.
 
-Formellement, un réseaux de neurones est un graphe orienté pondéré, où lorsque deux
+Formellement, un réseau de neurones est un graphe orienté pondéré, où lorsque deux
 nœuds (ou neurones) sont connectés (i.e lié par un bord orienté du graphe), le résultat en
 sortie du neurone devant est utilisé comment entrée du neurone de derrière.
 Autrement dit un réseau de neurones consiste en une succession de ``nœuds'' (ou synapses, ou
@@ -479,15 +479,15 @@ mime un réseau de neurones biologiques naturels très simpliste où chacune des
 informations reçue par un neurone se propage à d'autres neurones afin de prédire une
 valeur finale (par ex. le \POv) en fonction d'un signal initial (par ex. la
 concentration massique des sources de PM).
-On distingue 3 types de neurones:
+On distingue trois types de neurones:
 \begin{itemize}
-    \item neurones d'entrées (input) (connecté aux variables d'entrées),
+    \item neurones d'entrées (input) (connectées aux variables d'entrées),
     \item neurones de sorties (output),
     \item neurones cachés (répartis en une ou plusieurs couches).
 \end{itemize}
 Le plus couramment utilisé est le \textit{Multi Layer Perceptron} (MLP), qui est un
-réseau a-cyclique où les neurones sont structurés en couche successives\footnote{Il est
-d'ailleurs montré que le MLP est un approximateur universel}, illustré dans la
+réseau a-cyclique où les neurones sont structurés en couches successives\footnote{Il est
+d'ailleurs montré que le MLP est un approximateur universel.}, illustré dans la
 figure~\ref{fig:MLP_architecture}.
 
 \begin{figure}[ht]
@@ -502,7 +502,7 @@ figure~\ref{fig:MLP_architecture}.
 
 Au sein de chaque nœud, l'information reçue est condensée en une valeur unique puis propagée à
 son tour aux neurones suivants. En prenant l'exemple du MLP décrit par la
-figure~\ref{fig:MLP_architecture}, cette condensation d'information pour la première
+figure~\ref{fig:MLP_architecture}, cette condensation d'informations pour la première
 couche se fait selon l'Eq.~\ref{eq:ANN_neurone}:
 \begin{align}
     \label{eq:ANN_neurone}
@@ -510,7 +510,8 @@ couche se fait selon l'Eq.~\ref{eq:ANN_neurone}:
 \end{align}
 avec $w^x_{i,j}$ les poids entre les neurones des couches d'entrée et cachée, et
 $w^x_{0,j}$ une constante d'activation pour le neurone $j$. La fonction $H$
-peut-être de différents types, mais est très souvent non-linéraire. Le fait de combiner 2
+peut-être de différents types, mais est très souvent non-linéraire. Le fait de combiner
+deux
 couches de neurones et d'ajouter une fonction d'activation non linéaire amène la
 complexité recherchée permettant la prise en compte des phénomènes complexes.
 
@@ -528,7 +529,7 @@ Dans le cadre d'un financement du projet Idex DataInstitute de l'Université Gre
 obtenu un financement pour l'encadrement d'un stagiaire de M2, Jean-Baptiste Fiches, afin
 de travailler spécifiquement sur ces questions :
 \begin{enumerate}
-    \item Est-il possible d'appliquer un réseau de neurone pour la prédiction du potentiel
+    \item Est-il possible d'appliquer un réseau de neurones pour la prédiction du potentiel
         oxydant ?
     \item Ces réseaux présentent-ils des performances statistiques meilleures que la
         régression linéaire ?
@@ -548,14 +549,14 @@ neurones artificiel (MLP).
 \paragraph{Performance statistique}%
 \label{par:performance_statistique}
 
-Appliqué sur les 3 sites de la métropole Grenobloise, le MLP a été entraîné sur
+Appliqués sur les trois sites de la métropole Grenobloise, le MLP a été entraîné sur
 \SI{80}{\percent} des données et testé sur les \SI{20}{\percent} restant. Le MLR a quant à
 lui été entrainé sur l'ensemble des séries de mesures\footnote{Une comparaison pour les mêmes
 ensembles d'entrainement et de test est en cours.}
 Les performances statistiques de la prediction des MLP sont du même ordre que celles
-obtenues pour le MLR en prennant en compte son ensemble d'entrainement (figure~\ref{fig:perfMLPMLR}).
+obtenues pour le MLR alors même que le MLP n'a pas été entrainé sur ces données (figure~\ref{fig:perfMLPMLR}).
 Ainsi, le MLP prédit aussi bien chaque \POv{}
-(mesuré par AA, DTT et DCFH) sur les 3 sites que l'explique le MLR.
+(mesuré par AA, DTT et DCFH) sur les trois sites que l'explique le MLR.
 Ce type de modèle permet donc d'expliquer au moins aussi bien que le MLR les PO à partir
 des sources d'émissions de \PMdix.
 
@@ -571,9 +572,9 @@ des sources d'émissions de \PMdix.
 \paragraph{Présence d'effets non linéaires}%
 \label{par:présence_d_effets_non_linéaires}
 
-Pour estimer si le MLP capture bien des relations non-linéaires, 2 expériences sont menées.
-Dans les deux cas, le MLP est entraîné sur le jeu de données du site de GRE-fr. Deux
-situations fictives sont ensuite imaginées.
+Pour estimer si le MLP capture bien des relations non-linéaires, deux expériences sont
+menées.  Dans les deux cas, le MLP est entraîné sur le jeu de données du site de GRE-fr.
+Deux situations fictives sont ensuite imaginées.
 
 La première consiste à estimer le \PODTTv{} par le MLP, toutes contributions des sources
 nulles sauf une, variant de 0 à 24~\si{\ugm}. La réponse du \PODTTv{} en fonction de
@@ -590,17 +591,18 @@ trafic primaire et industrielle.
     \centering
     \includegraphics[width=0.9\linewidth]{figures/chapter05/prediction_other_0_softplus-64-0.4.pdf}
     \caption{Effet non linéaire de l'augmentation de la concentration d'une source
-        d'émission sur le \PODTTv{} d'après un réseau de neurone entraîné sur GRE-fr. Source: \cite{fichesMachine2020}.}%
+        d'émission sur le \PODTTv{} d'après un réseau de neurones entraîné sur GRE-fr. Source: \cite{fichesMachine2020}.}%
     \label{fig:figures/chapter05/10sourcesLinearite}
 \end{figure}
 
 Dans la deuxième situation, on cherche à estimer si le MLP prévoit des effets non-additifs
 lors de la présence conjointe de plusieurs sources de \PMdix. L'expérience prédit donc le
-\PODTTv{} pour un ensemble d'échantillons de test où cette fois 2 sources présentent des
-concentration variant chacune de 0 à \SI{15}{\ugm}.
+\PODTTv{} pour un ensemble d'échantillons de test où cette fois deux sources présentent des
+concentrations variant chacune de 0 à \SI{15}{\ugm}.
 Si l'effet est additif, le gradient de l'augmentation du \PODTTv{} dans un espace en
-2 dimensions représentant la contribution de chacune des sources est sensé être linéaire.
-Dans le cas contraire, cela indiquera un effet cocktail entre ces 2 sources.
+deux dimensions représentant la contribution de chacune des sources est sensé être
+linéaire.
+Dans le cas contraire, cela indiquera un effet cocktail entre ces deux sources.
 La figure~\ref{fig:figures/chapter05/coktail_Primary traffic_Nitrate-rich} montre
 l'influence de la présence conjointe de deux sources d'émissions (\textit{Primary traffic}
 et \textit{Nitrate-rich}) sur le \PODTTv. L'effet conjoint est bien non linéaire car alors
@@ -678,7 +680,7 @@ L'exposition intérieure des foyers est également quantifiée avec des mesures 
 Cette collaboration nous permet une caractérisation précise de
 l'exposition personnelle maternelle en lien avec un ensemble conséquent de variables
 phénotypiques du nouveau-né.
-De façons similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition au
+De façon similaire à l'étude de \cite{ouidirEstimation2015}, l'effet de l'exposition au
 \ce{NO2}, concentration massique des \PMdc{} mais surtout aux \POAAv{} et \PODTTv{} est en
 cours de publication par \cite{borlazaPersonalinprep.}.
 Grâce à cette étude, le pouvoir prédictif comparé de la métrique de la masse ou du PO des \PMdc{}
@@ -686,11 +688,12 @@ sur le petit poids de naissance ou la circonférence crânienne, parmi d'autres 
 pourra être évalué.
 
 Finalement, afin d'augmenter la résolution spatiale nécessaire aux prévisions
-épidémiologiques, la thèse d'Anouk Marshal (financement ADEMEi/ANSES, co-encadrement IGE/IAB) débutant à l'automne 2020 à
+épidémiologiques, la thèse d'Anouk Marshal (financement ADEME/ANSES, co-encadrement
+IGE/IAB) débutant à l'automne 2020 à
 l'IGE aura pour objectif d'établir un modèle de \textit{land use regression} (LUR) sur
 Grenoble et sa périphérie afin de quantifier l'importance de l'environnement géographique
-pour la mesure du PO et l'exposition personnel, en lien avec les effets sanitaires
-observées dans la cohortes SEPAGES.
+pour la mesure du PO et l'exposition personnelle, en lien avec les effets sanitaires
+observés dans la cohorte SEPAGES.
 
 %
 % 140 foyers pour deux périodes entre 2018 et
