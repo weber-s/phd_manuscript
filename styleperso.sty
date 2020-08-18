@@ -45,6 +45,8 @@
 \usepackage[nobottomtitles*]{titlesec}
 \usepackage{titletoc}
 \usepackage{threeparttablex}
+\usepackage{microtype}
+\usepackage[shortcuts]{extdash}
 % }}}
 % =====================================================================================
 
@@ -200,9 +202,9 @@
 \counterwithin{table}{section}
 \counterwithin{figure}{section}
 \counterwithin{equation}{section}
-\renewcommand{\thetable}{\thechapter.\thesection-\arabic{table}}
-\renewcommand{\thefigure}{\thechapter.\thesection-\arabic{figure}}
-\renewcommand{\theequation}{\thechapter.\thesection-\arabic{equation}}
+\renewcommand{\thetable}{\thechapter.\thesection\=/\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\thesection\=/\arabic{figure}}
+\renewcommand{\theequation}{\thechapter.\thesection\=/\arabic{equation}}
 
 \captionsetup[figure]{labelfont={bf},font=small}
 \captionsetup[table]{labelfont={bf},font=small}
@@ -284,7 +286,7 @@
 \onehalfspacing
 % \setlength{\parsep}{0pt}
 % \setlength{\parskip}{10pt}
-\setlength{\parskip}{1.2ex plus 0.5ex minus 0.3ex}
+\setlength{\parskip}{1.2ex plus 0.5ex minus 0.5ex}
 
 % This is how to control linespacing using setspace
 % (\singlespacing or doublespacing just call this command)

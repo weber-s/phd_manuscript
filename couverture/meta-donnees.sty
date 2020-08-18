@@ -16,11 +16,12 @@
 \ifx\colorbox\undefined\RequirePackage{color}\fi}
 
 \long\def\Universite#1{\gdef\@Universite{#1}}
-\def\@Universite{\includegraphics[width=10cm,clip]{couverture/logo-comue-cmjn.pdf}}
+% \def\@Universite{\includegraphics[width=10cm,clip]{couverture/logo-comue-cmjn.pdf}}
+\def\@Universite{\includegraphics[width=5cm,clip]{couverture/logo_UGA_couleur_cmjn.jpg}}
 \long\def\EcoleDoctorale#1{\gdef\@EcoleDoctorale{dans l'Ecole Doctorale {\bfseries#1}}}
 \def\@EcoleDoctorale{}     
 \long\def\Grade#1{\gdef\@Grade{\uppercase{#1}}}
-\def\@Grade{\uppercase{Docteur de l'Université de Grenoble}}       
+\def\@Grade{\uppercase{Docteur de l'Université de Grenoble}}
 \long\def\Specialite#1{\gdef\@Specialite{#1}}
 \def\@Specialite{}
 \long\def\Arrete#1{\gdef\@Arrete{#1}}
@@ -33,6 +34,8 @@
 \def\@Laboratoire{}   
 \long\def\Titre#1{\gdef\@Titre{#1}}
 \def\@Titre{}      
+\long\def\TitreEN#1{\gdef\@TitreEN{#1}}
+\def\@TitreEN{}      
 \long\def\Soustitre#1{\gdef\@Soustitre{#1}}
 \def\@Soustitre{}  
 \long\def\Auteur#1{\gdef\@Auteur{#1}}
@@ -79,7 +82,7 @@
 \newcommand{\@ThesisDiploma}{{\@Grade}}
 \newcommand\ThesisDiploma[1]{\renewcommand{\@ThesisDiploma}{{#1}}}
 
-\newcommand{\@ThesisPreparedIn}{préparée au sein du }
+\newcommand{\@ThesisPreparedIn}{préparée au sein de l'}
 \newcommand\ThesisPreparedIn[1]{\renewcommand{\@ThesisPreparedIn}{{#1}}}
 
 \newcommand{\@ThesisLaboratory}{{\@Laboratoire}}
@@ -100,7 +103,7 @@
 \newcommand{\@ThesisPresentedThe}{{\@Depot}}
 \newcommand\ThesisPresentedThe[1]{\renewcommand{\@ThesisPresentedThe}{{#1}}}
 
-\newcommand{\@ThesisTitle}{{\@Titre}}
+\newcommand{\@ThesisTitle}{{\@Titre\newline\par\@TitreEN}}
 \newcommand\ThesisTitle[1]{\renewcommand{\@ThesisTitle}{{#1}}}
 
 \newcommand{\@ThesisSubTitle}{{\@Soustitre}}
@@ -123,7 +126,10 @@
 
 \newcommand{\@ThesisJury}{\begin{tabular}{@{}p{12.5cm}@{}}\@Jury\end{tabular}}
 
-\newcommand{\@UniversityLogo}{\includegraphics[clip]{couverture/logo_Univ_Grenoble.pdf}}
+% \newcommand{\@UniversityLogo}{\includegraphics[clip]{couverture/logo_Univ_Grenoble.pdf}}
+% \newcommand\UniversityLogo[1]{\renewcommand{\@UniversityLogo}{{#1}}}
+
+\newcommand{\@UniversityLogo}{\includegraphics[width=5.65cm]{couverture/bordereau.jpg}}
 \newcommand\UniversityLogo[1]{\renewcommand{\@UniversityLogo}{{#1}}}
 
 \newcommand\@UGthesepage@height{28cm}
@@ -163,7 +169,12 @@
             \newpage}
 
 \newcommand\@Thesis@titlep@ge{\fboxsep=0pt
-\fbox{\colorbox[gray]{.82}{\parbox[t][28cm][b]{5.7cm}{\hfil\@UniversityLogo\hfil\par\vskip5mm}}\hskip5mm\parbox[t][28cm]{12.8cm}{
+\fbox{
+    % \colorbox[gray]{.82}{
+    %     \parbox[t][28cm][b]{5.7cm}{\hfil\@UniversityLogo\hfil\par\vskip5mm}
+    % }
+        \parbox[t][28cm][b]{5.70cm}{\@UniversityLogo}
+    \parbox[t][28cm]{12.0cm}{
        \vskip1mm plus1fil
              \hfill\@ThesisHead
        \vfill

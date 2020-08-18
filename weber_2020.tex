@@ -1,5 +1,6 @@
 % vim : foldmethod=marker
 \documentclass[a4paper,11pt]{book}
+\usepackage{couverture/meta-donnees}
 
 \usepackage{styleperso}
 \usepackage{todonotes}
@@ -16,23 +17,30 @@
 
 % =====================================================================================
 % ==== Title page {{{
-\author{Samuël Weber}
-\title{Aerosols sources and their contribution to the oxidative potential of Particulate Matter}
+% \author{Samuël Weber}
+% \title{Aerosols sources and their contribution to the oxidative potential of Particulate Matter}
 % }}}
 % =====================================================================================
 
 \begin{document}
 
-
-% \include{couverture}
-\maketitle
+\include{couverture}
 
 \frontmatter
 
+
+\begin{center}
+    \Huge\textsc{Résumé}
+\end{center}
+\addcontentsline{toc}{chapter}{Résumé}
+\input{chapters/resume.tex}
 \clearpage
-% \chapter{Acknowledgements}
-% \input{chapters/remerciements.tex}
-%
+
+\begin{center}
+    \Huge\textsc{Remerciements}
+\end{center}
+\addcontentsline{toc}{chapter}{Remerciements}
+\input{chapters/remerciements.tex}
 
 % =====================================================================================
 % ====== TableofContent {{{
@@ -41,7 +49,6 @@
 % =====================================================================================
 
 \mainmatter
-
 
 \chapter*{Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
@@ -101,9 +108,10 @@
 \printbibliography
 % \bibbysegment[heading=subbibliography]
 
+{\small
 \listoftables
 \listoffigures
-
+}
 % }}}
 % =====================================================================================
 
@@ -140,11 +148,11 @@
 \end{tcolorbox}
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/Mobil'Air_SA-Organics_LB_01082020.pdf}
 
-\section{\cite{weberComparison2019} SOURCES : complément d'information}
+\section{Weber et al. (2019) SOURCES : complément d'information}
 \label{annexe:SOURCES_SI}
 \includepdf[pages=-,scale=0.9,pagecommand={\pagestyle{fancy}}]{chapters/annexes/SOURCES_SI.pdf}
 
-\section{\cite{weberApportionment2018} Méthodologie de déconvolution du PO : complément d'information}
+\section{Weber et al. (2018) Méthodologie de déconvolution du PO : complément d'information}
 \label{annexe:deconvol_OP_SI}
 \includepdf[pages=-,scale=0.95,pagecommand={\pagestyle{fancy}}]{chapters/annexes/deconvol_OP_SI.pdf}
 
@@ -156,6 +164,8 @@
 \section{Productions scientifiques}
 \label{annexe:CV}
 \input{chapters/annexes/biblioperso.tex}
+\subsection{Parcours, formations et encadrements}%
+\label{sub:parcours_formations_et_encadrements}
 \includepdf[pages=-,scale=0.85,pagecommand={\pagestyle{fancy}}]{chapters/annexes/CV.pdf}
 
 
