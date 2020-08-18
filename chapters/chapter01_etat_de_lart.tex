@@ -86,7 +86,7 @@ d'altitude.
 
 À l'intérieur de cette fine couche d'environ \SI{600}{km}, seule la troposphère,
 c'est-à-dire les 13 premiers kilomètres, nous est directement familière. C'est en effet
-dans la troposphère que les phénomènes météorologiques auxquels nous sommes habitués s'y
+dans la troposphère que les phénomènes météorologiques auxquels nous sommes habitués se
 déroulent : nuage, vent, pluie, etc. Alors que l'atmosphère paraît immense, il est
 important de noter la faible hauteur de cette couche.
 
@@ -178,6 +178,7 @@ La nomenclature des aérosols est ainsi historiquement fondée sur leur taille:
         aérodynamique est inférieur ou égal à \SI{1}{\um} (coagulation et condensation de
         vapeur…)
 \end{itemize}
+Par définition, les \PMdix{} contiennent donc les autres modes, et ainsi de suite.
 
 
 Ces catégories très diverses présentent ainsi des formes variées, comme illustré par les
@@ -275,7 +276,7 @@ l'espace, conduisant ainsi à un refroidissement de l'atmosphère.  Cependant, l
 absorbent aussi une partie du rayonnement incident, ce qui augmente l'agitation thermique
 et donc conduit à un réchauffement du climat.  Ces deux effets antagonistes agissent de
 concert à différentes altitudes de l'atmosphère et dépendent de la composition chimique
-des aérosols.  Enfin, le dépôt des aérosols et notamment du \textit{black carbone} sur la
+des aérosols.  Enfin, le dépôt des aérosols et notamment du \textit{black carbon} sur la
 neige ou les glaces des banquises induit un effet bien connu de rétroaction positive. Le
 carbone diminue l'albédo et absorbe le rayonnement normalement réémis par les surfaces
 blanches, augmente donc localement la température et fait fondre la glace, découvrant
@@ -305,7 +306,7 @@ l'impact total des aérosols sur le climat n'est connu qu'avec une incertitude �
 
 La contribution des aérosols à la différence du forçage radiatif entre 1750 et 2011 s'estime entre
 \SIrange[range-phrase=~et~]{-0.77}{0.23}{\W\per\m\squared} (pour un forcage total actuel
-de \SI{2.29}{\W\m\squared}), avec un forçage négatif pour
+de \SI{2.29}{\W\per\m\squared}), avec un forçage négatif pour
 les poussières minérales, le sulfate, nitrate et carbone organique, mais positif pour le
 carbone suie.  Quant à leur rôle sur la dynamique des nuages, il s'estime entre
 \SIrange[range-phrase=~et~]{-1.33}{-0.06}{\W\per\m\squared}, mais présente des
@@ -348,7 +349,7 @@ pollutions, il est important de noter que la sur-mortalité due à l'exposition 
 durant l'épisode est très importante (jusqu'à 3 fois supérieure à la normale
 pour le smog de Londres), mais que la surmortalité persiste dans les mois qui suivent
 --pendant près d'un an pour le smog de Londres-- alors même que les niveaux de pollution
-étaient revenus à leurs états antérieur à décembre 1952 \autocite{bellReassessment2001}.  Ces
+étaient revenus à leurs états antérieurs à décembre 1952 \autocite{bellReassessment2001}.  Ces
 épisodes de pollution intenses marquent le début de la prise de conscience par la
 population de la problématique de la pollution de l'air et ont conduit à la première
 législation anglaise en matière de qualité de l'air en 1956 avec le \textit{Clean Air
@@ -540,12 +541,12 @@ précis temporellement, avec aucune certitude d'un oubli potentiel d'une source 
 en compte. Ce sont par exemple, une industrie locale non-encore répertoriée, la sous-estimation de
 la contribution d'un écosystème, une consommation de bois de chauffage individuel non
 inventoriée, etc.
-En plus de cette connaissances de la quantité des émissions, leurs distributions
-temporelles et spatiale s'avère également compliquée. Notamment, la répartition annuelle
+En plus de cette connaissances de la quantité des émissions, celle de leurs distributions
+temporelles et spatiales s'avère également compliquée. Notamment, la répartition annuelle
 de la quantité de bois de chauffage totale peut s'avérer approximative selon les
 paramétrisations des modèles et ne pas représenter la réalité des émissions.
 
-Aussi, la limitation physique des modèles météorologiques se retrouvent dans les CTM. Il
+Aussi, la limitation physique des modèles météorologiques se retrouve dans les CTM. Il
 est donc compliqué d'envisager, du fait du coût de calcul et de stockage, une simulation à
 \SI{10}{\m} de résolution spatiale (ou moins), ce qui serait cependant nécessaire pour
 appréhender correctement des phénomènes précis.
@@ -555,7 +556,7 @@ du fait d'une topographie très variable et des sources d'émissions localisées
 en partie les prédictions de ces modèles sur la vallée de l'Arve et Grenoble, mais un
 biais négatif de l'ordre de \SI{10}{\ugm} pour les \PMdix{} demeure.
 En dehors de ces travaux de recherches à fine échelle, les prévisions opérationelles
-francçaise de PREV'AIR \parencite{rouilPrev2009} se font à résolution spatiale de l'ordre
+françaises de PREV'AIR \parencite{rouilPrev2009} se font à résolution spatiale de l'ordre
 de \SI{4}{\kilo\m} alors que la vallée de l'Arve ne fait qu'un kilomètre de large. De
 fait, les prévisions ne pourront pas prendre en compte certains phénomènes très locaux.
 
@@ -744,6 +745,7 @@ figure~\ref{fig:chapter01/NMFvsPCA}).
 Dans le cas qui nous intéresse ici, cela signifie que chacun des vecteurs de la matrice
 $F$ correspond à un profil chimique, en \si{\ugm}, indépendant des autres profils, et
 que la matrice $G$ représente la contribution de chacun de ces profils au jour
+d'observation
 considéré, de manière cohérente avec l'équation de conservation de la masse.
 
 Puisque la PMF ne nous donne qu'un profil chimique, certains de ces profils représentent
@@ -799,7 +801,7 @@ figure~\ref{fig:chapter01/source_apportionment_methods} le ME-2 n'est pas à l'e
 l'axe : l'utilisateur rajoute de la connaissance sur les profils ou contributions
 temporelles des différents facteurs.
 
-L'ajout de ces contraintes limitent de fait les rotations possibles des matrices $F$ et
+L'ajout de ces contraintes limite de fait les rotations possibles des matrices $F$ et
 $G$, conduisant non-seulement à des solutions géochimiquement plus compréhensibles mais
 aussi à une incertitude plus faible des profils des différents facteurs.
 
@@ -819,7 +821,7 @@ constituée sur le site de Lens a été conduite par
 \cite{belisEvaluation2020}. Les 38 études des participants bénéficiaient de
 la même base de données. Cependant, non seulement le nombre de facteurs retrouvés varie de 5 à 12 mais 
 les contributions temporelles, bien que globalement concordantes, varient entre les
-différentes études, comme le montre les z-scores de la figure~\ref{fig:chapter01/belisEvaluation2020_fig2a}
+différentes études, comme le montrent les z-scores de la figure~\ref{fig:chapter01/belisEvaluation2020_fig2a}
 \footnote{Le z-score représente ici une distance entre les contributions temporelles de
     chacune des sources des différentes études à la moyenne de celles-ci, définie par 
     \begin{align}
@@ -897,22 +899,22 @@ choix pour cette thèse du modèle PMF avec analyse chimique sur filtre.
         \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
           \item Nécessite des cadastres d'émissions
           \item Nécessite un modèle météo
-          \item Ne voit que ce qui est donnée des cadastres
+          \item Ne voit que ce qui est donné des cadastres
           \item Variabilité temporelle des émissions peu robuste
-          \item Nombre d'espèces chimiques limités
+          \item Nombre d'espèces chimiques limité
         \end{itemize}
         \\ \midrule
         CMB & 
         \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
           \item Spécificité du site potentiellement prise en compte
-          \item Grand nombre d'espèces pouvant être utilisé
+          \item Grand nombre d'espèces pouvant être utilisées
         \end{itemize}
             & 
         \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✘}]
           \item Faible représentativité spatiale et temporelle
           \item Prélèvement et analyses couteux (humain et financier)
-          \item Profils des sources fixes et connu à l'avance
-          \item Nécessite une base de connaissance de profils chimique
+          \item Profils des sources fixes et connus à l'avance
+          \item Nécessite une base de connaissance de profils chimiques
           \item Subjectivité de l'expérimentateur
         \end{itemize}
         \\ \midrule
@@ -944,9 +946,9 @@ choix pour cette thèse du modèle PMF avec analyse chimique sur filtre.
         \\
         PMF-filtre &
         \begin{itemize}[topsep=0pt, left=0pt, label={\unicodesymbols ✔}]
-          \item Large gamme de famille d'espèce chimique
-          \item Directement applicable pour la régulation
-          \item D'autres analyse possible sur le même filtre (potentiel oxydant par
+          \item Large gamme de famille d'espèces chimiques
+          \item Directement applicable pour la réglementation
+          \item D'autres analyses possibles sur les mêmes filtres (potentiel oxydant par
               exemple)
         \end{itemize}
             & 
@@ -1029,33 +1031,36 @@ temporelle fine, réduisant l'intérêt de cette méthode pour cette thèse.
 \label{ssub:nécessité_d_inclure_des_espèces_traceuses}
 
 L'une des limitations des PMF provient de leur sensibilité aux variables d'entrées
-utilisées. La détermination de facteur sera grandement facilité par la présence d'une
+utilisées. La détermination d'un facteur sera grandement facilitée par la présence d'une
 espèce chimique permettant l'identification précise de ce facteur.
 Par exemple, un facteur ``combustion de biomasse'' peut être déterminé avec uniquement des
-espèces métaliques et la présence de potassium, mais l'ajout du lévoglucosan --produit de
-pyrolyse de la cellulose-- permet une identification beaucoup plus clair et non équivoque
+espèces métalliques et la présence de potassium, mais l'ajout du lévoglucosan --produit de
+pyrolyse de la cellulose-- permet une identification beaucoup plus claire et non équivoque
 de ce facteur.
 
-L'utilisation d'\textit{espèces traceuses} rend l'identification de facteur plus aisé,
-mais permet aussi la détermination de nouvelle source qui aurait été jusqu'alors peu ou
-pas visible.
-Par exemple, \cite{srivastavaSpeciation2018a} ont pu déterminer des facteurs peu courrant
-grâce à l'ajout de certanes espèces organiques traceuses de différents processus :
+L'utilisation d'\textit{espèces traceuses} rend l'identification de facteur plus aisée,
+mais permet aussi la détermination de nouvelles sources qui auraient étées jusqu'alors peu ou
+pas visibles.
+Par exemple, \cite{srivastavaSpeciation2018a} ont pu déterminer des facteurs peu
+courrants
+grâce à l'ajout de certaines espèces organiques traceuses de différents processus :
 \textit{fungal spores} (présence de près de \SI{80}{\percent} de l'arabitol et du sorbitol),
 \textit{plant debris} (présence d'alcanes impairs), \textit{biogenic SOA}
 (présence de produits d'oxydation de l'isoprène (acide $\alpha$-methylglycerique et 2-methylerythritol) et de
 l'$\alpha$-pinène (acide hydroxyglutarique)) et \textit{anthropogenic SOA} (présence
 d'acenaphthenequinone, de 6H–dibenzo[b,d]pyran-6-one, de 1,8-naphthalique anhydre et de
 DHOPA).
-De même, l'analyses des HULIS a permis une meilleure déterminantion des facteurs organiques.
-\cite{chevrierChauffage2016} a également utilisée des mesures de radiocarbone et la
-séparation en carbone \textit{fossil fuel} et \textit{wood burning} provennant de mesure
-d'aethalomètre 33, permettant une séparation et une évaluation des
-contributions des facteurs plus précise grâce à ces traceurs spécifiques.
+De même, l'analyse des HULIS a permis une meilleure déterminantion des facteurs organiques.
+\cite{chevrierChauffage2016} a également utilisé des mesures de radiocarbone et la
+séparation en carbone \textit{fossil fuel} et \textit{wood burning} provennant de mesures
+d'aethalomètre AE33, permettant une séparation et une évaluation des
+contributions des facteurs plus précises grâce à ces traceurs spécifiques.
 
-Cependant, bien que l'on sait maintenant l'importance de l'ajout de ces espèces dans les
-PMF, la généralisation de l'emploi de ces traceurs est limité par le coût analytique
+Cependant, bien que l'on sache maintenant l'importance de l'ajout de ces espèces dans les
+PMF, la généralisation de l'emploi de ces traceurs est limitée par le coût analytique
 et l'automatisation de certaines de ces mesures.
+Il convient donc d'essayer de déterminer le corpus analytique permettant une
+caractérisation chimique optimisée à un coût raisonnable.
 
 \section{Vers une mesure unifiée de l'impact sanitaire : le potentiel oxydant}%
 \label{sec:le_potentiel_oxydant_des_aerosols}
@@ -1063,13 +1068,14 @@ et l'automatisation de certaines de ces mesures.
 Devant la grande variété de chimie, forme, taille, etc. des aérosols, il apparaît
 compliqué de résumer la toxicité de l'air que l'on respire à la simple concentration
 massique en aérosols. En effet, il est évident que respirer un~\si{\ugm} de sable n'aura
-pas le même impact sur notre santé qu'un~\si{\ugm} de mercure ou de plomb.  Seulement, la
+pas le même impact sur notre santé qu'un~\si{\ugm} de mercure ou de plomb.  Seulement,
+la
 mesure des concentrations massiques est l'une des plus simples à implémenter en routine et est également
 facilement automatisable, permettant ainsi un premier ordre de grandeur de l'exposition
 des populations. Aussi, il est important de rappeler que les aérosols n'ont pas qu'un
 impact sanitaire, mais également climatique ou environnemental (voir
 section~\ref{ssub:impacts_climatiques} et~\ref{ssub:impacts_environnementaux}),
-pour lesquels la mesure de la concentration est tout à fait adaptée.
+pour lesquels la mesure de la concentration massique est tout à fait adaptée.
 
 Bien qu'il ne soit pas encore établi de mécanismes clairs entre les PM et leur impact
 sanitaire, leur capacité à induire un stress oxydant dans notre corps est une des
@@ -1134,18 +1140,19 @@ Air-O-Sol de l'IGE.
 
 La mesure du PO se faisant par suivi cinétique de la déplétion d'un anti-oxydant
 lorsqu'il est mis au contact des PM, le choix de l'anti-oxydant induit des mesures de PO
-différentes. Au cours de cette thèse, 2 mesures différentes sont utilisées conjointement :
+différentes. Au cours de cette thèse, deux mesures différentes sont utilisées conjointement :
 le test au dithiothreitol (DTT) et à l'acide ascorbique ou vitamine-A (AA), et sont
 explicités dans le chapitre suivant (section~\ref{sub:potentiels_oxydants}).
 
-D'autres méthodes de mesure du PO existent, mais n'ont pas été utilisées au courant de
+D'autres méthodes de mesures du PO existent, mais n'ont pas été utilisées au cours de
 cette thèse, à savoir :
 \begin{description}
     \item[Electron spin résonance ESR] Sensé cibler particulièrement le radical
         \ce{HO^{.}} \autocite{shiHydroxyl2003,shiTemporal2003}
     \item[DCFH] Mesure de la consomation DCFH par suivi de son produit oxydé la DCF, par
         fluorescence \parencite{foucaudMeasurement2007}.
-    \item[Mélange d'anti-oxydant (RTLF)] Bien que la plupart du temps testé indépendamment, il est
+    \item[Mélange d'anti-oxydant (RTLF)] Bien que la plupart du temps les différents
+        anti-oxydants soient testés indépendamment, il est
         possible d'estimer un ``PO moyen'' par la mise en contact de différents
         anti-oxydants simultanément (acide ascorbique, glutation et urée par
         exemple)~\autocite{mudwayDifferences2001,calasComparison2018,gaoCharacterization2020}
@@ -1192,8 +1199,8 @@ réactivitées vis-à-vis des différents tests de PO
 \parencite{ayresEvaluating2008,charrierDithiothreitol2012,jiangOxidative2016,calasImportance2017,wangRelationship2018}.
 Certains métaux, et notamment le cuivre ou le manganese, présentent aussi un potentiel
 oxydant important \parencite{charrierDithiothreitol2012,charrierBias2016}.
-Cependant, tous les métaux ne réagissent pas de façons similaire et d'autres comme le fer,
-le zinc ou le cromium ne présentent pas de réactivité particulière au test du DTT.
+Cependant, tous les métaux ne réagissent pas de façon similaire et d'autres comme le fer,
+le zinc ou le chrome ne présentent pas de réactivité particulière au test du DTT.
 
 Il faut noter également que la consomation d'antioxydant de ces différents composés
 n'augmente pas systématiquement linéairement avec la masse
@@ -1205,7 +1212,7 @@ pris individuellement.
 
 Cependant, il n'est pas possible de mesurer l'ensemble des espèces chimiques constituant
 les PM. Devant cette foultitude, il paraît donc illusoire de pouvoir attribuer un PO
-intrinsèque à chacune des espèces chimique.
+intrinsèque à chacune des espèces chimiques.
 
 \subsubsection{Corrélation PO -- chimie}%
 \label{ssub:corrélation_po_chimie}
@@ -1222,7 +1229,7 @@ En effet, une corrélation n'implique pas une causalitéi. Cette corrélation ne
 que d'une co-correlation entre le \NOt{} d'autres espèces qui, elles, sont, rédox-actives.
 
 L'étude de la corrélation simple permet donc une première estimation des déterminants du
-PO, mais se révèle être insufissante.
+PO, mais se révèle largement insuffisante.
 
 
 \subsubsection{Sources de PM et de PO}%
@@ -1239,7 +1246,7 @@ PO, mais se révèle être insufissante.
 Il est aussi possible de chercher à attribuer un PO non pas à une espèce chimique mais à
 une source d'émission spécifique.
 Cette vision par source présente également l'avantage de pouvoir se traduire plus
-simplement en terme de régulation de la qualité de l'air et permet
+simplement en terme de réglementation de la qualité de l'air et permet
 potentiellement une action politique plus rapide que s'il s'agissait de cibler une espèce
 chimique particulière.
 
@@ -1247,14 +1254,14 @@ chimique particulière.
 \label{par:mesures_directes_à_l_émission}
 
 La méthode la plus intuitive de mesure du PO des sources de PM est de faire les analyses
-directement à l'émission. Les sources les plus échantillonées sont différentes émissions
+directement à l'émission. Les sources les plus échantillonnées sont différentes émissions
 liées aux trafic routier \parencite{biswasOxidative2009,parkDifferential2018} ou à l'industrie
-\cite{jooPhysicochemical2018}, ainsi que la combustion de biomasse
+\parencite{jooPhysicochemical2018}, ainsi que la combustion de biomasse
 \parencite{jiangOxidative2016,parkDifferential2018} (voir notamment la revue de \cite{batesReview2019}).
 Certaines autres mesures peuvent être effectuées également en chambre de simulation : SOA, spray marin, etc.
 \parencite{parkDifferential2018}.
 
-Les sources d'émissions liés aux émissions primaire du trafic semblent avoir un \PODTTm{}
+Les sources d'émissions liés aux émissions primaires du trafic semblent avoir un \PODTTm{}
 intrinsèque (i.e. par microgramme de PM) du même ordre de grandeur que les émissions de
 combustion de biomasse. En revanche, les OAS d'origines biogéniques présentent un \PODTTm{}
 plus faible et une variabilité importante.
@@ -1262,9 +1269,10 @@ plus faible et une variabilité importante.
 Il semblerait quand meme tres intéressant de mesurer le PO sur des filtres collectés
 directement lors de l'émission pour de nombreux types de sources car c'est en définitive
 le type de mesure le plus fiable (mais sans prise en compte de phénomènes secondaires).
-De plus, de nombreux secteur d'émissions doivent déjà présenter des prélèvements
-caractérisations chimiques (banc d'essai, industrie, etc). 
-Il est également probable que de nombreux programmes de caractériation des émissions permettraient
+De plus, de nombreux secteurs d'émissions doivent déjà présenter des prélèvements avec
+une
+caractérisation chimique (banc d'essai, industrie, etc). 
+Il est également probable que de nombreux programmes passés de caractériation des émissions permettraient
 de rassembler le matériel nécessaire à ces mesures de PO, qui ne demandent pas de grandes
 surfaces de filtre par rapport aux surfaces prélevées.
 
@@ -1279,7 +1287,7 @@ Les premières études de ce type sont celles de
 \cite{vermaReactive2014,batesReactive2015,fangOxidative2016}, et utilisent 2 approches
 différentes :
 \begin{enumerate}
-    \item Incorporation de PO comme variable d'entrée d'une étude PMF au même titre qu'une
+    \item Incorporation des POs comme variables d'entrée d'une étude PMF au même titre qu'une
         autre espèce chimique ;
     \item Analyse de sources via le CMB (sans PO), puis régression linéaire entre les
         sources de PM ainsi déduites et le PO.
@@ -1292,7 +1300,7 @@ d'ammonium et enfin un facteur de composés organiques secondaires solubles.
 Concernant le \POAAv, \cite{fangOxidative2016} (voir
 figure~\ref{fig:chapter01/fangOxidative2016-fig4}) estiment à autour de \SI{45}{\percent} la
 contribution des émissions véhiculaires et à environ \SI{50}{\percent} la contribution de
-facteur secondaire (organique et inorganique).
+facteurs secondaires (organique et inorganique).
 
 \begin{figure}[ht]
     \centering
@@ -1330,8 +1338,8 @@ les solutions PMF se posera dans le
 chapitre~\ref{cha:approfondissement_des_connaissances_des_sources_des_pm}, à travers
 l'implémentation de nouveaux traceurs chimiques ou isotopiques.
 Également, les incertitudes des solutions PMF ne sont que rarement explicitées alors
-mêmes que c'est une question centrale qui intéressent d'autant plus les décideurs publics.
-Mes travaux s'appliquerons donc à systématiquement quantifier les incertitudes des
+mêmes que c'est une question centrale qui intéresse d'autant plus les décideurs publics.
+Mes travaux s'appliqueront donc à systématiquement quantifier les incertitudes des
 contributions des sources de \PMdix{} aux espèces mesurées.
 Aussi, afin de pouvoir généraliser à large échelle spatiale des résultats issus d'études
 PMF sur différents sites, une méthodologie harmonisée doit être employée (mêmes espèces
@@ -1342,8 +1350,8 @@ Enfin, l'estimation des sources majoritaires du potentiel oxydant des PM se doit
 quantifiée, aussi bien en termes de \POm{} --PO par microgramme, reflétant la toxicité de
 la source-- que de \POv{} --PO par mètre cube d'air, reflétant l'exposition à cette
 source.  Aussi, les différences de contributions des sources entre concentration massique
-et potentiel oxydant, qui ont commencés à être mise en évidence par les études
-antérieures, manque de généralisation spatiale. Les études précédentes ne couvrant que peu
+et potentiel oxydant, qui ont commencé à être mise en évidence par les études
+antérieures, manquent de généralisation spatiale, les études précédentes ne couvrant que peu
 de sites de prélèvements différents et présentant une étendue temporelle limitée.
 
 
