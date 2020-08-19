@@ -10,14 +10,14 @@ Mon implication y est donc importante et continuera de l'être lors de mes reche
 futures.
 
 Dans ce chapitre, deux des axes principaux qui constitueront mon travail post-thèse sont
-développés et des résultats préliminaires sont brièvement exposés.
+développés et des résultats déjà obtenus sont brièvement exposés.
 
 \section{Vers une prise en compte améliorée de l'exposition sanitaire}%
 
 Au cours de ma thèse, plusieurs questions ont pu être posées et certaines réponses
 apportées.  Cependant, le choix a été fait de se limiter principalement à l'estimation des
 sources du potentiel oxydant à travers le modèle source-récepteur PMF. Bien qu'apportant
-des résultats éclairant sur la dynamique des différents tests de PO, plusieurs aspects ont
+des résultats éclairants sur la dynamique des différents tests de PO, plusieurs aspects ont
 été volontairement écartés de ces études.
 
 Premièrement, l'utilisation des modèles site-récepteur limite nécessairement la couverture
@@ -42,6 +42,9 @@ Or, en moyenne, un européen passe la majeur partie de son temps en espace clos 
 extérieur comme référence de l'exposition de la population n'est donc peut-être pas
 suffisante.
 
+Les résultats des premiers travaux qui ont débuté sur ces trois aspects, auxquels je
+participe, sont présentés ci dessous.
+
 \section{Spatialisation du PO}
 
 \subsection{Estimation du PO à partir de la concentration massique des PM}
@@ -52,7 +55,7 @@ Ayant attribué un PO intrinsèque aux sources déterminées sur un site récept
 possible de généraliser la prédiction des valeurs de PO sur ce site en estimant une
 contribution moyenne mensuelle de chacune des sources. Ainsi, on peut envisager un ``gap
 filling'' des mesures de PO. Par exemple, le site de GRE-fr n'a été échantilloné qu'un
-jour sur 3, mais la station d'AtmoAURA procurent les mesures journalières des
+jour sur trois, mais la station d'AtmoAURA enregistre les mesures journalières des
 concentrations de \PMdix. Il est donc envisageable, en utilisant les contributions
 relatives des sources estimées sur ce site, de ``prédire'' un \POAAv{} et \PODTTv{} pour
 les jours manquants.
@@ -98,7 +101,7 @@ Cette méthode possède trois hypothèses et limitations fortes :
         ensemble de 15 sites de mesures, de typologie plutôt urbaine, et donc non
         nécessairement représentative de l'ensemble des situations possibles ;
     \item Le PO intrinsèque de chacune de ces sources présente en réalité une variabilité
-        plus ou moins importante, et une fois de plus estimé à partir d'un ensemble de
+        plus ou moins importante, et une fois de plus il est estimé à partir d'un ensemble de
         sites de typologie plutôt urbaine ;
     \item Il n'est pas pris en compte la spécificité du site en question (source atypique,
         topographie, climat...) ni la possible évolution du PO intrinsèque des sources qui
@@ -106,10 +109,10 @@ Cette méthode possède trois hypothèses et limitations fortes :
         etc.).
 \end{itemize}
 
-Elle présente néanmoins l'avantage de pouvoir estimer depuis une concentration massique
-des \PMdix{} une mesure au premier ordre de \POAAv{} et \PODTTv, qu'il s'agisse d'un site
-de mesure ``standard'' avec TEOM-FDMS ou d'une cartographie issus de prévision
-déterministe d'un modèle CTM ou de mesures satellitaires.
+Cette méthode simple présente néanmoins l'avantage de pouvoir estimer depuis une concentration massique
+des \PMdix{} une valeur au premier ordre de \POAAv{} et \PODTTv, qu'il s'agisse d'un site
+de mesure ``standard'' avec TEOM-FDMS ou d'une cartographie issue de prévisions
+déterministes d'un modèle CTM, ou encore de mesures satellitaires.
 
 Aussi, au fur et à mesure de la parution future de nouvelles études, cette technique pourra être 
 affinée en ne sélectionnant que des sites de même typologie ou
@@ -131,7 +134,7 @@ cela.
 
     Il est également possible d'utiliser \url{http://getopstandop.u-ga.fr/estimate},
     permettant d'estimer directement en ligne le \POAAv{} et \PODTTv{} de n'importe quelle
-    série de mesure concentration de \PMdix.
+    série de mesures de concentrations massiques de \PMdix.
 \end{tcolorbox}
 
 \subsubsection{Application sur un site urbain hors des études précédentes}
@@ -139,8 +142,8 @@ cela.
 Afin de tester la faisabilité et la généralisation suffisante des synthèses nationales,
 cette méthode d'estimation au premier ordre du PO a été appliquée sur le site de Zurich,
 pour les échantillons de l'étude en cours avec l'EMPA. 
-L'estimation a été faite en n'utilisant que les huit sources issues de majoritaires de la
-synthèse françaises, et leur \OPm{} moyen pour l'ensemble des quinze sites français.
+L'estimation a été faite en n'utilisant que les huit sources majoritaires issues de la
+synthèse française, et leur \OPm{} moyen pour l'ensemble des quinze sites français.
 
 Les \POAAv{} et \PODTTv{} mesurés sur les échantillons et estimés par cette méthode sont
 présentés figure~\ref{fig:figures/chapter05/pyopestimator_EMPA_ZURICH} pour tous les
@@ -150,8 +153,8 @@ mal estimés. Au final, des corrélations (Pearson) respectives de 0.74 et 0.80 
 \POAAv{} et \PODTTv{} sont obtenues.  Considérant les grandes approximations faites par cette
 méthode, ce résultat présente donc des performances étonnantes.
 
-On remarque également --conformément à ce que les études de regression linéaires
-multiples montraient déjà-- une tendance à la sous-estimation des fortes valeurs de PO,
+On remarque également -- conformément à ce que les études de regression linéaires
+multiples montraient déjà -- une tendance à la sous-estimation des fortes valeurs de PO,
 suggérant une fois de plus la présence de phénomènes non linéaires.
 
 \begin{figure}[ht]
@@ -175,7 +178,7 @@ et Spearman.}
 
 La même analyse est conduite sur le site de GRE-fr, afin d'estimer la faisabilité du
 ``gap-filling'', en prenant en compte l'intégralité des mesures annuelles de masse des
-\PMdix{} disponibles de la station d'AtmoAURA. La prise en compte de toutes ces mesures
+\PMdix{} disponibles de la station d'AtmoAURA (entre 2013 et début 2020). La prise en compte de toutes ces mesures
 nous affranchit du biais de sélection présent du fait de la fréquence d'échantillonage et
 d'analyse sur filtre lors de l'estimation de la contribution annuelle des sources au
 potentiel oxydant.
@@ -200,14 +203,14 @@ pour le \POAAv{} et \PODTTv).
 \paragraph{Importance de l'échantillonage et de l'exposition chronique}%
 \label{par:importance_de_l_échantillonage_et_de_l_exposition_chronique}
 
-Puisque l'approximation reconstruit relativement bien les observations, l'estimation du PO
-les jours non mesurés peut donc être considérée comme acceptable. Ainsi, l'estimation de
-la contribution des sources au PO sur le site de GRE-fr peut se faire en prenant en compte
-l'intégralité de la série de mesure d'Atmo AURA et non plus un échantillon tous les trois
-jours. Le biais de selection dû à la fréquence d'échantillonnage est donc ainsi amoindri.
+% Puisque l'approximation reconstruit relativement bien les observations, l'estimation du PO
+% les jours non mesurés peut donc être considérée comme acceptable. Ainsi, l'estimation de
+% la contribution des sources au PO sur le site de GRE-fr peut se faire en prenant en compte
+% l'intégralité de la série de mesure d'Atmo AURA et non plus un échantillon tous les trois
+% jours. Le biais de selection dû à la fréquence d'échantillonnage est donc ainsi amoindri.
 
 Les contributions des sources de PO d'après les mesures journalières d'Atmo AURA sur la
-station de GRE-fr sont présentées figure~\ref{fig:OPGRE-fr_source_estimated}.% et détaillées dans le tableau~\ref{tab:OPGRE-fr_source_estimated}.
+station de GRE-fr sont présentées figure~\ref{fig:OPGRE-fr_source_estimated}. % et détaillées dans le tableau~\ref{tab:OPGRE-fr_source_estimated}.
 Si elle n'apprend rien de bien nouveau, cette méthode d'estimation certes grossière,
 permet la prise en compte d'un très grand nombre de jours d'observation et met d'autant
 mieux en lumière la différence entre contribution moyenne et contribution médiane des
@@ -294,14 +297,15 @@ peuvent éventuellement apporter une meilleure prévisibilité.
     porté sur la validation des résultats du modèle.
 \end{tcolorbox}
 
-Si la partie précédente présentait une première méthode approchant de façon imparfaite la prévision du PO à partir
+Si la partie précédente proposait une première méthode approchant de façon imparfaite la prévision du PO à partir
 du calcul de la masse des \PMdix{} estimée par les CTM, il est certainement
 préférable d'inclure directement la variable ``potentiel oxydant'' dans ces modèles.
 
 Cependant, le ``PO'' n'étant pas une espèce chimique évoluant et réagissant dans le temps, son
 estimation ne peut se faire que a posteriori et soit (i) à partir du PO intrinsèque de chacune
 des espèces chimiques, soit (ii) en estimant la contribution des sources à la masse des \PMdix.
-Avec la voie (i), nous retrouvons les mêmes limitations que pour l'inversion par espèce chimique. Il faut donc
+Avec la voie (i), nous retrouvons les mêmes limitations que pour l'inversion par espèce
+chimique. Mais pour emprunter la voie (ii), il faut donc
 réussir à estimer tout d'abord correctement les sources de \PMdix{} dans les modèles CTM.
 
 Ensuite, deux solutions sont envisageables:
@@ -320,8 +324,8 @@ sont très nombreux.
 En revanche, cette solution, dans son implémentation actuelle à travers le ``source
 labelling'', ne prend en compte uniquement que les sources primaires. Par exemple, la
 condensation des \ce{NO_x} du trafic routier et de l'ammoniac de l'agriculture forme du
-nitrate-d'ammonium et est attribué selon une moyenne pondérée à la source trafic et
-agricole. Il y a donc une perte d'information entre source primaire et secondaire.
+nitrate-d'ammonium et est attribué selon une moyenne pondérée aux sources trafic et
+agricole. Il y a donc une perte d'information entre sources primaire et secondaire.
 
 La deuxième solution nécessite une comparaison des émissions chimiques considérées dans
 chacun des SNAP utilisés avec les profils chimiques des facteurs PMF. S'il est possible
@@ -343,7 +347,8 @@ avons pu apporter une preuve de concept de la faisabilité de la prédiction du 
 LE pour deux sources chimiquement proches entre LE et les PMF.
 La figure~\ref{fig:OPmap} présente pour le 10 février 2017 à 11h30 la contribution du
 transport routier et de la combustion résidentielle à la masse et au \PODTTv{} pour
-l'ensemble de l'Europe.
+l'ensemble de l'Europe (figure issue d'un run d'un mois destinée à l'étude d'un pic de
+pollution).
 
 Ce travail, très préliminaire, se poursuivra après ma thèse dans le cadre de cette
 collaboration entre l'IGE et le TNO.
@@ -358,12 +363,13 @@ estimée par \cite{weberSourceinprep.} appliqué aux prévisions de LOTOS-EUROS.
 \end{figure}
 
 Cette preuve de concept en 2018 a intéressé les développeurs
-d'un autre modèle de chimie transport: Chimère. Chimère a implémenté courant 2020 la
-même technique de ``source-labelling'' et un travail identique à celui entamé avec le TNO
+d'un autre modèle de chimie transport: Chimère. La
+même technique de ``source-labelling'' a été implémentée dans Chimère courant 2020, et un
+travail identique à celui entamé avec le TNO
 et LE sur le confrontation des résultats de contribution des sources pour des sites
 spécifiques est en cours avec le LISA et Chimère. Notamment, de février à juillet 2020, le
 stage de M2 de Matthieu Vida (LISA/IGE) portait sur cette thématique, qu'il va poursuivre en thèse à
-la rentrée universitaire 2020 (thèse ADEME/AQ2, co-encadrement LISA/IGE).
+la rentrée universitaire 2020 (thèse ADEME/Dim Qi2, co-encadrement LISA/IGE).
 
 Parallèlement, \cite{daellenbachSourcessubmitted} ont conduit une étude similaire à celle
 de \cite{weberSourceinprep.}, mais n'incluant que 109 mesures composites de potentiel
@@ -412,7 +418,7 @@ que ce soit par introduction du \POv{} dans une PMF, par régression linéaire m
 par ACP.
 De plus, aucun terme d'interaction entre sources n'est pris en compte alors même que
 le potentiel ``effet cocktail'' entre composés chimiques sur le PO est documenté, comme le
-montrent la figure~\ref{fig:charrier_hydrogen_2014_fig4} issue de
+montre la figure~\ref{fig:charrier_hydrogen_2014_fig4} issue de
 \cite{charrierHydrogen2014} ou encore 
 \cites[figure S7 du supplément]{charrierDithiothreitol2012}{xiongRethinking2017}{samakeUnexpected2017}{yuSynergistic2018}
 (à noter également que récemment, \cite{gaoCharacterization2020} ont introduit des
@@ -438,7 +444,7 @@ prise en compte des effets d'interaction entre sources et non prise en compte de
 linéarité du PO.
 
 L'ajout de terme d'interaction sous forme de produit des concentrations de sources serait
-une solution pour estimer le premier biais --bien que les différentes interactions soit en grande partie inconnues--
+une solution pour estimer le premier biais -- bien que les différentes interactions soit en grande partie inconnues --
 % (oui mais sur quelle base en pratique on arriverait à définir ce terme d'interaction? à partir d'expériences type charrier au dessus ou alors comme on a fait dans Samake sur le po des bioarérsols, mais dans ce cas on serait vite limité car impossible de faire toutes les expériences) 
 mais le deuxième biais ne peut tout simplement
 pas s'estimer par un modèle linéaire. Aussi, l'ajout de termes non linéaires n'est pas
@@ -471,6 +477,10 @@ linéaire et déterministe. Dans d'autres disciplines des sciences de l'environn
 type de modèle a également montré son intérêt pour l'évaluation de la qualité de
 l'eau~\autocite{nathanApplication2017}.
 
+\subsubsection{Présentation succincte d'un réseau de neurone}%
+\label{ssub:présentation_succincte_d_un_réseau_de_neurone}
+
+
 Formellement, un réseau de neurones est un graphe orienté pondéré, où lorsque deux
 nœuds (ou neurones) sont connectés (i.e lié par un bord orienté du graphe), le résultat en
 sortie du neurone devant est utilisé comment entrée du neurone de derrière.
@@ -482,8 +492,8 @@ valeur finale (par ex. le \POv) en fonction d'un signal initial (par ex. la
 concentration massique des sources de PM).
 On distingue trois types de neurones:
 \begin{itemize}
-    \item neurones d'entrées (input) (connectées aux variables d'entrées),
-    \item neurones de sorties (output),
+    \item neurones d'entré (input) (connectés aux variables d'entrées),
+    \item neurones de sortie (output),
     \item neurones cachés (répartis en une ou plusieurs couches).
 \end{itemize}
 Le plus couramment utilisé est le \textit{Multi Layer Perceptron} (MLP), qui est un
@@ -518,8 +528,8 @@ complexité recherchée permettant la prise en compte des phénomènes complexes
 
 Chacun des poids $w$ est inconnu a priori. Ils sont estimés par processus itératif et
 rétro-propagation à partir d'un ensemble de données d'entraînement pour lesquelles les
-valeurs d'entrées et de sorties sont connues. Les poids sont donc ``appris'' --d'où le
-terme de \textit{machine learning}-- par minimisation d'une fonction coût entre prédictions
+valeurs d'entrées et de sorties sont connues. Les poids sont donc ``appris'' -- d'où le
+terme de \textit{machine learning} -- par minimisation d'une fonction coût entre prédictions
 et observations (de manière similaire à l'algorithme PMF).
 
 En revanche, du fait de leurs complexités, même si les prédictions se trouvent être
@@ -553,7 +563,7 @@ neurones artificiel (MLP).
 Appliqués sur les trois sites de la métropole Grenobloise, le MLP a été entraîné sur
 \SI{80}{\percent} des données et testé sur les \SI{20}{\percent} restant. Le MLR a quant à
 lui été entrainé sur l'ensemble des séries de mesures\footnote{Une comparaison pour les mêmes
-ensembles d'entrainement et de test est en cours.}
+ensembles d'entrainement et de test est en cours.}.
 Les performances statistiques de la prediction des MLP sont du même ordre que celles
 obtenues pour le MLR alors même que le MLP n'a pas été entrainé sur ces données (figure~\ref{fig:perfMLPMLR}).
 Ainsi, le MLP prédit aussi bien chaque \POv{}
@@ -617,8 +627,8 @@ supérieure à \SI{5}{\ugm} et un maximum est obtenu pour des valeurs des contri
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\linewidth]{figures/chapter05/coktail_Primary traffic_Nitrate-rich.pdf}
-    \caption{Effet conjoint non-linéaire sur le \PODTTv{} entre la source \textit{Primary
+    \includegraphics[width=0.7\linewidth]{figures/chapter05/coktail_Primary traffic_Nitrate-rich.pdf}
+    \caption{Effet synergétique non-linéaire sur le \PODTTv{} entre la source \textit{Primary
     traffic} et \textit{Nitrate-rich} sur le site de GRE-fr.}%
     \label{fig:figures/chapter05/coktail_Primary traffic_Nitrate-rich}
 \end{figure}

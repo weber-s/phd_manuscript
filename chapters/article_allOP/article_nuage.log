@@ -1,33 +1,1425 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2020.7.8)  13 AUG 2020 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.8)  19 AUG 2020 20:02
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **article_nuage.tex
 (./article_nuage.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-03>
+L3 programming layer <2020-06-03> (./copernicus.cls
+Document Class: copernicus 2020/01/31 9.08 Copernicus papers
+(/usr/share/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
-! LaTeX Error: File `copernicus.cls' not found.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: cls)
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
 
-Enter file name: 
-./article_nuage.tex:13: Emergency stop.
-<read *> 
-         
-l.13 ^^M
-        
-*** (cannot \read from terminal in nonstop modes)
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+)
+Additional configuration file copernicus.cfg used
+(./copernicus.cfg) (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\dimen134
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+)
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen135
+)
+\bleed=\dimen136
+\longtwo@top=\skip49
+\longtwo@bottom=\skip50
+\longtwo@box=\box45
 
- 
+(/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box46
+\UL@hyphenbox=\box47
+\UL@skip=\skip51
+\UL@hook=\toks15
+\UL@height=\dimen137
+\UL@pe=\count175
+\UL@pixel=\dimen138
+\ULC@box=\box48
+Package: ulem 2019/11/18
+\ULdepth=\dimen139
+)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-06-03 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count176
+\l__pdf_internal_box=\box49
+))
+Package: fontawesome5 2020/03/24 v5.13.0 Font Awesome 5
+
+(/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-05-15 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-05-15 L3 Experimental document command parser
+
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
+\l__xparse_current_arg_int=\count177
+\g__xparse_grabber_int=\count178
+\l__xparse_m_args_int=\count179
+\l__xparse_v_nesting_int=\count180
+))
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-generic-helper.sty
+Package: fontawesome5-generic-helper 2020/03/24 v5.13.0 non-uTeX helper for fon
+tawesome5
+
+(/usr/share/texmf-dist/tex/latex/fontawesome5/fontawesome5-mapping.def)))
+(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+
+(/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+(/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex)
+(/usr/share/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.tex))
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/05/13 3.44 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/05/13 3.44 Babel common definitions
+\babel@savecnt=\count181
+\U@D=\dimen140
+\l@babelnohyphens=\language86
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count182
+
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+))
+(/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen141
+\ar@mcellbox=\box50
+\extrarowheight=\dimen142
+\NC@list=\toks18
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box51
+)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen143
+\TX@old@table=\dimen144
+\TX@old@col=\dimen145
+\TX@target=\dimen146
+\TX@delta=\dimen147
+\TX@cols=\count183
+\TX@ftn=\toks19
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+)
+(/usr/share/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen150
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count184
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count185
+\leftroot@=\count186
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count187
+\DOTSCASE@=\count188
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count189
+\c@MaxMatrixCols=\count190
+\dotsspace@=\muskip16
+\c@parentequation=\count191
+\dspbrk@lvl=\count192
+\tag@help=\toks23
+\row@=\count193
+\column@=\count194
+\maxfields@=\count195
+\andhelp@=\toks24
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks25
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip57
+\thm@postskip=\skip58
+\thm@headsep=\skip59
+\dth@everypar=\toks32
+)
+\affilsep=\skip60
+\@affilsep=\skip61
+\c@Maxaffil=\count196
+\c@authors=\count197
+\c@affil=\count198
+\c@authnum=\count199
+
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texmf-dist/tex/latex/accents/accents.sty
+Package: accents 2006/05/12 v1.4 Math Accent Tools
+\cc@skew=\dimen159
+\cc@wd=\dimen160
+\cc@code=\count266
+\cc@group=\count267
+\cc@skewchar=\count268
+)
+(/usr/share/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip62
+\multirow@cntb=\count269
+\multirow@dima=\skip63
+\bigstrutjot=\dimen161
+)
+(/usr/share/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count270
+\ST@wd=\dimen162
+\ST@rightskip=\skip64
+\ST@leftskip=\skip65
+\ST@parfillskip=\skip66
+\ST@pageleft=\dimen163
+\ST@headht=\dimen164
+\ST@tailht=\dimen165
+\ST@pagesofar=\dimen166
+\ST@pboxht=\dimen167
+\ST@lineht=\dimen168
+\ST@prevht=\dimen169
+\ST@toadd=\dimen170
+\ST@dimen=\dimen171
+\ST@pbox=\box54
+)
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count271
+\c@ALC@line=\count272
+\c@ALC@rem=\count273
+\c@ALC@depth=\count274
+\ALC@tlm=\skip67
+\algorithmicindent=\skip68
+)
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks33
+\float@box=\box55
+\@float@everytoks=\toks34
+\@floatcapt=\box56
+)
+\@float@every@algorithm=\toks35
+\c@algorithm=\count276
+)
+\c@figscheme=\count277
+\c@plates=\count278
+\c@listings=\count279
+\c@boxes=\count280
+
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/05/10 v3.4j Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/05/10 v1.11 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen172
+\captionmargin@=\dimen173
+\captionwidth=\dimen174
+\caption@tempdima=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\def \@tempa {figure}\i
+fx \@captype \@tempa \if@stage@final \vskip 0.7\abovecaptionskip \else \vskip \
+abovecaptionskip \goodbreak \fi \fi {\reset@font \small {\bfseries #1.} #2\par 
+}\if@cop@home \ifonline \ifnum \csname c@\@captype \endcsname =1 \immediate \wr
+ite \@auxout {\string \gdef \string \@num \@captype {}}\hypertarget {\@captype 
+}{}\fi \fi \fi \def \@tempa {table}\ifx \@captype \@tempa \vskip \abovecaptions
+kip \if@stage@final \else \goodbreak \fi \fi  on input line 1053.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count281
+\c@continuedfloat=\count282
+Package caption Info: float package is loaded.
+Package caption Info: supertabular package is loaded.
+) (/usr/share/texmf-dist/tex/latex/subfloat/subfloat.sty
+Package: subfloat 2003/08/21 version 2.14
+
+Package `subfloat', Version 2.14 of 2003/08/21.
+
+Package subfloat Warning: Numbers of floats not counted:
+(subfloat)                If you use one of the counters subfloatfiguremax or
+(subfloat)                subfloattablemax you will get strange error messages
+(subfloat)                containing \c@subfloatfiguremax or
+(subfloat)                \c@subfloattablemax:
+(subfloat)                Please switch on countmax or remove the code using
+(subfloat)                the counter then..
+
+) (./natbib.sty
+Package: natbib 2006/09/06 7.4a (PWD)
+\bibhang=\skip69
+\bibsep=\skip70
+LaTeX Info: Redefining \cite on input line 541.
+\c@NAT@ctr=\count283
+) (/usr/share/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count284
+\rotFPtop=\skip71
+\rotFPbot=\skip72
+\rot@float@box=\box57
+\rot@mess@toks=\toks36
+)
+(/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count285
+\output=\toks37
+\linenoprevgraf=\count286
+\linenumbersep=\dimen179
+\linenumberwidth=\dimen180
+\c@linenumber=\count287
+\c@pagewiselinenumber=\count288
+\c@LN@truepage=\count289
+\c@internallinenumber=\count290
+\c@internallinenumbers=\count291
+\quotelinenumbersep=\dimen181
+\bframerule=\dimen182
+\bframesep=\dimen183
+\bframebox=\box58
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(/usr/share/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/usr/share/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(/usr/share/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(/usr/share/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen184
+\Hy@linkcounter=\count292
+\Hy@pagecounter=\count293
+
+(/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count294
+Package hyperref Info: Option `bookmarks' set `false' on input line 4338.
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks OFF on input line 4723.
+\c@Hy@tempcnt=\count295
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen185
+
+(/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count296
+\Field@Width=\dimen186
+\Fld@charsize=\dimen187
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count297
+\c@Item=\count298
+\c@Hfootnote=\count299
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(/usr/share/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count300
+\c@bookmark@seq@number=\count301
+
+(/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip73
+)
+\c@reaction=\count302
+\tabularwidth=\dimen188
+Package color Info: Redefining color bgcol on input line 2562.
+)
+LaTeX Info: Redefining \vec on input line 13.
+Package hyperref Info: Option `colorlinks' set `true' on input line 86.
+Package hyperref Info: Option `breaklinks' set `true' on input line 86.
+
+
+Package hyperref Warning: Option `hyperfootnotes' has already been used,
+(hyperref)                setting the option has no effect on input line 86.
+
+(./article_nuage.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 88
+.
+ (/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count303
+\scratchdimen=\dimen189
+\scratchbox=\box59
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen190
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks39
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box60
+Package hyperref Info: Link coloring ON on input line 88.
+
+(/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count309
+)
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 149
+.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 149
+.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
+3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 4.74998pt on input line 153.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+54.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [2]
+<figures/fig1.png, id=300, 722.7pt x 505.89pt>
+File: figures/fig1.png Graphic file (type png)
+<use figures/fig1.png>
+Package pdftex.def Info: figures/fig1.png  used on input line 327.
+(pdftex.def)             Requested size: 352.52809pt x 246.76897pt.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 345.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 346.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 347.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 348.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 349.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 350.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 351.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 352.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 353.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 354.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 355.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 356.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 357.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 358.
+Package textcomp Info: Symbol \textrightarrow not provided by
+(textcomp)             font family ptm in TS1 encoding.
+(textcomp)             Default family used instead on input line 359.
+
+Underfull \hbox (badness 5203) in paragraph at lines 371--396
+\T1/ptm/m/n/10 The PM$[]$ con-cen-tra-tion was mea-sured at each site
+ []
+
+
+Underfull \hbox (badness 1997) in paragraph at lines 371--396
+\T1/ptm/m/n/10 by means of an au-to-matic an-a-lyzer, ac-cord-ing to EN
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 371--396
+\T1/ptm/m/n/10 12341:2014 pro-ce-dures ([][]CEN[][], [][]2014[][]). Off-line ch
+em-i-cal
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./figures/fig1.png>]
+Underfull \hbox (badness 3078) in paragraph at lines 483--491
+\T1/ptm/m/n/10 ([][]2017[][]); [][]We-ber et al.[][] ([][]2019[][])), DE-COM-BI
+O ([][]Chevrier[][],
+ []
+
+[5]
+<figures/fig2.pdf, id=462, 578.16pt x 361.35pt>
+File: figures/fig2.pdf Graphic file (type pdf)
+<use figures/fig2.pdf>
+Package pdftex.def Info: figures/fig2.pdf  used on input line 651.
+(pdftex.def)             Requested size: 402.89255pt x 251.80745pt.
+ [6]
+Underfull \vbox (badness 4779) has occurred while \output is active []
+
+<figures/fig3.pdf, id=496, 867.24pt x 325.215pt>
+File: figures/fig3.pdf Graphic file (type pdf)
+<use figures/fig3.pdf>
+Package pdftex.def Info: figures/fig3.pdf  used on input line 752.
+(pdftex.def)             Requested size: 503.61377pt x 188.85806pt.
+
+Underfull \vbox (badness 4779) has occurred while \output is active []
+
+ [7 <./figures/fig2.pdf>]
+<figures/fig4.pdf, id=592, 867.24pt x 260.17201pt>
+File: figures/fig4.pdf Graphic file (type pdf)
+<use figures/fig4.pdf>
+Package pdftex.def Info: figures/fig4.pdf  used on input line 805.
+(pdftex.def)             Requested size: 503.61377pt x 151.08644pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./figures/fig3.pdf>]
+<figures/fig5.pdf, id=680, 867.24pt x 433.62pt>
+File: figures/fig5.pdf Graphic file (type pdf)
+<use figures/fig5.pdf>
+Package pdftex.def Info: figures/fig5.pdf  used on input line 909.
+(pdftex.def)             Requested size: 503.61377pt x 251.81075pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./figures/fig4.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 3118) in paragraph at lines 989--997
+[]\T1/ptm/m/n/10 The in-or-ganic fac-tor (\T1/ptm/b/n/10 sulfate-rich \T1/ptm/m
+/n/10 and \T1/ptm/b/n/10 nitrate-rich\T1/ptm/m/n/10 )
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./figures/fig5.pdf>]
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 1082.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 1082.
+
+Missing character: There is no µ in font cmr9!
+
+LaTeX Warning: Float too large for page by 5.69054pt on input line 1122.
+
+<figures/fig6.pdf, id=913, 975.645pt x 578.16pt>
+File: figures/fig6.pdf Graphic file (type pdf)
+<use figures/fig6.pdf>
+Package pdftex.def Info: figures/fig6.pdf  used on input line 1145.
+(pdftex.def)             Requested size: 503.61377pt x 298.43942pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<figures/fig7.pdf, id=942, 975.645pt x 505.89pt>
+File: figures/fig7.pdf Graphic file (type pdf)
+<use figures/fig7.pdf>
+Package pdftex.def Info: figures/fig7.pdf  used on input line 1205.
+(pdftex.def)             Requested size: 503.61377pt x 261.13449pt.
+<figures/fig8.pdf, id=943, 975.645pt x 505.89pt>
+File: figures/fig8.pdf Graphic file (type pdf)
+<use figures/fig8.pdf>
+Package pdftex.def Info: figures/fig8.pdf  used on input line 1216.
+(pdftex.def)             Requested size: 503.61377pt x 261.13449pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./figures/fig6.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./figures/fig7.pdf> <./figures/fig8.pdf
+
+pdfTeX warning: pdflatex (file ./figures/fig8.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>] [14]
+Underfull \hbox (badness 1975) in paragraph at lines 1405--1411
+[]\T1/ptm/m/n/10 We demon-strate that source ap-por-tion-ment of OP
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 1456--1470
+[]\T1/ptm/m/n/10 This work was par-tially funded by ANSES for OP
+ []
+
+[15] (./article_nuage.bbl
+Underfull \hbox (badness 1152) in paragraph at lines 48--54
+\T1/ptm/m/n/9 D. C., An-der-son, H. R., Pur-die, E., Dun-ster, C., Aitl-hadj,
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 48--54
+\T1/ptm/m/n/9 L., Kelly, F. J., and Mud-way, I. S.: Short-Term As-so-ci-a-
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 48--54
+\T1/ptm/m/n/9 nal of Hy-giene and En-vi-ron-men-tal Health, 219, 566--572,
+ []
+
+
+Underfull \hbox (badness 2065) in paragraph at lines 58--65
+\T1/ptm/m/n/9 J.: Eval-u-at-ing the Tox-i-c-ity of Air-borne Par-tic-u-late Mat
+-ter
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--76
+[]\T1/ptm/m/n/9 Barraza-Villarreal, A., Sun-yer, J., Hernandez-Cadena, L.,
+ []
+
+
+Underfull \hbox (badness 6380) in paragraph at lines 70--76
+\T1/ptm/m/n/9 Escamilla-Nuñez, M. C., Sienra-Monge, J. J., Ramírez-
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 70--76
+\T1/ptm/m/n/9 Aguilar, M., Cortez-Lugo, M., Hol-guin, F., Diaz-Sánchez,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+Underfull \hbox (badness 4391) in paragraph at lines 140--144
+\T1/ptm/m/n/9 Ex-haust, Aerosol Sci-ence and Tech-nol-ogy, 25, 221--241,
+ []
+
+
+Underfull \hbox (badness 5388) in paragraph at lines 147--151
+[]\T1/ptm/m/n/9 Borlaza, L. J. S., Cosep, E. M. R., Kim, S., Lee, K.,
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 147--151
+\T1/ptm/m/n/9 Joo, H., Park, M., Bate, D., Cayetano, M. G., and Park,
+ []
+
+
+Underfull \hbox (badness 1178) in paragraph at lines 147--151
+\T1/ptm/m/n/9 K.: Ox-ida-tive Po-ten-tial of Fine Am-bi-ent Par-ti-cles in Var-
+i-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1184) in paragraph at lines 283--288
+\T1/ptm/m/n/9 Ma-n-arini, F., De Nun-tiis, P., Ri-naldi, M., Volpi, F., Gam-
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 283--288
+\T1/ptm/m/n/9 ment of PM2.5 and of Its Ox-ida-tive Po-ten-tial in an In-
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 297--302
+[]\T1/ptm/m/n/9 Charrier, J. G., Mc-Fall, A. S., Vu, K. K.-T., Baroi, J.,
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 297--302
+\T1/ptm/m/n/9 Olea, C., Has-son, A., and Anas-ta-sio, C.: A Bias in the
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 297--302
+\T1/ptm/m/n/9 ``Mass-Normalized'' DTT Re-sponse ^^U An Ef-fect of Non-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
+\T1/ptm/m/n/9 Linear Concentration-Response Curves for Cop-per and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
+\T1/ptm/m/n/9 Man-ganese, At-mo-spheric En-vi-ron-ment, 144, 325--334,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 398--403
+[]\T1/ptm/m/n/9 Gianini, M., Fis-cher, A., Gehrig, R., Ul-rich, A., Wichser,
+ []
+
+
+Underfull \hbox (badness 5970) in paragraph at lines 398--403
+\T1/ptm/m/n/9 A., Piot, C., Be-sombes, J.-L., and Hueglin, C.: Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--403
+\T1/ptm/m/n/9 par-a-tive Source Ap-por-tion-ment of PM$[]$ in Switzer-
+ []
+
+
+Underfull \hbox (badness 6477) in paragraph at lines 398--403
+\T1/ptm/m/n/9 land for 2008/2009 and 1998/1999 by Pos-i-tive Ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--403
+\T1/ptm/m/n/9 Fac-tori-sa-tion, At-mo-spheric En-vi-ron-ment, 54, 149--158,
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 413--417
+\T1/ptm/m/n/9 Dis-eases, Re-views on En-vi-ron-men-tal Health, 23, 243--298,
+ []
+
+
+Underfull \hbox (badness 1325) in paragraph at lines 430--435
+\T1/ptm/m/n/9 Nault, B. A., Schroder, J. C., Jimenez, J. L., and Pierce,
+ []
+
+
+Underfull \hbox (badness 3098) in paragraph at lines 457--461
+[]\T1/ptm/m/n/9 Jain, S., Sharma, S., Man-dal, T., and Sax-ena, M.: Source
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--461
+\T1/ptm/m/n/9 Ap-por-tion-ment of PM 10 in Delhi, In-dia Us-ing
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 464--469
+\T1/ptm/m/n/9 sonal Char-ac-ter-is-tics of Aerosols (PM2.5 and PM10) and
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 464--469
+\T1/ptm/m/n/9 over Delhi, In-dia, En-vi-ron-men-tal Pol-lu-tion, 262, 114337,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \hbox (badness 5756) in paragraph at lines 480--483
+[]\T1/ptm/m/n/9 Jiang, H. and Jang, M.: Dy-namic Ox-ida-tive Po-ten-tial of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
+\T1/ptm/m/n/9 At-mo-spheric Or-ganic Aerosol un-der Am-bi-ent Sun-light,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
+\T1/ptm/m/n/9 En-vi-ron-men-tal Sci-ence & Tech-nol-ogy, 52, 7496--7504,
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 488--495
+\T1/ptm/m/n/9 L., Vir-ta-nen, A., Florou, K., O'Dowd, C., Ovad-nevaite, J.,
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 498--503
+[]\T1/ptm/m/n/9 Karavalakis, G., Gy-sel, N., Schmitz, D. A., Cho, A. K.,
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 498--503
+\T1/ptm/m/n/9 Sioutas, C., Schauer, J. J., Cocker, D. R., and Durbin,
+ []
+
+
+Underfull \hbox (badness 5388) in paragraph at lines 498--503
+\T1/ptm/m/n/9 T. D.: Im-pact of Biodiesel on Reg-u-lated and Un-reg-u-
+ []
+
+
+Underfull \hbox (badness 5652) in paragraph at lines 498--503
+\T1/ptm/m/n/9 lated Emis-sions, and Re-dox and Proin-flam-ma-tory Prop-
+ []
+
+
+Underfull \hbox (badness 7047) in paragraph at lines 498--503
+\T1/ptm/m/n/9 er-ties of PM Emit-ted from Heavy-Duty Ve-hi-cles, The
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 498--503
+\T1/ptm/m/n/9 Sci-ence of the To-tal En-vi-ron-ment, 584-585, 1230--1238,
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 535--539
+[]\T1/ptm/m/n/9 Li, N., Hao, M., Phalen, R. F., Hinds, W. C., and Nel,
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 535--539
+\T1/ptm/m/n/9 A. E.: Par-tic-u-late Air Pol-lu-tants and Asthma: A Paradigm
+ []
+
+
+Underfull \hbox (badness 7344) in paragraph at lines 535--539
+\T1/ptm/m/n/9 for the Role of Ox-ida-tive Stress in PM-Induced Ad-
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 535--539
+\T1/ptm/m/n/9 verse Health Ef-fects, Clin-i-cal Im-munol-ogy, 109, 250--265,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--544
+[]\T1/ptm/m/n/9 Li, Q., Wy-att, A., and Ka-mens, R. M.: Ox-i-dant Gen-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--544
+\T1/ptm/m/n/9 er-a-tion and Tox-i-c-ity En-hance-ment of Aged-Diesel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--544
+\T1/ptm/m/n/9 Ex-haust, At-mo-spheric En-vi-ron-ment, 43, 1037--1042,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 6978) in paragraph at lines 574--578
+\T1/ptm/m/n/9 Metal-lic El-e-ments in Sub-mi-cronic and Ul-tra-fine At-mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--578
+\T1/ptm/m/n/9 spheric Par-ti-cles from Ur-ban and In-dus-trial Ar-eas in
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 574--578
+\T1/ptm/m/n/9 North-ern France, At-mo-spheric Re-search, 135-136, 35--47,
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 588--594
+\T1/ptm/m/n/9 sions, Sci-ence of The To-tal En-vi-ron-ment, 686, 382--392,
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 632--637
+[]\T1/ptm/m/n/9 Paraskevopoulou, D., Bougia-ti-oti, A., Stavroulas, I., Fang, T
+.,
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 632--637
+\T1/ptm/m/n/9 A., and Mi-halopou-los, N.: Year-long Vari-abil-ity of Ox-ida-
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 632--637
+\T1/ptm/m/n/9 tive Po-ten-tial of Par-tic-u-late Mat-ter in an Ur-ban Mediter-
+ []
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 639--642
+[]\T1/ptm/m/n/9 Pernigotti, D. and Belis, C. A.: DeltaSA Tool for Source
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--642
+\T1/ptm/m/n/9 Ap-por-tion-ment Bench-mark-ing, De-scrip-tion and Sen-si-tiv-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--642
+\T1/ptm/m/n/9 ity Anal-y-sis, At-mo-spheric En-vi-ron-ment, 180, 138--148,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 645--648
+[]\T1/ptm/m/n/9 Pernigotti, D., Belis, C. A., and Spanò, L.: SPECIEU-
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 645--648
+\T1/ptm/m/n/9 ROPE: The Eu-ro-pean Data Base for PM Source Pro-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 645--648
+\T1/ptm/m/n/9 files, At-mo-spheric Pol-lu-tion Re-search, 7, 307--314,
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 651--656
+\T1/ptm/m/n/9 tion of Par-ti-cles at Two Sites in the Ur-ban Area of Mi-
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 705--711
+[]\T1/ptm/m/n/9 Piot, C., Jaf-frezo, J.-L., Co-zic, J., Pis-sot, N., Had-dad, I
+. E.,
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 705--711
+\T1/ptm/m/n/9 matog-ra-phy &ndash; Elec-tro-spray Ion-iza-tion Tan-dem Mass
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 716--723
+[]\T1/ptm/m/n/9 Salameh, D., De-tour-nay, A., Pey, J., Pérez, N., Liguori, F.,
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 716--723
+\T1/ptm/m/n/9 D., Latella, A., Pil-lon, S., For-men-ton, G., Patti, S., Ar-
+ []
+
+
+Underfull \hbox (badness 2119) in paragraph at lines 716--723
+\T1/ptm/m/n/9 men-gaud, A., Piga, D., Jaf-frezo, J. L., Bartzis, J., To-lis,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 767--770
+\T1/ptm/m/n/9 ac-tiv-ity to-ward Dithio-thre-itol, Nan-otox-i-col-ogy, 2, 121--
+129,
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 778--782
+\T1/ptm/m/n/9 Strum, M.: The De-vel-op-ment and Uses of EPA's SPE-CI-
+ []
+
+
+Underfull \hbox (badness 3189) in paragraph at lines 786--792
+\T1/ptm/m/n/9 B., Be-sombes, J.-L., Alle-man, L. Y., Jaf-frezo, J.-L., Ja-
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 786--792
+\T1/ptm/m/n/9 ci-a-tion of Or-ganic Frac-tion Does Mat-ter for Source Ap-
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 786--792
+\T1/ptm/m/n/9 por-tion-ment. Part 1: A One-Year Cam-paign in Greno-ble
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \hbox (badness 4217) in paragraph at lines 816--822
+[]\T1/ptm/m/n/9 Strak, M., Janssen, N., Bee-len, R., Schmitz, O., Vaart-jes,
+ []
+
+
+Underfull \hbox (badness 1558) in paragraph at lines 816--822
+\T1/ptm/m/n/9 I., Karssen-berg, D., van den Brink, C., Bots, M. L., Di-
+ []
+
+
+Underfull \hbox (badness 1838) in paragraph at lines 816--822
+\T1/ptm/m/n/9 jst, M., Brunekreef, B., and Hoek, G.: Long-Term Ex-po-
+ []
+
+
+Underfull \hbox (badness 1642) in paragraph at lines 816--822
+\T1/ptm/m/n/9 sure to Par-tic-u-late Mat-ter, NO2 and the Ox-ida-tive Po-ten-
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 840--844
+\T1/ptm/m/n/9 tal Data Anal-y-ses, https://www.epa.gov/air-research/positive-
+ []
+
+
+Underfull \hbox (badness 4084) in paragraph at lines 847--851
+[]\T1/ptm/m/n/9 Verma, V., Ning, Z., Cho, A. K., Schauer, J. J., Shafer,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--851
+\T1/ptm/m/n/9 M. M., and Sioutas, C.: Re-dox Ac-tiv-ity of Ur-ban
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--851
+\T1/ptm/m/n/9 Quasi-Ultrafine Par-ti-cles from Pri-mary and Sec-ondary
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--851
+\T1/ptm/m/n/9 Sources, At-mo-spheric En-vi-ron-ment, 43, 6360--6368,
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 870--875
+\T1/ptm/m/n/9 Ac-tiv-ity ^^U As-sess-ing the Im-por-tance of Quinones and At-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 7504) in paragraph at lines 899--904
+[]\T1/ptm/m/n/9 Wagstrom, K. M., Pan-dis, S. N., Yarwood, G., Wil-son,
+ []
+
+
+Underfull \hbox (badness 5756) in paragraph at lines 899--904
+\T1/ptm/m/n/9 G. M., and Mor-ris, R. E.: De-vel-op-ment and Ap-pli-ca-
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 899--904
+\T1/ptm/m/n/9 tion of a Com-pu-ta-tion-ally Ef-fi-cient Par-tic-u-late Mat-ter 
+Ap-
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 899--904
+\T1/ptm/m/n/9 por-tion-ment Al-go-rithm in a Three-Dimensional Chem-i-cal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 925--929
+\T1/ptm/m/n/9 At-mo-spheres, 114, https://doi.org/[][]10.1029/2008JD010846[][],
+
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 942--948
+\T1/ptm/m/n/9 A., Be-sombes, J.-L., Ja-cob, V., Guil-laud, G., Mes-bah, B.,
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 942--948
+\T1/ptm/m/n/9 i-tive Ma-trix Fac-tor-iza-tion Ap-proach, At-mo-sphere, 10, 310,
+
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 952--958
+[]\T1/ptm/m/n/9 Weichenthal, S., Crouse, D. L., Pin-ault, L., Godri-Pollitt,
+ []
+
+
+Underfull \hbox (badness 3838) in paragraph at lines 952--958
+\T1/ptm/m/n/9 K., Lav-i-gne, E., Evans, G., van Donke-laar, A., Mar-tin,
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 952--958
+\T1/ptm/m/n/9 R. V., and Bur-nett, R. T.: Ox-ida-tive Bur-den of Fine Par-
+ []
+
+
+Underfull \hbox (badness 5203) in paragraph at lines 952--958
+\T1/ptm/m/n/9 tic-u-late Air Pol-lu-tion and Risk of Cause-Specific Mor-
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 952--958
+\T1/ptm/m/n/9 tal-ity in the Cana-dian Cen-sus Health and En-vi-ron-ment
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 952--958
+\T1/ptm/m/n/9 Co-hort (Can-CHEC), En-vi-ron-men-tal Re-search, 146, 92--99,
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 975--980
+[]\T1/ptm/m/n/9 Yang, A., Janssen, N. A. H., Brunekreef, B., Cassee, F. R.,
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 975--980
+\T1/ptm/m/n/9 Hoek, G., and Gehring, U.: Chil-dren's Res-pi-ra-tory Health
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Underfull \hbox (badness 1466) in paragraph at lines 1005--1013
+\T1/ptm/m/n/9 Ac-tiv-ity in Fine Am-bi-ent Aerosol, At-mo-spheric Chem-istry
+ []
+
+) [22
+
+] [23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1716.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1716.
+ (./article_nuage.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1716.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1716.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1716.
+ ) 
 Here is how much of TeX's memory you used:
- 21 strings out of 479284
- 404 string characters out of 5886221
- 244941 words of memory out of 5000000
- 17776 multiletter control sequences out of 15000+600000
- 532338 words of font info for 24 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 14i,0n,17p,164b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 15369 strings out of 480478
+ 251354 string characters out of 5905960
+ 594086 words of memory out of 5000000
+ 30904 multiletter control sequences out of 15000+600000
+ 576476 words of font info for 78 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,11n,47p,814b,709s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
+texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y9.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/sh
+are/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts
+/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on article_nuage.pdf (23 pages, 1127342 bytes).
+PDF statistics:
+ 1483 PDF objects out of 1728 (max. 8388607)
+ 1003 compressed objects within 11 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+
